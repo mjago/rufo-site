@@ -4,18 +4,31 @@ permalink: "/docs/spaces_around_when/"
 excerpt: "spaces_around_when Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 604. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
 when  2  then  3
 else  4
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when 2 then 3
 else 4
+end
+```
+### unique 1
+```ruby
+# AFTER
+
+case 1
+when 2 then 3
+else        4
 end
 ```

@@ -4,57 +4,98 @@ permalink: "/docs/and_or_not/"
 excerpt: "and_or_not Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 60. unnamed
+### original
 ```ruby
 # BEFORE
+
+ foo  and  bar
+
+```
+### expected
+```ruby
+# AFTER
+
 foo  and  bar
+
 ```
+### unique 1
 ```ruby
 # AFTER
-foo  and  bar
+
+foo and bar
 ```
-### 61. unnamed
+### original
 ```ruby
 # BEFORE
-foo  or  bar
+
+ foo  or  bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo  or  bar
+
 ```
-### 62. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo or bar
+```
+### original
 ```ruby
 # BEFORE
-not  foo
+
+ not  foo
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not foo
+
 ```
-### 63. unnamed
+### original
 ```ruby
 # BEFORE
+
 not(x)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not(x)
+
 ```
-### 64. unnamed
+### original
 ```ruby
 # BEFORE
+
 not (x)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not(x)
+
 ```
-### 65. unnamed
+### original
 ```ruby
 # BEFORE
+
 not((a, b = 1, 2))
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not((a, b = 1, 2))
 ```

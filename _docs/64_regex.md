@@ -4,48 +4,72 @@ permalink: "/docs/regex/"
 excerpt: "regex Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 546. unnamed
+### original
 ```ruby
 # BEFORE
+
 //
+
 ```
+### expected
 ```ruby
 # AFTER
+
 //
+
 ```
-### 547. unnamed
+### original
 ```ruby
 # BEFORE
+
 //ix
+
 ```
+### expected
 ```ruby
 # AFTER
+
 //ix
+
 ```
-### 548. unnamed
+### original
 ```ruby
 # BEFORE
+
 /foo/
+
 ```
+### expected
 ```ruby
 # AFTER
+
 /foo/
+
 ```
-### 549. unnamed
+### original
 ```ruby
 # BEFORE
+
 /foo #{1 + 2} /
+
 ```
+### expected
 ```ruby
 # AFTER
+
 /foo #{1 + 2} /
+
 ```
-### 550. unnamed
+### original
 ```ruby
 # BEFORE
+
 %r( foo )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %r( foo )
 ```

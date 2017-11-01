@@ -4,79 +4,118 @@ permalink: "/docs/spaces_around_equal/"
 excerpt: "spaces_around_equal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 591. unnamed
+### original
 ```ruby
 # BEFORE
+
 a=1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = 1
+
 ```
-### 592. unnamed
+### original
 ```ruby
 # BEFORE
+
 a  =  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = 1
+
 ```
-### 593. unnamed
+### original
 ```ruby
 # BEFORE
+
 a  =  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = 1
+
 ```
-### 594. unnamed
+### original
 ```ruby
 # BEFORE
+
 a+=1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a += 1
+
 ```
-### 595. unnamed
+### original
 ```ruby
 # BEFORE
+
 a  +=  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a += 1
+
 ```
-### 596. unnamed
+### original
 ```ruby
 # BEFORE
+
 a  +=  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a += 1
+
 ```
-### 597. unnamed
+### original
 ```ruby
 # BEFORE
+
 def foo(x  =  1)
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x = 1)
 end
+
 ```
-### 598. unnamed
+### original
 ```ruby
 # BEFORE
+
 def foo(x=1)
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x = 1)
 end
 ```

@@ -4,62 +4,50 @@ permalink: "/docs/visibility_indent/"
 excerpt: "visibility_indent Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 715. unnamed
+### original
 ```ruby
 # BEFORE
+
 private
 
 foo
 bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 private
 
 foo
 bar
+
 ```
-### 716. unnamed
+### original
 ```ruby
 # BEFORE
-private
 
-  foo
-bar
-```
-```ruby
-# AFTER
-private
-
-foo
-bar
-```
-### 717. unnamed
-```ruby
-# BEFORE
 private
 
   foo
 bar
 
-protected
-
-  baz
 ```
+### expected
 ```ruby
 # AFTER
+
 private
 
 foo
 bar
 
-protected
-
-baz
 ```
-### 718. unnamed
+### original
 ```ruby
 # BEFORE
+
 private
 
   foo
@@ -68,9 +56,12 @@ bar
 protected
 
   baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 private
 
 foo
@@ -79,38 +70,77 @@ bar
 protected
 
 baz
+
 ```
-### 719. unnamed
+### original
 ```ruby
 # BEFORE
+
+private
+
+  foo
+bar
+
+protected
+
+  baz
+
+```
+### expected
+```ruby
+# AFTER
+
+private
+
+foo
+bar
+
+protected
+
+baz
+
+```
+### original
+```ruby
+# BEFORE
+
 class Foo
   private
 
     foo
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 class Foo
   private
 
   foo
 end
+
 ```
-### 720. unnamed
+### original
 ```ruby
 # BEFORE
+
 class << self
   private
 
     foo
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 class << self
   private
 
   foo
 end
+
 ```

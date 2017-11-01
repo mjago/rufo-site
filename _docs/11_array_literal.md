@@ -4,299 +4,524 @@ permalink: "/docs/array_literal/"
 excerpt: "array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 75. unnamed
+### original
 ```ruby
 # BEFORE
-[  ]
+
+ [  ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 []
+
 ```
-### 76. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 ]
+
+ [  1 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1]
+
 ```
-### 77. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 , 2 ]
+
+ [  1 , 2 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1, 2]
+
 ```
-### 78. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 , 2 , ]
+
+ [  1 , 2 , ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1, 2]
+
 ```
-### 79. unnamed
+### original
 ```ruby
 # BEFORE
-[
+
+ [
  1 , 2 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+[
+  1, 2,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [
   1, 2
 ]
 ```
-### 80. unnamed
+### original
 ```ruby
 # BEFORE
-[
+
+ [
  1 , 2, ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [
   1, 2,
 ]
+
 ```
-### 81. unnamed
-```ruby
-# BEFORE
-[
- 1 , 2 ,
- 3 , 4 ]
-```
+### unique 1
 ```ruby
 # AFTER
+
+[
+  1, 2
+]
+```
+### original
+```ruby
+# BEFORE
+
+ [
+ 1 , 2 ,
+ 3 , 4 ]
+
+```
+### expected
+```ruby
+# AFTER
+
+[
+  1, 2,
+  3, 4,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [
   1, 2,
   3, 4
 ]
 ```
-### 82. unnamed
+### original
 ```ruby
 # BEFORE
-[
+
+ [
  1 ,
  2]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+[
+  1,
+  2,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [
   1,
   2
 ]
 ```
-### 83. unnamed
+### original
 ```ruby
 # BEFORE
-[  # comment
+
+ [  # comment
  1 ,
  2]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+[ # comment
+  1,
+  2,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [ # comment
   1,
   2
 ]
 ```
-### 84. unnamed
+### original
 ```ruby
 # BEFORE
-[
+
+ [
  1 ,  # comment
  2]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+[
+  1,  # comment
+  2,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [
   1,  # comment
   2
 ]
 ```
-### 85. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 ,
+
+ [  1 ,
  2, 3,
  4 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1,
  2, 3,
  4]
+
 ```
-### 86. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 ,
+
+ [  1 ,
  2, 3,
  4, ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1,
  2, 3,
  4]
+
 ```
-### 87. unnamed
+### original
 ```ruby
 # BEFORE
-[  1 ,
+
+ [  1 ,
  2, 3,
  4,
  ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1,
  2, 3,
  4]
+
 ```
-### 88. unnamed
+### original
 ```ruby
 # BEFORE
-[ 1 ,
+
+ [ 1 ,
  2, 3,
  4, # foo
  ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1,
  2, 3,
  4 # foo
 ]
+
 ```
-### 89. unnamed
+### original
 ```ruby
 # BEFORE
-begin
+
+ begin
  [
  1 , 2 ]
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
+begin
+  [
+    1, 2,
+  ]
+end
+
+```
+### unique 1
+```ruby
+# AFTER
+
 begin
   [
     1, 2
   ]
 end
 ```
-### 90. unnamed
+### original
 ```ruby
 # BEFORE
-[
+
+ [
  1 # foo
  ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+[
+  1, # foo
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 [
   1 # foo
 ]
 ```
-### 91. unnamed
+### original
 ```ruby
 # BEFORE
-[ *x ]
+
+ [ *x ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [*x]
+
 ```
-### 92. unnamed
+### original
 ```ruby
 # BEFORE
-[ *x , 1 ]
+
+ [ *x , 1 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [*x, 1]
+
 ```
-### 93. unnamed
+### original
 ```ruby
 # BEFORE
-[ 1, *x ]
+
+ [ 1, *x ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1, *x]
+
 ```
-### 94. unnamed
+### original
 ```ruby
 # BEFORE
-x = [{
+
+ x = [{
  foo: 1
 }]
+
 ```
+### expected
 ```ruby
 # AFTER
+
+x = [{
+  foo: 1,
+}]
+
+```
+### unique 1
+```ruby
+# AFTER
+
 x = [{
   foo: 1
 }]
 ```
-### 95. unnamed
+### original
 ```ruby
 # BEFORE
+
 [1,   2]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [1, 2]
+
 ```
-### 96. unnamed
+### original
 ```ruby
 # BEFORE
+
 [
   1,
   # comment
   2,
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 [
   1,
   # comment
   2,
 ]
+
 ```
-### 97. unnamed
-```ruby
-# BEFORE
-[
-  *a,
-  b,
-]
-```
+### unique 1
 ```ruby
 # AFTER
+
+[
+  1,
+  # comment
+  2
+]
+```
+### original
+```ruby
+# BEFORE
+
 [
   *a,
   b,
 ]
+
 ```
-### 98. unnamed
+### expected
+```ruby
+# AFTER
+
+[
+  *a,
+  b,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
+[
+  *a,
+  b
+]
+```
+### original
 ```ruby
 # BEFORE
+
+[
+  1, *a,
+  b,
+]
+
+```
+### expected
+```ruby
+# AFTER
+
 [
   1, *a,
   b,
 ]
 ```
+### unique 1
 ```ruby
 # AFTER
+
 [
   1, *a,
-  b,
+  b
 ]
 ```

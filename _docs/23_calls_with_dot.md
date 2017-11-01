@@ -4,39 +4,58 @@ permalink: "/docs/calls_with_dot/"
 excerpt: "calls_with_dot Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 209. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.()
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.()
+
 ```
-### 210. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.( 1 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.(1)
+
 ```
-### 211. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.( 1, 2 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.(1, 2)
+
 ```
-### 212. unnamed
+### original
 ```ruby
 # BEFORE
+
 x.foo.( 1, 2 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x.foo.(1, 2)
 ```

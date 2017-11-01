@@ -4,203 +4,302 @@ permalink: "/docs/percent_array_literal/"
 excerpt: "percent_array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 513. unnamed
+### original
 ```ruby
 # BEFORE
-%w(  )
+
+ %w(  ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w()
+
 ```
-### 514. unnamed
+### original
 ```ruby
 # BEFORE
+
+ %w(one) 
+
+```
+### expected
+```ruby
+# AFTER
+
 %w(one)
+
 ```
-```ruby
-# AFTER
-%w(one)
-```
-### 515. unnamed
+### original
 ```ruby
 # BEFORE
-%w( one )
+
+ %w( one ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w( one )
+
 ```
-### 516. unnamed
+### original
 ```ruby
 # BEFORE
-%w(one   two 
- three )
+
+ %w(one   two 
+ three ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w(one two
    three)
+
 ```
-### 517. unnamed
+### original
 ```ruby
 # BEFORE
-%w( one   two 
- three )
+
+ %w( one   two 
+ three ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w( one two
     three )
+
 ```
-### 518. unnamed
+### original
 ```ruby
 # BEFORE
-%w( 
- one )
+
+ %w( 
+ one ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w(
   one)
+
 ```
-### 519. unnamed
+### original
 ```ruby
 # BEFORE
-%w( 
+
+ %w( 
  one 
- )
+ ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w(
   one
 )
+
 ```
-### 520. unnamed
+### original
 ```ruby
 # BEFORE
-%w[ one ]
+
+ %w[ one ] 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %w[ one ]
+
 ```
-### 521. unnamed
+### original
 ```ruby
 # BEFORE
-begin 
+
+ begin 
  %w( 
  one 
  ) 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   %w(
     one
   )
 end
+
 ```
-### 522. unnamed
+### original
 ```ruby
 # BEFORE
-%i(  )
+
+ %i(  ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %i()
+
 ```
-### 523. unnamed
+### original
 ```ruby
 # BEFORE
-%i( one )
+
+ %i( one ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %i( one )
+
 ```
-### 524. unnamed
+### original
 ```ruby
 # BEFORE
-%i( one   two 
- three )
+
+ %i( one   two 
+ three ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %i( one two
     three )
+
 ```
-### 525. unnamed
+### original
 ```ruby
 # BEFORE
-%i[ one ]
+
+ %i[ one ] 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %i[ one ]
+
 ```
-### 526. unnamed
+### original
 ```ruby
 # BEFORE
-%W( )
+
+ %W( ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %W()
+
 ```
-### 527. unnamed
+### original
 ```ruby
 # BEFORE
-%W( one )
+
+ %W( one ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %W( one )
+
 ```
-### 528. unnamed
+### original
 ```ruby
 # BEFORE
-%W( one  two )
+
+ %W( one  two ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %W( one two )
+
 ```
-### 529. unnamed
+### original
 ```ruby
 # BEFORE
-%W( one  two #{ 1 } )
+
+ %W( one  two #{ 1 } ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %W( one two #{1} )
+
 ```
-### 530. unnamed
+### original
 ```ruby
 # BEFORE
+
 %W(#{1}2)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %W(#{1}2)
+
 ```
-### 531. unnamed
+### original
 ```ruby
 # BEFORE
-%I( )
+
+ %I( ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %I()
+
 ```
-### 532. unnamed
+### original
 ```ruby
 # BEFORE
-%I( one  two #{ 1 } )
+
+ %I( one  two #{ 1 } ) 
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %I( one two #{1} )
 ```

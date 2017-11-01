@@ -4,156 +4,240 @@ permalink: "/docs/multiple_assignments/"
 excerpt: "multiple_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 485. unnamed
+### original
 ```ruby
 # BEFORE
+
 a  =   1  ,   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = 1, 2
+
 ```
-### 486. unnamed
+### original
 ```ruby
 # BEFORE
+
 a , b  = 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, b = 2
+
 ```
-### 487. unnamed
+### original
 ```ruby
 # BEFORE
+
 a , b, ( c, d )  = 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, b, (c, d) = 2
+
 ```
-### 488. unnamed
+### original
 ```ruby
 # BEFORE
-*x = 1
+
+ *x = 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 *x = 1
+
 ```
-### 489. unnamed
+### original
 ```ruby
 # BEFORE
-a , b , *x = 1
+
+ a , b , *x = 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, b, *x = 1
+
 ```
-### 490. unnamed
+### original
 ```ruby
 # BEFORE
-*x , a , b = 1
+
+ *x , a , b = 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 *x, a, b = 1
+
 ```
-### 491. unnamed
+### original
 ```ruby
 # BEFORE
+
+ a, b, *x, c, d = 1
+
+```
+### expected
+```ruby
+# AFTER
+
 a, b, *x, c, d = 1
+
 ```
-```ruby
-# AFTER
-a, b, *x, c, d = 1
-```
-### 492. unnamed
+### original
 ```ruby
 # BEFORE
+
 a, b, = 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, b, = 1
+
 ```
-### 493. unnamed
+### original
 ```ruby
 # BEFORE
+
 a = b, *c
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = b, *c
+
 ```
-### 494. unnamed
+### original
 ```ruby
 # BEFORE
+
 a = b, *c, *d
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = b, *c, *d
+
 ```
-### 495. unnamed
+### original
 ```ruby
 # BEFORE
+
 a, = b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, = b
+
 ```
-### 496. unnamed
+### original
 ```ruby
 # BEFORE
+
 a = b, c, *d
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = b, c, *d
+
 ```
-### 497. unnamed
+### original
 ```ruby
 # BEFORE
+
 a = b, c, *d, e
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = b, c, *d, e
+
 ```
-### 498. unnamed
+### original
 ```ruby
 # BEFORE
+
 *, y = z
+
 ```
+### expected
 ```ruby
 # AFTER
+
 *, y = z
+
 ```
-### 499. unnamed
+### original
 ```ruby
 # BEFORE
+
 w, (x,), y = z
+
 ```
+### expected
 ```ruby
 # AFTER
+
 w, (x,), y = z
+
 ```
-### 500. unnamed
+### original
 ```ruby
 # BEFORE
+
 a, b=1, 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a, b = 1, 2
+
 ```
-### 501. unnamed
+### original
 ```ruby
 # BEFORE
+
 * = 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 * = 1
 ```

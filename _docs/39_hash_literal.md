@@ -4,156 +4,244 @@ permalink: "/docs/hash_literal/"
 excerpt: "hash_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 317. unnamed
+### original
 ```ruby
 # BEFORE
-{ }
+
+ { }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 {}
+
 ```
-### 318. unnamed
+### original
 ```ruby
 # BEFORE
-{:foo   =>   1 }
+
+ {:foo   =>   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{:foo => 1 }
-```
-### 319. unnamed
-```ruby
-# BEFORE
-{:foo   =>   1}
-```
-```ruby
-# AFTER
+
 {:foo => 1}
+
 ```
-### 320. unnamed
+### original
 ```ruby
 # BEFORE
-{ :foo   =>   1 }
+
+ {:foo   =>   1}
+
 ```
+### expected
 ```ruby
 # AFTER
-{ :foo => 1 }
+
+{:foo => 1}
+
 ```
-### 321. unnamed
+### original
 ```ruby
 # BEFORE
-{ :foo   =>   1 , 2  =>  3  }
+
+ { :foo   =>   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ :foo => 1, 2 => 3  }
+
+{:foo => 1}
+
 ```
-### 322. unnamed
+### original
 ```ruby
 # BEFORE
-{
+
+ { :foo   =>   1 , 2  =>  3  }
+
+```
+### expected
+```ruby
+# AFTER
+
+{:foo => 1, 2 => 3}
+
+```
+### original
+```ruby
+# BEFORE
+
+ {
  :foo   =>   1 ,
  2  =>  3  }
+
 ```
+### expected
 ```ruby
 # AFTER
+
+{
+  :foo => 1,
+  2 => 3,
+}
+
+```
+### unique 1
+```ruby
+# AFTER
+
 {
   :foo => 1,
   2 => 3
 }
 ```
-### 323. unnamed
+### original
 ```ruby
 # BEFORE
-{ **x }
+
+ { **x }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ **x }
+
+{**x}
+
 ```
-### 324. unnamed
+### original
 ```ruby
 # BEFORE
-{foo:  1}
+
+ {foo:  1}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 {foo: 1}
+
 ```
-### 325. unnamed
+### original
 ```ruby
 # BEFORE
-{ foo:  1 }
+
+ { foo:  1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ foo: 1 }
+
+{foo: 1}
+
 ```
-### 326. unnamed
+### original
 ```ruby
 # BEFORE
-{ :foo   =>
+
+ { :foo   =>
   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ :foo => 1 }
+
+{:foo => 1}
+
 ```
-### 327. unnamed
+### original
 ```ruby
 # BEFORE
-{ "foo": 1 }
+
+ { "foo": 1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ "foo": 1 }
+
+{"foo": 1}
+
 ```
-### 328. unnamed
+### original
 ```ruby
 # BEFORE
-{ "foo #{ 2 }": 1 }
+
+ { "foo #{ 2 }": 1 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ "foo #{2}": 1 }
+
+{"foo #{2}": 1}
+
 ```
-### 329. unnamed
+### original
 ```ruby
 # BEFORE
-{ :"one two"  => 3 }
+
+ { :"one two"  => 3 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ :"one two" => 3 }
+
+{:"one two" => 3}
+
 ```
-### 330. unnamed
+### original
 ```ruby
 # BEFORE
-{ foo:  1,
+
+ { foo:  1,
    bar: 2 }
+
 ```
+### expected
 ```ruby
 # AFTER
-{ foo: 1,
-  bar: 2 }
+
+{foo: 1,
+ bar: 2}
+
 ```
-### 331. unnamed
+### original
 ```ruby
 # BEFORE
+
 {foo: 1,  bar: 2}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 {foo: 1, bar: 2}
+
 ```
-### 332. unnamed
+### original
 ```ruby
 # BEFORE
+
 {1 =>
    2}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 {1 => 2}
 ```

@@ -4,367 +4,535 @@ permalink: "/docs/method_calls/"
 excerpt: "method_calls Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 379. foo
+### original
 ```ruby
 # BEFORE
+
 foo
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo
+
 ```
-### 380. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo()
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo()
+
 ```
-### 381. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo ()
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo ()
+
 ```
-### 382. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(  )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo()
+
 ```
-### 383. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
 
  )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo()
+
 ```
-### 384. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(  1  )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(1)
+
 ```
-### 385. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(  1 ,   2 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(1, 2)
+
 ```
-### 386. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1
+
 ```
-### 387. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1,  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, 2
+
 ```
-### 388. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1,  *x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, *x
+
 ```
-### 389. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1,  *x , 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, *x, 2
+
 ```
-### 390. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1,  *x , 2 , 3
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, *x, 2, 3
+
 ```
-### 391. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1,  *x , 2 , 3 , *z , *w , 4
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, *x, 2, 3, *z, *w, 4
+
 ```
-### 392. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo *x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo *x
+
 ```
-### 393. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,
   *x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1,
   *x
+
 ```
-### 394. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,  *x , *y
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, *x, *y
+
 ```
-### 395. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,  **x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, **x
+
 ```
-### 396. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,
  **x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1,
     **x
+
 ```
-### 397. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,  **x , **y
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, **x, **y
+
 ```
-### 398. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,  bar:  2 , baz:  3
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, bar: 2, baz: 3
+
 ```
-### 399. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,
  bar:  2 , baz:  3
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1,
     bar: 2, baz: 3
+
 ```
-### 400. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1,
  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1,
     2
+
 ```
-### 401. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(1,
  2)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(1,
     2)
+
 ```
-### 402. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
 1,
  2)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(
   1,
   2
 )
+
 ```
-### 403. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
 1,
  2,)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(
   1,
   2,
 )
+
 ```
-### 404. unnamed
-```ruby
-# BEFORE
-foo(
-1,
- 2
-)
-```
+### unique 1
 ```ruby
 # AFTER
+
 foo(
   1,
   2
 )
 ```
-### 405. unnamed
+### original
 ```ruby
 # BEFORE
+
+foo(
+1,
+ 2
+)
+
+```
+### expected
+```ruby
+# AFTER
+
+foo(
+  1,
+  2
+)
+
+```
+### original
+```ruby
+# BEFORE
+
 begin
  foo(
 1,
  2
 )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(
     1,
     2
   )
 end
+
 ```
-### 406. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  foo(1,
  2
  )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(1,
       2)
 end
+
 ```
-### 407. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  foo(1,
  2,
  )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(1,
       2)
 end
+
 ```
-### 408. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  foo(
  1,
  2,
  )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(
     1,
     2,
   )
 end
+
 ```
-### 409. unnamed
+### unique 1
+```ruby
+# AFTER
+
+begin
+  foo(
+    1,
+    2
+  )
+end
+```
+### original
 ```ruby
 # BEFORE
+
 begin
  foo(
  1,
  2, )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(
     1,
     2,
   )
 end
+
 ```
-### 410. unnamed
-```ruby
-# BEFORE
-begin
- foo(
-1,
- 2)
- end
-```
+### unique 1
 ```ruby
 # AFTER
+
 begin
   foo(
     1,
@@ -372,433 +540,716 @@ begin
   )
 end
 ```
-### 411. unnamed
+### original
 ```ruby
 # BEFORE
+
+begin
+ foo(
+1,
+ 2)
+ end
+
+```
+### expected
+```ruby
+# AFTER
+
+begin
+  foo(
+    1,
+    2
+  )
+end
+
+```
+### original
+```ruby
+# BEFORE
+
 begin
  foo(
 1,
  2 # comment
 )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo(
     1,
     2 # comment
   )
 end
+
 ```
-### 412. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(bar(
 1,
 ))
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(bar(
   1,
 ))
+
 ```
-### 413. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo(bar(
+  1
+))
+```
+### original
 ```ruby
 # BEFORE
+
 foo(bar(
   1,
   baz(
     2
   )
 ))
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(bar(
   1,
   baz(
     2
   )
 ))
+
 ```
-### 414. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo &block
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo &block
+
 ```
-### 415. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1 ,  &block
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, &block
+
 ```
-### 416. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(1 ,  &block)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(1, &block)
+
 ```
-### 417. unnamed
+### original
 ```ruby
 # BEFORE
+
 x y z
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x y z
+
 ```
-### 418. unnamed
+### original
 ```ruby
 # BEFORE
+
 x y z w, q
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x y z w, q
+
 ```
-### 419. unnamed
+### original
 ```ruby
 # BEFORE
+
 x(*y, &z)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x(*y, &z)
+
 ```
-### 420. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo \
  1, 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo \
   1, 2
+
 ```
-### 421. unnamed
+### original
 ```ruby
 # BEFORE
+
 a(
 *b)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a(
   *b
 )
+
 ```
-### 422. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
 x: 1,
  y: 2
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
+foo(
+  x: 1,
+  y: 2,
+)
+
+```
+### unique 1
+```ruby
+# AFTER
+
 foo(
   x: 1,
   y: 2
 )
 ```
-### 423. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar(
   1,
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar(
   1,
 )
+
 ```
-### 424. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo bar(
+  1
+)
+```
+### original
 ```ruby
 # BEFORE
+
 foo 1, {
   x: y,
 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, {
   x: y,
 }
+
 ```
-### 425. unnamed
-```ruby
-# BEFORE
-foo 1, [
-  1,
-]
-```
+### unique 1
 ```ruby
 # AFTER
+
+foo 1, {
+  x: y
+}
+```
+### original
+```ruby
+# BEFORE
+
 foo 1, [
   1,
 ]
+
 ```
-### 426. unnamed
+### expected
+```ruby
+# AFTER
+
+foo 1, [
+  1,
+]
+
+```
+### unique 1
+```ruby
+# AFTER
+
+foo 1, [
+  1
+]
+```
+### original
 ```ruby
 # BEFORE
+
 foo 1, [
   <<-EOF,
   bar
 EOF
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, [
   <<-EOF,
   bar
 EOF
 ]
+
 ```
-### 427. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar( # foo
   1, # bar
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar( # foo
   1, # bar
 )
+
 ```
-### 428. unnamed
-```ruby
-# BEFORE
-foo bar {
-  1
-}
-```
+### unique 1
 ```ruby
 # AFTER
+
+foo bar( # foo
+  1 # bar
+)
+```
+### original
+```ruby
+# BEFORE
+
 foo bar {
   1
 }
+
 ```
-### 429. unnamed
+### expected
+```ruby
+# AFTER
+
+foo bar {
+  1
+}
+
+```
+### original
 ```ruby
 # BEFORE
+
 foo x:  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo x: 1
+
 ```
-### 430. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
   &block
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(
   &block
 )
+
 ```
-### 431. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(
   1,
   &block
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(
   1,
   &block
 )
+
 ```
-### 432. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo(& block)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(&block)
+
 ```
-### 433. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1, [
       2,
     ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, [
       2,
     ]
+
 ```
-### 434. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo 1, [
+      2
+    ]
+```
+### original
 ```ruby
 # BEFORE
+
 foo 1, [
   2,
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, [
   2,
 ]
+
 ```
-### 435. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo 1, [
+  2
+]
+```
+### original
 ```ruby
 # BEFORE
+
 foo bar(
   2
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar(
   2
 )
+
 ```
-### 436. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar(
       2
     )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar(
       2
     )
+
 ```
-### 437. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar {
   2
 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar {
   2
 }
+
 ```
-### 438. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar {
       2
     }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar {
       2
     }
+
 ```
-### 439. unnamed
+### original
 ```ruby
 # BEFORE
+
 foobar 1,
   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foobar 1,
   2
+
 ```
-### 440. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   foobar 1,
     2
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foobar 1,
     2
 end
+
 ```
-### 441. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo([
       1,
     ])
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo([
       1,
     ])
+
 ```
-### 442. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo([
+      1
+    ])
+```
+### original
 ```ruby
 # BEFORE
+
 begin
   foo([
         1,
       ])
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo([
         1,
       ])
 end
+
 ```
-### 443. unnamed
-```ruby
-# BEFORE
-(a b).c([
-          1,
-        ])
-```
+### unique 1
 ```ruby
 # AFTER
+
+begin
+  foo([
+        1
+      ])
+end
+```
+### original
+```ruby
+# BEFORE
+
 (a b).c([
           1,
         ])
+
 ```
-### 444. unnamed
+### expected
+```ruby
+# AFTER
+
+(a b).c([
+          1,
+        ])
+
+```
+### unique 1
+```ruby
+# AFTER
+
+(a b).c([
+          1
+        ])
+```
+### original
 ```ruby
 # BEFORE
+
 foobar 1,
   "foo
    bar"
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foobar 1,
   "foo
    bar"

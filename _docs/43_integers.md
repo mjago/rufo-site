@@ -4,12 +4,16 @@ permalink: "/docs/integers/"
 excerpt: "integers Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 365. 123
+### original
 ```ruby
 # BEFORE
+
 123
+
 ```
+### expected
 ```ruby
 # AFTER
+
 123
 ```

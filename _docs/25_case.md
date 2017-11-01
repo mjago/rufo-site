@@ -4,96 +4,136 @@ permalink: "/docs/case/"
 excerpt: "case Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 239. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 end
+
 ```
-### 240. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2
  when 3 then 4
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 when 3 then 4
 end
+
 ```
-### 241. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2 else 3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 else 3
 end
+
 ```
-### 242. unnamed
+### unique 1
+```ruby
+# AFTER
+
+case
+when 1 then 2
+else        3
+end
+```
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 ; 2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1; 2
 end
+
 ```
-### 243. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
 end
+
 ```
-### 244. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1
  2
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
   3
 end
+
 ```
-### 245. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1
  2
@@ -101,9 +141,12 @@ case
  when 4
  5
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
@@ -111,103 +154,135 @@ when 1
 when 4
   5
 end
+
 ```
-### 246. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 123
  when 1
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 123
 when 1
   2
 end
+
 ```
-### 247. unnamed
+### original
 ```ruby
 # BEFORE
+
 case  # foo
  when 1
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case  # foo
 when 1
   2
 end
+
 ```
-### 248. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1  # comment
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 # comment
   2
 end
+
 ```
-### 249. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2 else
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 else
   3
 end
+
 ```
-### 250. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2 else ;
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 else
   3
 end
+
 ```
-### 251. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then 2 else  # comm
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1 then 2
 else # comm
   3
 end
+
 ```
-### 252. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  case
  when 1
@@ -218,9 +293,12 @@ begin
  5
  end
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   case
   when 1
@@ -231,88 +309,115 @@ begin
     5
   end
 end
+
 ```
-### 253. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
 end
+
 ```
-### 254. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 then ;
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
 end
+
 ```
-### 255. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 ;
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1
   2
 end
+
 ```
-### 256. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 ,
  2 ;
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1,
      2
   3
 end
+
 ```
-### 257. unnamed
+### original
 ```ruby
 # BEFORE
+
 case
  when 1 , 2,  # comm
 
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case
 when 1, 2,  # comm
      3
 end
+
 ```
-### 258. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  case
  when :x
@@ -320,9 +425,12 @@ begin
  2
  end
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   case
   when :x
@@ -330,72 +438,97 @@ begin
     2
   end
 end
+
 ```
-### 259. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
  when *x , *y
  2
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when *x, *y
   2
 end
+
 ```
-### 260. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
 when *x then 2
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when *x then 2
 end
+
 ```
-### 261. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
 when  2  then  3
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when 2 then 3
 end
+
 ```
-### 262. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
 when 2 then # comment
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when 2 then # comment
 end
+
 ```
-### 263. unnamed
+### original
 ```ruby
 # BEFORE
+
 case 1
  when 2 then 3
  else
   4
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 case 1
 when 2 then 3
 else

@@ -4,366 +4,488 @@ permalink: "/docs/method_definition/"
 excerpt: "method_definition Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 445. unnamed
+### original
 ```ruby
 # BEFORE
-def foo
+
+  def foo
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo
 end
+
 ```
-### 446. unnamed
+### original
 ```ruby
 # BEFORE
-def foo ; end
+
+  def foo ; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo; end
+
 ```
-### 447. unnamed
+### original
 ```ruby
 # BEFORE
-def foo()
+
+  def foo()
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo()
 end
+
 ```
-### 448. unnamed
+### original
 ```ruby
 # BEFORE
-def foo() 1 end
+
+  def foo() 1 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo() 1 end
+
 ```
-### 449. unnamed
+### original
 ```ruby
 # BEFORE
-def foo(
+
+  def foo(
  )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo()
 end
+
 ```
-### 450. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( x )
+
+  def foo( x )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x)
 end
+
 ```
-### 451. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( x , y )
- end
+
+  def foo( x , y )
+  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x, y)
 end
+
 ```
-### 452. unnamed
+### original
 ```ruby
 # BEFORE
-def foo x
- end
-```
-```ruby
-# AFTER
-def foo(x)
-end
-```
-### 453. unnamed
-```ruby
-# BEFORE
-def foo x , y
- end
-```
-```ruby
-# AFTER
-def foo(x, y)
-end
-```
-### 454. unnamed
-```ruby
-# BEFORE
-def foo
+
+  def foo
  1
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo
   1
 end
+
 ```
-### 455. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( * x )
+
+  def foo( * x )
  1
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(*x)
   1
 end
+
 ```
-### 456. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a , * x )
+
+  def foo( a , * x )
  1
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a, *x)
   1
 end
+
 ```
-### 457. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a , * x, b )
+
+  def foo( a , * x, b )
  1
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a, *x, b)
   1
 end
+
 ```
-### 458. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( x  =  1 )
+
+  def foo( x  =  1 )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x = 1)
 end
+
 ```
-### 459. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( x  =  1, * y )
+
+  def foo( x  =  1, * y )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x = 1, *y)
 end
+
 ```
-### 460. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( & block )
+
+  def foo( & block )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(&block)
 end
+
 ```
-### 461. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a: , b: )
+
+  def foo( a: , b: )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a:, b:)
 end
+
 ```
-### 462. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a: 1 , b: 2  )
+
+  def foo( a: 1 , b: 2  )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a: 1, b: 2)
 end
+
 ```
-### 463. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( x,
+
+  def foo( x,
  y )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(x,
         y)
 end
+
 ```
-### 464. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a: 1,
+
+  def foo( a: 1,
  b: 2 )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a: 1,
         b: 2)
 end
+
 ```
-### 465. unnamed
+### original
 ```ruby
 # BEFORE
-def foo(
+
+  def foo(
  x,
  y )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(
         x,
         y)
 end
+
 ```
-### 466. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a: 1, &block )
+
+  def foo( a: 1, &block )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a: 1, &block)
 end
+
 ```
-### 467. unnamed
+### original
 ```ruby
 # BEFORE
-def foo( a: 1,
+
+  def foo( a: 1,
  &block )
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(a: 1,
         &block)
 end
+
 ```
-### 468. unnamed
+### original
 ```ruby
 # BEFORE
-def foo(*)
+
+  def foo(*)
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(*)
 end
+
 ```
-### 469. unnamed
+### original
 ```ruby
 # BEFORE
-def foo(**)
+
+  def foo(**)
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo(**)
 end
+
 ```
-### 470. unnamed
+### original
 ```ruby
 # BEFORE
+
 def `(cmd)
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def `(cmd)
 end
+
 ```
-### 471. unnamed
+### original
 ```ruby
 # BEFORE
+
 module_function def foo
   1
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 module_function def foo
   1
 end
+
 ```
-### 472. unnamed
+### original
 ```ruby
 # BEFORE
+
 private def foo
   1
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 private def foo
   1
 end
+
 ```
-### 473. unnamed
+### original
 ```ruby
 # BEFORE
+
 some class Foo
   1
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 some class Foo
   1
 end
+
 ```
-### 474. unnamed
+### original
 ```ruby
 # BEFORE
+
 def foo; 1; end
 def bar; 2; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo; 1; end
 def bar; 2; end
+
 ```
-### 475. unnamed
+### original
 ```ruby
 # BEFORE
+
 def foo; 1; end
 
 def bar; 2; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 def foo; 1; end
 
 def bar; 2; end

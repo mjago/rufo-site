@@ -4,152 +4,270 @@ permalink: "/docs/binary_operators/"
 excerpt: "binary_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 153. unnamed
+### original
 ```ruby
 # BEFORE
+
 1   +   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1   +   2
+
 ```
-### 154. unnamed
-```ruby
-# BEFORE
-1+2
-```
+### unique 1
 ```ruby
 # AFTER
-1+2
+
+1 + 2
 ```
-### 155. unnamed
+### original
 ```ruby
 # BEFORE
+
+1+2
+
+```
+### expected
+```ruby
+# AFTER
+
+1+2
+
+```
+### original
+```ruby
+# BEFORE
+
 1   +  
  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1   +
   2
+
 ```
-### 156. unnamed
-```ruby
-# BEFORE
-1   +  # hello 
- 2
-```
+### unique 1
 ```ruby
 # AFTER
-1   + # hello
+
+1 +
   2
 ```
-### 157. unnamed
+### original
 ```ruby
 # BEFORE
+
+1   +  # hello 
+ 2
+
+```
+### expected
+```ruby
+# AFTER
+
+1   + # hello
+  2
+
+```
+### unique 1
+```ruby
+# AFTER
+
+1 + # hello
+  2
+```
+### original
+```ruby
+# BEFORE
+
 1 +
  2+
  3
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 +
   2+
   3
+
 ```
-### 158. unnamed
+### original
 ```ruby
 # BEFORE
+
 1  &&  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1  &&  2
+
 ```
-### 159. unnamed
-```ruby
-# BEFORE
-1  ||  2
-```
+### unique 1
 ```ruby
 # AFTER
-1  ||  2
+
+1 && 2
 ```
-### 160. unnamed
+### original
 ```ruby
 # BEFORE
+
+1  ||  2
+
+```
+### expected
+```ruby
+# AFTER
+
+1  ||  2
+
+```
+### unique 1
+```ruby
+# AFTER
+
+1 || 2
+```
+### original
+```ruby
+# BEFORE
+
+1*2
+
+```
+### expected
+```ruby
+# AFTER
+
+1*2
+
+```
+### original
+```ruby
+# BEFORE
+
+1* 2
+
+```
+### expected
+```ruby
+# AFTER
+
+1* 2
+
+```
+### unique 1
+```ruby
+# AFTER
+
 1*2
 ```
-```ruby
-# AFTER
-1*2
-```
-### 161. unnamed
+### original
 ```ruby
 # BEFORE
-1* 2
-```
-```ruby
-# AFTER
-1* 2
-```
-### 162. unnamed
-```ruby
-# BEFORE
+
 1 *2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 *2
+
 ```
-### 163. unnamed
-```ruby
-# BEFORE
-1/2
-```
+### unique 1
 ```ruby
 # AFTER
-1/2
+
+1 * 2
 ```
-### 164. unnamed
+### original
 ```ruby
 # BEFORE
-1**2
+
+1/2
+
 ```
+### expected
 ```ruby
 # AFTER
-1**2
+
+1/2
+
 ```
-### 165. unnamed
+### original
 ```ruby
 # BEFORE
+
+1**2
+
+```
+### expected
+```ruby
+# AFTER
+
+1**2
+
+```
+### original
+```ruby
+# BEFORE
+
 1 \
  + 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 \
   + 2
+
 ```
-### 166. unnamed
+### original
 ```ruby
 # BEFORE
+
 a = 1 ||
 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a = 1 ||
     2
+
 ```
-### 167. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 ||
 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 ||
 2
 ```

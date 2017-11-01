@@ -4,39 +4,59 @@ permalink: "/docs/spaces_around_block_brace/"
 excerpt: "spaces_around_block_brace Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 585. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo{1}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { 1 }
+
 ```
-### 586. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo{|x|1}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x| 1 }
+
 ```
-### 587. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  {  1  }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { 1 }
+
 ```
-### 588. unnamed
+### original
 ```ruby
 # BEFORE
+
 ->{1}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 -> { 1 }
+
 ```

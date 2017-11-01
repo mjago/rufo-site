@@ -4,92 +4,131 @@ permalink: "/docs/while/"
 excerpt: "while Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 722. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1 ; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1; end
+
 ```
-### 723. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1 ; 2 ; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1; 2; end
+
 ```
-### 724. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1
 end
+
 ```
-### 725. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1
  2
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1
   2
   3
 end
+
 ```
-### 726. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1  # foo
  2
  3
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1 # foo
   2
   3
 end
+
 ```
-### 727. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1 do  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1 do end
+
 ```
-### 728. unnamed
+### original
 ```ruby
 # BEFORE
+
 while 1 do  2  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 while 1 do 2 end
+
 ```
-### 729. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  while 1  do  2  end
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   while 1 do 2 end
 end

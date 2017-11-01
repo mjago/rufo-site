@@ -4,107 +4,169 @@ permalink: "/docs/array_access/"
 excerpt: "array_access Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 66. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[ ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[]
+
 ```
-### 67. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[
  ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[]
+
 ```
-### 68. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[ 1 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[1]
+
 ```
-### 69. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[ 1 , 2 , 3 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[1, 2, 3]
+
 ```
-### 70. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[ 1 ,
  2 ,
  3 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[1,
     2,
     3]
+
 ```
-### 71. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[
  1 ,
  2 ,
  3 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[
   1,
   2,
   3]
+
 ```
-### 72. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[ *x ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[*x]
+
 ```
-### 73. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo[
  1,
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[
   1,
 ]
+
 ```
-### 74. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo[
+  1
+]
+```
+### original
 ```ruby
 # BEFORE
+
 foo[
  1,
  2 , 3,
  4,
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo[
   1,
   2, 3,
   4,
+]
+```
+### unique 1
+```ruby
+# AFTER
+
+foo[
+  1,
+  2, 3,
+  4
 ]
 ```

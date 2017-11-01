@@ -4,273 +4,442 @@ permalink: "/docs/calls_with_receiver/"
 excerpt: "calls_with_receiver Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 213. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo . bar . baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar.baz
+
 ```
-### 214. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo . bar( 1 , 2 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1, 2)
+
 ```
-### 215. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo .
  bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.
   bar
+
 ```
-### 216. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo .
  bar .
  baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.
   bar.
   baz
+
 ```
-### 217. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo
  . bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo
   .bar
+
 ```
-### 218. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo
  . bar
  . baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo
   .bar
   .baz
+
 ```
-### 219. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.bar
 .baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar
   .baz
+
 ```
-### 220. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar
+   .baz
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar(1)
 .baz(2)
 .qux(3)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1)
   .baz(2)
   .qux(3)
+
 ```
-### 221. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar(1)
+   .baz(2)
+   .qux(3)
+```
+### original
 ```ruby
 # BEFORE
+
 foobar.baz
 .with(
 1
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foobar.baz
   .with(
     1
   )
+
 ```
-### 222. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foobar.baz
+      .with(
+        1
+      )
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar 1,
  x: 1,
  y: 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar 1,
         x: 1,
         y: 2
+
 ```
-### 223. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo
   .bar # x
   .baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo
   .bar # x
   .baz
+
 ```
-### 224. unnamed
+### original
 ```ruby
 # BEFORE
+
 c.x w 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 c.x w 1
+
 ```
-### 225. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.bar
   .baz
   .baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar
   .baz
   .baz
+
 ```
-### 226. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar
+   .baz
+   .baz
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar
   .baz
    .baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar
   .baz
   .baz
+
 ```
-### 227. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar
+   .baz
+   .baz
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar(1)
    .baz([
   2,
 ])
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1)
    .baz([
      2,
    ])
+
 ```
-### 228. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar(1)
+   .baz([
+     2
+   ])
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar(1)
    .baz(
   2,
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1)
    .baz(
      2,
    )
+
 ```
-### 229. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo.bar(1)
+   .baz(
+     2
+   )
+```
+### original
 ```ruby
 # BEFORE
+
 foo.bar(1)
    .baz(
   qux(
 2
 )
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1)
    .baz(
      qux(
        2
      )
    )
+
 ```
-### 230. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.bar(1)
    .baz(
   qux.last(
 2
 )
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(1)
    .baz(
      qux.last(
        2
      )
    )
+
 ```
-### 231. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.bar(
 1
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar(
   1
 )
+
 ```
-### 232. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo 1, [
   2,
 
   3,
 ]
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1, [
   2,
 
   3,
 ]
+
 ```
-### 233. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo 1, [
+  2,
+
+  3
+]
+```
+### original
 ```ruby
 # BEFORE
+
 foo :x, {
   :foo1 => :bar,
 
@@ -280,9 +449,12 @@ foo :x, {
 multiline :call,
           :foo => :bar,
           :foo => bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo :x, {
   :foo1 => :bar,
 
@@ -292,65 +464,104 @@ foo :x, {
 multiline :call,
           :foo => :bar,
           :foo => bar
+
 ```
-### 234. unnamed
+### unique 1
+```ruby
+# AFTER
+
+foo :x, {
+  :foo1 => :bar,
+
+  :foo2 => bar
+}
+
+multiline :call,
+          :foo => :bar,
+          :foo => bar
+```
+### original
 ```ruby
 # BEFORE
+
 x
   .foo.bar
   .baz
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x
   .foo.bar
   .baz
+
 ```
-### 235. unnamed
+### original
 ```ruby
 # BEFORE
+
 x
   .foo.bar.baz
   .qux
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x
   .foo.bar.baz
   .qux
+
 ```
-### 236. unnamed
+### original
 ```ruby
 # BEFORE
+
 x
   .foo(a.b).bar(c.d).baz(e.f)
   .qux.z(a.b)
   .final
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x
   .foo(a.b).bar(c.d).baz(e.f)
   .qux.z(a.b)
   .final
+
 ```
-### 237. unnamed
+### original
 ```ruby
 # BEFORE
+
 x.y  1,  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x.y 1, 2
+
 ```
-### 238. unnamed
+### original
 ```ruby
 # BEFORE
+
 x.y \
   1,  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x.y \
   1, 2
 ```

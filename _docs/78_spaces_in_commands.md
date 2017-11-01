@@ -4,48 +4,73 @@ permalink: "/docs/spaces_in_commands/"
 excerpt: "spaces_in_commands Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 605. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo 1
+
 ```
-### 606. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo.bar  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo.bar 1
+
 ```
-### 607. unnamed
+### original
 ```ruby
 # BEFORE
+
 not x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not x
+
 ```
-### 608. unnamed
+### original
 ```ruby
 # BEFORE
+
 not  x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 not x
+
 ```
-### 609. unnamed
+### original
 ```ruby
 # BEFORE
+
 defined?  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 defined? 1
+
 ```

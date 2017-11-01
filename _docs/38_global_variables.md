@@ -4,21 +4,30 @@ permalink: "/docs/global_variables/"
 excerpt: "global_variables Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 315. unnamed
+### original
 ```ruby
 # BEFORE
+
 $abc
+
 ```
+### expected
 ```ruby
 # AFTER
+
 $abc
+
 ```
-### 316. unnamed
+### original
 ```ruby
 # BEFORE
+
 $abc . d
+
 ```
+### expected
 ```ruby
 # AFTER
+
 $abc.d
 ```

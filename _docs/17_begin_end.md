@@ -4,267 +4,371 @@ permalink: "/docs/begin_end/"
 excerpt: "begin_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 120. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin;end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin; end
+
 ```
-### 121. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
 end
+
 ```
-### 122. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin 1 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin 1 end
+
 ```
-### 123. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin; 1; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin; 1; end
+
 ```
-### 124. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin; 1; 2; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin; 1; 2; end
+
 ```
-### 125. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin; 1 
  2; end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin; 1
   2; end
+
 ```
-### 126. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  1 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   1
 end
+
 ```
-### 127. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  1 
  2 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   1
   2
 end
+
 ```
-### 128. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin 
  begin 
  1 
  end 
  2 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   begin
     1
   end
   2
 end
+
 ```
-### 129. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin # hello
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin # hello
 end
+
 ```
-### 130. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin;# hello
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin # hello
 end
+
 ```
-### 131. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  1  # a
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   1  # a
 end
+
 ```
-### 132. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  1  # a
  # b 
  3 # c 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   1  # a
   # b
   3 # c
 end
+
 ```
-### 133. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
 end
 
 # foo
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
 end
 
 # foo
+
 ```
-### 134. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   begin 1 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   begin 1 end
 end
+
 ```
-### 135. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   def foo(x) 1 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   def foo(x) 1 end
 end
+
 ```
-### 136. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   if 1 then 2 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   if 1 then 2 end
 end
+
 ```
-### 137. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   if 1 then 2 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   if 1 then 2 end
 end
+
 ```
-### 138. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   foo do 1 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo do 1 end
 end
+
 ```
-### 139. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   for x in y do 1 end
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   for x in y do 1 end
 end
+
 ```
-### 140. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
   # foo
 
   1
 end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   # foo
 

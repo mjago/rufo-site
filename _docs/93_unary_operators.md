@@ -4,48 +4,72 @@ permalink: "/docs/unary_operators/"
 excerpt: "unary_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 703. unnamed
+### original
 ```ruby
 # BEFORE
+
 - x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 -x
+
 ```
-### 704. unnamed
+### original
 ```ruby
 # BEFORE
+
 + x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 +x
+
 ```
-### 705. unnamed
+### original
 ```ruby
 # BEFORE
+
 +x
+
 ```
+### expected
 ```ruby
 # AFTER
+
 +x
+
 ```
-### 706. unnamed
+### original
 ```ruby
 # BEFORE
+
 +(x)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 +(x)
+
 ```
-### 707. unnamed
+### original
 ```ruby
 # BEFORE
+
 + (x)
+
 ```
+### expected
 ```ruby
 # AFTER
+
 +(x)
 ```

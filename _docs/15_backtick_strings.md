@@ -4,21 +4,30 @@ permalink: "/docs/backtick_strings/"
 excerpt: "backtick_strings Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 116. unnamed
+### original
 ```ruby
 # BEFORE
+
 `cat meow`
+
 ```
+### expected
 ```ruby
 # AFTER
+
 `cat meow`
+
 ```
-### 117. unnamed
+### original
 ```ruby
 # BEFORE
-%x( cat meow )
+
+ %x( cat meow )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 %x( cat meow )
 ```

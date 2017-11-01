@@ -4,32 +4,46 @@ permalink: "/docs/assignment_operators/"
 excerpt: "assignment_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 101. unnamed
+### original
 ```ruby
 # BEFORE
+
 a += 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a += 2
+
 ```
-### 102. unnamed
+### original
 ```ruby
 # BEFORE
+
 a +=
  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a +=
   2
+
 ```
-### 103. unnamed
+### original
 ```ruby
 # BEFORE
+
 a+=1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 a += 1
 ```

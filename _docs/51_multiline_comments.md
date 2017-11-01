@@ -4,24 +4,30 @@ permalink: "/docs/multiline_comments/"
 excerpt: "multiline_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 482. multiline_comment
+### original
 ```ruby
 # BEFORE
+
 =begin
   foo
   bar
 =end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 =begin
   foo
   bar
 =end
+
 ```
-### 483. multiline_comment_2
+### original
 ```ruby
 # BEFORE
+
 1
 
 =begin
@@ -30,9 +36,12 @@ excerpt: "multiline_comments Specs."
 =end
 
 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 
 =begin
@@ -41,17 +50,22 @@ excerpt: "multiline_comments Specs."
 =end
 
 2
+
 ```
-### 484. multiline_comment_3
+### original
 ```ruby
 # BEFORE
+
 # foo
 =begin
 bar
 =end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # foo
 =begin
 bar

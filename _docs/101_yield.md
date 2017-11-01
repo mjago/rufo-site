@@ -4,50 +4,74 @@ permalink: "/docs/yield/"
 excerpt: "yield Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 730. yield
+### original
 ```ruby
 # BEFORE
+
 yield
+
 ```
+### expected
 ```ruby
 # AFTER
+
 yield
+
 ```
-### 731. unnamed
+### original
 ```ruby
 # BEFORE
+
 yield  1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 yield 1
+
 ```
-### 732. unnamed
+### original
 ```ruby
 # BEFORE
+
 yield  1 , 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 yield 1, 2
+
 ```
-### 733. unnamed
+### original
 ```ruby
 # BEFORE
+
 yield  1 , 
  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 yield 1,
       2
+
 ```
-### 734. unnamed
+### original
 ```ruby
 # BEFORE
+
 yield( 1 , 2 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 yield(1, 2)
 ```

@@ -4,348 +4,522 @@ permalink: "/docs/blocks/"
 excerpt: "blocks Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 168. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   {}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { }
+
 ```
-### 169. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   {   }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { }
+
 ```
-### 170. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   {  1 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { 1 }
+
 ```
-### 171. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   {  1 ; 2 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { 1; 2 }
+
 ```
-### 172. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   {  1
  2 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo {
   1
   2
 }
+
 ```
-### 173. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo {
   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo {
   1
 }
+
 ```
-### 174. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  foo {  1  }
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   foo { 1 }
 end
+
 ```
-### 175. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x , y | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x, y| }
+
 ```
-### 176. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x , | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x, | }
+
 ```
-### 177. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x , y, | bar}
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x, y, | bar }
+
 ```
-### 178. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { || }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { }
+
 ```
-### 179. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { }
+
 ```
-### 180. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | ( x ) , z | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |(x), z| }
+
 ```
-### 181. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | ( x , y ) , z | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |(x, y), z| }
+
 ```
-### 182. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | ( x , ( y , w ) ) , z | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |(x, (y, w)), z| }
+
 ```
-### 183. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | bar: 1 , baz: 2 | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |bar: 1, baz: 2| }
+
 ```
-### 184. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | *z | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |*z| }
+
 ```
-### 185. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | **z | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |**z| }
+
 ```
-### 186. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | bar = 1 | }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |bar = 1| }
+
 ```
-### 187. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x , y | 1 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x, y| 1 }
+
 ```
-### 188. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x |
   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x|
   1
 }
+
 ```
-### 189. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { | x ,
  y |
   1 }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |x,
        y|
   1
 }
+
 ```
-### 190. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   do   end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo do end
+
 ```
-### 191. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo   do 1  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo do 1 end
+
 ```
-### 192. unnamed
+### original
 ```ruby
 # BEFORE
+
 bar foo {
  1
  }, 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 bar foo {
   1
 }, 2
+
 ```
-### 193. unnamed
+### original
 ```ruby
 # BEFORE
+
 bar foo {
  1
  } + 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 bar foo {
   1
 } + 2
+
 ```
-### 194. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { |;x| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |; x| }
+
 ```
-### 195. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { |
 ;x| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |; x| }
+
 ```
-### 196. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { |;x, y| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |; x, y| }
+
 ```
-### 197. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { |a, b;x, y| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |a, b; x, y| }
+
 ```
-### 198. unnamed
+### original
 ```ruby
 # BEFORE
+
 proc { |(x, *y),z| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 proc { |(x, *y), z| }
+
 ```
-### 199. unnamed
+### original
 ```ruby
 # BEFORE
+
 proc { |(w, *x, y), z| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 proc { |(w, *x, y), z| }
+
 ```
-### 200. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { |(*x, y), z| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { |(*x, y), z| }
+
 ```
-### 201. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo { begin; end; }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo { begin; end }
+
 ```
-### 202. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo {
  |i| }
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo {
   |i| }
 ```

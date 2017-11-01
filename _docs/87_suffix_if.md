@@ -4,75 +4,114 @@ permalink: "/docs/suffix_if/"
 excerpt: "suffix_if Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 642. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 if 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 if 2
+
 ```
-### 643. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 unless 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 unless 2
+
 ```
-### 644. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 rescue 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 rescue 2
+
 ```
-### 645. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 while 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 while 2
+
 ```
-### 646. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 until 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 until 2
+
 ```
-### 647. unnamed
+### original
 ```ruby
 # BEFORE
+
 x.y rescue z
+
 ```
+### expected
 ```ruby
 # AFTER
+
 x.y rescue z
+
 ```
-### 648. unnamed
+### original
 ```ruby
 # BEFORE
+
 1  if  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 if 2
+
 ```
-### 649. unnamed
+### original
 ```ruby
 # BEFORE
+
 foo bar(1)  if  2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo bar(1) if 2
 ```

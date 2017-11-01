@@ -4,113 +4,162 @@ permalink: "/docs/semicolons/"
 excerpt: "semicolons Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 557. unnamed
+### original
 ```ruby
 # BEFORE
+
 123;
+
 ```
+### expected
 ```ruby
 # AFTER
+
 123
+
 ```
-### 558. unnamed
+### original
 ```ruby
 # BEFORE
+
 1   ;   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1; 2
+
 ```
-### 559. unnamed
+### original
 ```ruby
 # BEFORE
+
 1   ;  ;   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1; 2
+
 ```
-### 560. unnamed
+### original
 ```ruby
 # BEFORE
+
 1  
   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 2
+
 ```
-### 561. unnamed
+### original
 ```ruby
 # BEFORE
+
 1  
    
   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 
 2
+
 ```
-### 562. unnamed
+### original
 ```ruby
 # BEFORE
+
 1  
  ; ; ; 
   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 
 2
+
 ```
-### 563. unnamed
+### original
 ```ruby
 # BEFORE
+
 1 ; 
  ; 
  ; ; 
   2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 
 2
+
 ```
-### 564. unnamed
+### original
 ```ruby
 # BEFORE
+
 123; # hello
+
 ```
+### expected
 ```ruby
 # AFTER
+
 123 # hello
+
 ```
-### 565. unnamed
+### original
 ```ruby
 # BEFORE
+
 1;
 2
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1
 2
+
 ```
-### 566. unnamed
+### original
 ```ruby
 # BEFORE
+
 begin
  1 ; 2 
  end
+
 ```
+### expected
 ```ruby
 # AFTER
+
 begin
   1; 2
 end

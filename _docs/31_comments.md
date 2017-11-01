@@ -4,141 +4,197 @@ permalink: "/docs/comments/"
 excerpt: "comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### 275. comment
+### original
 ```ruby
 # BEFORE
+
 # foo
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # foo
+
 ```
-### 276. two_comments
+### original
 ```ruby
 # BEFORE
+
 # foo
 # bar
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # foo
 # bar
+
 ```
-### 277. integer_with_comment
+### original
 ```ruby
 # BEFORE
+
 1   # foo
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1   # foo
+
 ```
-### 278. comment_with_double_line_break
+### original
 ```ruby
 # BEFORE
+
 # a
 
 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # a
 
 # b
+
 ```
-### 279. comment_with_triple_line_break
+### original
 ```ruby
 # BEFORE
+
 # a
 
 
 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # a
 
 # b
+
 ```
-### 280. comment_and_integer
+### original
 ```ruby
 # BEFORE
+
 # a
 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # a
 1
+
 ```
-### 281. comment_double_newline_integer
+### original
 ```ruby
 # BEFORE
+
 # a
 
 
 1
+
 ```
+### expected
 ```ruby
 # AFTER
+
 # a
 
 1
+
 ```
-### 282. integer_with_comment_and_following_comment
+### original
 ```ruby
 # BEFORE
+
 1 # a
 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 # b
+
 ```
-### 283. integer_with_comment_and_multiline_break
+### original
 ```ruby
 # BEFORE
+
 1 # a
 
 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 
 # b
+
 ```
-### 284. integers_separated_by_comments
+### original
 ```ruby
 # BEFORE
+
 1 # a
 
 2 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 
 2 # b
+
 ```
-### 285. multiple_trailing_comments
+### original
 ```ruby
 # BEFORE
+
 1 # a
 
 
 2 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 
 2 # b
+
 ```
-### 286. more_trailing_comments
+### original
 ```ruby
 # BEFORE
+
 1 # a
 
 
@@ -147,16 +203,21 @@ excerpt: "comments Specs."
 
 
 2 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 
 2 # b
+
 ```
-### 287. still_more_trailing_comments
+### original
 ```ruby
 # BEFORE
+
 1 # a
 
 
@@ -165,79 +226,140 @@ excerpt: "comments Specs."
 
  # c
  2 # b
+
 ```
+### expected
 ```ruby
 # AFTER
+
 1 # a
 
 # b
 
 # c
 2 # b
+
 ```
-### 288. comment_indentation_inside_method_call
+### original
 ```ruby
 # BEFORE
+
 foo(
 # comment for foo
 foo: 'foo'
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
+foo(
+  # comment for foo
+  foo: 'foo',
+)
+
+```
+### unique 1
+```ruby
+# AFTER
+
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### 289. comment_indentation_inside_method_call_2
+### original
 ```ruby
 # BEFORE
+
 foo(
  # comment for foo
 foo: 'foo'
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
+foo(
+  # comment for foo
+  foo: 'foo',
+)
+
+```
+### unique 1
+```ruby
+# AFTER
+
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### 290. comment_indentation_inside_method_call_3
+### original
 ```ruby
 # BEFORE
+
 foo(
   # comment for foo
 foo: 'foo'
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
+foo(
+  # comment for foo
+  foo: 'foo',
+)
+
+```
+### unique 1
+```ruby
+# AFTER
+
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### 291. comment_indentation_inside_method_call_4
+### original
 ```ruby
 # BEFORE
+
 foo(
    # comment for foo
 foo: 'foo'
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
+foo(
+  # comment for foo
+  foo: 'foo',
+)
+
+```
+### unique 1
+```ruby
+# AFTER
+
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### 292. multiple_comments_inside_method_call
+### original
 ```ruby
 # BEFORE
+
 foo(
 # comment for foo
 foo: 'foo',
@@ -245,14 +367,29 @@ foo: 'foo',
 # comment for bar
 bar: 'bar',
 )
+
 ```
+### expected
 ```ruby
 # AFTER
+
 foo(
   # comment for foo
   foo: 'foo',
 
   # comment for bar
   bar: 'bar',
+)
+```
+### unique 1
+```ruby
+# AFTER
+
+foo(
+  # comment for foo
+  foo: 'foo',
+
+  # comment for bar
+  bar: 'bar'
 )
 ```
