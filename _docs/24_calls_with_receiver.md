@@ -110,7 +110,7 @@ foo.bar
 
 ```
 ```ruby
-# with setting :align_chained_calls true
+# with setting `align_chained_calls true`
 
 foo.bar
    .baz
@@ -133,7 +133,7 @@ foo.bar(1)
 
 ```
 ```ruby
-# with setting :align_chained_calls true
+# with setting `align_chained_calls true`
 
 foo.bar(1)
    .baz(2)
@@ -159,7 +159,7 @@ foobar.baz
 
 ```
 ```ruby
-# with setting :align_chained_calls true
+# with setting `align_chained_calls true`
 
 foobar.baz
       .with(
@@ -231,7 +231,7 @@ foo.bar
 
 ```
 ```ruby
-# with setting :align_chained_calls true
+# with setting `align_chained_calls true`
 
 foo.bar
    .baz
@@ -255,7 +255,7 @@ foo.bar
 
 ```
 ```ruby
-# with setting :align_chained_calls true
+# with setting `align_chained_calls true`
 
 foo.bar
    .baz
@@ -281,7 +281,7 @@ foo.bar(1)
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo.bar(1)
    .baz([
@@ -308,7 +308,7 @@ foo.bar(1)
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo.bar(1)
    .baz(
@@ -400,7 +400,7 @@ foo 1, [
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo 1, [
   2,
@@ -438,7 +438,7 @@ multiline :call,
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo :x, {
   :foo1 => :bar,

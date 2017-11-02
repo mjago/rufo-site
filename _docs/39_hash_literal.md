@@ -88,7 +88,7 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   :foo => 1,

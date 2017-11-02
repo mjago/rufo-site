@@ -124,7 +124,7 @@ foo[
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo[
   1
@@ -151,7 +151,7 @@ foo[
 ]
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo[
   1,

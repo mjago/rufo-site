@@ -31,7 +31,7 @@ excerpt: "spaces_around_binary Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 + 2
 ```
@@ -49,7 +49,7 @@ excerpt: "spaces_around_binary Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1+2
 ```

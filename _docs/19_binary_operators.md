@@ -18,7 +18,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 + 2
 ```
@@ -51,7 +51,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 +
   2
@@ -72,7 +72,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 + # hello
   2
@@ -108,7 +108,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 && 2
 ```
@@ -126,7 +126,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 || 2
 ```
@@ -157,7 +157,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1*2
 ```
@@ -175,7 +175,7 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 1 * 2
 ```

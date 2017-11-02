@@ -26,7 +26,7 @@ end
 
 ```
 ```ruby
-# with setting :double_newline_inside_type :no
+# with setting `double_newline_inside_type :no`
 
 class Foo
   1

@@ -73,7 +73,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2
@@ -96,7 +96,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2
@@ -121,7 +121,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2,
@@ -147,7 +147,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,
@@ -173,7 +173,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [ # comment
   1,
@@ -199,7 +199,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,  # comment
@@ -298,7 +298,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 begin
   [
@@ -324,7 +324,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1 # foo
@@ -387,7 +387,7 @@ x = [{
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 x = [{
   foo: 1
@@ -428,7 +428,7 @@ x = [{
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,
@@ -456,7 +456,7 @@ x = [{
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   *a,
@@ -482,7 +482,7 @@ x = [{
 ]
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, *a,

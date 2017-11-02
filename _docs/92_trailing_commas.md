@@ -24,7 +24,7 @@ excerpt: "trailing_commas Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,
@@ -51,7 +51,7 @@ excerpt: "trailing_commas Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,
@@ -78,7 +78,7 @@ excerpt: "trailing_commas Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   foo: 1,
@@ -105,7 +105,7 @@ excerpt: "trailing_commas Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   foo: 1,
@@ -134,7 +134,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo(
   one: 1,
@@ -164,7 +164,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo(
   one: 1,
@@ -189,7 +189,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo(
   one: 1
@@ -212,7 +212,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo(
   one: 1
@@ -235,7 +235,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2
@@ -258,7 +258,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2
@@ -283,7 +283,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1, 2,
@@ -309,7 +309,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,
@@ -335,7 +335,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [ # comment
   1,
@@ -361,7 +361,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,  # comment
@@ -460,7 +460,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 begin
   [
@@ -486,7 +486,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1 # foo

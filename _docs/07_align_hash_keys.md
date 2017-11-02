@@ -23,7 +23,7 @@ excerpt: "align_hash_keys Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   1 => 2,
@@ -49,7 +49,7 @@ excerpt: "align_hash_keys Specs."
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   foo: 1,
@@ -90,7 +90,7 @@ foo(
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo(
   bar: 1,
@@ -155,7 +155,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   1 => 2,
@@ -188,7 +188,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   1 => 2,
@@ -221,7 +221,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   1 => 2,
@@ -254,7 +254,7 @@ end
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   1 => 2,
@@ -283,7 +283,7 @@ foo 1, bar: [
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 foo 1, bar: [
          2
@@ -376,7 +376,7 @@ a = b :foo => x,
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   :foo => 1,
@@ -422,7 +422,7 @@ a = b :foo => x,
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 =begin
 =end
@@ -463,7 +463,7 @@ foo 1, :bar => 2, :baz => 3
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 {
   foo: 1,

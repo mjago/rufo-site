@@ -134,9 +134,6 @@ class RenderSpecs
       gz.close
       @diffs_hash = YAML.load(yml)
     end
-
-    #    pp @diffs_hash
-    #    exit
   end
 
   def test_locator_name(test)
@@ -167,11 +164,10 @@ class RenderSpecs
 
   def fetch_option(count)
     options = fetch_options(count)
-    pp options
     str = ''
     6.times do |y|
       if options[settings[y][0]] == settings[y][2]
-        str += settings[y][0].inspect + ' ' + settings[y][2].inspect
+        str += '`' + settings[y][0].to_s + ' ' + settings[y][2].inspect + '`'
       end
     end
     str
@@ -215,7 +211,6 @@ class RenderSpecs
             end
 
             # start a new test
-#            puts "filename #{filename}"
             name = $~[1].strip
             test_count += 1
             name = "unnamed test #{test_count}" if name.empty?
@@ -234,7 +229,6 @@ class RenderSpecs
             current_test[:original] += line
           end
         end
-        puts "filename #{filename}"
         file_tests << current_test
         tests << { file_name: filename,
                    relative_path: '../test_all_settings',
@@ -274,13 +268,11 @@ class RenderSpecs
   end
 
   def build(tests)
-    pp tests
     file_count = 0
     tests.each do |test|
       file_count += 1
       @filename = File.basename(test[:file_name])
       with_write_file out_filename(File.basename(test[:file_name]), file_count) do |wf|
-#        File.basename(test[:file_name]
         front_matter(wf)
         test[:tests].each do |test_data|
           render(test_data[:name], :original, test_data[:original], wf)

@@ -26,7 +26,7 @@ end
 
 ```
 ```ruby
-# with setting :align_case_when true
+# with setting `align_case_when true`
 
 case
 when 1   then 2

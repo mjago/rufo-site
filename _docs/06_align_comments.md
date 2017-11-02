@@ -217,7 +217,7 @@ bar = 2 # baz
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,   # foo
@@ -244,7 +244,7 @@ bar = 2 # baz
 
 ```
 ```ruby
-# with setting :trailing_commas :never
+# with setting `trailing_commas :never`
 
 [
   1,   # foo

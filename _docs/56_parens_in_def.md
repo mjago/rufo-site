@@ -31,7 +31,7 @@ def foo x; end
 
 ```
 ```ruby
-# with setting :parens_in_def :yes
+# with setting `parens_in_def :yes`
 
 def foo(x); end
 ```

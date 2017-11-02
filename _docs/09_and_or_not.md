@@ -18,7 +18,7 @@ foo  and  bar
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 foo and bar
 ```
@@ -36,7 +36,7 @@ foo  or  bar
 
 ```
 ```ruby
-# with setting :spaces_around_binary :one
+# with setting `spaces_around_binary :one`
 
 foo or bar
 ```

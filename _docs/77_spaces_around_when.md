@@ -23,7 +23,7 @@ else 4
 end
 ```
 ```ruby
-# with setting :align_case_when true
+# with setting `align_case_when true`
 
 case 1
 when 2 then 3
