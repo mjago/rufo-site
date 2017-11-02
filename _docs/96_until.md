@@ -4,16 +4,15 @@ permalink: "/docs/until/"
 excerpt: "until Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 until 1 ; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 until 1; end
 ```

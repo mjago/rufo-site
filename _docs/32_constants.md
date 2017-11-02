@@ -4,129 +4,120 @@ permalink: "/docs/constants/"
 excerpt: "constants Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 Foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 Foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 Foo::Bar::Baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 Foo::Bar::Baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 Foo::Bar::Baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 Foo::Bar::Baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 Foo:: Bar:: Baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 Foo::Bar::Baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 Foo:: 
 Bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 Foo::Bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ::Foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 ::Foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ::Foo::Bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 ::Foo::Bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ::Foo = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 ::Foo = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ::Foo::Bar = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 ::Foo::Bar = 1
 ```

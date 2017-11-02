@@ -4,88 +4,81 @@ permalink: "/docs/binary_operators/"
 excerpt: "binary_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 1   +   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1   +   2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 + 2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1+2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1+2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1   +  
  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1   +
   2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 +
   2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1   +  # hello 
  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1   + # hello
   2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 + # hello
   2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 +
@@ -93,180 +86,165 @@ excerpt: "binary_operators Specs."
  3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 +
   2+
   3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1  &&  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1  &&  2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 && 2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1  ||  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1  ||  2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 || 2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1*2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1*2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1* 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1* 2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1*2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 *2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 *2
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 1 * 2
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1/2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1/2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1**2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1**2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 \
  + 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 \
   + 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = 1 ||
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1 ||
     2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 ||
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 ||
 2

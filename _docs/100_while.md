@@ -4,52 +4,49 @@ permalink: "/docs/while/"
 excerpt: "while Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1 ; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1 ; 2 ; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1; 2; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1
@@ -58,9 +55,8 @@ while 1
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1
   2
@@ -68,8 +64,8 @@ while 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1  # foo
@@ -78,9 +74,8 @@ while 1  # foo
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1 # foo
   2
@@ -88,36 +83,34 @@ while 1 # foo
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1 do  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1 do end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 while 1 do  2  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 while 1 do 2 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -125,9 +118,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   while 1 do 2 end

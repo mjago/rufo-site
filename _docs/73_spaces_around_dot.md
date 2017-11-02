@@ -4,30 +4,28 @@ permalink: "/docs/spaces_around_dot/"
 excerpt: "spaces_around_dot Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar = 1
 

@@ -4,52 +4,49 @@ permalink: "/docs/comments/"
 excerpt: "comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 # foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # foo
 
 ```
+```ruby
 ### original
-```ruby
 # BEFORE
-
-# foo
-# bar
-
-```
-### expected
-```ruby
-# AFTER
 
 # foo
 # bar
 
 ```
-### original
 ```ruby
+# DEFAULT
+
+# foo
+# bar
+
+```
+```ruby
+### original
 # BEFORE
 
 1   # foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1   # foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # a
@@ -57,17 +54,16 @@ excerpt: "comments Specs."
 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # a
 
 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # a
@@ -76,33 +72,31 @@ excerpt: "comments Specs."
 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # a
 
 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # a
 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # a
 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # a
@@ -111,51 +105,48 @@ excerpt: "comments Specs."
 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # a
 
 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # a
 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # a
 # b
 
 ```
+```ruby
 ### original
-```ruby
 # BEFORE
-
-1 # a
-
-# b
-
-```
-### expected
-```ruby
-# AFTER
 
 1 # a
 
 # b
 
 ```
-### original
 ```ruby
+# DEFAULT
+
+1 # a
+
+# b
+
+```
+```ruby
+### original
 # BEFORE
 
 1 # a
@@ -163,17 +154,16 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # a
 
 2 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # a
@@ -182,17 +172,16 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # a
 
 2 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # a
@@ -205,17 +194,16 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # a
 
 2 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # a
@@ -228,9 +216,8 @@ excerpt: "comments Specs."
  2 # b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # a
 
@@ -240,8 +227,8 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -250,9 +237,8 @@ foo: 'foo'
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   # comment for foo
@@ -260,17 +246,16 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -279,9 +264,8 @@ foo: 'foo'
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   # comment for foo
@@ -289,17 +273,16 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -308,9 +291,8 @@ foo: 'foo'
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   # comment for foo
@@ -318,17 +300,16 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -337,9 +318,8 @@ foo: 'foo'
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   # comment for foo
@@ -347,17 +327,16 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -369,9 +348,8 @@ bar: 'bar',
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   # comment for foo
@@ -381,9 +359,8 @@ foo(
   bar: 'bar',
 )
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   # comment for foo

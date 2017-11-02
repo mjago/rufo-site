@@ -4,8 +4,8 @@ permalink: "/docs/case/"
 excerpt: "case Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -13,17 +13,16 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -32,9 +31,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -42,8 +40,8 @@ when 3 then 4
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -51,9 +49,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -61,17 +58,16 @@ else 3
 end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_case_when  true
 
 case
 when 1 then 2
 else        3
 end
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -79,17 +75,16 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1; 2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -98,9 +93,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -108,8 +102,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -119,9 +113,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -130,8 +123,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -143,9 +136,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -156,8 +148,8 @@ when 4
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 123
@@ -166,9 +158,8 @@ case 123
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 123
 when 1
@@ -176,8 +167,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case  # foo
@@ -186,9 +177,8 @@ case  # foo
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case  # foo
 when 1
@@ -196,8 +186,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -206,9 +196,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 # comment
@@ -216,8 +205,8 @@ when 1 # comment
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -226,9 +215,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -237,8 +225,8 @@ else
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -247,9 +235,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -258,8 +245,8 @@ else
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -268,9 +255,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -279,8 +265,8 @@ else # comm
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -295,9 +281,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   case
@@ -311,8 +296,8 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -321,9 +306,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -331,8 +315,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -341,9 +325,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -351,8 +334,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -361,9 +344,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1
@@ -371,8 +353,8 @@ when 1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -382,9 +364,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1,
@@ -393,8 +374,8 @@ when 1,
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -404,9 +385,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1, 2,  # comm
@@ -414,8 +394,8 @@ when 1, 2,  # comm
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -427,9 +407,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   case
@@ -440,8 +419,8 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -450,9 +429,8 @@ case 1
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when *x, *y
@@ -460,8 +438,8 @@ when *x, *y
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -469,17 +447,16 @@ when *x then 2
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when *x then 2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -487,17 +464,16 @@ when  2  then  3
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when 2 then 3
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -505,17 +481,16 @@ when 2 then # comment
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when 2 then # comment
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -525,9 +500,8 @@ case 1
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when 2 then 3

@@ -4,30 +4,28 @@ permalink: "/docs/spaces_after_lambda_arrow/"
 excerpt: "spaces_after_lambda_arrow Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 ->  { }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->{ }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { }
 

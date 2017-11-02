@@ -4,66 +4,62 @@ permalink: "/docs/semicolons/"
 excerpt: "semicolons Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 123;
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 123
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1   ;   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1; 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1   ;  ;   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1; 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1  
   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1  
@@ -71,17 +67,16 @@ excerpt: "semicolons Specs."
   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1  
@@ -89,17 +84,16 @@ excerpt: "semicolons Specs."
   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 ; 
@@ -108,47 +102,44 @@ excerpt: "semicolons Specs."
   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 123; # hello
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 123 # hello
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1;
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -156,9 +147,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1; 2

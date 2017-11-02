@@ -4,116 +4,108 @@ permalink: "/docs/spaces_after_comma/"
 excerpt: "spaces_after_comma Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1,  2,  3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, 2, 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(1,  2,  3)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(1, 2, 3)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(1,2,3,x:1,y:2)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(1, 2, 3, x: 1, y: 2)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo(x,y)
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x, y)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [1,  2,  3]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, 2, 3]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [1,2,3]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, 2, 3]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a  ,  b = 1,  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b = 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a,b = 1,2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b = 1, 2
 

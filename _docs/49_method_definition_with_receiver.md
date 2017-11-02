@@ -4,32 +4,30 @@ permalink: "/docs/method_definition_with_receiver/"
 excerpt: "method_definition_with_receiver Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
  def foo . 
  bar; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo.bar; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  def self . 
  bar; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def self.bar; end
 ```

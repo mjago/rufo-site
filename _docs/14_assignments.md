@@ -4,54 +4,51 @@ permalink: "/docs/assignments/"
 excerpt: "assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 a   =   1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a   =
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a =
   2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a   =   # hello
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = # hello
   2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = if 1
@@ -59,17 +56,16 @@ a = if 1
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = if 1
       2
     end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = unless 1
@@ -77,17 +73,16 @@ a = unless 1
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = unless 1
       2
     end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = begin
@@ -95,17 +90,16 @@ a = begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = begin
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = case
@@ -114,9 +108,8 @@ a = case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = case
     when 1
@@ -124,8 +117,8 @@ a = case
     end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = begin
@@ -133,17 +126,16 @@ a = begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = begin
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = begin
@@ -153,9 +145,8 @@ rescue
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = begin
       1
@@ -164,8 +155,8 @@ a = begin
     end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = begin
@@ -175,9 +166,8 @@ ensure
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = begin
       1
@@ -186,22 +176,21 @@ a = begin
     end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a=1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = \
@@ -210,9 +199,8 @@ a = \
   end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a =
   begin

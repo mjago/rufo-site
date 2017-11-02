@@ -4,8 +4,8 @@ permalink: "/docs/BEGIN/"
 excerpt: "BEGIN Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 BEGIN  { 
@@ -14,9 +14,8 @@ BEGIN  {
  } 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 BEGIN {
   1
@@ -24,16 +23,15 @@ BEGIN {
 }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 BEGIN  { 1 ; 2 } 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 BEGIN { 1; 2 }
 ```

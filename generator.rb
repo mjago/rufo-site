@@ -10,7 +10,6 @@ class RenderSpecs
                 File.join(SOURCE_SPECS, '2.3/**.rb.spec')]
   OUTDIR = '_docs'
   CONFIGDIR = '_data'
-#  CONFIGDIR = '.'
   SETTINGS_COUNT = 6
   NUM_OF_SETTINGS = 2 ** SETTINGS_COUNT
 
@@ -23,18 +22,15 @@ class RenderSpecs
   end
 
   def write_nav tests
-    hsh = {}
-    arr = []
+    children = []
     tests.each do |test|
       filename = File.basename(test[:file_name])
       fn = filename.gsub('.rb.spec','')
-      arr << {title: fn,
-              url: "/docs/#{fn}"}
+      children << {"title"=> "#{fn}", "url"=>"/docs/#{fn}"}
     end
-    hsh['docs'] = [{ title: "Spec Examples",
-                     children: arr }]
     File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do|f|
-      f.write hsh.to_yaml
+      f.write ({"docs" => [{"title" =>"Spec Examples",
+                            "children"=> children }]}).to_yaml
     end
   end
 
@@ -72,19 +68,20 @@ class RenderSpecs
   end
 
   def render(title, mode, code, out)
-    original = true if mode == :original
+    out.puts '```ruby'
+    case mode
     # code.strip!
-    print_title title, out
-    if original
-      out.puts '```ruby'
+    when :original
+      print_title title, out
       out.puts "# BEFORE"
-    else
-      out.puts '```ruby'
-      out.puts "# AFTER" unless code == ""
+    when :default
+      out.puts "# DEFAULT" unless code == ""
+    when :setting
+      out.puts "# #{title}"
     end
     out.puts code
-              pp code
-#          exit
+    pp code
+    #          exit
     out.puts '```'
   end
 
@@ -168,6 +165,18 @@ class RenderSpecs
     options
   end
 
+  def fetch_option(count)
+    options = fetch_options(count)
+    pp options
+    str = ''
+    6.times do |y|
+      if options[settings[y][0]] == settings[y][2]
+        str += settings[y][0].inspect + '  ' + settings[y][2].inspect
+      end
+    end
+    str
+  end
+
   def options_title(options)
     acw = (options[:align_case_when] == true) ? '✔' : '✘'
     acc = (options[:align_chained_calls] == true) ? '✔' : '✘'
@@ -240,38 +249,14 @@ class RenderSpecs
       test[:tests].each do |data|
         expected_ary = []
         expected = data[:expected].rstrip + "\n"
-        #puts "expected: #{expected}"
-        # puts '**** **** **** **** **** **** **** **** **** **** **** **** **** **** '
         NUM_OF_SETTINGS.times do |iteration|
           #        pending if test[:pending]
-          #        test[:options] = fetch_options(iteration)
-          # formatted = described_class.format(test[:original], **test[:options])
-          #        pp @diffs_hash
-          #        exit
-          # test_locator_name(test)
-          #          puts test.inspect
           file_name = File.basename test[:file_name]
-          #          puts file_name
-          #          puts test[:file_name]
-          #          pp data
-          #          exit
-          #          puts data[:line]
-          #          test[:file_name] + ' ' + test[:line]
-          #puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
           name = "#{(test[:file_name].to_s)} #{data[:line]}"
-          #puts name
           if @diffs_hash[name]
             if @diffs_hash[name][iteration]
               diff = @diffs_hash[name][iteration]
-              #              puts "*********************************"
-              #              puts "iteration: #{iteration}"
-              #              puts "test[:file_name]: #{test[:file_name]}"
-              #              puts "expected: #{expected}"
-              #              puts "diff: #{diff}"
-              #              puts "data[:line]: #{data[:line]}"
               new_expected = Diff::LCS.patch!(expected, diff)
-              #              puts "new_expected: #{new_expected}"
-
               expected_ary << { :setting => iteration, :expected => new_expected }
             end
           end
@@ -286,72 +271,8 @@ class RenderSpecs
     sorted
   end
 
-  #          with_write_file out_filename do |wf|
-  #          @original = @expected = ''
-  #          front_matter(wf)
-  #          with_spec_lines file do |line|
-  #            if original? line
-  #              unless @expected == ""
-  #                render :expected, wf
-  #                @original, @expected = '', ''
-  #              end
-  #              @state = :original
-  #            elsif expected? line
-  #              unless @original == ""
-  #                render :original, wf
-  #              end
-  #              @state = :expected
-  #            else
-  #              case @state
-  #              when :original; @original += line
-  #              when :expected; @expected += line
-  #              else
-  #                raise "ERROR! invalid state!"
-  #              end
-  #            end
-  #          end
-  #          render :expected, wf
-  #        end
-
-#  def run
-#    with_spec_dirs SPEC_FILES do |dir|
-#      @version = :two_three_plus if dir.include?("2.3")
-#      with_spec_files dir do |file|
-#        @file_count += 1
-#        @filename = File.basename(file)
-#        @filenames << @filename.gsub('.rb.spec','')
-#        with_write_file out_filename do |wf|
-#          @original = @expected = ''
-#          front_matter(wf)
-#          with_spec_lines file do |line|
-#            if original? line
-#              unless @expected == ""
-#                render :expected, wf
-#                @original, @expected = '', ''
-#              end
-#              @state = :original
-#            elsif expected? line
-#              unless @original == ""
-#                render :original, wf
-#              end
-#              @state = :expected
-#            else
-#              case @state
-#              when :original; @original += line
-#              when :expected; @expected += line
-#              else
-#                raise "ERROR! invalid state!"
-#              end
-#            end
-#          end
-#          render :expected, wf
-#        end
-#      end
-#    end
-#    write_nav
-#  end
-
   def build(tests)
+    pp tests
     file_count = 0
     tests.each do |test|
       file_count += 1
@@ -361,12 +282,12 @@ class RenderSpecs
         front_matter(wf)
         test[:tests].each do |test_data|
           render('original', :original, test_data[:original], wf)
-          render('expected', :expected, test_data[:expected], wf)
+          render('default', :default, test_data[:expected], wf)
           uniques = test_data[:unique_expects]
           if uniques
             uniques.each_with_index do |uq, idx|
               next if idx.zero?
-              render("unique #{idx}", :expected, uq[:expected], wf)
+              render("#{fetch_option(uq[:setting])}", :setting, uq[:expected], wf)
             end
           end
         end
@@ -378,27 +299,6 @@ end
 
 rs = RenderSpecs.new
 rs.load_diffs
-#rs.get_tests
 uniques = rs.sort_uniques(rs.get_tests)
 rs.build uniques
-
-"formatter_source_specs/trailing_commas.rb.spec 270"
-
-
-#       {:relative_path=>"../test_all_settings",
-#        :name=>"unnamed test 696",
-#        :line=>25,
-#        :options=>
-#        {:parens_in_de=frender>:yes,
-#         :align_case_when=>true,
-#         :align_chained_calls=>true,
-#         :double_newline_inside_type=>:no,
-#         :trailing_commas=>:never,
-#         :spaces_around_binary=>:one},
-#        :original=>"\n" + "yield  1 , \n" + " 2\n" + "\n",
-#        :expected=>"\n" + "yield 1,\n" + "      2\n" + "\n",
-#        :unique_expects=>
-#        [{:setting=>0, :expected=>"\n" + "yield 1,\n" + "      2\n"}]}
-
-
 

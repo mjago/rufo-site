@@ -4,16 +4,15 @@ permalink: "/docs/imaginaries/"
 excerpt: "imaginaries Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 3.141592i
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 3.141592i
 ```

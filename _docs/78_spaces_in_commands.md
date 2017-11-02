@@ -4,72 +4,67 @@ permalink: "/docs/spaces_in_commands/"
 excerpt: "spaces_in_commands Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 not x
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not x
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 not  x
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not x
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 defined?  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 defined? 1
 

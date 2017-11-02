@@ -4,8 +4,8 @@ permalink: "/docs/align_chained_calls/"
 excerpt: "align_chained_calls Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 x.foo
@@ -13,9 +13,8 @@ x.foo
  .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x.foo
  .bar { a.b }

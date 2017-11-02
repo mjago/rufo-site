@@ -4,98 +4,92 @@ permalink: "/docs/percent_array_literal/"
 excerpt: "percent_array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
  %w(  ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w()
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w(one) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w(one)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w( one ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w( one )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w(one   two 
  three ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w(one two
    three)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w( one   two 
  three ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w( one two
     three )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w( 
  one ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w(
   one)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w( 
@@ -103,31 +97,29 @@ excerpt: "percent_array_literal Specs."
  ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w(
   one
 )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %w[ one ] 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %w[ one ]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  begin 
@@ -137,9 +129,8 @@ excerpt: "percent_array_literal Specs."
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   %w(
@@ -148,158 +139,147 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %i(  ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %i()
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %i( one ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %i( one )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %i( one   two 
  three ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %i( one two
     three )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %i[ one ] 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %i[ one ]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %W( ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %W()
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %W( one ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %W( one )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %W( one  two ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %W( one two )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %W( one  two #{ 1 } ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %W( one two #{1} )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 %W(#{1}2)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %W(#{1}2)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %I( ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %I()
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  %I( one  two #{ 1 } ) 
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 %I( one two #{1} )
 ```

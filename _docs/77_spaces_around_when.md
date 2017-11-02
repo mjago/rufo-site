@@ -4,8 +4,8 @@ permalink: "/docs/spaces_around_when/"
 excerpt: "spaces_around_when Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 case 1
@@ -14,18 +14,16 @@ else  4
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case 1
 when 2 then 3
 else 4
 end
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_case_when  true
 
 case 1
 when 2 then 3

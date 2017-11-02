@@ -4,65 +4,61 @@ permalink: "/docs/array_access/"
 excerpt: "array_access Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[ ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[ 1 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[1]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[ 1 , 2 , 3 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[1, 2, 3]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[ 1 ,
@@ -70,17 +66,16 @@ foo[ 1 ,
  3 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[1,
     2,
     3]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[
@@ -89,9 +84,8 @@ foo[
  3 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[
   1,
@@ -99,22 +93,21 @@ foo[
   3]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[ *x ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[*x]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[
@@ -122,25 +115,23 @@ foo[
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[
   1,
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo[
   1
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo[
@@ -150,9 +141,8 @@ foo[
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo[
   1,
@@ -160,9 +150,8 @@ foo[
   4,
 ]
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo[
   1,

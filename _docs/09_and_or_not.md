@@ -4,98 +4,90 @@ permalink: "/docs/and_or_not/"
 excerpt: "and_or_not Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
  foo  and  bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo  and  bar
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 foo and bar
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  foo  or  bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo  or  bar
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :spaces_around_binary  :one
 
 foo or bar
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  not  foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 not(x)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not(x)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 not (x)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not(x)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 not((a, b = 1, 2))
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 not((a, b = 1, 2))
 ```

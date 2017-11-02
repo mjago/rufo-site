@@ -4,17 +4,16 @@ permalink: "/docs/keyword_arguments/"
 excerpt: "keyword_arguments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 def meth(fallback:       nil)
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def meth(fallback: nil)
 end

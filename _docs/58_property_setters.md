@@ -4,38 +4,36 @@ permalink: "/docs/property_setters/"
 excerpt: "property_setters Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar  =  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar  =
  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar =
   1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo .
@@ -43,47 +41,44 @@ foo .
  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.
   bar =
   1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo:: bar  =  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo::bar = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo:: bar  =
  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo::bar =
   1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo::
@@ -91,9 +86,8 @@ foo::
  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo::
   bar =

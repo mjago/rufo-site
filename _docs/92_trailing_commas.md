@@ -4,8 +4,8 @@ permalink: "/docs/trailing_commas/"
 excerpt: "trailing_commas Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -14,9 +14,8 @@ excerpt: "trailing_commas Specs."
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,
@@ -24,17 +23,16 @@ excerpt: "trailing_commas Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -43,9 +41,8 @@ excerpt: "trailing_commas Specs."
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,
@@ -53,17 +50,16 @@ excerpt: "trailing_commas Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -72,9 +68,8 @@ excerpt: "trailing_commas Specs."
 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   foo: 1,
@@ -82,17 +77,16 @@ excerpt: "trailing_commas Specs."
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   foo: 1,
   bar: 2
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -101,9 +95,8 @@ excerpt: "trailing_commas Specs."
 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   foo: 1,
@@ -111,17 +104,16 @@ excerpt: "trailing_commas Specs."
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   foo: 1,
   bar: 2
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -131,9 +123,8 @@ foo(
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   one: 1,
@@ -142,9 +133,8 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   one: 1,
@@ -152,8 +142,8 @@ foo(
   three: 3
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -163,9 +153,8 @@ foo(
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   one: 1,
@@ -174,9 +163,8 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   one: 1,
@@ -184,108 +172,100 @@ foo(
   three: 3
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
   one: 1)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   one: 1,
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   one: 1
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
   one: 1,)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   one: 1,
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   one: 1
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
  1 , 2 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
  1 , 2, ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -293,9 +273,8 @@ foo(
  3 , 4 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
@@ -303,17 +282,16 @@ foo(
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2,
   3, 4
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -321,9 +299,8 @@ foo(
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,
@@ -331,17 +308,16 @@ foo(
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  # comment
@@ -349,9 +325,8 @@ foo(
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [ # comment
   1,
@@ -359,17 +334,16 @@ foo(
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [ # comment
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -377,9 +351,8 @@ foo(
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,  # comment
@@ -387,17 +360,16 @@ foo(
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,  # comment
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1 ,
@@ -405,17 +377,16 @@ foo(
  4 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1 ,
@@ -423,17 +394,16 @@ foo(
  4, ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1 ,
@@ -442,17 +412,16 @@ foo(
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1 ,
@@ -461,9 +430,8 @@ foo(
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
@@ -471,8 +439,8 @@ foo(
 ]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  begin
@@ -481,9 +449,8 @@ foo(
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   [
@@ -492,9 +459,8 @@ begin
 end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 begin
   [
@@ -502,8 +468,8 @@ begin
   ]
 end
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -511,18 +477,16 @@ end
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, # foo
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1 # foo

@@ -4,54 +4,51 @@ permalink: "/docs/module/"
 excerpt: "module Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 module   Foo  
   end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module Foo
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 module Foo ; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module Foo; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 module Foo; 1; end
 module Bar; 2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module Foo; 1; end
 module Bar; 2; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 module Foo; 1; end
@@ -59,9 +56,8 @@ module Foo; 1; end
 module Bar; 2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module Foo; 1; end
 

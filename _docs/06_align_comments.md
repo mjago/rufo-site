@@ -4,24 +4,23 @@ permalink: "/docs/align_comments/"
 excerpt: "align_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # one
  123 # two
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # one
 123 # two
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 # one
@@ -30,9 +29,8 @@ excerpt: "align_comments Specs."
  5 # lala
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 # one
 123 # two
@@ -40,8 +38,8 @@ excerpt: "align_comments Specs."
 5 # lala
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foobar( # one
@@ -49,81 +47,76 @@ foobar( # one
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foobar( # one
   1 # two
 )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = 1 # foo
  abc = 2 # bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1 # foo
 abc = 2 # bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = 1 # foo
       # bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1 # foo
       # bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # foo
 a # bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # foo
 a # bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  # foo
 a # bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # foo
 a # bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 require x
@@ -133,9 +126,8 @@ require x
 FOO = :bar # Comment 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 require x
 
@@ -144,8 +136,8 @@ require x
 FOO = :bar # Comment 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -157,9 +149,8 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   require x
@@ -170,8 +161,8 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -181,9 +172,8 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   a     # c1
@@ -192,24 +182,23 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = 1   # foo
 bar = 2 # baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1   # foo
 bar = 2 # baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -218,9 +207,8 @@ bar = 2 # baz
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,   # foo
@@ -228,17 +216,16 @@ bar = 2 # baz
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,   # foo
   234   # bar
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -247,9 +234,8 @@ bar = 2 # baz
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,   # foo
@@ -257,26 +243,24 @@ bar = 2 # baz
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,   # foo
   234    # bar
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo bar: 1,  # comment
     baz: 2    # comment
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo bar: 1,  # comment
     baz: 2    # comment

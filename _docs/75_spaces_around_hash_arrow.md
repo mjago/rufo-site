@@ -4,58 +4,54 @@ permalink: "/docs/spaces_around_hash_arrow/"
 excerpt: "spaces_around_hash_arrow Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 {1  =>  2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {1 => 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {1=>2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {1 => 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {foo:  2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {foo:2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 2}
 ```

@@ -4,114 +4,106 @@ permalink: "/docs/array_literal/"
 excerpt: "array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
  [  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 []
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 , 2 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, 2]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 , 2 , ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, 2]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
  1 , 2 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
  1 , 2, ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -119,9 +111,8 @@ excerpt: "array_literal Specs."
  3 , 4 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, 2,
@@ -129,17 +120,16 @@ excerpt: "array_literal Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, 2,
   3, 4
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -147,9 +137,8 @@ excerpt: "array_literal Specs."
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,
@@ -157,17 +146,16 @@ excerpt: "array_literal Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  # comment
@@ -175,9 +163,8 @@ excerpt: "array_literal Specs."
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [ # comment
   1,
@@ -185,17 +172,16 @@ excerpt: "array_literal Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [ # comment
   1,
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -203,9 +189,8 @@ excerpt: "array_literal Specs."
  2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,  # comment
@@ -213,17 +198,16 @@ excerpt: "array_literal Specs."
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,  # comment
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 ,
@@ -231,17 +215,16 @@ excerpt: "array_literal Specs."
  4 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 ,
@@ -249,17 +232,16 @@ excerpt: "array_literal Specs."
  4, ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [  1 ,
@@ -268,17 +250,16 @@ excerpt: "array_literal Specs."
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
  4]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1 ,
@@ -287,9 +268,8 @@ excerpt: "array_literal Specs."
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1,
  2, 3,
@@ -297,8 +277,8 @@ excerpt: "array_literal Specs."
 ]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  begin
@@ -307,9 +287,8 @@ excerpt: "array_literal Specs."
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   [
@@ -318,9 +297,8 @@ begin
 end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 begin
   [
@@ -328,8 +306,8 @@ begin
   ]
 end
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [
@@ -337,67 +315,62 @@ end
  ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, # foo
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1 # foo
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ *x ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [*x]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ *x , 1 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [*x, 1]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  [ 1, *x ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, *x]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  x = [{
@@ -405,39 +378,36 @@ end
 }]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = [{
   foo: 1,
 }]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 x = [{
   foo: 1
 }]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [1,   2]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [1, 2]
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -447,9 +417,8 @@ x = [{
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1,
@@ -458,9 +427,8 @@ x = [{
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1,
@@ -468,8 +436,8 @@ x = [{
   2
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -478,9 +446,8 @@ x = [{
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   *a,
@@ -488,17 +455,16 @@ x = [{
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   *a,
   b
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 [
@@ -507,18 +473,16 @@ x = [{
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 [
   1, *a,
   b,
 ]
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 [
   1, *a,

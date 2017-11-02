@@ -4,58 +4,54 @@ permalink: "/docs/suffix_rescue/"
 excerpt: "suffix_rescue Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 URI(string) rescue return
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 URI(string) rescue return
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 URI(string) while return
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 URI(string) while return
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 URI(string) if return
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 URI(string) if return
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 URI(string) unless return
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 URI(string) unless return
 ```

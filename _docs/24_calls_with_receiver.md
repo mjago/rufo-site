@@ -4,52 +4,49 @@ permalink: "/docs/calls_with_receiver/"
 excerpt: "calls_with_receiver Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar . baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar.baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo . bar( 1 , 2 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1, 2)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo .
  bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.
   bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo .
@@ -57,33 +54,31 @@ foo .
  baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.
   bar.
   baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo
  . bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo
   .bar
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo
@@ -91,40 +86,37 @@ foo
  . baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo
   .bar
   .baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar
 .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar
   .baz
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_chained_calls  true
 
 foo.bar
    .baz
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar(1)
@@ -132,25 +124,23 @@ foo.bar(1)
 .qux(3)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1)
   .baz(2)
   .qux(3)
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_chained_calls  true
 
 foo.bar(1)
    .baz(2)
    .qux(3)
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foobar.baz
@@ -159,9 +149,8 @@ foobar.baz
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foobar.baz
   .with(
@@ -169,17 +158,16 @@ foobar.baz
   )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_chained_calls  true
 
 foobar.baz
       .with(
         1
       )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar 1,
@@ -187,17 +175,16 @@ foo.bar 1,
  y: 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar 1,
         x: 1,
         y: 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo
@@ -205,31 +192,29 @@ foo
   .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo
   .bar # x
   .baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 c.x w 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 c.x w 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar
@@ -237,25 +222,23 @@ foo.bar
   .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar
   .baz
   .baz
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_chained_calls  true
 
 foo.bar
    .baz
    .baz
 ```
+```ruby
 ### original
-```ruby
 # BEFORE
 
 foo.bar
@@ -263,25 +246,23 @@ foo.bar
    .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar
   .baz
   .baz
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_chained_calls  true
 
 foo.bar
    .baz
    .baz
 ```
+```ruby
 ### original
-```ruby
 # BEFORE
 
 foo.bar(1)
@@ -290,9 +271,8 @@ foo.bar(1)
 ])
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1)
    .baz([
@@ -300,17 +280,16 @@ foo.bar(1)
    ])
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo.bar(1)
    .baz([
      2
    ])
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar(1)
@@ -319,9 +298,8 @@ foo.bar(1)
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1)
    .baz(
@@ -329,17 +307,16 @@ foo.bar(1)
    )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo.bar(1)
    .baz(
      2
    )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar(1)
@@ -350,9 +327,8 @@ foo.bar(1)
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1)
    .baz(
@@ -362,8 +338,8 @@ foo.bar(1)
    )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar(1)
@@ -374,9 +350,8 @@ foo.bar(1)
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(1)
    .baz(
@@ -386,8 +361,8 @@ foo.bar(1)
    )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo.bar(
@@ -395,17 +370,16 @@ foo.bar(
 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo.bar(
   1
 )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1, [
@@ -415,9 +389,8 @@ foo 1, [
 ]
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, [
   2,
@@ -426,9 +399,8 @@ foo 1, [
 ]
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo 1, [
   2,
@@ -436,8 +408,8 @@ foo 1, [
   3
 ]
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo :x, {
@@ -451,9 +423,8 @@ multiline :call,
           :foo => bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo :x, {
   :foo1 => :bar,
@@ -466,9 +437,8 @@ multiline :call,
           :foo => bar
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo :x, {
   :foo1 => :bar,
@@ -480,8 +450,8 @@ multiline :call,
           :foo => :bar,
           :foo => bar
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x
@@ -489,17 +459,16 @@ x
   .baz
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x
   .foo.bar
   .baz
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x
@@ -507,17 +476,16 @@ x
   .qux
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x
   .foo.bar.baz
   .qux
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x
@@ -526,9 +494,8 @@ x
   .final
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x
   .foo(a.b).bar(c.d).baz(e.f)
@@ -536,31 +503,29 @@ x
   .final
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x.y  1,  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x.y 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x.y \
   1,  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x.y \
   1, 2

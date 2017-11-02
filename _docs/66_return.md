@@ -4,74 +4,69 @@ permalink: "/docs/return/"
 excerpt: "return Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 return
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 return
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 return  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 return 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 return  1 , 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 return 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 return  1 , 
  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 return 1,
        2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 return a b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 return a b
 ```

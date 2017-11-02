@@ -4,37 +4,34 @@ permalink: "/docs/parens_in_def/"
 excerpt: "parens_in_def Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo(x); end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x); end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo x; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo x; end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :parens_in_def  :yes
 
 def foo(x); end
 ```

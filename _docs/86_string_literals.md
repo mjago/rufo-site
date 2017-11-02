@@ -4,143 +4,133 @@ permalink: "/docs/string_literals/"
 excerpt: "string_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 'hello'
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 'hello'
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "hello"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "hello"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "hello"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "hello"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "\n"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "\n"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "hello #{1} foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "hello #{1} foo"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "hello #{  1   } foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "hello #{1} foo"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "hello #{
 1} foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "hello #{1} foo"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "#@foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "#@foo"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "#@@foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "#@@foo"
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 "#$foo"
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 "#$foo"
 ```

@@ -4,16 +4,15 @@ permalink: "/docs/redo/"
 excerpt: "redo Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 redo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 redo
 ```

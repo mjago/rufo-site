@@ -4,8 +4,8 @@ permalink: "/docs/begin_rescue_end/"
 excerpt: "begin_rescue_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -15,9 +15,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -26,8 +25,8 @@ rescue
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -36,9 +35,8 @@ rescue B
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
 rescue A
@@ -46,8 +44,8 @@ rescue B
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -57,9 +55,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -68,8 +65,8 @@ rescue Foo
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -79,9 +76,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -90,8 +86,8 @@ rescue => ex
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -101,9 +97,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -112,8 +107,8 @@ rescue Foo => ex
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -123,9 +118,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -134,8 +128,8 @@ rescue Foo, Bar, Baz => ex
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -147,9 +141,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -160,8 +153,8 @@ rescue Foo,
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -171,9 +164,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -182,8 +174,8 @@ ensure
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -193,9 +185,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -204,8 +195,8 @@ else
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -214,9 +205,8 @@ rescue *x
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -224,8 +214,8 @@ rescue *x
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -234,9 +224,8 @@ rescue *x, *y
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -244,8 +233,8 @@ rescue *x, *y
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -254,9 +243,8 @@ rescue *x, y, *z
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1

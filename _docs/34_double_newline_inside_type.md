@@ -4,8 +4,8 @@ permalink: "/docs/double_newline_inside_type/"
 excerpt: "double_newline_inside_type Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 class Foo
@@ -15,9 +15,8 @@ class Foo
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 class Foo
 
@@ -26,9 +25,8 @@ class Foo
 end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :double_newline_inside_type  :no
 
 class Foo
   1

@@ -4,96 +4,90 @@ permalink: "/docs/begin_end/"
 excerpt: "begin_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 begin;end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 1 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin 1 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin; 1; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin; 1; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin; 1; 2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin; 1; 2; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin; 1 
  2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin; 1
   2; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -101,17 +95,16 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -120,9 +113,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1
@@ -130,8 +122,8 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin 
@@ -142,9 +134,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   begin
@@ -154,40 +145,38 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin # hello
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin # hello
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin;# hello
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin # hello
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -195,17 +184,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1  # a
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -215,9 +203,8 @@ begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   1  # a
@@ -226,8 +213,8 @@ begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -236,9 +223,8 @@ end
 # foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
 end
@@ -246,8 +232,8 @@ end
 # foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -255,17 +241,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   begin 1 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -273,17 +258,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   def foo(x) 1 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -291,17 +275,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   if 1 then 2 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -309,17 +292,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   if 1 then 2 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -327,17 +309,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   foo do 1 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -345,17 +326,16 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   for x in y do 1 end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 begin
@@ -365,9 +345,8 @@ begin
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 begin
   # foo

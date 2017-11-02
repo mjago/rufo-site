@@ -4,240 +4,223 @@ permalink: "/docs/multiple_assignments/"
 excerpt: "multiple_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 a  =   1  ,   2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a , b  = 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b = 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a , b, ( c, d )  = 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b, (c, d) = 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  *x = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 *x = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  a , b , *x = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b, *x = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  *x , a , b = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 *x, a, b = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  a, b, *x, c, d = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b, *x, c, d = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a, b, = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b, = 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = b, *c
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = b, *c
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = b, *c, *d
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = b, *c, *d
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a, = b
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, = b
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = b, c, *d
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = b, c, *d
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = b, c, *d, e
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = b, c, *d, e
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 *, y = z
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 *, y = z
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 w, (x,), y = z
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 w, (x,), y = z
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a, b=1, 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a, b = 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 * = 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 * = 1
 ```

@@ -4,8 +4,8 @@ permalink: "/docs/visibility_markers/"
 excerpt: "visibility_markers Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 private
@@ -13,9 +13,8 @@ private
 1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 private
 

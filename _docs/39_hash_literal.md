@@ -4,78 +4,73 @@ permalink: "/docs/hash_literal/"
 excerpt: "hash_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
  { }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {:foo   =>   1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {:foo   =>   1}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :foo   =>   1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :foo   =>   1 , 2  =>  3  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1, 2 => 3}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {
@@ -83,9 +78,8 @@ excerpt: "hash_literal Specs."
  2  =>  3  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   :foo => 1,
@@ -93,155 +87,144 @@ excerpt: "hash_literal Specs."
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   :foo => 1,
   2 => 3
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { **x }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {**x}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {foo:  1}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { foo:  1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :foo   =>
   1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { "foo": 1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {"foo": 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { "foo #{ 2 }": 1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {"foo #{2}": 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :"one two"  => 3 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:"one two" => 3}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { foo:  1,
    bar: 2 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 1,
  bar: 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {foo: 1,  bar: 2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 1, bar: 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {1 =>
    2}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {1 => 2}
 ```

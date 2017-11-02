@@ -4,8 +4,8 @@ permalink: "/docs/align_hash_keys/"
 excerpt: "align_hash_keys Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -13,9 +13,8 @@ excerpt: "align_hash_keys Specs."
  123 => 4 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   1 => 2,
@@ -23,17 +22,16 @@ excerpt: "align_hash_keys Specs."
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   1 => 2,
   123 => 4
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -41,9 +39,8 @@ excerpt: "align_hash_keys Specs."
  barbaz: 2 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   foo: 1,
@@ -51,33 +48,31 @@ excerpt: "align_hash_keys Specs."
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   foo: 1,
   barbaz: 2
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo bar: 1,
  barbaz: 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo bar: 1,
     barbaz: 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(
@@ -85,9 +80,8 @@ foo(
  barbaz: 2)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(
   bar: 1,
@@ -95,17 +89,16 @@ foo(
 )
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo(
   bar: 1,
   barbaz: 2
 )
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo(x,
@@ -114,9 +107,8 @@ def foo(x,
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x,
         y: 1,
@@ -124,24 +116,23 @@ def foo(x,
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {1 => 2}
 {123 => 4}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {1 => 2}
 {123 => 4}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -152,9 +143,8 @@ end
  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   1 => 2,
@@ -164,9 +154,8 @@ end
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   1 => 2,
@@ -175,8 +164,8 @@ end
   }
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -187,9 +176,8 @@ end
  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   1 => 2,
@@ -199,9 +187,8 @@ end
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   1 => 2,
@@ -210,8 +197,8 @@ end
   }
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -222,9 +209,8 @@ end
  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   1 => 2,
@@ -234,9 +220,8 @@ end
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   1 => 2,
@@ -245,8 +230,8 @@ end
   ]
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -257,9 +242,8 @@ end
  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   1 => 2,
@@ -269,9 +253,8 @@ end
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   1 => 2,
@@ -280,8 +263,8 @@ end
   ]
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1, bar: [
@@ -290,9 +273,8 @@ foo 1, bar: [
        baz: 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, bar: [
          2,
@@ -300,89 +282,83 @@ foo 1, bar: [
        baz: 3
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 foo 1, bar: [
          2
        ],
        baz: 3
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a   = b :foo => x,
   :baar => x
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = b :foo => x,
       :baar => x
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {:foo   =>   1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {:foo   =>   1}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :foo   =>   1 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { :foo   =>   1 , 2  =>  3  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {:foo => 1, 2 => 3}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  {
@@ -390,9 +366,8 @@ a = b :foo => x,
  2  =>  3  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   :foo => 1,
@@ -400,33 +375,31 @@ a = b :foo => x,
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   :foo => 1,
   2 => 3
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
  { foo:  1,
  bar: 2 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {foo: 1,
  bar: 2}
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 =begin
@@ -437,9 +410,8 @@ a = b :foo => x,
 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 =begin
 =end
@@ -449,9 +421,8 @@ a = b :foo => x,
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 =begin
 =end
@@ -460,22 +431,21 @@ a = b :foo => x,
   :bc => 2
 }
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1,  :bar  =>  2 , :baz  =>  3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, :bar => 2, :baz => 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {
@@ -483,9 +453,8 @@ foo 1, :bar => 2, :baz => 3
  barbaz: 2 }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {
   foo: 1,
@@ -493,9 +462,8 @@ foo 1, :bar => 2, :baz => 3
 }
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :trailing_commas  :never
 
 {
   foo: 1,

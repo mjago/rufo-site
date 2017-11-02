@@ -4,68 +4,64 @@ permalink: "/docs/method_definition/"
 excerpt: "method_definition Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo ; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo()
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo()
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo() 1 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo() 1 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo(
@@ -73,48 +69,45 @@ def foo() 1 end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo()
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( x )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( x , y )
   end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x, y)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo
@@ -122,17 +115,16 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( * x )
@@ -140,17 +132,16 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(*x)
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a , * x )
@@ -158,17 +149,16 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a, *x)
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a , * x, b )
@@ -176,97 +166,91 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a, *x, b)
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( x  =  1 )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x = 1)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( x  =  1, * y )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x = 1, *y)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( & block )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(&block)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a: , b: )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a:, b:)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a: 1 , b: 2  )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a: 1, b: 2)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( x,
@@ -274,17 +258,16 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(x,
         y)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a: 1,
@@ -292,17 +275,16 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a: 1,
         b: 2)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo(
@@ -311,9 +293,8 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(
         x,
@@ -321,24 +302,23 @@ def foo(
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a: 1, &block )
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a: 1, &block)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo( a: 1,
@@ -346,65 +326,61 @@ end
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(a: 1,
         &block)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo(*)
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(*)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
   def foo(**)
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo(**)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def `(cmd)
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def `(cmd)
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 module_function def foo
@@ -412,17 +388,16 @@ module_function def foo
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module_function def foo
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 private def foo
@@ -430,17 +405,16 @@ private def foo
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 private def foo
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 some class Foo
@@ -448,33 +422,31 @@ some class Foo
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 some class Foo
   1
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo; 1; end
 def bar; 2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo; 1; end
 def bar; 2; end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo; 1; end
@@ -482,9 +454,8 @@ def foo; 1; end
 def bar; 2; end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo; 1; end
 

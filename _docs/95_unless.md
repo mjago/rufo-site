@@ -4,8 +4,8 @@ permalink: "/docs/unless/"
 excerpt: "unless Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 unless 1
@@ -13,17 +13,16 @@ unless 1
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 unless 1
   2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 unless 1
@@ -32,9 +31,8 @@ else
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 unless 1
   2

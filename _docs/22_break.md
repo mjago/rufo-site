@@ -4,59 +4,55 @@ permalink: "/docs/break/"
 excerpt: "break Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 break
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 break
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 break  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 break 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 break  1 , 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 break 1, 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 break  1 , 
  2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 break 1,
       2

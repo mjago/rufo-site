@@ -4,8 +4,8 @@ permalink: "/docs/multiline_comments/"
 excerpt: "multiline_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 =begin
@@ -14,9 +14,8 @@ excerpt: "multiline_comments Specs."
 =end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 =begin
   foo
@@ -24,8 +23,8 @@ excerpt: "multiline_comments Specs."
 =end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1
@@ -38,9 +37,8 @@ excerpt: "multiline_comments Specs."
 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 
@@ -52,8 +50,8 @@ excerpt: "multiline_comments Specs."
 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 # foo
@@ -62,9 +60,8 @@ bar
 =end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 # foo
 =begin

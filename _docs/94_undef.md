@@ -4,30 +4,28 @@ permalink: "/docs/undef/"
 excerpt: "undef Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 undef  foo
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 undef foo
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 undef  foo , bar
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 undef foo, bar
 ```

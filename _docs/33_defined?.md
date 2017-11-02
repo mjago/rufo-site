@@ -4,58 +4,54 @@ permalink: "/docs/defined?/"
 excerpt: "defined? Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 defined?  1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 defined? 1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 defined? ( 1 )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 defined? (1)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 defined?(1)
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 defined?(1)
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 defined?((a, b = 1, 2))
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 defined?((a, b = 1, 2))
 ```

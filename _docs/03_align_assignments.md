@@ -4,8 +4,8 @@ permalink: "/docs/align_assignments/"
 excerpt: "align_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 x = 1
@@ -14,9 +14,8 @@ x = 1
  w = 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = 1
 xyz = 2
@@ -24,8 +23,8 @@ xyz = 2
 w = 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x = 1
@@ -34,9 +33,8 @@ x = 1
  w = 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = 1
 foo[bar] = 2
@@ -44,8 +42,8 @@ foo[bar] = 2
 w = 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x = 1; x = 2
@@ -54,9 +52,8 @@ x = 1; x = 2
  w = 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = 1; x = 2
 xyz = 2
@@ -64,8 +61,8 @@ xyz = 2
 w = 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = begin
@@ -74,9 +71,8 @@ a = begin
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = begin
   b = 1
@@ -84,40 +80,38 @@ a = begin
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 a = 1
  a += 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 a = 1
 a += 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo = 1
  a += 2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo = 1
 a += 2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x = 1
@@ -126,9 +120,8 @@ x = 1
  w = 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = 1
 xyz = 2

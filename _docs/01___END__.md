@@ -4,8 +4,8 @@ permalink: "/docs/__END__/"
 excerpt: "__END__ Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 1
@@ -17,9 +17,8 @@ this
  here
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 

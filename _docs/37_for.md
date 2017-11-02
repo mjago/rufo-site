@@ -4,8 +4,8 @@ permalink: "/docs/for/"
 excerpt: "for Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 for  x  in  y
@@ -13,17 +13,16 @@ for  x  in  y
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 for x in y
   2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 for  x , y  in  z
@@ -31,17 +30,16 @@ for  x , y  in  z
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 for x, y in z
   2
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 for  x  in  y  do
@@ -49,9 +47,8 @@ for  x  in  y  do
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 for x in y
   2

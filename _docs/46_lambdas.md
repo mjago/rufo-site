@@ -4,73 +4,68 @@ permalink: "/docs/lambdas/"
 excerpt: "lambdas Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 -> { }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->{ }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->{   1   }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { 1 }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->{   1 ; 2  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> { 1; 2 }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->{   1
  2  }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> {
   1
@@ -78,17 +73,16 @@ excerpt: "lambdas Specs."
 }
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 -> do  1
  2  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> do
   1
@@ -96,17 +90,16 @@ excerpt: "lambdas Specs."
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->do  1
  2  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> do
   1
@@ -114,16 +107,15 @@ end
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 ->( x ){ }
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 -> (x) { }
 ```

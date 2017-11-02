@@ -4,62 +4,58 @@ permalink: "/docs/ternaries/"
 excerpt: "ternaries Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 1  ?   2    :  3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 ? 2 : 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 ?
  2 : 3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 ?
   2 : 3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1 ? 2 :
  3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 ? 2 :
   3
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1?2:3
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1 ? 2 : 3
 ```

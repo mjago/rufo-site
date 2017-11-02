@@ -4,8 +4,8 @@ permalink: "/docs/heredoc/"
 excerpt: "heredoc Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 <<-EOF
@@ -14,9 +14,8 @@ excerpt: "heredoc Specs."
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 <<-EOF
   foo
@@ -24,8 +23,8 @@ EOF
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1 , <<-EOF , 2
@@ -34,9 +33,8 @@ foo 1 , <<-EOF , 2
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, <<-EOF, 2
   foo
@@ -44,8 +42,8 @@ foo 1, <<-EOF, 2
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2 , 3
@@ -56,9 +54,8 @@ EOF1
 EOF2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, <<-EOF1, 2, <<-EOF2, 3
   foo
@@ -68,8 +65,8 @@ EOF1
 EOF2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2
@@ -80,9 +77,8 @@ EOF1
 EOF2
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo 1, <<-EOF1, 2, <<-EOF2
   foo
@@ -92,8 +88,8 @@ EOF1
 EOF2
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(1 , <<-EOF , 2 )
@@ -102,9 +98,8 @@ foo(1 , <<-EOF , 2 )
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(1, <<-EOF, 2)
   foo
@@ -112,8 +107,8 @@ foo(1, <<-EOF, 2)
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 <<-EOF.foo
@@ -121,17 +116,16 @@ EOF
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 <<-EOF.foo
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x = <<-EOF.foo
@@ -139,17 +133,16 @@ x = <<-EOF.foo
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x = <<-EOF.foo
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 x, y = <<-EOF.foo, 2
@@ -157,17 +150,16 @@ x, y = <<-EOF.foo, 2
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 x, y = <<-EOF.foo, 2
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 call <<-EOF.foo, y
@@ -175,17 +167,16 @@ call <<-EOF.foo, y
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 call <<-EOF.foo, y
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(<<-EOF
@@ -195,9 +186,8 @@ foo(<<-EOF
   )
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(<<-EOF
   foo
@@ -206,8 +196,8 @@ foo(<<-EOF
 )
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 <<-EOF
@@ -217,9 +207,8 @@ EOF
 # comment
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 <<-EOF
   foo
@@ -228,8 +217,8 @@ EOF
 # comment
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo(<<-EOF)
@@ -237,17 +226,16 @@ foo(<<-EOF)
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo(<<-EOF)
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 foo <<-EOF.bar if 1
@@ -255,17 +243,16 @@ foo <<-EOF.bar if 1
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 foo <<-EOF.bar if 1
   x
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 <<-EOF % 1
@@ -273,17 +260,16 @@ EOF
 EOF
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 <<-EOF % 1
   bar
 EOF
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 {1 => <<EOF,
@@ -292,9 +278,8 @@ EOF
  2 => 3}
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 {1 => <<EOF,
 text

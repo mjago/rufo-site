@@ -4,8 +4,8 @@ permalink: "/docs/align_case_when/"
 excerpt: "align_case_when Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 case
@@ -15,9 +15,8 @@ case
  end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 case
 when 1 then 2
@@ -26,9 +25,8 @@ else 6
 end
 
 ```
-### unique 1
 ```ruby
-# AFTER
+# :align_case_when  true
 
 case
 when 1   then 2

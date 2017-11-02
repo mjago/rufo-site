@@ -4,8 +4,8 @@ permalink: "/docs/junk_drawer/"
 excerpt: "junk_drawer Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 def foo
@@ -14,9 +14,8 @@ def bar
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 def foo
 end
@@ -25,8 +24,8 @@ def bar
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 class Foo
@@ -35,9 +34,8 @@ class Bar
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 class Foo
 end
@@ -46,8 +44,8 @@ class Bar
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 module Foo
@@ -56,9 +54,8 @@ module Bar
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 module Foo
 end
@@ -67,8 +64,8 @@ module Bar
 end
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 1
@@ -76,9 +73,8 @@ def foo
 end
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 1
 

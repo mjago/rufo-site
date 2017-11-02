@@ -4,58 +4,54 @@ permalink: "/docs/special_global_variables/"
 excerpt: "special_global_variables Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### original
 ```ruby
+### original
 # BEFORE
 
 $~
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 $~
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 $1
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 $1
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 $!
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 $!
 
 ```
-### original
 ```ruby
+### original
 # BEFORE
 
 $@
 
 ```
-### expected
 ```ruby
-# AFTER
+# DEFAULT
 
 $@
 ```
