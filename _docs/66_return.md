@@ -4,47 +4,47 @@ permalink: "/docs/return/"
 excerpt: "return Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### return
 ```ruby
-### original
 # BEFORE
 
 return
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 return
 
 ```
+### unnamed test 540
 ```ruby
-### original
 # BEFORE
 
 return  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 return 1
 
 ```
+### unnamed test 541
 ```ruby
-### original
 # BEFORE
 
 return  1 , 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 return 1, 2
 
 ```
+### unnamed test 542
 ```ruby
-### original
 # BEFORE
 
 return  1 , 
@@ -52,21 +52,21 @@ return  1 ,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 return 1,
        2
 
 ```
+### unnamed test 543
 ```ruby
-### original
 # BEFORE
 
 return a b
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 return a b
 ```

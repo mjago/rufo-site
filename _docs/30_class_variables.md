@@ -4,15 +4,15 @@ permalink: "/docs/class_variables/"
 excerpt: "class_variables Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 266
 ```ruby
-### original
 # BEFORE
 
 @@foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 @@foo
 ```

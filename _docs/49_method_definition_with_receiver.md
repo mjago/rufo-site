@@ -4,8 +4,8 @@ permalink: "/docs/method_definition_with_receiver/"
 excerpt: "method_definition_with_receiver Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 465
 ```ruby
-### original
 # BEFORE
 
  def foo . 
@@ -13,13 +13,13 @@ excerpt: "method_definition_with_receiver Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo.bar; end
 
 ```
+### unnamed test 466
 ```ruby
-### original
 # BEFORE
 
  def self . 
@@ -27,7 +27,7 @@ def foo.bar; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def self.bar; end
 ```

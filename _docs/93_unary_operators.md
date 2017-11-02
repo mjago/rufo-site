@@ -4,67 +4,67 @@ permalink: "/docs/unary_operators/"
 excerpt: "unary_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 666
 ```ruby
-### original
 # BEFORE
 
 - x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 -x
 
 ```
+### unnamed test 667
 ```ruby
-### original
 # BEFORE
 
 + x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 +x
 
 ```
+### unnamed test 668
 ```ruby
-### original
 # BEFORE
 
 +x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 +x
 
 ```
+### unnamed test 669
 ```ruby
-### original
 # BEFORE
 
 +(x)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 +(x)
 
 ```
+### unnamed test 670
 ```ruby
-### original
 # BEFORE
 
 + (x)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 +(x)
 ```

@@ -4,8 +4,8 @@ permalink: "/docs/heredoc/"
 excerpt: "heredoc Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### heredoc
 ```ruby
-### original
 # BEFORE
 
 <<-EOF
@@ -15,7 +15,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 <<-EOF
   foo
@@ -23,8 +23,8 @@ EOF
 EOF
 
 ```
+### heredoc_multiline
 ```ruby
-### original
 # BEFORE
 
 foo 1 , <<-EOF , 2
@@ -34,7 +34,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, <<-EOF, 2
   foo
@@ -42,8 +42,8 @@ foo 1, <<-EOF, 2
 EOF
 
 ```
+### heredoc_multiline_2
 ```ruby
-### original
 # BEFORE
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2 , 3
@@ -55,7 +55,7 @@ EOF2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, <<-EOF1, 2, <<-EOF2, 3
   foo
@@ -65,8 +65,8 @@ EOF1
 EOF2
 
 ```
+### heredoc_multiline_3
 ```ruby
-### original
 # BEFORE
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2
@@ -78,7 +78,7 @@ EOF2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, <<-EOF1, 2, <<-EOF2
   foo
@@ -88,8 +88,8 @@ EOF1
 EOF2
 
 ```
+### heredoc_inside_method_call
 ```ruby
-### original
 # BEFORE
 
 foo(1 , <<-EOF , 2 )
@@ -99,7 +99,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1, <<-EOF, 2)
   foo
@@ -107,8 +107,8 @@ foo(1, <<-EOF, 2)
 EOF
 
 ```
+### heredoc_with_method_called
 ```ruby
-### original
 # BEFORE
 
 <<-EOF.foo
@@ -117,15 +117,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 <<-EOF.foo
   bar
 EOF
 
 ```
+### heredoc_assigned_to_variable
 ```ruby
-### original
 # BEFORE
 
 x = <<-EOF.foo
@@ -134,15 +134,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = <<-EOF.foo
   bar
 EOF
 
 ```
+### heredoc_assigned_to_multiple_variables
 ```ruby
-### original
 # BEFORE
 
 x, y = <<-EOF.foo, 2
@@ -151,15 +151,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x, y = <<-EOF.foo, 2
   bar
 EOF
 
 ```
+### heredoc_as_method_argument
 ```ruby
-### original
 # BEFORE
 
 call <<-EOF.foo, y
@@ -168,15 +168,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 call <<-EOF.foo, y
   bar
 EOF
 
 ```
+### heredoc_as_method_argument_with_brackets
 ```ruby
-### original
 # BEFORE
 
 foo(<<-EOF
@@ -187,7 +187,7 @@ foo(<<-EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(<<-EOF
   foo
@@ -196,8 +196,8 @@ foo(<<-EOF
 )
 
 ```
+### heredoc_with_trailing_comment
 ```ruby
-### original
 # BEFORE
 
 <<-EOF
@@ -208,7 +208,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 <<-EOF
   foo
@@ -217,8 +217,8 @@ EOF
 # comment
 
 ```
+### heredoc_as_strange_method_argument
 ```ruby
-### original
 # BEFORE
 
 foo(<<-EOF)
@@ -227,15 +227,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(<<-EOF)
   bar
 EOF
 
 ```
+### heredoc_with_bizarre_syntax
 ```ruby
-### original
 # BEFORE
 
 foo <<-EOF.bar if 1
@@ -244,15 +244,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo <<-EOF.bar if 1
   x
 EOF
 
 ```
+### heredoc_with_percent
 ```ruby
-### original
 # BEFORE
 
 <<-EOF % 1
@@ -261,15 +261,15 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 <<-EOF % 1
   bar
 EOF
 
 ```
+### heredoc_as_hash_value
 ```ruby
-### original
 # BEFORE
 
 {1 => <<EOF,
@@ -279,7 +279,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {1 => <<EOF,
 text

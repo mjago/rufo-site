@@ -4,34 +4,34 @@ permalink: "/docs/while/"
 excerpt: "while Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 685
 ```ruby
-### original
 # BEFORE
 
 while 1 ; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1; end
 
 ```
+### unnamed test 686
 ```ruby
-### original
 # BEFORE
 
 while 1 ; 2 ; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1; 2; end
 
 ```
+### unnamed test 687
 ```ruby
-### original
 # BEFORE
 
 while 1
@@ -39,14 +39,14 @@ while 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1
 end
 
 ```
+### unnamed test 688
 ```ruby
-### original
 # BEFORE
 
 while 1
@@ -56,7 +56,7 @@ while 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1
   2
@@ -64,8 +64,8 @@ while 1
 end
 
 ```
+### unnamed test 689
 ```ruby
-### original
 # BEFORE
 
 while 1  # foo
@@ -75,7 +75,7 @@ while 1  # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1 # foo
   2
@@ -83,34 +83,34 @@ while 1 # foo
 end
 
 ```
+### unnamed test 690
 ```ruby
-### original
 # BEFORE
 
 while 1 do  end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1 do end
 
 ```
+### unnamed test 691
 ```ruby
-### original
 # BEFORE
 
 while 1 do  2  end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 while 1 do 2 end
 
 ```
+### unnamed test 692
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -119,7 +119,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   while 1 do 2 end

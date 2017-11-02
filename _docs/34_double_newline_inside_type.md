@@ -4,8 +4,8 @@ permalink: "/docs/double_newline_inside_type/"
 excerpt: "double_newline_inside_type Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 298
 ```ruby
-### original
 # BEFORE
 
 class Foo
@@ -16,7 +16,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class Foo
 
@@ -26,7 +26,7 @@ end
 
 ```
 ```ruby
-# :double_newline_inside_type  :no
+# with setting :double_newline_inside_type :no
 
 class Foo
   1

@@ -4,8 +4,8 @@ permalink: "/docs/variables/"
 excerpt: "variables Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 676
 ```ruby
-### original
 # BEFORE
 
 a = 1
@@ -13,21 +13,21 @@ a = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 a
 
 ```
+### unnamed test 677
 ```ruby
-### original
 # BEFORE
 
 @foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 @foo
 ```

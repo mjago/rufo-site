@@ -4,8 +4,8 @@ permalink: "/docs/class_rescue_end/"
 excerpt: "class_rescue_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 265
 ```ruby
-### original
 # BEFORE
 
   class Foo 
@@ -15,7 +15,7 @@ excerpt: "class_rescue_end Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class Foo
   raise 'bar'

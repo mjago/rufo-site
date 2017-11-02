@@ -4,86 +4,86 @@ permalink: "/docs/string_literals/"
 excerpt: "string_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### single_quote_string_literal
 ```ruby
-### original
 # BEFORE
 
 'hello'
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 'hello'
 
 ```
+### double_quote_string_literal
 ```ruby
-### original
 # BEFORE
 
 "hello"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "hello"
 
 ```
+### percent_q_string_literal
 ```ruby
-### original
 # BEFORE
 
 "hello"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "hello"
 
 ```
+### percent_string_literal
 ```ruby
-### original
 # BEFORE
 
 "\n"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "\n"
 
 ```
+### percent_string_literal_1
 ```ruby
-### original
 # BEFORE
 
 "hello #{1} foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "hello #{1} foo"
 
 ```
+### percent_string_literal_2
 ```ruby
-### original
 # BEFORE
 
 "hello #{  1   } foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "hello #{1} foo"
 
 ```
+### percent_string_literal_3
 ```ruby
-### original
 # BEFORE
 
 "hello #{
@@ -91,46 +91,46 @@ excerpt: "string_literals Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "hello #{1} foo"
 
 ```
+### percent_string_literal_4
 ```ruby
-### original
 # BEFORE
 
 "#@foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "#@foo"
 
 ```
+### percent_string_literal_5
 ```ruby
-### original
 # BEFORE
 
 "#@@foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "#@@foo"
 
 ```
+### percent_string_literal_6
 ```ruby
-### original
 # BEFORE
 
 "#$foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 "#$foo"
 ```

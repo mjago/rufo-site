@@ -4,8 +4,8 @@ permalink: "/docs/junk_drawer/"
 excerpt: "junk_drawer Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 357
 ```ruby
-### original
 # BEFORE
 
 def foo
@@ -15,7 +15,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo
 end
@@ -24,8 +24,8 @@ def bar
 end
 
 ```
+### unnamed test 358
 ```ruby
-### original
 # BEFORE
 
 class Foo
@@ -35,7 +35,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class Foo
 end
@@ -44,8 +44,8 @@ class Bar
 end
 
 ```
+### unnamed test 359
 ```ruby
-### original
 # BEFORE
 
 module Foo
@@ -55,7 +55,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 module Foo
 end
@@ -64,8 +64,8 @@ module Bar
 end
 
 ```
+### unnamed test 360
 ```ruby
-### original
 # BEFORE
 
 1
@@ -74,7 +74,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 

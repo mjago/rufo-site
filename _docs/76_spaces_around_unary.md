@@ -4,15 +4,15 @@ permalink: "/docs/spaces_around_unary/"
 excerpt: "spaces_around_unary Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 587
 ```ruby
-### original
 # BEFORE
 
 - x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 -x
 

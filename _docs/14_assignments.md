@@ -4,21 +4,21 @@ permalink: "/docs/assignments/"
 excerpt: "assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 96
 ```ruby
-### original
 # BEFORE
 
 a   =   1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 
 ```
+### unnamed test 97
 ```ruby
-### original
 # BEFORE
 
 a   =
@@ -26,14 +26,14 @@ a   =
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a =
   2
 
 ```
+### unnamed test 98
 ```ruby
-### original
 # BEFORE
 
 a   =   # hello
@@ -41,14 +41,14 @@ a   =   # hello
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = # hello
   2
 
 ```
+### unnamed test 99
 ```ruby
-### original
 # BEFORE
 
 a = if 1
@@ -57,15 +57,15 @@ a = if 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = if 1
       2
     end
 
 ```
+### unnamed test 100
 ```ruby
-### original
 # BEFORE
 
 a = unless 1
@@ -74,15 +74,15 @@ a = unless 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = unless 1
       2
     end
 
 ```
+### unnamed test 101
 ```ruby
-### original
 # BEFORE
 
 a = begin
@@ -91,15 +91,15 @@ a = begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = begin
   1
 end
 
 ```
+### unnamed test 102
 ```ruby
-### original
 # BEFORE
 
 a = case
@@ -109,7 +109,7 @@ a = case
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = case
     when 1
@@ -117,8 +117,8 @@ a = case
     end
 
 ```
+### unnamed test 103
 ```ruby
-### original
 # BEFORE
 
 a = begin
@@ -127,15 +127,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = begin
   1
 end
 
 ```
+### unnamed test 104
 ```ruby
-### original
 # BEFORE
 
 a = begin
@@ -146,7 +146,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = begin
       1
@@ -155,8 +155,8 @@ a = begin
     end
 
 ```
+### unnamed test 105
 ```ruby
-### original
 # BEFORE
 
 a = begin
@@ -167,7 +167,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = begin
       1
@@ -176,21 +176,21 @@ a = begin
     end
 
 ```
+### unnamed test 106
 ```ruby
-### original
 # BEFORE
 
 a=1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 
 ```
+### unnamed test 107
 ```ruby
-### original
 # BEFORE
 
 a = \
@@ -200,7 +200,7 @@ a = \
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a =
   begin

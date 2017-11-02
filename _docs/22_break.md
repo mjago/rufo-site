@@ -4,47 +4,47 @@ permalink: "/docs/break/"
 excerpt: "break Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### break
 ```ruby
-### original
 # BEFORE
 
 break
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 break
 
 ```
+### unnamed test 198
 ```ruby
-### original
 # BEFORE
 
 break  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 break 1
 
 ```
+### unnamed test 199
 ```ruby
-### original
 # BEFORE
 
 break  1 , 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 break 1, 2
 
 ```
+### unnamed test 200
 ```ruby
-### original
 # BEFORE
 
 break  1 , 
@@ -52,7 +52,7 @@ break  1 ,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 break 1,
       2

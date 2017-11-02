@@ -4,21 +4,21 @@ permalink: "/docs/begin_end/"
 excerpt: "begin_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 112
 ```ruby
-### original
 # BEFORE
 
 begin;end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin; end
 
 ```
+### unnamed test 113
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -26,53 +26,53 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
 end
 
 ```
+### unnamed test 114
 ```ruby
-### original
 # BEFORE
 
 begin 1 end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin 1 end
 
 ```
+### unnamed test 115
 ```ruby
-### original
 # BEFORE
 
 begin; 1; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin; 1; end
 
 ```
+### unnamed test 116
 ```ruby
-### original
 # BEFORE
 
 begin; 1; 2; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin; 1; 2; end
 
 ```
+### unnamed test 117
 ```ruby
-### original
 # BEFORE
 
 begin; 1 
@@ -80,14 +80,14 @@ begin; 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin; 1
   2; end
 
 ```
+### unnamed test 118
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -96,15 +96,15 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
 end
 
 ```
+### unnamed test 119
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -114,7 +114,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -122,8 +122,8 @@ begin
 end
 
 ```
+### unnamed test 120
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -135,7 +135,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   begin
@@ -145,8 +145,8 @@ begin
 end
 
 ```
+### unnamed test 121
 ```ruby
-### original
 # BEFORE
 
 begin # hello
@@ -154,14 +154,14 @@ begin # hello
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin # hello
 end
 
 ```
+### unnamed test 122
 ```ruby
-### original
 # BEFORE
 
 begin;# hello
@@ -169,14 +169,14 @@ begin;# hello
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin # hello
 end
 
 ```
+### unnamed test 123
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -185,15 +185,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1  # a
 end
 
 ```
+### unnamed test 124
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -204,7 +204,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1  # a
@@ -213,8 +213,8 @@ begin
 end
 
 ```
+### unnamed test 125
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -224,7 +224,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
 end
@@ -232,8 +232,8 @@ end
 # foo
 
 ```
+### unnamed test 126
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -242,15 +242,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   begin 1 end
 end
 
 ```
+### unnamed test 127
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -259,15 +259,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   def foo(x) 1 end
 end
 
 ```
+### unnamed test 128
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -276,15 +276,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   if 1 then 2 end
 end
 
 ```
+### unnamed test 129
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -293,15 +293,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   if 1 then 2 end
 end
 
 ```
+### unnamed test 130
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -310,15 +310,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo do 1 end
 end
 
 ```
+### unnamed test 131
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -327,15 +327,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   for x in y do 1 end
 end
 
 ```
+### unnamed test 132
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -346,7 +346,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   # foo

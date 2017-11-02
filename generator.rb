@@ -58,7 +58,7 @@ class RenderSpecs
 
   def print_title(title, out)
     title = unnamed if title == ''
-#    @title = '(v2.3 and later) ' + @title unless @version == :all
+    #    @title = '(v2.3 and later) ' + @title unless @version == :all
     out.puts '### ' + title.gsub('.rb.spec','')
   end
 
@@ -68,20 +68,20 @@ class RenderSpecs
   end
 
   def render(title, mode, code, out)
-    out.puts '```ruby'
     case mode
     # code.strip!
     when :original
       print_title title, out
+      out.puts '```ruby'
       out.puts "# BEFORE"
     when :default
-      out.puts "# DEFAULT" unless code == ""
+      out.puts '```ruby'
+      out.puts "# BECOMES" unless code == ""
     when :setting
-      out.puts "# #{title}"
+      out.puts '```ruby'
+      out.puts "# with setting #{title}"
     end
     out.puts code
-    pp code
-    #          exit
     out.puts '```'
   end
 
@@ -171,7 +171,7 @@ class RenderSpecs
     str = ''
     6.times do |y|
       if options[settings[y][0]] == settings[y][2]
-        str += settings[y][0].inspect + '  ' + settings[y][2].inspect
+        str += settings[y][0].inspect + ' ' + settings[y][2].inspect
       end
     end
     str
@@ -204,6 +204,7 @@ class RenderSpecs
         current_test = {}
         ignore_next_line = false
         filename = "formatter_source_specs/#{File.basename source_specs}"
+        name = ''
         File.foreach(source_specs).with_index do |line, index|
           case
           when line =~ /^#~# ORIGINAL ?([\w\s]+)$/
@@ -218,6 +219,7 @@ class RenderSpecs
             name = $~[1].strip
             test_count += 1
             name = "unnamed test #{test_count}" if name.empty?
+            current_test[:name] = name
             current_test[:original] = ""
             current_test[:line] = index + 1
           when line =~ /^#~# EXPECTED$/
@@ -281,8 +283,8 @@ class RenderSpecs
 #        File.basename(test[:file_name]
         front_matter(wf)
         test[:tests].each do |test_data|
-          render('original', :original, test_data[:original], wf)
-          render('default', :default, test_data[:expected], wf)
+          render(test_data[:name], :original, test_data[:original], wf)
+          render('(default)', :default, test_data[:expected], wf)
           uniques = test_data[:unique_expects]
           if uniques
             uniques.each_with_index do |uq, idx|

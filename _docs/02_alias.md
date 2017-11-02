@@ -4,54 +4,54 @@ permalink: "/docs/alias/"
 excerpt: "alias Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 2
 ```ruby
-### original
 # BEFORE
 
 alias  foo  bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 alias foo bar
 
 ```
+### unnamed test 3
 ```ruby
-### original
 # BEFORE
 
 alias  :foo  :bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 alias :foo :bar
 
 ```
+### unnamed test 4
 ```ruby
-### original
 # BEFORE
 
 alias  store  []=
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 alias store []=
 
 ```
+### unnamed test 5
 ```ruby
-### original
 # BEFORE
 
 alias  $foo  $bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 alias $foo $bar
 ```

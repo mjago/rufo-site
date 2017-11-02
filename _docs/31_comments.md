@@ -4,49 +4,49 @@ permalink: "/docs/comments/"
 excerpt: "comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### comment
 ```ruby
-### original
 # BEFORE
 
 # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # foo
 
 ```
+### two_comments
 ```ruby
-### original
 # BEFORE
-
-# foo
-# bar
-
-```
-```ruby
-# DEFAULT
 
 # foo
 # bar
 
 ```
 ```ruby
-### original
+# BECOMES
+
+# foo
+# bar
+
+```
+### integer_with_comment
+```ruby
 # BEFORE
 
 1   # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1   # foo
 
 ```
+### comment_with_double_line_break
 ```ruby
-### original
 # BEFORE
 
 # a
@@ -55,15 +55,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # a
 
 # b
 
 ```
+### comment_with_triple_line_break
 ```ruby
-### original
 # BEFORE
 
 # a
@@ -73,30 +73,30 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # a
 
 # b
 
 ```
+### comment_and_integer
 ```ruby
-### original
 # BEFORE
-
-# a
-1
-
-```
-```ruby
-# DEFAULT
 
 # a
 1
 
 ```
 ```ruby
-### original
+# BECOMES
+
+# a
+1
+
+```
+### comment_double_newline_integer
+```ruby
 # BEFORE
 
 # a
@@ -106,15 +106,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # a
 
 1
 
 ```
+### integer_with_comment_and_following_comment
 ```ruby
-### original
 # BEFORE
 
 1 # a
@@ -122,23 +122,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # a
 # b
 
 ```
+### integer_with_comment_and_multiline_break
 ```ruby
-### original
 # BEFORE
-
-1 # a
-
-# b
-
-```
-```ruby
-# DEFAULT
 
 1 # a
 
@@ -146,7 +138,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-### original
+# BECOMES
+
+1 # a
+
+# b
+
+```
+### integers_separated_by_comments
+```ruby
 # BEFORE
 
 1 # a
@@ -155,15 +155,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # a
 
 2 # b
 
 ```
+### multiple_trailing_comments
 ```ruby
-### original
 # BEFORE
 
 1 # a
@@ -173,15 +173,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # a
 
 2 # b
 
 ```
+### more_trailing_comments
 ```ruby
-### original
 # BEFORE
 
 1 # a
@@ -195,15 +195,15 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # a
 
 2 # b
 
 ```
+### still_more_trailing_comments
 ```ruby
-### original
 # BEFORE
 
 1 # a
@@ -217,7 +217,7 @@ excerpt: "comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # a
 
@@ -227,8 +227,8 @@ excerpt: "comments Specs."
 2 # b
 
 ```
+### comment_indentation_inside_method_call
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -238,7 +238,7 @@ foo: 'foo'
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   # comment for foo
@@ -247,15 +247,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
+### comment_indentation_inside_method_call_2
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -265,7 +265,7 @@ foo: 'foo'
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   # comment for foo
@@ -274,15 +274,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
+### comment_indentation_inside_method_call_3
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -292,7 +292,7 @@ foo: 'foo'
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   # comment for foo
@@ -301,15 +301,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
+### comment_indentation_inside_method_call_4
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -319,7 +319,7 @@ foo: 'foo'
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   # comment for foo
@@ -328,15 +328,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   # comment for foo
   foo: 'foo'
 )
 ```
+### multiple_comments_inside_method_call
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -349,7 +349,7 @@ bar: 'bar',
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   # comment for foo
@@ -360,7 +360,7 @@ foo(
 )
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   # comment for foo

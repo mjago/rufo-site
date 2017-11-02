@@ -4,21 +4,21 @@ permalink: "/docs/assignment_operators/"
 excerpt: "assignment_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 93
 ```ruby
-### original
 # BEFORE
 
 a += 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a += 2
 
 ```
+### unnamed test 94
 ```ruby
-### original
 # BEFORE
 
 a +=
@@ -26,21 +26,21 @@ a +=
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a +=
   2
 
 ```
+### unnamed test 95
 ```ruby
-### original
 # BEFORE
 
 a+=1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a += 1
 ```

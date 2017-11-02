@@ -4,73 +4,73 @@ permalink: "/docs/hash_literal/"
 excerpt: "hash_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 308
 ```ruby
-### original
 # BEFORE
 
  { }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {}
 
 ```
+### unnamed test 309
 ```ruby
-### original
 # BEFORE
 
  {:foo   =>   1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:foo => 1}
 
 ```
+### unnamed test 310
 ```ruby
-### original
 # BEFORE
 
  {:foo   =>   1}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:foo => 1}
 
 ```
+### unnamed test 311
 ```ruby
-### original
 # BEFORE
 
  { :foo   =>   1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:foo => 1}
 
 ```
+### unnamed test 312
 ```ruby
-### original
 # BEFORE
 
  { :foo   =>   1 , 2  =>  3  }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:foo => 1, 2 => 3}
 
 ```
+### unnamed test 313
 ```ruby
-### original
 # BEFORE
 
  {
@@ -79,7 +79,7 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {
   :foo => 1,
@@ -88,54 +88,54 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 {
   :foo => 1,
   2 => 3
 }
 ```
+### unnamed test 314
 ```ruby
-### original
 # BEFORE
 
  { **x }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {**x}
 
 ```
+### unnamed test 315
 ```ruby
-### original
 # BEFORE
 
  {foo:  1}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {foo: 1}
 
 ```
+### unnamed test 316
 ```ruby
-### original
 # BEFORE
 
  { foo:  1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {foo: 1}
 
 ```
+### unnamed test 317
 ```ruby
-### original
 # BEFORE
 
  { :foo   =>
@@ -143,52 +143,52 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:foo => 1}
 
 ```
+### unnamed test 318
 ```ruby
-### original
 # BEFORE
 
  { "foo": 1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {"foo": 1}
 
 ```
+### unnamed test 319
 ```ruby
-### original
 # BEFORE
 
  { "foo #{ 2 }": 1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {"foo #{2}": 1}
 
 ```
+### unnamed test 320
 ```ruby
-### original
 # BEFORE
 
  { :"one two"  => 3 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {:"one two" => 3}
 
 ```
+### unnamed test 321
 ```ruby
-### original
 # BEFORE
 
  { foo:  1,
@@ -196,27 +196,27 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {foo: 1,
  bar: 2}
 
 ```
+### unnamed test 322
 ```ruby
-### original
 # BEFORE
 
 {foo: 1,  bar: 2}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {foo: 1, bar: 2}
 
 ```
+### unnamed test 323
 ```ruby
-### original
 # BEFORE
 
 {1 =>
@@ -224,7 +224,7 @@ excerpt: "hash_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 {1 => 2}
 ```

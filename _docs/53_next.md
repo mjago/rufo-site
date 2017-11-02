@@ -4,47 +4,47 @@ permalink: "/docs/next/"
 excerpt: "next Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### next
 ```ruby
-### original
 # BEFORE
 
 next
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 next
 
 ```
+### unnamed test 492
 ```ruby
-### original
 # BEFORE
 
 next  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 next 1
 
 ```
+### unnamed test 493
 ```ruby
-### original
 # BEFORE
 
 next  1 , 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 next 1, 2
 
 ```
+### unnamed test 494
 ```ruby
-### original
 # BEFORE
 
 next  1 , 
@@ -52,7 +52,7 @@ next  1 ,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 next 1,
      2

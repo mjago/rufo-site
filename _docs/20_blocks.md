@@ -4,60 +4,60 @@ permalink: "/docs/blocks/"
 excerpt: "blocks Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 160
 ```ruby
-### original
 # BEFORE
 
 foo   {}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { }
 
 ```
+### unnamed test 161
 ```ruby
-### original
 # BEFORE
 
 foo   {   }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { }
 
 ```
+### unnamed test 162
 ```ruby
-### original
 # BEFORE
 
 foo   {  1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { 1 }
 
 ```
+### unnamed test 163
 ```ruby
-### original
 # BEFORE
 
 foo   {  1 ; 2 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { 1; 2 }
 
 ```
+### unnamed test 164
 ```ruby
-### original
 # BEFORE
 
 foo   {  1
@@ -65,7 +65,7 @@ foo   {  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo {
   1
@@ -73,8 +73,8 @@ foo {
 }
 
 ```
+### unnamed test 165
 ```ruby
-### original
 # BEFORE
 
 foo {
@@ -82,15 +82,15 @@ foo {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo {
   1
 }
 
 ```
+### unnamed test 166
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -99,184 +99,184 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo { 1 }
 end
 
 ```
+### unnamed test 167
 ```ruby
-### original
 # BEFORE
 
 foo { | x , y | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x, y| }
 
 ```
+### unnamed test 168
 ```ruby
-### original
 # BEFORE
 
 foo { | x , | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x, | }
 
 ```
+### unnamed test 169
 ```ruby
-### original
 # BEFORE
 
 foo { | x , y, | bar}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x, y, | bar }
 
 ```
+### unnamed test 170
 ```ruby
-### original
 # BEFORE
 
 foo { || }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { }
 
 ```
+### unnamed test 171
 ```ruby
-### original
 # BEFORE
 
 foo { | | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { }
 
 ```
+### unnamed test 172
 ```ruby
-### original
 # BEFORE
 
 foo { | ( x ) , z | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |(x), z| }
 
 ```
+### unnamed test 173
 ```ruby
-### original
 # BEFORE
 
 foo { | ( x , y ) , z | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |(x, y), z| }
 
 ```
+### unnamed test 174
 ```ruby
-### original
 # BEFORE
 
 foo { | ( x , ( y , w ) ) , z | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |(x, (y, w)), z| }
 
 ```
+### unnamed test 175
 ```ruby
-### original
 # BEFORE
 
 foo { | bar: 1 , baz: 2 | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |bar: 1, baz: 2| }
 
 ```
+### unnamed test 176
 ```ruby
-### original
 # BEFORE
 
 foo { | *z | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |*z| }
 
 ```
+### unnamed test 177
 ```ruby
-### original
 # BEFORE
 
 foo { | **z | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |**z| }
 
 ```
+### unnamed test 178
 ```ruby
-### original
 # BEFORE
 
 foo { | bar = 1 | }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |bar = 1| }
 
 ```
+### unnamed test 179
 ```ruby
-### original
 # BEFORE
 
 foo { | x , y | 1 }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x, y| 1 }
 
 ```
+### unnamed test 180
 ```ruby
-### original
 # BEFORE
 
 foo { | x |
@@ -284,15 +284,15 @@ foo { | x |
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x|
   1
 }
 
 ```
+### unnamed test 181
 ```ruby
-### original
 # BEFORE
 
 foo { | x ,
@@ -301,7 +301,7 @@ foo { | x ,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x,
        y|
@@ -309,34 +309,34 @@ foo { |x,
 }
 
 ```
+### unnamed test 182
 ```ruby
-### original
 # BEFORE
 
 foo   do   end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo do end
 
 ```
+### unnamed test 183
 ```ruby
-### original
 # BEFORE
 
 foo   do 1  end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo do 1 end
 
 ```
+### unnamed test 184
 ```ruby
-### original
 # BEFORE
 
 bar foo {
@@ -345,15 +345,15 @@ bar foo {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 bar foo {
   1
 }, 2
 
 ```
+### unnamed test 185
 ```ruby
-### original
 # BEFORE
 
 bar foo {
@@ -362,28 +362,28 @@ bar foo {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 bar foo {
   1
 } + 2
 
 ```
+### unnamed test 186
 ```ruby
-### original
 # BEFORE
 
 foo { |;x| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |; x| }
 
 ```
+### unnamed test 187
 ```ruby
-### original
 # BEFORE
 
 foo { |
@@ -391,91 +391,91 @@ foo { |
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |; x| }
 
 ```
+### unnamed test 188
 ```ruby
-### original
 # BEFORE
 
 foo { |;x, y| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |; x, y| }
 
 ```
+### unnamed test 189
 ```ruby
-### original
 # BEFORE
 
 foo { |a, b;x, y| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |a, b; x, y| }
 
 ```
+### unnamed test 190
 ```ruby
-### original
 # BEFORE
 
 proc { |(x, *y),z| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 proc { |(x, *y), z| }
 
 ```
+### unnamed test 191
 ```ruby
-### original
 # BEFORE
 
 proc { |(w, *x, y), z| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 proc { |(w, *x, y), z| }
 
 ```
+### unnamed test 192
 ```ruby
-### original
 # BEFORE
 
 foo { |(*x, y), z| }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |(*x, y), z| }
 
 ```
+### unnamed test 193
 ```ruby
-### original
 # BEFORE
 
 foo { begin; end; }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { begin; end }
 
 ```
+### unnamed test 194
 ```ruby
-### original
 # BEFORE
 
 foo {
@@ -483,7 +483,7 @@ foo {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo {
   |i| }

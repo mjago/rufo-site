@@ -4,60 +4,60 @@ permalink: "/docs/method_calls/"
 excerpt: "method_calls Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### foo
 ```ruby
-### original
 # BEFORE
 
 foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo
 
 ```
+### unnamed test 371
 ```ruby
-### original
 # BEFORE
 
 foo()
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo()
 
 ```
+### unnamed test 372
 ```ruby
-### original
 # BEFORE
 
 foo ()
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo ()
 
 ```
+### unnamed test 373
 ```ruby
-### original
 # BEFORE
 
 foo(  )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo()
 
 ```
+### unnamed test 374
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -66,130 +66,130 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo()
 
 ```
+### unnamed test 375
 ```ruby
-### original
 # BEFORE
 
 foo(  1  )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1)
 
 ```
+### unnamed test 376
 ```ruby
-### original
 # BEFORE
 
 foo(  1 ,   2 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1, 2)
 
 ```
+### unnamed test 377
 ```ruby
-### original
 # BEFORE
 
 foo  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1
 
 ```
+### unnamed test 378
 ```ruby
-### original
 # BEFORE
 
 foo  1,  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, 2
 
 ```
+### unnamed test 379
 ```ruby
-### original
 # BEFORE
 
 foo  1,  *x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, *x
 
 ```
+### unnamed test 380
 ```ruby
-### original
 # BEFORE
 
 foo  1,  *x , 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, *x, 2
 
 ```
+### unnamed test 381
 ```ruby
-### original
 # BEFORE
 
 foo  1,  *x , 2 , 3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, *x, 2, 3
 
 ```
+### unnamed test 382
 ```ruby
-### original
 # BEFORE
 
 foo  1,  *x , 2 , 3 , *z , *w , 4
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, *x, 2, 3, *z, *w, 4
 
 ```
+### unnamed test 383
 ```ruby
-### original
 # BEFORE
 
 foo *x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo *x
 
 ```
+### unnamed test 384
 ```ruby
-### original
 # BEFORE
 
 foo 1,
@@ -197,40 +197,40 @@ foo 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1,
   *x
 
 ```
+### unnamed test 385
 ```ruby
-### original
 # BEFORE
 
 foo 1,  *x , *y
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, *x, *y
 
 ```
+### unnamed test 386
 ```ruby
-### original
 # BEFORE
 
 foo 1,  **x
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, **x
 
 ```
+### unnamed test 387
 ```ruby
-### original
 # BEFORE
 
 foo 1,
@@ -238,40 +238,40 @@ foo 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1,
     **x
 
 ```
+### unnamed test 388
 ```ruby
-### original
 # BEFORE
 
 foo 1,  **x , **y
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, **x, **y
 
 ```
+### unnamed test 389
 ```ruby
-### original
 # BEFORE
 
 foo 1,  bar:  2 , baz:  3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, bar: 2, baz: 3
 
 ```
+### unnamed test 390
 ```ruby
-### original
 # BEFORE
 
 foo 1,
@@ -279,14 +279,14 @@ foo 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1,
     bar: 2, baz: 3
 
 ```
+### unnamed test 391
 ```ruby
-### original
 # BEFORE
 
 foo 1,
@@ -294,14 +294,14 @@ foo 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1,
     2
 
 ```
+### unnamed test 392
 ```ruby
-### original
 # BEFORE
 
 foo(1,
@@ -309,14 +309,14 @@ foo(1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1,
     2)
 
 ```
+### unnamed test 393
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -325,7 +325,7 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   1,
@@ -333,8 +333,8 @@ foo(
 )
 
 ```
+### unnamed test 394
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -343,7 +343,7 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   1,
@@ -352,15 +352,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   1,
   2
 )
 ```
+### unnamed test 395
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -370,7 +370,7 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   1,
@@ -378,8 +378,8 @@ foo(
 )
 
 ```
+### unnamed test 396
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -391,7 +391,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(
@@ -401,8 +401,8 @@ begin
 end
 
 ```
+### unnamed test 397
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -413,7 +413,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(1,
@@ -421,8 +421,8 @@ begin
 end
 
 ```
+### unnamed test 398
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -433,7 +433,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(1,
@@ -441,8 +441,8 @@ begin
 end
 
 ```
+### unnamed test 399
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -454,7 +454,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(
@@ -465,7 +465,7 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 begin
   foo(
@@ -474,8 +474,8 @@ begin
   )
 end
 ```
+### unnamed test 400
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -486,7 +486,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(
@@ -497,7 +497,7 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 begin
   foo(
@@ -506,8 +506,8 @@ begin
   )
 end
 ```
+### unnamed test 401
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -518,7 +518,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(
@@ -528,8 +528,8 @@ begin
 end
 
 ```
+### unnamed test 402
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -541,7 +541,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo(
@@ -551,8 +551,8 @@ begin
 end
 
 ```
+### unnamed test 403
 ```ruby
-### original
 # BEFORE
 
 foo(bar(
@@ -561,7 +561,7 @@ foo(bar(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(bar(
   1,
@@ -569,14 +569,14 @@ foo(bar(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(bar(
   1
 ))
 ```
+### unnamed test 404
 ```ruby
-### original
 # BEFORE
 
 foo(bar(
@@ -588,7 +588,7 @@ foo(bar(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(bar(
   1,
@@ -598,86 +598,86 @@ foo(bar(
 ))
 
 ```
+### unnamed test 405
 ```ruby
-### original
 # BEFORE
 
 foo &block
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo &block
 
 ```
+### unnamed test 406
 ```ruby
-### original
 # BEFORE
 
 foo 1 ,  &block
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, &block
 
 ```
+### unnamed test 407
 ```ruby
-### original
 # BEFORE
 
 foo(1 ,  &block)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1, &block)
 
 ```
+### unnamed test 408
 ```ruby
-### original
 # BEFORE
 
 x y z
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x y z
 
 ```
+### unnamed test 409
 ```ruby
-### original
 # BEFORE
 
 x y z w, q
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x y z w, q
 
 ```
+### unnamed test 410
 ```ruby
-### original
 # BEFORE
 
 x(*y, &z)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x(*y, &z)
 
 ```
+### unnamed test 411
 ```ruby
-### original
 # BEFORE
 
 foo \
@@ -685,14 +685,14 @@ foo \
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo \
   1, 2
 
 ```
+### unnamed test 412
 ```ruby
-### original
 # BEFORE
 
 a(
@@ -700,15 +700,15 @@ a(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a(
   *b
 )
 
 ```
+### unnamed test 413
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -718,7 +718,7 @@ x: 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   x: 1,
@@ -727,15 +727,15 @@ foo(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo(
   x: 1,
   y: 2
 )
 ```
+### unnamed test 414
 ```ruby
-### original
 # BEFORE
 
 foo bar(
@@ -744,7 +744,7 @@ foo bar(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar(
   1,
@@ -752,14 +752,14 @@ foo bar(
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo bar(
   1
 )
 ```
+### unnamed test 415
 ```ruby
-### original
 # BEFORE
 
 foo 1, {
@@ -768,7 +768,7 @@ foo 1, {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, {
   x: y,
@@ -776,14 +776,14 @@ foo 1, {
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo 1, {
   x: y
 }
 ```
+### unnamed test 416
 ```ruby
-### original
 # BEFORE
 
 foo 1, [
@@ -792,7 +792,7 @@ foo 1, [
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, [
   1,
@@ -800,14 +800,14 @@ foo 1, [
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo 1, [
   1
 ]
 ```
+### unnamed test 417
 ```ruby
-### original
 # BEFORE
 
 foo 1, [
@@ -818,7 +818,7 @@ EOF
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, [
   <<-EOF,
@@ -827,8 +827,8 @@ EOF
 ]
 
 ```
+### unnamed test 418
 ```ruby
-### original
 # BEFORE
 
 foo bar( # foo
@@ -837,7 +837,7 @@ foo bar( # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar( # foo
   1, # bar
@@ -845,14 +845,14 @@ foo bar( # foo
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo bar( # foo
   1 # bar
 )
 ```
+### unnamed test 419
 ```ruby
-### original
 # BEFORE
 
 foo bar {
@@ -861,28 +861,28 @@ foo bar {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar {
   1
 }
 
 ```
+### unnamed test 420
 ```ruby
-### original
 # BEFORE
 
 foo x:  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo x: 1
 
 ```
+### unnamed test 421
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -891,15 +891,15 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   &block
 )
 
 ```
+### unnamed test 422
 ```ruby
-### original
 # BEFORE
 
 foo(
@@ -909,7 +909,7 @@ foo(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(
   1,
@@ -917,21 +917,21 @@ foo(
 )
 
 ```
+### unnamed test 423
 ```ruby
-### original
 # BEFORE
 
 foo(& block)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(&block)
 
 ```
+### unnamed test 424
 ```ruby
-### original
 # BEFORE
 
 foo 1, [
@@ -940,7 +940,7 @@ foo 1, [
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, [
       2,
@@ -948,14 +948,14 @@ foo 1, [
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo 1, [
       2
     ]
 ```
+### unnamed test 425
 ```ruby
-### original
 # BEFORE
 
 foo 1, [
@@ -964,7 +964,7 @@ foo 1, [
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, [
   2,
@@ -972,14 +972,14 @@ foo 1, [
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo 1, [
   2
 ]
 ```
+### unnamed test 426
 ```ruby
-### original
 # BEFORE
 
 foo bar(
@@ -988,15 +988,15 @@ foo bar(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar(
   2
 )
 
 ```
+### unnamed test 427
 ```ruby
-### original
 # BEFORE
 
 foo bar(
@@ -1005,15 +1005,15 @@ foo bar(
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar(
       2
     )
 
 ```
+### unnamed test 428
 ```ruby
-### original
 # BEFORE
 
 foo bar {
@@ -1022,15 +1022,15 @@ foo bar {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar {
   2
 }
 
 ```
+### unnamed test 429
 ```ruby
-### original
 # BEFORE
 
 foo bar {
@@ -1039,15 +1039,15 @@ foo bar {
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar {
       2
     }
 
 ```
+### unnamed test 430
 ```ruby
-### original
 # BEFORE
 
 foobar 1,
@@ -1055,14 +1055,14 @@ foobar 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foobar 1,
   2
 
 ```
+### unnamed test 431
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -1072,7 +1072,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foobar 1,
@@ -1080,8 +1080,8 @@ begin
 end
 
 ```
+### unnamed test 432
 ```ruby
-### original
 # BEFORE
 
 foo([
@@ -1090,7 +1090,7 @@ foo([
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo([
       1,
@@ -1098,14 +1098,14 @@ foo([
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo([
       1
     ])
 ```
+### unnamed test 433
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -1116,7 +1116,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   foo([
@@ -1126,7 +1126,7 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 begin
   foo([
@@ -1134,8 +1134,8 @@ begin
       ])
 end
 ```
+### unnamed test 434
 ```ruby
-### original
 # BEFORE
 
 (a b).c([
@@ -1144,7 +1144,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 (a b).c([
           1,
@@ -1152,14 +1152,14 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 (a b).c([
           1
         ])
 ```
+### unnamed test 435
 ```ruby
-### original
 # BEFORE
 
 foobar 1,
@@ -1168,7 +1168,7 @@ foobar 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foobar 1,
   "foo

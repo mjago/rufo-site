@@ -4,47 +4,47 @@ permalink: "/docs/semicolons/"
 excerpt: "semicolons Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 544
 ```ruby
-### original
 # BEFORE
 
 123;
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 123
 
 ```
+### unnamed test 545
 ```ruby
-### original
 # BEFORE
 
 1   ;   2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1; 2
 
 ```
+### unnamed test 546
 ```ruby
-### original
 # BEFORE
 
 1   ;  ;   2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1; 2
 
 ```
+### unnamed test 547
 ```ruby
-### original
 # BEFORE
 
 1  
@@ -52,14 +52,14 @@ excerpt: "semicolons Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 2
 
 ```
+### unnamed test 548
 ```ruby
-### original
 # BEFORE
 
 1  
@@ -68,15 +68,15 @@ excerpt: "semicolons Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 
 2
 
 ```
+### unnamed test 549
 ```ruby
-### original
 # BEFORE
 
 1  
@@ -85,15 +85,15 @@ excerpt: "semicolons Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 
 2
 
 ```
+### unnamed test 550
 ```ruby
-### original
 # BEFORE
 
 1 ; 
@@ -103,28 +103,28 @@ excerpt: "semicolons Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 
 2
 
 ```
+### unnamed test 551
 ```ruby
-### original
 # BEFORE
 
 123; # hello
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 123 # hello
 
 ```
+### unnamed test 552
 ```ruby
-### original
 # BEFORE
 
 1;
@@ -132,14 +132,14 @@ excerpt: "semicolons Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1
 2
 
 ```
+### unnamed test 553
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -148,7 +148,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1; 2

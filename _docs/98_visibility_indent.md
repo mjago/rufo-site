@@ -4,8 +4,8 @@ permalink: "/docs/visibility_indent/"
 excerpt: "visibility_indent Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 678
 ```ruby
-### original
 # BEFORE
 
 private
@@ -15,7 +15,7 @@ bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 private
 
@@ -23,27 +23,8 @@ foo
 bar
 
 ```
+### unnamed test 679
 ```ruby
-### original
-# BEFORE
-
-private
-
-  foo
-bar
-
-```
-```ruby
-# DEFAULT
-
-private
-
-foo
-bar
-
-```
-```ruby
-### original
 # BEFORE
 
 private
@@ -51,26 +32,18 @@ private
   foo
 bar
 
-protected
-
-  baz
-
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 private
 
 foo
 bar
 
-protected
-
-baz
-
 ```
+### unnamed test 680
 ```ruby
-### original
 # BEFORE
 
 private
@@ -84,7 +57,7 @@ protected
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 private
 
@@ -96,8 +69,35 @@ protected
 baz
 
 ```
+### unnamed test 681
 ```ruby
-### original
+# BEFORE
+
+private
+
+  foo
+bar
+
+protected
+
+  baz
+
+```
+```ruby
+# BECOMES
+
+private
+
+foo
+bar
+
+protected
+
+baz
+
+```
+### unnamed test 682
+```ruby
 # BEFORE
 
 class Foo
@@ -108,7 +108,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class Foo
   private
@@ -117,8 +117,8 @@ class Foo
 end
 
 ```
+### unnamed test 683
 ```ruby
-### original
 # BEFORE
 
 class << self
@@ -129,7 +129,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class << self
   private

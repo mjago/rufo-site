@@ -4,47 +4,47 @@ permalink: "/docs/spaces_after_comma/"
 excerpt: "spaces_after_comma Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 554
 ```ruby
-### original
 # BEFORE
 
 foo 1,  2,  3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo 1, 2, 3
 
 ```
+### unnamed test 555
 ```ruby
-### original
 # BEFORE
 
 foo(1,  2,  3)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1, 2, 3)
 
 ```
+### unnamed test 556
 ```ruby
-### original
 # BEFORE
 
 foo(1,2,3,x:1,y:2)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo(1, 2, 3, x: 1, y: 2)
 
 ```
+### unnamed test 557
 ```ruby
-### original
 # BEFORE
 
 def foo(x,y)
@@ -52,60 +52,60 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x, y)
 end
 
 ```
+### unnamed test 558
 ```ruby
-### original
 # BEFORE
 
 [1,  2,  3]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, 2, 3]
 
 ```
+### unnamed test 559
 ```ruby
-### original
 # BEFORE
 
 [1,2,3]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, 2, 3]
 
 ```
+### unnamed test 560
 ```ruby
-### original
 # BEFORE
 
 a  ,  b = 1,  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b = 1, 2
 
 ```
+### unnamed test 561
 ```ruby
-### original
 # BEFORE
 
 a,b = 1,2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b = 1, 2
 

@@ -4,8 +4,8 @@ permalink: "/docs/unless/"
 excerpt: "unless Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 673
 ```ruby
-### original
 # BEFORE
 
 unless 1
@@ -14,15 +14,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 unless 1
   2
 end
 
 ```
+### unnamed test 674
 ```ruby
-### original
 # BEFORE
 
 unless 1
@@ -32,7 +32,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 unless 1
   2

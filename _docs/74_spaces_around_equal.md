@@ -4,86 +4,86 @@ permalink: "/docs/spaces_around_equal/"
 excerpt: "spaces_around_equal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 575
 ```ruby
-### original
 # BEFORE
 
 a=1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 
 ```
+### unnamed test 576
 ```ruby
-### original
 # BEFORE
 
 a  =  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 
 ```
+### unnamed test 577
 ```ruby
-### original
 # BEFORE
 
 a  =  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 
 ```
+### unnamed test 578
 ```ruby
-### original
 # BEFORE
 
 a+=1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a += 1
 
 ```
+### unnamed test 579
 ```ruby
-### original
 # BEFORE
 
 a  +=  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a += 1
 
 ```
+### unnamed test 580
 ```ruby
-### original
 # BEFORE
 
 a  +=  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a += 1
 
 ```
+### unnamed test 581
 ```ruby
-### original
 # BEFORE
 
 def foo(x  =  1)
@@ -91,14 +91,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x = 1)
 end
 
 ```
+### unnamed test 582
 ```ruby
-### original
 # BEFORE
 
 def foo(x=1)
@@ -106,7 +106,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x = 1)
 end

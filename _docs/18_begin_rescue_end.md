@@ -4,8 +4,8 @@ permalink: "/docs/begin_rescue_end/"
 excerpt: "begin_rescue_end Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 133
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -16,7 +16,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -25,8 +25,8 @@ rescue
 end
 
 ```
+### unnamed test 134
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -36,7 +36,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
 rescue A
@@ -44,8 +44,8 @@ rescue B
 end
 
 ```
+### unnamed test 135
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -56,7 +56,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -65,8 +65,8 @@ rescue Foo
 end
 
 ```
+### unnamed test 136
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -77,7 +77,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -86,8 +86,8 @@ rescue => ex
 end
 
 ```
+### unnamed test 137
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -98,7 +98,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -107,8 +107,8 @@ rescue Foo => ex
 end
 
 ```
+### unnamed test 138
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -119,7 +119,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -128,8 +128,8 @@ rescue Foo, Bar, Baz => ex
 end
 
 ```
+### unnamed test 139
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -142,7 +142,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -153,8 +153,8 @@ rescue Foo,
 end
 
 ```
+### unnamed test 140
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -165,7 +165,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -174,8 +174,8 @@ ensure
 end
 
 ```
+### unnamed test 141
 ```ruby
-### original
 # BEFORE
 
 begin 
@@ -186,7 +186,7 @@ begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -195,8 +195,8 @@ else
 end
 
 ```
+### unnamed test 142
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -206,7 +206,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -214,8 +214,8 @@ rescue *x
 end
 
 ```
+### unnamed test 143
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -225,7 +225,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1
@@ -233,8 +233,8 @@ rescue *x, *y
 end
 
 ```
+### unnamed test 144
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -244,7 +244,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   1

@@ -4,28 +4,28 @@ permalink: "/docs/booleans/"
 excerpt: "booleans Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### false
 ```ruby
-### original
 # BEFORE
 
 false
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 false
 
 ```
+### true
 ```ruby
-### original
 # BEFORE
 
 true
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 true
 ```

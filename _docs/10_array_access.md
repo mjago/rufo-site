@@ -4,21 +4,21 @@ permalink: "/docs/array_access/"
 excerpt: "array_access Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 58
 ```ruby
-### original
 # BEFORE
 
 foo[ ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[]
 
 ```
+### unnamed test 59
 ```ruby
-### original
 # BEFORE
 
 foo[
@@ -26,39 +26,39 @@ foo[
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[]
 
 ```
+### unnamed test 60
 ```ruby
-### original
 # BEFORE
 
 foo[ 1 ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[1]
 
 ```
+### unnamed test 61
 ```ruby
-### original
 # BEFORE
 
 foo[ 1 , 2 , 3 ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[1, 2, 3]
 
 ```
+### unnamed test 62
 ```ruby
-### original
 # BEFORE
 
 foo[ 1 ,
@@ -67,15 +67,15 @@ foo[ 1 ,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[1,
     2,
     3]
 
 ```
+### unnamed test 63
 ```ruby
-### original
 # BEFORE
 
 foo[
@@ -85,7 +85,7 @@ foo[
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[
   1,
@@ -93,21 +93,21 @@ foo[
   3]
 
 ```
+### unnamed test 64
 ```ruby
-### original
 # BEFORE
 
 foo[ *x ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[*x]
 
 ```
+### unnamed test 65
 ```ruby
-### original
 # BEFORE
 
 foo[
@@ -116,7 +116,7 @@ foo[
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[
   1,
@@ -124,14 +124,14 @@ foo[
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo[
   1
 ]
 ```
+### unnamed test 66
 ```ruby
-### original
 # BEFORE
 
 foo[
@@ -142,7 +142,7 @@ foo[
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo[
   1,
@@ -151,7 +151,7 @@ foo[
 ]
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 foo[
   1,

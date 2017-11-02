@@ -4,21 +4,21 @@ permalink: "/docs/ternaries/"
 excerpt: "ternaries Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 642
 ```ruby
-### original
 # BEFORE
 
 1  ?   2    :  3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 ? 2 : 3
 
 ```
+### unnamed test 643
 ```ruby
-### original
 # BEFORE
 
 1 ?
@@ -26,14 +26,14 @@ excerpt: "ternaries Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 ?
   2 : 3
 
 ```
+### unnamed test 644
 ```ruby
-### original
 # BEFORE
 
 1 ? 2 :
@@ -41,21 +41,21 @@ excerpt: "ternaries Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 ? 2 :
   3
 
 ```
+### unnamed test 645
 ```ruby
-### original
 # BEFORE
 
 1?2:3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 ? 2 : 3
 ```

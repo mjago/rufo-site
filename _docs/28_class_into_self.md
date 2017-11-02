@@ -4,8 +4,8 @@ permalink: "/docs/class_into_self/"
 excerpt: "class_into_self Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 264
 ```ruby
-### original
 # BEFORE
 
 class  <<  self 
@@ -14,7 +14,7 @@ class  <<  self
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 class << self
   1

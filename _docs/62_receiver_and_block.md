@@ -4,8 +4,8 @@ permalink: "/docs/receiver_and_block/"
 excerpt: "receiver_and_block Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 530
 ```ruby
-### original
 # BEFORE
 
 foo.bar 1 do 
@@ -13,14 +13,14 @@ foo.bar 1 do
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.bar 1 do
 end
 
 ```
+### unnamed test 531
 ```ruby
-### original
 # BEFORE
 
 foo::bar 1 do 
@@ -28,7 +28,7 @@ foo::bar 1 do
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo::bar 1 do
 end

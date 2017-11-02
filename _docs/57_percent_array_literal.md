@@ -4,47 +4,47 @@ permalink: "/docs/percent_array_literal/"
 excerpt: "percent_array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 500
 ```ruby
-### original
 # BEFORE
 
  %w(  ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w()
 
 ```
+### unnamed test 501
 ```ruby
-### original
 # BEFORE
 
  %w(one) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w(one)
 
 ```
+### unnamed test 502
 ```ruby
-### original
 # BEFORE
 
  %w( one ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w( one )
 
 ```
+### unnamed test 503
 ```ruby
-### original
 # BEFORE
 
  %w(one   two 
@@ -52,14 +52,14 @@ excerpt: "percent_array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w(one two
    three)
 
 ```
+### unnamed test 504
 ```ruby
-### original
 # BEFORE
 
  %w( one   two 
@@ -67,14 +67,14 @@ excerpt: "percent_array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w( one two
     three )
 
 ```
+### unnamed test 505
 ```ruby
-### original
 # BEFORE
 
  %w( 
@@ -82,14 +82,14 @@ excerpt: "percent_array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w(
   one)
 
 ```
+### unnamed test 506
 ```ruby
-### original
 # BEFORE
 
  %w( 
@@ -98,28 +98,28 @@ excerpt: "percent_array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w(
   one
 )
 
 ```
+### unnamed test 507
 ```ruby
-### original
 # BEFORE
 
  %w[ one ] 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %w[ one ]
 
 ```
+### unnamed test 508
 ```ruby
-### original
 # BEFORE
 
  begin 
@@ -130,7 +130,7 @@ excerpt: "percent_array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   %w(
@@ -139,34 +139,34 @@ begin
 end
 
 ```
+### unnamed test 509
 ```ruby
-### original
 # BEFORE
 
  %i(  ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %i()
 
 ```
+### unnamed test 510
 ```ruby
-### original
 # BEFORE
 
  %i( one ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %i( one )
 
 ```
+### unnamed test 511
 ```ruby
-### original
 # BEFORE
 
  %i( one   two 
@@ -174,112 +174,112 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %i( one two
     three )
 
 ```
+### unnamed test 512
 ```ruby
-### original
 # BEFORE
 
  %i[ one ] 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %i[ one ]
 
 ```
+### unnamed test 513
 ```ruby
-### original
 # BEFORE
 
  %W( ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %W()
 
 ```
+### unnamed test 514
 ```ruby
-### original
 # BEFORE
 
  %W( one ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %W( one )
 
 ```
+### unnamed test 515
 ```ruby
-### original
 # BEFORE
 
  %W( one  two ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %W( one two )
 
 ```
+### unnamed test 516
 ```ruby
-### original
 # BEFORE
 
  %W( one  two #{ 1 } ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %W( one two #{1} )
 
 ```
+### unnamed test 517
 ```ruby
-### original
 # BEFORE
 
 %W(#{1}2)
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %W(#{1}2)
 
 ```
+### unnamed test 518
 ```ruby
-### original
 # BEFORE
 
  %I( ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %I()
 
 ```
+### unnamed test 519
 ```ruby
-### original
 # BEFORE
 
  %I( one  two #{ 1 } ) 
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %I( one two #{1} )
 ```

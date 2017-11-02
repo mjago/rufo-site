@@ -4,34 +4,34 @@ permalink: "/docs/super/"
 excerpt: "super Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### super
 ```ruby
-### original
 # BEFORE
 
 super
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 super
 
 ```
+### unnamed test 634
 ```ruby
-### original
 # BEFORE
 
 super 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 super 1
 
 ```
+### unnamed test 635
 ```ruby
-### original
 # BEFORE
 
 super 1, 
@@ -39,34 +39,34 @@ super 1,
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 super 1,
       2
 
 ```
+### unnamed test 636
 ```ruby
-### original
 # BEFORE
 
 super( 1 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 super(1)
 
 ```
+### unnamed test 637
 ```ruby
-### original
 # BEFORE
 
 super( 1 , 2 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 super(1, 2)
 ```

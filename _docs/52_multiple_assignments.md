@@ -4,223 +4,223 @@ permalink: "/docs/multiple_assignments/"
 excerpt: "multiple_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 474
 ```ruby
-### original
 # BEFORE
 
 a  =   1  ,   2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1, 2
 
 ```
+### unnamed test 475
 ```ruby
-### original
 # BEFORE
 
 a , b  = 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b = 2
 
 ```
+### unnamed test 476
 ```ruby
-### original
 # BEFORE
 
 a , b, ( c, d )  = 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b, (c, d) = 2
 
 ```
+### unnamed test 477
 ```ruby
-### original
 # BEFORE
 
  *x = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 *x = 1
 
 ```
+### unnamed test 478
 ```ruby
-### original
 # BEFORE
 
  a , b , *x = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b, *x = 1
 
 ```
+### unnamed test 479
 ```ruby
-### original
 # BEFORE
 
  *x , a , b = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 *x, a, b = 1
 
 ```
+### unnamed test 480
 ```ruby
-### original
 # BEFORE
 
  a, b, *x, c, d = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b, *x, c, d = 1
 
 ```
+### unnamed test 481
 ```ruby
-### original
 # BEFORE
 
 a, b, = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b, = 1
 
 ```
+### unnamed test 482
 ```ruby
-### original
 # BEFORE
 
 a = b, *c
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = b, *c
 
 ```
+### unnamed test 483
 ```ruby
-### original
 # BEFORE
 
 a = b, *c, *d
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = b, *c, *d
 
 ```
+### unnamed test 484
 ```ruby
-### original
 # BEFORE
 
 a, = b
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, = b
 
 ```
+### unnamed test 485
 ```ruby
-### original
 # BEFORE
 
 a = b, c, *d
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = b, c, *d
 
 ```
+### unnamed test 486
 ```ruby
-### original
 # BEFORE
 
 a = b, c, *d, e
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = b, c, *d, e
 
 ```
+### unnamed test 487
 ```ruby
-### original
 # BEFORE
 
 *, y = z
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 *, y = z
 
 ```
+### unnamed test 488
 ```ruby
-### original
 # BEFORE
 
 w, (x,), y = z
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 w, (x,), y = z
 
 ```
+### unnamed test 489
 ```ruby
-### original
 # BEFORE
 
 a, b=1, 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a, b = 1, 2
 
 ```
+### unnamed test 490
 ```ruby
-### original
 # BEFORE
 
 * = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 * = 1
 ```

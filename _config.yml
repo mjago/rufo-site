@@ -8,10 +8,10 @@
 # Site Settings
 minimal_mistakes_skin    : "default" #"dark" #, "dirt", "mint", "sunrise"
 locale                   : "en-US"
-title                    : "Rufo Formatter"
+title                    : "Rufo - the Ruby Formatter"
 title_separator          : "-"
 name                     : &name "Martyn Jago"
-description              : &description "A lightning-fast, opinionated Ruby formatter."
+description              : &description "The fast Ruby Formatter."
 url                      : https://mjago.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/rufo-site" # the subpath of your site, e.g. "/blog"
 repository               : "mjago/rufo-site"

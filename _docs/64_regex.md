@@ -4,67 +4,67 @@ permalink: "/docs/regex/"
 excerpt: "regex Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 533
 ```ruby
-### original
 # BEFORE
 
 //
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 //
 
 ```
+### unnamed test 534
 ```ruby
-### original
 # BEFORE
 
 //ix
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 //ix
 
 ```
+### unnamed test 535
 ```ruby
-### original
 # BEFORE
 
 /foo/
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 /foo/
 
 ```
+### unnamed test 536
 ```ruby
-### original
 # BEFORE
 
 /foo #{1 + 2} /
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 /foo #{1 + 2} /
 
 ```
+### unnamed test 537
 ```ruby
-### original
 # BEFORE
 
 %r( foo )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 %r( foo )
 ```

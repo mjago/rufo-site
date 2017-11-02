@@ -4,60 +4,60 @@ permalink: "/docs/array_literal/"
 excerpt: "array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 67
 ```ruby
-### original
 # BEFORE
 
  [  ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 []
 
 ```
+### unnamed test 68
 ```ruby
-### original
 # BEFORE
 
  [  1 ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1]
 
 ```
+### unnamed test 69
 ```ruby
-### original
 # BEFORE
 
  [  1 , 2 ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, 2]
 
 ```
+### unnamed test 70
 ```ruby
-### original
 # BEFORE
 
  [  1 , 2 , ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, 2]
 
 ```
+### unnamed test 71
 ```ruby
-### original
 # BEFORE
 
  [
@@ -65,7 +65,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1, 2,
@@ -73,14 +73,14 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1, 2
 ]
 ```
+### unnamed test 72
 ```ruby
-### original
 # BEFORE
 
  [
@@ -88,7 +88,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1, 2,
@@ -96,14 +96,14 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1, 2
 ]
 ```
+### unnamed test 73
 ```ruby
-### original
 # BEFORE
 
  [
@@ -112,7 +112,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1, 2,
@@ -121,15 +121,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1, 2,
   3, 4
 ]
 ```
+### unnamed test 74
 ```ruby
-### original
 # BEFORE
 
  [
@@ -138,7 +138,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1,
@@ -147,15 +147,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1,
   2
 ]
 ```
+### unnamed test 75
 ```ruby
-### original
 # BEFORE
 
  [  # comment
@@ -164,7 +164,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [ # comment
   1,
@@ -173,15 +173,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [ # comment
   1,
   2
 ]
 ```
+### unnamed test 76
 ```ruby
-### original
 # BEFORE
 
  [
@@ -190,7 +190,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1,  # comment
@@ -199,15 +199,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1,  # comment
   2
 ]
 ```
+### unnamed test 77
 ```ruby
-### original
 # BEFORE
 
  [  1 ,
@@ -216,15 +216,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1,
  2, 3,
  4]
 
 ```
+### unnamed test 78
 ```ruby
-### original
 # BEFORE
 
  [  1 ,
@@ -233,15 +233,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1,
  2, 3,
  4]
 
 ```
+### unnamed test 79
 ```ruby
-### original
 # BEFORE
 
  [  1 ,
@@ -251,15 +251,15 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1,
  2, 3,
  4]
 
 ```
+### unnamed test 80
 ```ruby
-### original
 # BEFORE
 
  [ 1 ,
@@ -269,7 +269,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1,
  2, 3,
@@ -277,8 +277,8 @@ excerpt: "array_literal Specs."
 ]
 
 ```
+### unnamed test 81
 ```ruby
-### original
 # BEFORE
 
  begin
@@ -288,7 +288,7 @@ excerpt: "array_literal Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   [
@@ -298,7 +298,7 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 begin
   [
@@ -306,8 +306,8 @@ begin
   ]
 end
 ```
+### unnamed test 82
 ```ruby
-### original
 # BEFORE
 
  [
@@ -316,7 +316,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1, # foo
@@ -324,53 +324,53 @@ end
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1 # foo
 ]
 ```
+### unnamed test 83
 ```ruby
-### original
 # BEFORE
 
  [ *x ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [*x]
 
 ```
+### unnamed test 84
 ```ruby
-### original
 # BEFORE
 
  [ *x , 1 ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [*x, 1]
 
 ```
+### unnamed test 85
 ```ruby
-### original
 # BEFORE
 
  [ 1, *x ]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, *x]
 
 ```
+### unnamed test 86
 ```ruby
-### original
 # BEFORE
 
  x = [{
@@ -379,7 +379,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = [{
   foo: 1,
@@ -387,27 +387,27 @@ x = [{
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 x = [{
   foo: 1
 }]
 ```
+### unnamed test 87
 ```ruby
-### original
 # BEFORE
 
 [1,   2]
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [1, 2]
 
 ```
+### unnamed test 88
 ```ruby
-### original
 # BEFORE
 
 [
@@ -418,7 +418,7 @@ x = [{
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1,
@@ -428,7 +428,7 @@ x = [{
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1,
@@ -436,8 +436,8 @@ x = [{
   2
 ]
 ```
+### unnamed test 89
 ```ruby
-### original
 # BEFORE
 
 [
@@ -447,7 +447,7 @@ x = [{
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   *a,
@@ -456,15 +456,15 @@ x = [{
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   *a,
   b
 ]
 ```
+### unnamed test 90
 ```ruby
-### original
 # BEFORE
 
 [
@@ -474,7 +474,7 @@ x = [{
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1, *a,
@@ -482,7 +482,7 @@ x = [{
 ]
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1, *a,

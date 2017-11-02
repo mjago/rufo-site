@@ -4,106 +4,106 @@ permalink: "/docs/suffix_if/"
 excerpt: "suffix_if Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 621
 ```ruby
-### original
 # BEFORE
 
 1 if 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 if 2
 
 ```
+### unnamed test 622
 ```ruby
-### original
 # BEFORE
 
 1 unless 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 unless 2
 
 ```
+### unnamed test 623
 ```ruby
-### original
 # BEFORE
 
 1 rescue 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 rescue 2
 
 ```
+### unnamed test 624
 ```ruby
-### original
 # BEFORE
 
 1 while 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 while 2
 
 ```
+### unnamed test 625
 ```ruby
-### original
 # BEFORE
 
 1 until 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 until 2
 
 ```
+### unnamed test 626
 ```ruby
-### original
 # BEFORE
 
 x.y rescue z
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x.y rescue z
 
 ```
+### unnamed test 627
 ```ruby
-### original
 # BEFORE
 
 1  if  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 if 2
 
 ```
+### unnamed test 628
 ```ruby
-### original
 # BEFORE
 
 foo bar(1)  if  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar(1) if 2
 ```

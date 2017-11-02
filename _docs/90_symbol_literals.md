@@ -4,54 +4,54 @@ permalink: "/docs/symbol_literals/"
 excerpt: "symbol_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 638
 ```ruby
-### original
 # BEFORE
 
 :foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 :foo
 
 ```
+### unnamed test 639
 ```ruby
-### original
 # BEFORE
 
 :"foo"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 :"foo"
 
 ```
+### unnamed test 640
 ```ruby
-### original
 # BEFORE
 
 :"foo#{1}"
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 :"foo#{1}"
 
 ```
+### unnamed test 641
 ```ruby
-### original
 # BEFORE
 
 :*
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 :*
 ```

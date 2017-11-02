@@ -4,54 +4,54 @@ permalink: "/docs/special_global_variables/"
 excerpt: "special_global_variables Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 604
 ```ruby
-### original
 # BEFORE
 
 $~
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 $~
 
 ```
+### unnamed test 605
 ```ruby
-### original
 # BEFORE
 
 $1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 $1
 
 ```
+### unnamed test 606
 ```ruby
-### original
 # BEFORE
 
 $!
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 $!
 
 ```
+### unnamed test 607
 ```ruby
-### original
 # BEFORE
 
 $@
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 $@
 ```

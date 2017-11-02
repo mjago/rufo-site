@@ -4,60 +4,60 @@ permalink: "/docs/constants/"
 excerpt: "constants Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 285
 ```ruby
-### original
 # BEFORE
 
 Foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 Foo
 
 ```
+### unnamed test 286
 ```ruby
-### original
 # BEFORE
 
 Foo::Bar::Baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 Foo::Bar::Baz
 
 ```
+### unnamed test 287
 ```ruby
-### original
 # BEFORE
 
 Foo::Bar::Baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 Foo::Bar::Baz
 
 ```
+### unnamed test 288
 ```ruby
-### original
 # BEFORE
 
 Foo:: Bar:: Baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 Foo::Bar::Baz
 
 ```
+### unnamed test 289
 ```ruby
-### original
 # BEFORE
 
 Foo:: 
@@ -65,59 +65,59 @@ Bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 Foo::Bar
 
 ```
+### unnamed test 290
 ```ruby
-### original
 # BEFORE
 
 ::Foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 ::Foo
 
 ```
+### unnamed test 291
 ```ruby
-### original
 # BEFORE
 
 ::Foo::Bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 ::Foo::Bar
 
 ```
+### unnamed test 292
 ```ruby
-### original
 # BEFORE
 
 ::Foo = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 ::Foo = 1
 
 ```
+### unnamed test 293
 ```ruby
-### original
 # BEFORE
 
 ::Foo::Bar = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 ::Foo::Bar = 1
 ```

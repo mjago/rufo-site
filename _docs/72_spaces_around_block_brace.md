@@ -4,54 +4,54 @@ permalink: "/docs/spaces_around_block_brace/"
 excerpt: "spaces_around_block_brace Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 569
 ```ruby
-### original
 # BEFORE
 
 foo{1}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { 1 }
 
 ```
+### unnamed test 570
 ```ruby
-### original
 # BEFORE
 
 foo{|x|1}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { |x| 1 }
 
 ```
+### unnamed test 571
 ```ruby
-### original
 # BEFORE
 
 foo  {  1  }
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo { 1 }
 
 ```
+### unnamed test 572
 ```ruby
-### original
 # BEFORE
 
 ->{1}
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 -> { 1 }
 

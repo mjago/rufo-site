@@ -4,8 +4,8 @@ permalink: "/docs/align_assignments/"
 excerpt: "align_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 6
 ```ruby
-### original
 # BEFORE
 
 x = 1
@@ -15,7 +15,7 @@ x = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = 1
 xyz = 2
@@ -23,8 +23,8 @@ xyz = 2
 w = 3
 
 ```
+### unnamed test 7
 ```ruby
-### original
 # BEFORE
 
 x = 1
@@ -34,7 +34,7 @@ x = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = 1
 foo[bar] = 2
@@ -42,8 +42,8 @@ foo[bar] = 2
 w = 3
 
 ```
+### unnamed test 8
 ```ruby
-### original
 # BEFORE
 
 x = 1; x = 2
@@ -53,7 +53,7 @@ x = 1; x = 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = 1; x = 2
 xyz = 2
@@ -61,8 +61,8 @@ xyz = 2
 w = 3
 
 ```
+### unnamed test 9
 ```ruby
-### original
 # BEFORE
 
 a = begin
@@ -72,7 +72,7 @@ a = begin
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = begin
   b = 1
@@ -80,8 +80,8 @@ a = begin
 end
 
 ```
+### unnamed test 10
 ```ruby
-### original
 # BEFORE
 
 a = 1
@@ -89,14 +89,14 @@ a = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1
 a += 2
 
 ```
+### unnamed test 11
 ```ruby
-### original
 # BEFORE
 
 foo = 1
@@ -104,14 +104,14 @@ foo = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo = 1
 a += 2
 
 ```
+### unnamed test 12
 ```ruby
-### original
 # BEFORE
 
 x = 1
@@ -121,7 +121,7 @@ x = 1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x = 1
 xyz = 2

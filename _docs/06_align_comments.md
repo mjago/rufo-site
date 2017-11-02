@@ -4,8 +4,8 @@ permalink: "/docs/align_comments/"
 excerpt: "align_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 15
 ```ruby
-### original
 # BEFORE
 
 1 # one
@@ -13,14 +13,14 @@ excerpt: "align_comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # one
 123 # two
 
 ```
+### unnamed test 16
 ```ruby
-### original
 # BEFORE
 
 1 # one
@@ -30,7 +30,7 @@ excerpt: "align_comments Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 # one
 123 # two
@@ -38,8 +38,8 @@ excerpt: "align_comments Specs."
 5 # lala
 
 ```
+### unnamed test 17
 ```ruby
-### original
 # BEFORE
 
 foobar( # one
@@ -48,15 +48,15 @@ foobar( # one
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foobar( # one
   1 # two
 )
 
 ```
+### unnamed test 18
 ```ruby
-### original
 # BEFORE
 
 a = 1 # foo
@@ -64,14 +64,14 @@ a = 1 # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1 # foo
 abc = 2 # bar
 
 ```
+### unnamed test 19
 ```ruby
-### original
 # BEFORE
 
 a = 1 # foo
@@ -79,14 +79,14 @@ a = 1 # foo
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1 # foo
       # bar
 
 ```
+### unnamed test 20
 ```ruby
-### original
 # BEFORE
 
 # foo
@@ -94,14 +94,14 @@ a # bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # foo
 a # bar
 
 ```
+### unnamed test 21
 ```ruby
-### original
 # BEFORE
 
  # foo
@@ -109,14 +109,14 @@ a # bar
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 # foo
 a # bar
 
 ```
+### unnamed test 22
 ```ruby
-### original
 # BEFORE
 
 require x
@@ -127,7 +127,7 @@ FOO = :bar # Comment 3
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 require x
 
@@ -136,8 +136,8 @@ require x
 FOO = :bar # Comment 3
 
 ```
+### unnamed test 23
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -150,7 +150,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   require x
@@ -161,8 +161,8 @@ begin
 end
 
 ```
+### unnamed test 24
 ```ruby
-### original
 # BEFORE
 
 begin
@@ -173,7 +173,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 begin
   a     # c1
@@ -182,8 +182,8 @@ begin
 end
 
 ```
+### unnamed test 25
 ```ruby
-### original
 # BEFORE
 
 a = 1   # foo
@@ -191,14 +191,14 @@ bar = 2 # baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1   # foo
 bar = 2 # baz
 
 ```
+### unnamed test 26
 ```ruby
-### original
 # BEFORE
 
 [
@@ -208,7 +208,7 @@ bar = 2 # baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1,   # foo
@@ -217,15 +217,15 @@ bar = 2 # baz
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1,   # foo
   234   # bar
 ]
 ```
+### unnamed test 27
 ```ruby
-### original
 # BEFORE
 
 [
@@ -235,7 +235,7 @@ bar = 2 # baz
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 [
   1,   # foo
@@ -244,15 +244,15 @@ bar = 2 # baz
 
 ```
 ```ruby
-# :trailing_commas  :never
+# with setting :trailing_commas :never
 
 [
   1,   # foo
   234    # bar
 ]
 ```
+### unnamed test 28
 ```ruby
-### original
 # BEFORE
 
 foo bar: 1,  # comment
@@ -260,7 +260,7 @@ foo bar: 1,  # comment
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo bar: 1,  # comment
     baz: 2    # comment

@@ -4,54 +4,54 @@ permalink: "/docs/calls_with_dot/"
 excerpt: "calls_with_dot Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 201
 ```ruby
-### original
 # BEFORE
 
 foo.()
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.()
 
 ```
+### unnamed test 202
 ```ruby
-### original
 # BEFORE
 
 foo.( 1 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.(1)
 
 ```
+### unnamed test 203
 ```ruby
-### original
 # BEFORE
 
 foo.( 1, 2 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.(1, 2)
 
 ```
+### unnamed test 204
 ```ruby
-### original
 # BEFORE
 
 x.foo.( 1, 2 )
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 x.foo.(1, 2)
 ```

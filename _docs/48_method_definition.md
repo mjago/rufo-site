@@ -4,8 +4,8 @@ permalink: "/docs/method_definition/"
 excerpt: "method_definition Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 436
 ```ruby
-### original
 # BEFORE
 
   def foo
@@ -13,27 +13,27 @@ excerpt: "method_definition Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo
 end
 
 ```
+### unnamed test 437
 ```ruby
-### original
 # BEFORE
 
   def foo ; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo; end
 
 ```
+### unnamed test 438
 ```ruby
-### original
 # BEFORE
 
   def foo()
@@ -41,27 +41,27 @@ def foo; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo()
 end
 
 ```
+### unnamed test 439
 ```ruby
-### original
 # BEFORE
 
   def foo() 1 end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo() 1 end
 
 ```
+### unnamed test 440
 ```ruby
-### original
 # BEFORE
 
   def foo(
@@ -70,14 +70,14 @@ def foo() 1 end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo()
 end
 
 ```
+### unnamed test 441
 ```ruby
-### original
 # BEFORE
 
   def foo( x )
@@ -85,14 +85,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x)
 end
 
 ```
+### unnamed test 442
 ```ruby
-### original
 # BEFORE
 
   def foo( x , y )
@@ -100,14 +100,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x, y)
 end
 
 ```
+### unnamed test 443
 ```ruby
-### original
 # BEFORE
 
   def foo
@@ -116,15 +116,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo
   1
 end
 
 ```
+### unnamed test 444
 ```ruby
-### original
 # BEFORE
 
   def foo( * x )
@@ -133,15 +133,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(*x)
   1
 end
 
 ```
+### unnamed test 445
 ```ruby
-### original
 # BEFORE
 
   def foo( a , * x )
@@ -150,15 +150,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a, *x)
   1
 end
 
 ```
+### unnamed test 446
 ```ruby
-### original
 # BEFORE
 
   def foo( a , * x, b )
@@ -167,15 +167,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a, *x, b)
   1
 end
 
 ```
+### unnamed test 447
 ```ruby
-### original
 # BEFORE
 
   def foo( x  =  1 )
@@ -183,14 +183,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x = 1)
 end
 
 ```
+### unnamed test 448
 ```ruby
-### original
 # BEFORE
 
   def foo( x  =  1, * y )
@@ -198,14 +198,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x = 1, *y)
 end
 
 ```
+### unnamed test 449
 ```ruby
-### original
 # BEFORE
 
   def foo( & block )
@@ -213,14 +213,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(&block)
 end
 
 ```
+### unnamed test 450
 ```ruby
-### original
 # BEFORE
 
   def foo( a: , b: )
@@ -228,14 +228,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a:, b:)
 end
 
 ```
+### unnamed test 451
 ```ruby
-### original
 # BEFORE
 
   def foo( a: 1 , b: 2  )
@@ -243,14 +243,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a: 1, b: 2)
 end
 
 ```
+### unnamed test 452
 ```ruby
-### original
 # BEFORE
 
   def foo( x,
@@ -259,15 +259,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(x,
         y)
 end
 
 ```
+### unnamed test 453
 ```ruby
-### original
 # BEFORE
 
   def foo( a: 1,
@@ -276,15 +276,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a: 1,
         b: 2)
 end
 
 ```
+### unnamed test 454
 ```ruby
-### original
 # BEFORE
 
   def foo(
@@ -294,7 +294,7 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(
         x,
@@ -302,8 +302,8 @@ def foo(
 end
 
 ```
+### unnamed test 455
 ```ruby
-### original
 # BEFORE
 
   def foo( a: 1, &block )
@@ -311,14 +311,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a: 1, &block)
 end
 
 ```
+### unnamed test 456
 ```ruby
-### original
 # BEFORE
 
   def foo( a: 1,
@@ -327,15 +327,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(a: 1,
         &block)
 end
 
 ```
+### unnamed test 457
 ```ruby
-### original
 # BEFORE
 
   def foo(*)
@@ -343,14 +343,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(*)
 end
 
 ```
+### unnamed test 458
 ```ruby
-### original
 # BEFORE
 
   def foo(**)
@@ -358,14 +358,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo(**)
 end
 
 ```
+### unnamed test 459
 ```ruby
-### original
 # BEFORE
 
 def `(cmd)
@@ -373,14 +373,14 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def `(cmd)
 end
 
 ```
+### unnamed test 460
 ```ruby
-### original
 # BEFORE
 
 module_function def foo
@@ -389,15 +389,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 module_function def foo
   1
 end
 
 ```
+### unnamed test 461
 ```ruby
-### original
 # BEFORE
 
 private def foo
@@ -406,15 +406,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 private def foo
   1
 end
 
 ```
+### unnamed test 462
 ```ruby
-### original
 # BEFORE
 
 some class Foo
@@ -423,15 +423,15 @@ end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 some class Foo
   1
 end
 
 ```
+### unnamed test 463
 ```ruby
-### original
 # BEFORE
 
 def foo; 1; end
@@ -439,14 +439,14 @@ def bar; 2; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo; 1; end
 def bar; 2; end
 
 ```
+### unnamed test 464
 ```ruby
-### original
 # BEFORE
 
 def foo; 1; end
@@ -455,7 +455,7 @@ def bar; 2; end
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 def foo; 1; end
 

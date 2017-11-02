@@ -4,39 +4,39 @@ permalink: "/docs/binary_operators/"
 excerpt: "binary_operators Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 145
 ```ruby
-### original
 # BEFORE
 
 1   +   2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1   +   2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 + 2
 ```
+### unnamed test 146
 ```ruby
-### original
 # BEFORE
 
 1+2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1+2
 
 ```
+### unnamed test 147
 ```ruby
-### original
 # BEFORE
 
 1   +  
@@ -44,20 +44,20 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1   +
   2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 +
   2
 ```
+### unnamed test 148
 ```ruby
-### original
 # BEFORE
 
 1   +  # hello 
@@ -65,20 +65,20 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1   + # hello
   2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 + # hello
   2
 ```
+### unnamed test 149
 ```ruby
-### original
 # BEFORE
 
 1 +
@@ -87,126 +87,126 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 +
   2+
   3
 
 ```
+### unnamed test 150
 ```ruby
-### original
 # BEFORE
 
 1  &&  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1  &&  2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 && 2
 ```
+### unnamed test 151
 ```ruby
-### original
 # BEFORE
 
 1  ||  2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1  ||  2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 || 2
 ```
+### unnamed test 152
 ```ruby
-### original
 # BEFORE
 
 1*2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1*2
 
 ```
+### unnamed test 153
 ```ruby
-### original
 # BEFORE
 
 1* 2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1* 2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1*2
 ```
+### unnamed test 154
 ```ruby
-### original
 # BEFORE
 
 1 *2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 *2
 
 ```
 ```ruby
-# :spaces_around_binary  :one
+# with setting :spaces_around_binary :one
 
 1 * 2
 ```
+### unnamed test 155
 ```ruby
-### original
 # BEFORE
 
 1/2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1/2
 
 ```
+### unnamed test 156
 ```ruby
-### original
 # BEFORE
 
 1**2
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1**2
 
 ```
+### unnamed test 157
 ```ruby
-### original
 # BEFORE
 
 1 \
@@ -214,14 +214,14 @@ excerpt: "binary_operators Specs."
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 \
   + 2
 
 ```
+### unnamed test 158
 ```ruby
-### original
 # BEFORE
 
 a = 1 ||
@@ -229,14 +229,14 @@ a = 1 ||
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 a = 1 ||
     2
 
 ```
+### unnamed test 159
 ```ruby
-### original
 # BEFORE
 
 1 ||
@@ -244,7 +244,7 @@ a = 1 ||
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 1 ||
 2

@@ -4,21 +4,21 @@ permalink: "/docs/property_setters/"
 excerpt: "property_setters Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
+### unnamed test 520
 ```ruby
-### original
 # BEFORE
 
 foo . bar  =  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.bar = 1
 
 ```
+### unnamed test 521
 ```ruby
-### original
 # BEFORE
 
 foo . bar  =
@@ -26,14 +26,14 @@ foo . bar  =
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.bar =
   1
 
 ```
+### unnamed test 522
 ```ruby
-### original
 # BEFORE
 
 foo .
@@ -42,28 +42,28 @@ foo .
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo.
   bar =
   1
 
 ```
+### unnamed test 523
 ```ruby
-### original
 # BEFORE
 
 foo:: bar  =  1
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo::bar = 1
 
 ```
+### unnamed test 524
 ```ruby
-### original
 # BEFORE
 
 foo:: bar  =
@@ -71,14 +71,14 @@ foo:: bar  =
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo::bar =
   1
 
 ```
+### unnamed test 525
 ```ruby
-### original
 # BEFORE
 
 foo::
@@ -87,7 +87,7 @@ foo::
 
 ```
 ```ruby
-# DEFAULT
+# BECOMES
 
 foo::
   bar =
