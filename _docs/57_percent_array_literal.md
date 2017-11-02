@@ -1,5 +1,5 @@
 ---
-title: "percent_array_literal"
+title: "percent\\_array\\_literal"
 permalink: "/docs/percent_array_literal/"
 excerpt: "percent_array_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00

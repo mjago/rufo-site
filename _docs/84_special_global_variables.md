@@ -1,5 +1,5 @@
 ---
-title: "special_global_variables"
+title: "special\\_global\\_variables"
 permalink: "/docs/special_global_variables/"
 excerpt: "special_global_variables Specs."
 # modified: 2017-10-27T16:25:30-04:00

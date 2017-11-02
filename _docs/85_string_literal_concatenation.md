@@ -1,5 +1,5 @@
 ---
-title: "string_literal_concatenation"
+title: "string\\_literal\\_concatenation"
 permalink: "/docs/string_literal_concatenation/"
 excerpt: "string_literal_concatenation Specs."
 # modified: 2017-10-27T16:25:30-04:00

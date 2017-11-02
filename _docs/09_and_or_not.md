@@ -1,5 +1,5 @@
 ---
-title: "and_or_not"
+title: "and\\_or\\_not"
 permalink: "/docs/and_or_not/"
 excerpt: "and_or_not Specs."
 # modified: 2017-10-27T16:25:30-04:00

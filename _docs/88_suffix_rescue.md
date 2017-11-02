@@ -1,5 +1,5 @@
 ---
-title: "suffix_rescue"
+title: "suffix\\_rescue"
 permalink: "/docs/suffix_rescue/"
 excerpt: "suffix_rescue Specs."
 # modified: 2017-10-27T16:25:30-04:00

@@ -1,5 +1,5 @@
 ---
-title: "hash_literal"
+title: "hash\\_literal"
 permalink: "/docs/hash_literal/"
 excerpt: "hash_literal Specs."
 # modified: 2017-10-27T16:25:30-04:00

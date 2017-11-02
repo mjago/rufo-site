@@ -1,5 +1,5 @@
 ---
-title: "junk_drawer"
+title: "junk\\_drawer"
 permalink: "/docs/junk_drawer/"
 excerpt: "junk_drawer Specs."
 # modified: 2017-10-27T16:25:30-04:00

@@ -1,5 +1,5 @@
 ---
-title: "symbol_literals"
+title: "symbol\\_literals"
 permalink: "/docs/symbol_literals/"
 excerpt: "symbol_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00

@@ -17,7 +17,7 @@ excerpt: "comments Specs."
 # foo
 
 ```
-### two_comments
+### two\_comments
 ```ruby
 # BEFORE
 
@@ -32,7 +32,7 @@ excerpt: "comments Specs."
 # bar
 
 ```
-### integer_with_comment
+### integer\_with\_comment
 ```ruby
 # BEFORE
 
@@ -45,7 +45,7 @@ excerpt: "comments Specs."
 1   # foo
 
 ```
-### comment_with_double_line_break
+### comment\_with\_double\_line\_break
 ```ruby
 # BEFORE
 
@@ -62,7 +62,7 @@ excerpt: "comments Specs."
 # b
 
 ```
-### comment_with_triple_line_break
+### comment\_with\_triple\_line\_break
 ```ruby
 # BEFORE
 
@@ -80,11 +80,28 @@ excerpt: "comments Specs."
 # b
 
 ```
-### comment_and_integer
+### comment\_and\_integer
 ```ruby
 # BEFORE
 
 # a
+1
+
+```
+```ruby
+# BECOMES
+
+# a
+1
+
+```
+### comment\_double\_newline\_integer
+```ruby
+# BEFORE
+
+# a
+
+
 1
 
 ```
@@ -92,28 +109,11 @@ excerpt: "comments Specs."
 # BECOMES
 
 # a
-1
-
-```
-### comment_double_newline_integer
-```ruby
-# BEFORE
-
-# a
-
 
 1
 
 ```
-```ruby
-# BECOMES
-
-# a
-
-1
-
-```
-### integer_with_comment_and_following_comment
+### integer\_with\_comment\_and\_following\_comment
 ```ruby
 # BEFORE
 
@@ -128,7 +128,7 @@ excerpt: "comments Specs."
 # b
 
 ```
-### integer_with_comment_and_multiline_break
+### integer\_with\_comment\_and\_multiline\_break
 ```ruby
 # BEFORE
 
@@ -145,7 +145,7 @@ excerpt: "comments Specs."
 # b
 
 ```
-### integers_separated_by_comments
+### integers\_separated\_by\_comments
 ```ruby
 # BEFORE
 
@@ -162,7 +162,7 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### multiple_trailing_comments
+### multiple\_trailing\_comments
 ```ruby
 # BEFORE
 
@@ -180,7 +180,7 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### more_trailing_comments
+### more\_trailing\_comments
 ```ruby
 # BEFORE
 
@@ -202,7 +202,7 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### still_more_trailing_comments
+### still\_more\_trailing\_comments
 ```ruby
 # BEFORE
 
@@ -227,7 +227,7 @@ excerpt: "comments Specs."
 2 # b
 
 ```
-### comment_indentation_inside_method_call
+### comment\_indentation\_inside\_method\_call
 ```ruby
 # BEFORE
 
@@ -254,7 +254,7 @@ foo(
   foo: 'foo'
 )
 ```
-### comment_indentation_inside_method_call_2
+### comment\_indentation\_inside\_method\_call\_2
 ```ruby
 # BEFORE
 
@@ -281,7 +281,7 @@ foo(
   foo: 'foo'
 )
 ```
-### comment_indentation_inside_method_call_3
+### comment\_indentation\_inside\_method\_call\_3
 ```ruby
 # BEFORE
 
@@ -308,7 +308,7 @@ foo(
   foo: 'foo'
 )
 ```
-### comment_indentation_inside_method_call_4
+### comment\_indentation\_inside\_method\_call\_4
 ```ruby
 # BEFORE
 
@@ -335,7 +335,7 @@ foo(
   foo: 'foo'
 )
 ```
-### multiple_comments_inside_method_call
+### multiple\_comments\_inside\_method\_call
 ```ruby
 # BEFORE
 

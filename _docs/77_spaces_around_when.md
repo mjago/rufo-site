@@ -1,5 +1,5 @@
 ---
-title: "spaces_around_when"
+title: "spaces\\_around\\_when"
 permalink: "/docs/spaces_around_when/"
 excerpt: "spaces_around_when Specs."
 # modified: 2017-10-27T16:25:30-04:00

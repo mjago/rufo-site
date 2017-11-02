@@ -1,10 +1,10 @@
 ---
-title: "string_literals"
+title: "string\\_literals"
 permalink: "/docs/string_literals/"
 excerpt: "string_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### single_quote_string_literal
+### single\_quote\_string\_literal
 ```ruby
 # BEFORE
 
@@ -17,7 +17,7 @@ excerpt: "string_literals Specs."
 'hello'
 
 ```
-### double_quote_string_literal
+### double\_quote\_string\_literal
 ```ruby
 # BEFORE
 
@@ -30,7 +30,7 @@ excerpt: "string_literals Specs."
 "hello"
 
 ```
-### percent_q_string_literal
+### percent\_q\_string\_literal
 ```ruby
 # BEFORE
 
@@ -43,7 +43,7 @@ excerpt: "string_literals Specs."
 "hello"
 
 ```
-### percent_string_literal
+### percent\_string\_literal
 ```ruby
 # BEFORE
 
@@ -56,7 +56,7 @@ excerpt: "string_literals Specs."
 "\n"
 
 ```
-### percent_string_literal_1
+### percent\_string\_literal\_1
 ```ruby
 # BEFORE
 
@@ -69,7 +69,7 @@ excerpt: "string_literals Specs."
 "hello #{1} foo"
 
 ```
-### percent_string_literal_2
+### percent\_string\_literal\_2
 ```ruby
 # BEFORE
 
@@ -82,7 +82,7 @@ excerpt: "string_literals Specs."
 "hello #{1} foo"
 
 ```
-### percent_string_literal_3
+### percent\_string\_literal\_3
 ```ruby
 # BEFORE
 
@@ -96,7 +96,7 @@ excerpt: "string_literals Specs."
 "hello #{1} foo"
 
 ```
-### percent_string_literal_4
+### percent\_string\_literal\_4
 ```ruby
 # BEFORE
 
@@ -109,7 +109,7 @@ excerpt: "string_literals Specs."
 "#@foo"
 
 ```
-### percent_string_literal_5
+### percent\_string\_literal\_5
 ```ruby
 # BEFORE
 
@@ -122,7 +122,7 @@ excerpt: "string_literals Specs."
 "#@@foo"
 
 ```
-### percent_string_literal_6
+### percent\_string\_literal\_6
 ```ruby
 # BEFORE
 

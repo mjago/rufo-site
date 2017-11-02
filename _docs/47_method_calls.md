@@ -1,5 +1,5 @@
 ---
-title: "method_calls"
+title: "method\\_calls"
 permalink: "/docs/method_calls/"
 excerpt: "method_calls Specs."
 # modified: 2017-10-27T16:25:30-04:00

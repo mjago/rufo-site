@@ -1,5 +1,5 @@
 ---
-title: "array_setter"
+title: "array\\_setter"
 permalink: "/docs/array_setter/"
 excerpt: "array_setter Specs."
 # modified: 2017-10-27T16:25:30-04:00

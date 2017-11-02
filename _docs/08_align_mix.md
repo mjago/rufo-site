@@ -1,5 +1,5 @@
 ---
-title: "align_mix"
+title: "align\\_mix"
 permalink: "/docs/align_mix/"
 excerpt: "align_mix Specs."
 # modified: 2017-10-27T16:25:30-04:00

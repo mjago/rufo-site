@@ -1,5 +1,5 @@
 ---
-title: "receiver_and_block"
+title: "receiver\\_and\\_block"
 permalink: "/docs/receiver_and_block/"
 excerpt: "receiver_and_block Specs."
 # modified: 2017-10-27T16:25:30-04:00

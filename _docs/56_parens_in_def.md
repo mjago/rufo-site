@@ -1,5 +1,5 @@
 ---
-title: "parens_in_def"
+title: "parens\\_in\\_def"
 permalink: "/docs/parens_in_def/"
 excerpt: "parens_in_def Specs."
 # modified: 2017-10-27T16:25:30-04:00

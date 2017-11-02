@@ -23,7 +23,7 @@ EOF
 EOF
 
 ```
-### heredoc_multiline
+### heredoc\_multiline
 ```ruby
 # BEFORE
 
@@ -42,7 +42,7 @@ foo 1, <<-EOF, 2
 EOF
 
 ```
-### heredoc_multiline_2
+### heredoc\_multiline\_2
 ```ruby
 # BEFORE
 
@@ -65,7 +65,7 @@ EOF1
 EOF2
 
 ```
-### heredoc_multiline_3
+### heredoc\_multiline\_3
 ```ruby
 # BEFORE
 
@@ -88,7 +88,7 @@ EOF1
 EOF2
 
 ```
-### heredoc_inside_method_call
+### heredoc\_inside\_method\_call
 ```ruby
 # BEFORE
 
@@ -107,7 +107,7 @@ foo(1, <<-EOF, 2)
 EOF
 
 ```
-### heredoc_with_method_called
+### heredoc\_with\_method\_called
 ```ruby
 # BEFORE
 
@@ -124,7 +124,7 @@ EOF
 EOF
 
 ```
-### heredoc_assigned_to_variable
+### heredoc\_assigned\_to\_variable
 ```ruby
 # BEFORE
 
@@ -141,7 +141,7 @@ x = <<-EOF.foo
 EOF
 
 ```
-### heredoc_assigned_to_multiple_variables
+### heredoc\_assigned\_to\_multiple\_variables
 ```ruby
 # BEFORE
 
@@ -158,7 +158,7 @@ x, y = <<-EOF.foo, 2
 EOF
 
 ```
-### heredoc_as_method_argument
+### heredoc\_as\_method\_argument
 ```ruby
 # BEFORE
 
@@ -175,7 +175,7 @@ call <<-EOF.foo, y
 EOF
 
 ```
-### heredoc_as_method_argument_with_brackets
+### heredoc\_as\_method\_argument\_with\_brackets
 ```ruby
 # BEFORE
 
@@ -196,7 +196,7 @@ foo(<<-EOF
 )
 
 ```
-### heredoc_with_trailing_comment
+### heredoc\_with\_trailing\_comment
 ```ruby
 # BEFORE
 
@@ -217,7 +217,7 @@ EOF
 # comment
 
 ```
-### heredoc_as_strange_method_argument
+### heredoc\_as\_strange\_method\_argument
 ```ruby
 # BEFORE
 
@@ -234,7 +234,7 @@ foo(<<-EOF)
 EOF
 
 ```
-### heredoc_with_bizarre_syntax
+### heredoc\_with\_bizarre\_syntax
 ```ruby
 # BEFORE
 
@@ -251,7 +251,7 @@ foo <<-EOF.bar if 1
 EOF
 
 ```
-### heredoc_with_percent
+### heredoc\_with\_percent
 ```ruby
 # BEFORE
 
@@ -268,7 +268,7 @@ EOF
 EOF
 
 ```
-### heredoc_as_hash_value
+### heredoc\_as\_hash\_value
 ```ruby
 # BEFORE
 

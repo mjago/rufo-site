@@ -1,5 +1,5 @@
 ---
-title: "suffix_if"
+title: "suffix\\_if"
 permalink: "/docs/suffix_if/"
 excerpt: "suffix_if Specs."
 # modified: 2017-10-27T16:25:30-04:00

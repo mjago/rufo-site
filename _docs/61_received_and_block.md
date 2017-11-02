@@ -1,5 +1,5 @@
 ---
-title: "received_and_block"
+title: "received\\_and\\_block"
 permalink: "/docs/received_and_block/"
 excerpt: "received_and_block Specs."
 # modified: 2017-10-27T16:25:30-04:00

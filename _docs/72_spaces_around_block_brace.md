@@ -1,5 +1,5 @@
 ---
-title: "spaces_around_block_brace"
+title: "spaces\\_around\\_block\\_brace"
 permalink: "/docs/spaces_around_block_brace/"
 excerpt: "spaces_around_block_brace Specs."
 # modified: 2017-10-27T16:25:30-04:00

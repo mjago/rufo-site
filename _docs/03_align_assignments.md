@@ -1,5 +1,5 @@
 ---
-title: "align_assignments"
+title: "align\\_assignments"
 permalink: "/docs/align_assignments/"
 excerpt: "align_assignments Specs."
 # modified: 2017-10-27T16:25:30-04:00

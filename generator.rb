@@ -29,8 +29,8 @@ class RenderSpecs
       children << {"title"=> "#{fn}", "url"=>"/docs/#{fn}"}
     end
     File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do|f|
-      f.write ({"docs" => [{"title" =>"Spec Examples",
-                            "children"=> children }]}).to_yaml
+      f.write ({"docs" => [{ "title" =>"Spec Examples",
+                             "children"=> children }]}).to_yaml
     end
   end
 
@@ -59,7 +59,7 @@ class RenderSpecs
   def print_title(title, out)
     title = unnamed if title == ''
     #    @title = '(v2.3 and later) ' + @title unless @version == :all
-    out.puts '### ' + title.gsub('.rb.spec','')
+    out.puts '### ' + title.gsub('.rb.spec','').gsub('_', '\\_')
   end
 
   def print_filename(out)
@@ -118,7 +118,7 @@ class RenderSpecs
     name = @filename.gsub('.rb.spec', '')
     out.puts <<~EFM
                ---
-               title: \"#{name}\"
+               title: \"#{name.gsub('_', '\\\\\\\\_')}\"
                permalink: \"/docs/#{name}/\"
                excerpt: \"#{name} Specs.\"
                # modified: 2017-10-27T16:25:30-04:00

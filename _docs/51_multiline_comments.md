@@ -1,10 +1,10 @@
 ---
-title: "multiline_comments"
+title: "multiline\\_comments"
 permalink: "/docs/multiline_comments/"
 excerpt: "multiline_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
 ---
-### multiline_comment
+### multiline\_comment
 ```ruby
 # BEFORE
 
@@ -23,7 +23,7 @@ excerpt: "multiline_comments Specs."
 =end
 
 ```
-### multiline_comment_2
+### multiline\_comment\_2
 ```ruby
 # BEFORE
 
@@ -50,7 +50,7 @@ excerpt: "multiline_comments Specs."
 2
 
 ```
-### multiline_comment_3
+### multiline\_comment\_3
 ```ruby
 # BEFORE
 
