@@ -3,24 +3,24 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: mm-home-page-feature.jpg
+  overlay_image: homepage.jpg
   cta_url: "/pages/introduction"
   caption:
 excerpt: 'Ruby is a fast Ruby formatter - ideal for integrating with your Editor, or Continuous Integration System.'
 feature_row:
-  - image_path: mm-customizable-feature.png
+  - image_path: introduction.png
     alt: "Introduction"
     title: "Introduction"
     excerpt: "Use from the command line, within your CI process, or in your Editor"
     url: "/pages/introduction/"
     btn_label: "Intro"
-  - image_path: mm-responsive-feature.png
+  - image_path: examples.png
     alt: "Examples"
     title: "Examples"
     excerpt: "These examples are used internally to test Rufo"
     url: "/docs/__END__"
     btn_label: "Examples"
-  - image_path: mm-free-feature.png
+  - image_path: settings.png
     alt: "settings"
     title: "Settings"
     excerpt: "There is a limited sub-set of configuration available for controlling how Rufo formats"
