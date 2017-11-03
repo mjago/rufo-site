@@ -1,7 +1,7 @@
 ---
 toc: true
-toc_label: "My Custom Table of Contents Label"
-toc_icon: "gear"# modified: 2017-10-27T16:25:30-04:00
+toc_label: "Settings"
+toc_icon: "gear"
 title: "Settings"
 permalink: "/pages/settings/"
 ---
