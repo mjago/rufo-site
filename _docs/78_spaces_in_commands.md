@@ -1,8 +1,10 @@
 ---
 title: "spaces\\_in\\_commands"
 permalink: "/docs/spaces_in_commands/"
-excerpt: "spaces_in_commands Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 589
 ```ruby

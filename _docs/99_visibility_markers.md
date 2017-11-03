@@ -1,8 +1,10 @@
 ---
 title: "visibility\\_markers"
 permalink: "/docs/visibility_markers/"
-excerpt: "visibility_markers Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 684
 ```ruby

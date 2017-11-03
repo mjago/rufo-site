@@ -1,8 +1,10 @@
 ---
 title: "spaces\\_around\\_equal"
 permalink: "/docs/spaces_around_equal/"
-excerpt: "spaces_around_equal Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 575
 ```ruby

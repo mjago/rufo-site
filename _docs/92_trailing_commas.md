@@ -1,8 +1,10 @@
 ---
 title: "trailing\\_commas"
 permalink: "/docs/trailing_commas/"
-excerpt: "trailing_commas Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 646
 ```ruby

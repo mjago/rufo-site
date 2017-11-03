@@ -1,8 +1,10 @@
 ---
 title: "string\\_literals"
 permalink: "/docs/string_literals/"
-excerpt: "string_literals Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### single\_quote\_string\_literal
 ```ruby

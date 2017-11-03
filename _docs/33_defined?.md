@@ -1,8 +1,10 @@
 ---
 title: "defined?"
 permalink: "/docs/defined?/"
-excerpt: "defined? Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 294
 ```ruby

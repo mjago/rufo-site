@@ -1,8 +1,10 @@
 ---
 title: "spaces\\_after\\_comma"
 permalink: "/docs/spaces_after_comma/"
-excerpt: "spaces_after_comma Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### unnamed test 554
 ```ruby

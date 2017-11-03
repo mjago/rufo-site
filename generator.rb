@@ -19,18 +19,26 @@ class RenderSpecs
     @state, @version = :init, :all
     @file_count = 0
     @filenames = []
+    STDOUT.puts "generating..."
   end
 
   def write_nav tests
-    children = []
+    headings = [{"title"=> "Introduction", "url"=>"/docs/introduction"}]
+    examples = []
     tests.each do |test|
       filename = File.basename(test[:file_name])
       fn = filename.gsub('.rb.spec','')
-      children << {"title"=> "#{fn}", "url"=>"/docs/#{fn}"}
+      examples << {"title"=> "#{fn}", "url"=>"/docs/#{fn}"}
     end
     File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do|f|
-      f.write ({"docs" => [{ "title" =>"Spec Examples",
-                             "children"=> children }]}).to_yaml
+      f.write ({"main" =>  [{ "title" =>"Introduction",
+                              "url"=> "/pages/introduction" },
+                            { "title" => "Examples",
+                              "url" => "/docs/alias" },
+                            { "title" => "Settings",
+                              "url" => "/pages/settings" }],
+                "docs" => [{ "title" =>"Spec Examples",
+                             "children"=> examples }]}).to_yaml
     end
   end
 
@@ -120,8 +128,10 @@ class RenderSpecs
                ---
                title: \"#{name.gsub('_', '\\\\\\\\_')}\"
                permalink: \"/docs/#{name}/\"
-               excerpt: \"#{name} Specs.\"
                # modified: 2017-10-27T16:25:30-04:00
+               toc: true
+               sidebar:
+                 nav: "docs"
                ---
                EFM
   end

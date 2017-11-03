@@ -1,8 +1,10 @@
 ---
 title: "multiline\\_comments"
 permalink: "/docs/multiline_comments/"
-excerpt: "multiline_comments Specs."
 # modified: 2017-10-27T16:25:30-04:00
+toc: true
+sidebar:
+  nav: "docs"
 ---
 ### multiline\_comment
 ```ruby
