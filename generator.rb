@@ -2,9 +2,10 @@ require "zlib"
 require 'yaml'
 require "diff/lcs"
 require 'pp'
+require_relative "../new_parser/lib/rufo"
 
 class RenderSpecs
-  FILE_PATH = '../test_all_settings'
+  FILE_PATH = '../new_parser'
   SOURCE_SPECS = File.join FILE_PATH, 'spec/lib/rufo/formatter_source_specs'
   SPEC_FILES = [File.join(SOURCE_SPECS, '**.rb.spec'),
                 File.join(SOURCE_SPECS, '2.3/**.rb.spec')]
@@ -14,12 +15,6 @@ class RenderSpecs
   NUM_OF_SETTINGS = 2 ** SETTINGS_COUNT
 
   def initialize
-    @original, @expected, @test_out = '', '', ''
-    @title_count, @unnamed_count = 0, 0
-    @state, @version = :init, :all
-    @file_count = 0
-    @filenames = []
-    STDOUT.puts "generating..."
   end
 
   def write_nav tests
@@ -66,7 +61,6 @@ class RenderSpecs
 
   def print_title(title, out)
     title = unnamed if title == ''
-    #    @title = '(v2.3 and later) ' + @title unless @version == :all
     out.puts '### ' + title.gsub('.rb.spec','').gsub('_', '\\_')
   end
 
@@ -81,7 +75,7 @@ class RenderSpecs
     when :original
       print_title title, out
       out.puts '```ruby'
-      out.puts "# BEFORE"
+      out.puts "# GIVEN"
     when :default
       out.puts '```ruby'
       out.puts "# BECOMES" unless code == ""
@@ -113,10 +107,6 @@ class RenderSpecs
     end
   end
 
-  def select_code(mode)
-    mode == :original ? @original : @expected
-  end
-
   def out_filename(filename, file_count)
     fc = file_count < 10 ? "0#{file_count}_" : "#{file_count}_"
     File.join(OUTDIR, fc + filename.gsub('.rb.spec', '.md'))
@@ -138,7 +128,8 @@ class RenderSpecs
 
   def load_diffs
     yml = ''
-    File.open('../test_all_settings/spec/lib/rufo/diffs.gz') do |f|
+#    File.open('../test_all_settings/spec/lib/rufo/diffs.gz') do |f|
+    File.open('diffs.gz') do |f|
       gz = Zlib::GzipReader.new(f)
       yml = gz.read
       gz.close
@@ -146,8 +137,8 @@ class RenderSpecs
     end
   end
 
-  def test_locator_name(test)
-    test[:relative_path] + ' ' + test[:line].to_s
+  def test_locator_name(name, line)
+    "#{name} #{line}"
   end
 
   def settings
@@ -201,17 +192,28 @@ class RenderSpecs
   EOS
   end
 
+  def with_spec_dirs(paths)
+    paths.each { |p| yield p }
+  end
+
+  def with_spec_files(dir)
+    files = Dir.glob(dir)
+#    pp files
+    files.each { |f| yield f }
+  end
+
   def get_tests
     tests = []
     test_count = 0
-    Dir[File.join(SOURCE_SPECS, "*")].each do |source_specs|
-      if File.file?(source_specs)
+    with_spec_dirs SPEC_FILES do |dir|
+      version = :two_three_plus if dir.include?("2.3")
+      with_spec_files dir do |file|
         file_tests = []
         current_test = {}
         ignore_next_line = false
-        filename = "formatter_source_specs/#{File.basename source_specs}"
+        filename = "formatter_source_specs/#{File.basename file}"
         name = ''
-        File.foreach(source_specs).with_index do |line, index|
+        File.foreach(file).with_index do |line, index|
           case
           when line =~ /^#~# ORIGINAL ?([\w\s]+)$/
             # save old test
@@ -224,6 +226,7 @@ class RenderSpecs
             name = $~[1].strip
             test_count += 1
             name = "unnamed test #{test_count}" if name.empty?
+            name += " - (v2.3 only)" if version == :two_three_plus
             current_test[:name] = name
             current_test[:original] = ""
             current_test[:line] = index + 1
@@ -232,7 +235,6 @@ class RenderSpecs
           when line =~ /^#~# PENDING$/
             current_test[:pending] = true
           when line =~ /^#~# (.+)$/
-            current_test[:options] = eval("{ #{$~[1]} }")
           when current_test[:expected]
             current_test[:expected] += line
           when current_test[:original]
@@ -249,20 +251,19 @@ class RenderSpecs
   end
 
   def sort_uniques(tests)
+    STDOUT.puts "sorting"
     sorted = []
     tests.each do |test|
       sorted_data = []
       test[:tests].each do |data|
         expected_ary = []
-        expected = data[:expected].rstrip + "\n"
+        default_format = Rufo::Formatter.format(data[:original])
         NUM_OF_SETTINGS.times do |iteration|
-          #        pending if test[:pending]
-          file_name = File.basename test[:file_name]
           name = "#{(test[:file_name].to_s)} #{data[:line]}"
           if @diffs_hash[name]
             if @diffs_hash[name][iteration]
               diff = @diffs_hash[name][iteration]
-              new_expected = Diff::LCS.patch!(expected, diff)
+              new_expected = Diff::LCS.patch!(default_format, diff)
               expected_ary << { :setting => iteration, :expected => new_expected }
             end
           end
@@ -278,6 +279,7 @@ class RenderSpecs
   end
 
   def build(tests)
+    STDOUT.puts "generating html"
     file_count = 0
     tests.each do |test|
       file_count += 1
@@ -285,8 +287,9 @@ class RenderSpecs
       with_write_file out_filename(File.basename(test[:file_name]), file_count) do |wf|
         front_matter(wf)
         test[:tests].each do |test_data|
+          default_format = Rufo::Formatter.format(test_data[:original])
           render(test_data[:name], :original, test_data[:original], wf)
-          render('(default)', :default, test_data[:expected], wf)
+          render('(default)', :default, default_format, wf)
           uniques = test_data[:unique_expects]
           if uniques
             uniques.each_with_index do |uq, idx|
@@ -299,9 +302,39 @@ class RenderSpecs
     end
     write_nav tests
   end
+
+  def generate_diffs
+    STDOUT.puts "generating diffs"
+    diffs_hash = {}
+    test_files = get_tests
+    test_files.each do |tests|
+      name = tests[:file_name]
+      tests[:tests].each do |test|
+        line = test[:line]
+        diffs_hash[test_locator_name(name, line)] = {}
+        diff_count = 0
+        default_format = Rufo::Formatter.format(test[:original])
+        NUM_OF_SETTINGS.times do |iteration|
+          options = fetch_options(iteration)
+          formatted = Rufo::Formatter.format(test[:original], options)
+          default_format = formatted if iteration == 0
+          diff = Diff::LCS.diff(default_format, formatted)
+          diffs_hash[test_locator_name(name, line)][iteration] = diff
+          diff_count += 1 unless diff.empty?
+        end
+        diffs_hash[test_locator_name(name, line)] = nil if diff_count == 0
+      end
+    end
+    yml = YAML.dump diffs_hash
+    Zlib::GzipWriter.open('diffs.gz') do |gz|
+      gz.write yml
+      gz.close
+    end
+  end
 end
 
 rs = RenderSpecs.new
+rs.generate_diffs
 rs.load_diffs
 uniques = rs.sort_uniques(rs.get_tests)
 rs.build uniques

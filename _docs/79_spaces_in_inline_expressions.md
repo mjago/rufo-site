@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 594
+### unnamed test 627
 ```ruby
-# BEFORE
+# GIVEN
 
 begin end
 
@@ -17,11 +17,10 @@ begin end
 # BECOMES
 
 begin end
-
 ```
-### unnamed test 595
+### unnamed test 628
 ```ruby
-# BEFORE
+# GIVEN
 
 begin  1  end
 
@@ -30,11 +29,10 @@ begin  1  end
 # BECOMES
 
 begin 1 end
-
 ```
-### unnamed test 596
+### unnamed test 629
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo()  1  end
 
@@ -43,11 +41,10 @@ def foo()  1  end
 # BECOMES
 
 def foo() 1 end
-
 ```
-### unnamed test 597
+### unnamed test 630
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo(x)  1  end
 
@@ -56,11 +53,10 @@ def foo(x)  1  end
 # BECOMES
 
 def foo(x) 1 end
-
 ```
-### unnamed test 598
+### unnamed test 631
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo1(x) 1 end
  def foo2(x) 2 end
@@ -73,5 +69,4 @@ def foo1(x) 1 end
 def foo1(x) 1 end
 def foo2(x) 2 end
 def foo3(x) 3 end
-
 ```

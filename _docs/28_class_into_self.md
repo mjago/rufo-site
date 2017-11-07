@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 264
+### unnamed test 287
 ```ruby
-# BEFORE
+# GIVEN
 
 class  <<  self 
  1 

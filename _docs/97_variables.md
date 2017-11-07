@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 676
+### unnamed test 717
 ```ruby
-# BEFORE
+# GIVEN
 
 a = 1
   a
@@ -19,11 +19,10 @@ a = 1
 
 a = 1
 a
-
 ```
-### unnamed test 677
+### unnamed test 718
 ```ruby
-# BEFORE
+# GIVEN
 
 @foo
 

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 474
+### unnamed test 502
 ```ruby
-# BEFORE
+# GIVEN
 
 a  =   1  ,   2
 
@@ -17,11 +17,10 @@ a  =   1  ,   2
 # BECOMES
 
 a = 1, 2
-
 ```
-### unnamed test 475
+### unnamed test 503
 ```ruby
-# BEFORE
+# GIVEN
 
 a , b  = 2
 
@@ -30,11 +29,10 @@ a , b  = 2
 # BECOMES
 
 a, b = 2
-
 ```
-### unnamed test 476
+### unnamed test 504
 ```ruby
-# BEFORE
+# GIVEN
 
 a , b, ( c, d )  = 2
 
@@ -43,11 +41,10 @@ a , b, ( c, d )  = 2
 # BECOMES
 
 a, b, (c, d) = 2
-
 ```
-### unnamed test 477
+### unnamed test 505
 ```ruby
-# BEFORE
+# GIVEN
 
  *x = 1
 
@@ -56,11 +53,10 @@ a, b, (c, d) = 2
 # BECOMES
 
 *x = 1
-
 ```
-### unnamed test 478
+### unnamed test 506
 ```ruby
-# BEFORE
+# GIVEN
 
  a , b , *x = 1
 
@@ -69,11 +65,10 @@ a, b, (c, d) = 2
 # BECOMES
 
 a, b, *x = 1
-
 ```
-### unnamed test 479
+### unnamed test 507
 ```ruby
-# BEFORE
+# GIVEN
 
  *x , a , b = 1
 
@@ -82,11 +77,10 @@ a, b, *x = 1
 # BECOMES
 
 *x, a, b = 1
-
 ```
-### unnamed test 480
+### unnamed test 508
 ```ruby
-# BEFORE
+# GIVEN
 
  a, b, *x, c, d = 1
 
@@ -95,11 +89,10 @@ a, b, *x = 1
 # BECOMES
 
 a, b, *x, c, d = 1
-
 ```
-### unnamed test 481
+### unnamed test 509
 ```ruby
-# BEFORE
+# GIVEN
 
 a, b, = 1
 
@@ -108,11 +101,10 @@ a, b, = 1
 # BECOMES
 
 a, b, = 1
-
 ```
-### unnamed test 482
+### unnamed test 510
 ```ruby
-# BEFORE
+# GIVEN
 
 a = b, *c
 
@@ -121,11 +113,10 @@ a = b, *c
 # BECOMES
 
 a = b, *c
-
 ```
-### unnamed test 483
+### unnamed test 511
 ```ruby
-# BEFORE
+# GIVEN
 
 a = b, *c, *d
 
@@ -134,11 +125,10 @@ a = b, *c, *d
 # BECOMES
 
 a = b, *c, *d
-
 ```
-### unnamed test 484
+### unnamed test 512
 ```ruby
-# BEFORE
+# GIVEN
 
 a, = b
 
@@ -147,11 +137,10 @@ a, = b
 # BECOMES
 
 a, = b
-
 ```
-### unnamed test 485
+### unnamed test 513
 ```ruby
-# BEFORE
+# GIVEN
 
 a = b, c, *d
 
@@ -160,11 +149,10 @@ a = b, c, *d
 # BECOMES
 
 a = b, c, *d
-
 ```
-### unnamed test 486
+### unnamed test 514
 ```ruby
-# BEFORE
+# GIVEN
 
 a = b, c, *d, e
 
@@ -173,11 +161,10 @@ a = b, c, *d, e
 # BECOMES
 
 a = b, c, *d, e
-
 ```
-### unnamed test 487
+### unnamed test 515
 ```ruby
-# BEFORE
+# GIVEN
 
 *, y = z
 
@@ -186,11 +173,10 @@ a = b, c, *d, e
 # BECOMES
 
 *, y = z
-
 ```
-### unnamed test 488
+### unnamed test 516
 ```ruby
-# BEFORE
+# GIVEN
 
 w, (x,), y = z
 
@@ -199,11 +185,10 @@ w, (x,), y = z
 # BECOMES
 
 w, (x,), y = z
-
 ```
-### unnamed test 489
+### unnamed test 517
 ```ruby
-# BEFORE
+# GIVEN
 
 a, b=1, 2
 
@@ -212,11 +197,10 @@ a, b=1, 2
 # BECOMES
 
 a, b = 1, 2
-
 ```
-### unnamed test 490
+### unnamed test 518
 ```ruby
-# BEFORE
+# GIVEN
 
 * = 1
 

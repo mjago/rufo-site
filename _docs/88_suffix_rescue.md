@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 629
+### unnamed test 662
 ```ruby
-# BEFORE
+# GIVEN
 
 URI(string) rescue return
 
@@ -17,11 +17,10 @@ URI(string) rescue return
 # BECOMES
 
 URI(string) rescue return
-
 ```
-### unnamed test 630
+### unnamed test 663
 ```ruby
-# BEFORE
+# GIVEN
 
 URI(string) while return
 
@@ -30,11 +29,10 @@ URI(string) while return
 # BECOMES
 
 URI(string) while return
-
 ```
-### unnamed test 631
+### unnamed test 664
 ```ruby
-# BEFORE
+# GIVEN
 
 URI(string) if return
 
@@ -43,11 +41,10 @@ URI(string) if return
 # BECOMES
 
 URI(string) if return
-
 ```
-### unnamed test 632
+### unnamed test 665
 ```ruby
-# BEFORE
+# GIVEN
 
 URI(string) unless return
 

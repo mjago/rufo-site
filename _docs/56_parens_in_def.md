@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 498
+### unnamed test 526
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo(x); end
 
@@ -17,11 +17,10 @@ def foo(x); end
 # BECOMES
 
 def foo(x); end
-
 ```
-### unnamed test 499
+### unnamed test 527
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo x; end
 
@@ -29,11 +28,39 @@ def foo x; end
 ```ruby
 # BECOMES
 
-def foo x; end
-
+def foo(x); end
 ```
 ```ruby
 # with setting `parens_in_def :yes`
 
+def foo(x)); end
+```
+### unnamed test 528
+```ruby
+# GIVEN
+
 def foo(x); end
+
+```
+```ruby
+# BECOMES
+
+def foo(x); end
+```
+### unnamed test 529
+```ruby
+# GIVEN
+
+def foo x; end
+
+```
+```ruby
+# BECOMES
+
+def foo(x); end
+```
+```ruby
+# with setting `parens_in_def :yes`
+
+def foo(x)); end
 ```

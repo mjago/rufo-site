@@ -8,7 +8,7 @@ sidebar:
 ---
 ### heredoc
 ```ruby
-# BEFORE
+# GIVEN
 
 <<-EOF
   foo
@@ -23,11 +23,10 @@ EOF
   foo
   bar
 EOF
-
 ```
 ### heredoc\_multiline
 ```ruby
-# BEFORE
+# GIVEN
 
 foo 1 , <<-EOF , 2
   foo
@@ -42,11 +41,10 @@ foo 1, <<-EOF, 2
   foo
   bar
 EOF
-
 ```
 ### heredoc\_multiline\_2
 ```ruby
-# BEFORE
+# GIVEN
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2 , 3
   foo
@@ -65,11 +63,10 @@ foo 1, <<-EOF1, 2, <<-EOF2, 3
 EOF1
   baz
 EOF2
-
 ```
 ### heredoc\_multiline\_3
 ```ruby
-# BEFORE
+# GIVEN
 
 foo 1 , <<-EOF1 , 2 , <<-EOF2
   foo
@@ -88,11 +85,10 @@ foo 1, <<-EOF1, 2, <<-EOF2
 EOF1
   baz
 EOF2
-
 ```
 ### heredoc\_inside\_method\_call
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(1 , <<-EOF , 2 )
   foo
@@ -107,11 +103,10 @@ foo(1, <<-EOF, 2)
   foo
   bar
 EOF
-
 ```
 ### heredoc\_with\_method\_called
 ```ruby
-# BEFORE
+# GIVEN
 
 <<-EOF.foo
   bar
@@ -124,11 +119,10 @@ EOF
 <<-EOF.foo
   bar
 EOF
-
 ```
 ### heredoc\_assigned\_to\_variable
 ```ruby
-# BEFORE
+# GIVEN
 
 x = <<-EOF.foo
   bar
@@ -141,11 +135,10 @@ EOF
 x = <<-EOF.foo
   bar
 EOF
-
 ```
 ### heredoc\_assigned\_to\_multiple\_variables
 ```ruby
-# BEFORE
+# GIVEN
 
 x, y = <<-EOF.foo, 2
   bar
@@ -158,11 +151,10 @@ EOF
 x, y = <<-EOF.foo, 2
   bar
 EOF
-
 ```
 ### heredoc\_as\_method\_argument
 ```ruby
-# BEFORE
+# GIVEN
 
 call <<-EOF.foo, y
   bar
@@ -175,11 +167,10 @@ EOF
 call <<-EOF.foo, y
   bar
 EOF
-
 ```
 ### heredoc\_as\_method\_argument\_with\_brackets
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(<<-EOF
   foo
@@ -196,11 +187,10 @@ foo(<<-EOF
   bar
   EOF
 )
-
 ```
 ### heredoc\_with\_trailing\_comment
 ```ruby
-# BEFORE
+# GIVEN
 
 <<-EOF
   foo
@@ -217,11 +207,10 @@ EOF
 EOF
 
 # comment
-
 ```
 ### heredoc\_as\_strange\_method\_argument
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(<<-EOF)
   bar
@@ -234,11 +223,10 @@ EOF
 foo(<<-EOF)
   bar
 EOF
-
 ```
 ### heredoc\_with\_bizarre\_syntax
 ```ruby
-# BEFORE
+# GIVEN
 
 foo <<-EOF.bar if 1
   x
@@ -251,11 +239,10 @@ EOF
 foo <<-EOF.bar if 1
   x
 EOF
-
 ```
 ### heredoc\_with\_percent
 ```ruby
-# BEFORE
+# GIVEN
 
 <<-EOF % 1
   bar
@@ -268,11 +255,10 @@ EOF
 <<-EOF % 1
   bar
 EOF
-
 ```
 ### heredoc\_as\_hash\_value
 ```ruby
-# BEFORE
+# GIVEN
 
 {1 => <<EOF,
 text

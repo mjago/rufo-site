@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 573
+### unnamed test 606
 ```ruby
-# BEFORE
+# GIVEN
 
 foo . bar
 
@@ -17,11 +17,10 @@ foo . bar
 # BECOMES
 
 foo.bar
-
 ```
-### unnamed test 574
+### unnamed test 607
 ```ruby
-# BEFORE
+# GIVEN
 
 foo . bar = 1
 
@@ -30,5 +29,4 @@ foo . bar = 1
 # BECOMES
 
 foo.bar = 1
-
 ```

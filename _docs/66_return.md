@@ -8,7 +8,7 @@ sidebar:
 ---
 ### return
 ```ruby
-# BEFORE
+# GIVEN
 
 return
 
@@ -17,11 +17,10 @@ return
 # BECOMES
 
 return
-
 ```
-### unnamed test 540
+### unnamed test 570
 ```ruby
-# BEFORE
+# GIVEN
 
 return  1
 
@@ -30,11 +29,10 @@ return  1
 # BECOMES
 
 return 1
-
 ```
-### unnamed test 541
+### unnamed test 571
 ```ruby
-# BEFORE
+# GIVEN
 
 return  1 , 2
 
@@ -43,11 +41,10 @@ return  1 , 2
 # BECOMES
 
 return 1, 2
-
 ```
-### unnamed test 542
+### unnamed test 572
 ```ruby
-# BEFORE
+# GIVEN
 
 return  1 , 
  2
@@ -58,11 +55,10 @@ return  1 ,
 
 return 1,
        2
-
 ```
-### unnamed test 543
+### unnamed test 573
 ```ruby
-# BEFORE
+# GIVEN
 
 return a b
 

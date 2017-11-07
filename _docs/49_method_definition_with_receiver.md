@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 465
+### unnamed test 493
 ```ruby
-# BEFORE
+# GIVEN
 
  def foo . 
  bar; end
@@ -18,11 +18,10 @@ sidebar:
 # BECOMES
 
 def foo.bar; end
-
 ```
-### unnamed test 466
+### unnamed test 494
 ```ruby
-# BEFORE
+# GIVEN
 
  def self . 
  bar; end

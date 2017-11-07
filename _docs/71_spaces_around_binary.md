@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 566
+### unnamed test 596
 ```ruby
-# BEFORE
+# GIVEN
 
 1+2
 
@@ -17,11 +17,22 @@ sidebar:
 # BECOMES
 
 1+2
+```
+### unnamed test 597
+```ruby
+# GIVEN
+
+1+2
 
 ```
-### unnamed test 567
 ```ruby
-# BEFORE
+# BECOMES
+
+1+2
+```
+### unnamed test 598
+```ruby
+# GIVEN
 
 1  +  2
 
@@ -30,16 +41,32 @@ sidebar:
 # BECOMES
 
 1  +  2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1 + 2
 ```
-### unnamed test 568
+### unnamed test 599
 ```ruby
-# BEFORE
+# GIVEN
+
+1  +  2
+
+```
+```ruby
+# BECOMES
+
+1  +  2
+```
+```ruby
+# with setting `spaces_around_binary :one`
+
+1 + 2
+```
+### unnamed test 600
+```ruby
+# GIVEN
 
 1+  2
 
@@ -48,10 +75,26 @@ sidebar:
 # BECOMES
 
 1+  2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1+2
+```
+### unnamed test 601
+```ruby
+# GIVEN
+
+1 +2
+
+```
+```ruby
+# BECOMES
+
+1 +2
+```
+```ruby
+# with setting `spaces_around_binary :one`
+
+1 + 2
 ```

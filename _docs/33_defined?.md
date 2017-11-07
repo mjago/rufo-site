@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 294
+### unnamed test 317
 ```ruby
-# BEFORE
+# GIVEN
 
 defined?  1
 
@@ -17,11 +17,10 @@ defined?  1
 # BECOMES
 
 defined? 1
-
 ```
-### unnamed test 295
+### unnamed test 318
 ```ruby
-# BEFORE
+# GIVEN
 
 defined? ( 1 )
 
@@ -30,11 +29,10 @@ defined? ( 1 )
 # BECOMES
 
 defined? (1)
-
 ```
-### unnamed test 296
+### unnamed test 319
 ```ruby
-# BEFORE
+# GIVEN
 
 defined?(1)
 
@@ -43,11 +41,10 @@ defined?(1)
 # BECOMES
 
 defined?(1)
-
 ```
-### unnamed test 297
+### unnamed test 320
 ```ruby
-# BEFORE
+# GIVEN
 
 defined?((a, b = 1, 2))
 

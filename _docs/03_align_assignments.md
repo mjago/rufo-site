@@ -8,7 +8,7 @@ sidebar:
 ---
 ### unnamed test 6
 ```ruby
-# BEFORE
+# GIVEN
 
 x = 1
  xyz = 2
@@ -23,11 +23,10 @@ x = 1
 xyz = 2
 
 w = 3
-
 ```
 ### unnamed test 7
 ```ruby
-# BEFORE
+# GIVEN
 
 x = 1
  foo[bar] = 2
@@ -42,11 +41,10 @@ x = 1
 foo[bar] = 2
 
 w = 3
-
 ```
 ### unnamed test 8
 ```ruby
-# BEFORE
+# GIVEN
 
 x = 1; x = 2
  xyz = 2
@@ -61,11 +59,10 @@ x = 1; x = 2
 xyz = 2
 
 w = 3
-
 ```
 ### unnamed test 9
 ```ruby
-# BEFORE
+# GIVEN
 
 a = begin
  b = 1
@@ -80,11 +77,10 @@ a = begin
   b = 1
   abc = 2
 end
-
 ```
 ### unnamed test 10
 ```ruby
-# BEFORE
+# GIVEN
 
 a = 1
  a += 2
@@ -95,11 +91,10 @@ a = 1
 
 a = 1
 a += 2
-
 ```
 ### unnamed test 11
 ```ruby
-# BEFORE
+# GIVEN
 
 foo = 1
  a += 2
@@ -110,11 +105,10 @@ foo = 1
 
 foo = 1
 a += 2
-
 ```
 ### unnamed test 12
 ```ruby
-# BEFORE
+# GIVEN
 
 x = 1
  xyz = 2
@@ -129,5 +123,4 @@ x = 1
 xyz = 2
 
 w = 3
-
 ```

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 145
+### unnamed test 168
 ```ruby
-# BEFORE
+# GIVEN
 
 1   +   2
 
@@ -17,16 +17,15 @@ sidebar:
 # BECOMES
 
 1   +   2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1 + 2
 ```
-### unnamed test 146
+### unnamed test 169
 ```ruby
-# BEFORE
+# GIVEN
 
 1+2
 
@@ -35,11 +34,10 @@ sidebar:
 # BECOMES
 
 1+2
-
 ```
-### unnamed test 147
+### unnamed test 170
 ```ruby
-# BEFORE
+# GIVEN
 
 1   +  
  2
@@ -50,7 +48,6 @@ sidebar:
 
 1   +
   2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
@@ -58,9 +55,9 @@ sidebar:
 1 +
   2
 ```
-### unnamed test 148
+### unnamed test 171
 ```ruby
-# BEFORE
+# GIVEN
 
 1   +  # hello 
  2
@@ -71,7 +68,6 @@ sidebar:
 
 1   + # hello
   2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
@@ -79,9 +75,9 @@ sidebar:
 1 + # hello
   2
 ```
-### unnamed test 149
+### unnamed test 172
 ```ruby
-# BEFORE
+# GIVEN
 
 1 +
  2+
@@ -94,11 +90,10 @@ sidebar:
 1 +
   2+
   3
-
 ```
-### unnamed test 150
+### unnamed test 173
 ```ruby
-# BEFORE
+# GIVEN
 
 1  &&  2
 
@@ -107,16 +102,15 @@ sidebar:
 # BECOMES
 
 1  &&  2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1 && 2
 ```
-### unnamed test 151
+### unnamed test 174
 ```ruby
-# BEFORE
+# GIVEN
 
 1  ||  2
 
@@ -125,16 +119,15 @@ sidebar:
 # BECOMES
 
 1  ||  2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1 || 2
 ```
-### unnamed test 152
+### unnamed test 175
 ```ruby
-# BEFORE
+# GIVEN
 
 1*2
 
@@ -143,11 +136,10 @@ sidebar:
 # BECOMES
 
 1*2
-
 ```
-### unnamed test 153
+### unnamed test 176
 ```ruby
-# BEFORE
+# GIVEN
 
 1* 2
 
@@ -156,16 +148,15 @@ sidebar:
 # BECOMES
 
 1* 2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1*2
 ```
-### unnamed test 154
+### unnamed test 177
 ```ruby
-# BEFORE
+# GIVEN
 
 1 *2
 
@@ -174,16 +165,15 @@ sidebar:
 # BECOMES
 
 1 *2
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 1 * 2
 ```
-### unnamed test 155
+### unnamed test 178
 ```ruby
-# BEFORE
+# GIVEN
 
 1/2
 
@@ -192,11 +182,10 @@ sidebar:
 # BECOMES
 
 1/2
-
 ```
-### unnamed test 156
+### unnamed test 179
 ```ruby
-# BEFORE
+# GIVEN
 
 1**2
 
@@ -205,11 +194,10 @@ sidebar:
 # BECOMES
 
 1**2
-
 ```
-### unnamed test 157
+### unnamed test 180
 ```ruby
-# BEFORE
+# GIVEN
 
 1 \
  + 2
@@ -220,11 +208,10 @@ sidebar:
 
 1 \
   + 2
-
 ```
-### unnamed test 158
+### unnamed test 181
 ```ruby
-# BEFORE
+# GIVEN
 
 a = 1 ||
 2
@@ -235,11 +222,10 @@ a = 1 ||
 
 a = 1 ||
     2
-
 ```
-### unnamed test 159
+### unnamed test 182
 ```ruby
-# BEFORE
+# GIVEN
 
 1 ||
 2

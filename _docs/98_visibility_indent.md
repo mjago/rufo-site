@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 678
+### unnamed test 719
 ```ruby
-# BEFORE
+# GIVEN
 
 private
 
@@ -23,11 +23,10 @@ private
 
 foo
 bar
-
 ```
-### unnamed test 679
+### unnamed test 720
 ```ruby
-# BEFORE
+# GIVEN
 
 private
 
@@ -42,38 +41,10 @@ private
 
 foo
 bar
-
 ```
-### unnamed test 680
+### unnamed test 721
 ```ruby
-# BEFORE
-
-private
-
-  foo
-bar
-
-protected
-
-  baz
-
-```
-```ruby
-# BECOMES
-
-private
-
-foo
-bar
-
-protected
-
-baz
-
-```
-### unnamed test 681
-```ruby
-# BEFORE
+# GIVEN
 
 private
 
@@ -96,11 +67,36 @@ bar
 protected
 
 baz
+```
+### unnamed test 722
+```ruby
+# GIVEN
+
+private
+
+  foo
+bar
+
+protected
+
+  baz
 
 ```
-### unnamed test 682
 ```ruby
-# BEFORE
+# BECOMES
+
+private
+
+foo
+bar
+
+protected
+
+baz
+```
+### unnamed test 723
+```ruby
+# GIVEN
 
 class Foo
   private
@@ -117,11 +113,10 @@ class Foo
 
   foo
 end
-
 ```
-### unnamed test 683
+### unnamed test 724
 ```ruby
-# BEFORE
+# GIVEN
 
 class << self
   private
@@ -138,5 +133,4 @@ class << self
 
   foo
 end
-
 ```

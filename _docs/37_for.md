@@ -6,12 +6,12 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 303
+### unnamed test 327
 ```ruby
-# BEFORE
+# GIVEN
 
 for  x  in  y
- 2 
+ 2
  end
 
 ```
@@ -21,14 +21,13 @@ for  x  in  y
 for x in y
   2
 end
-
 ```
-### unnamed test 304
+### unnamed test 328
 ```ruby
-# BEFORE
+# GIVEN
 
 for  x , y  in  z
- 2 
+ 2
  end
 
 ```
@@ -38,14 +37,13 @@ for  x , y  in  z
 for x, y in z
   2
 end
-
 ```
-### unnamed test 305
+### unnamed test 329
 ```ruby
-# BEFORE
+# GIVEN
 
 for  x  in  y  do
- 2 
+ 2
  end
 
 ```
@@ -54,5 +52,37 @@ for  x  in  y  do
 
 for x in y
   2
+end
+```
+### bug\_45
+```ruby
+# GIVEN
+
+for i, in [[1,2]]
+  i.should == 1
+end
+
+```
+```ruby
+# BECOMES
+
+for i, in [[1, 2]]
+  i.should == 1
+end
+```
+### unnamed test 331
+```ruby
+# GIVEN
+
+for i,j, in [[1,2]]
+  i.should == 1
+end
+
+```
+```ruby
+# BECOMES
+
+for i, j, in [[1, 2]]
+  i.should == 1
 end
 ```

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 265
+### unnamed test 288
 ```ruby
-# BEFORE
+# GIVEN
 
   class Foo 
  raise 'bar' 

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 530
+### unnamed test 560
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar 1 do 
  end
@@ -19,11 +19,10 @@ foo.bar 1 do
 
 foo.bar 1 do
 end
-
 ```
-### unnamed test 531
+### unnamed test 561
 ```ruby
-# BEFORE
+# GIVEN
 
 foo::bar 1 do 
  end

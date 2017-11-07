@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 257
+### unnamed test 280
 ```ruby
-# BEFORE
+# GIVEN
 
 class   Foo  
   end
@@ -19,11 +19,10 @@ class   Foo
 
 class Foo
 end
-
 ```
-### unnamed test 258
+### unnamed test 281
 ```ruby
-# BEFORE
+# GIVEN
 
 class   Foo  < Bar 
   end
@@ -34,11 +33,10 @@ class   Foo  < Bar
 
 class Foo < Bar
 end
-
 ```
-### unnamed test 259
+### unnamed test 282
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo
 1
@@ -51,11 +49,10 @@ end
 class Foo
   1
 end
-
 ```
-### unnamed test 260
+### unnamed test 283
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo  ;  end
 
@@ -64,11 +61,10 @@ class Foo  ;  end
 # BECOMES
 
 class Foo; end
-
 ```
-### unnamed test 261
+### unnamed test 284
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo; 
   end
@@ -79,11 +75,10 @@ class Foo;
 
 class Foo
 end
-
 ```
-### unnamed test 262
+### unnamed test 285
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo; 1; end
 class Bar; 2; end
@@ -94,11 +89,10 @@ class Bar; 2; end
 
 class Foo; 1; end
 class Bar; 2; end
-
 ```
-### unnamed test 263
+### unnamed test 286
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo; 1; end
 

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 133
+### unnamed test 156
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -25,11 +25,10 @@ begin
 rescue
   2
 end
-
 ```
-### unnamed test 134
+### unnamed test 157
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
 rescue A
@@ -44,11 +43,10 @@ begin
 rescue A
 rescue B
 end
-
 ```
-### unnamed test 135
+### unnamed test 158
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -65,11 +63,10 @@ begin
 rescue Foo
   2
 end
-
 ```
-### unnamed test 136
+### unnamed test 159
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -86,11 +83,10 @@ begin
 rescue => ex
   2
 end
-
 ```
-### unnamed test 137
+### unnamed test 160
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -107,11 +103,10 @@ begin
 rescue Foo => ex
   2
 end
-
 ```
-### unnamed test 138
+### unnamed test 161
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -128,11 +123,10 @@ begin
 rescue Foo, Bar, Baz => ex
   2
 end
-
 ```
-### unnamed test 139
+### unnamed test 162
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -153,11 +147,10 @@ rescue Foo,
        Baz => ex
   2
 end
-
 ```
-### unnamed test 140
+### unnamed test 163
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -174,11 +167,10 @@ begin
 ensure
   2
 end
-
 ```
-### unnamed test 141
+### unnamed test 164
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  1 
@@ -195,11 +187,10 @@ begin
 else
   2
 end
-
 ```
-### unnamed test 142
+### unnamed test 165
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   1
@@ -214,11 +205,10 @@ begin
   1
 rescue *x
 end
-
 ```
-### unnamed test 143
+### unnamed test 166
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   1
@@ -233,11 +223,10 @@ begin
   1
 rescue *x, *y
 end
-
 ```
-### unnamed test 144
+### unnamed test 167
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   1

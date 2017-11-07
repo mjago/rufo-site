@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 298
+### unnamed test 321
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo
 
@@ -25,7 +25,33 @@ class Foo
   1
 
 end
+```
+```ruby
+# with setting `double_newline_inside_type :no`
 
+class Foo
+  1
+end
+```
+### unnamed test 322
+```ruby
+# GIVEN
+
+class Foo
+
+1
+
+end
+
+```
+```ruby
+# BECOMES
+
+class Foo
+
+  1
+
+end
 ```
 ```ruby
 # with setting `double_newline_inside_type :no`

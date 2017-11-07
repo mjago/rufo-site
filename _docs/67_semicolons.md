@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 544
+### unnamed test 574
 ```ruby
-# BEFORE
+# GIVEN
 
 123;
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 123
-
 ```
-### unnamed test 545
+### unnamed test 575
 ```ruby
-# BEFORE
+# GIVEN
 
 1   ;   2
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 1; 2
-
 ```
-### unnamed test 546
+### unnamed test 576
 ```ruby
-# BEFORE
+# GIVEN
 
 1   ;  ;   2
 
@@ -43,13 +41,12 @@ sidebar:
 # BECOMES
 
 1; 2
-
 ```
-### unnamed test 547
+### unnamed test 577
 ```ruby
-# BEFORE
+# GIVEN
 
-1  
+1
   2
 
 ```
@@ -58,31 +55,13 @@ sidebar:
 
 1
 2
-
 ```
-### unnamed test 548
+### unnamed test 578
 ```ruby
-# BEFORE
-
-1  
-   
-  2
-
-```
-```ruby
-# BECOMES
+# GIVEN
 
 1
 
-2
-
-```
-### unnamed test 549
-```ruby
-# BEFORE
-
-1  
- ; ; ; 
   2
 
 ```
@@ -92,15 +71,13 @@ sidebar:
 1
 
 2
-
 ```
-### unnamed test 550
+### unnamed test 579
 ```ruby
-# BEFORE
+# GIVEN
 
-1 ; 
- ; 
- ; ; 
+1
+ ; ; ;
   2
 
 ```
@@ -110,11 +87,27 @@ sidebar:
 1
 
 2
+```
+### unnamed test 580
+```ruby
+# GIVEN
+
+1 ;
+ ;
+ ; ;
+  2
 
 ```
-### unnamed test 551
 ```ruby
-# BEFORE
+# BECOMES
+
+1
+
+2
+```
+### unnamed test 581
+```ruby
+# GIVEN
 
 123; # hello
 
@@ -123,11 +116,10 @@ sidebar:
 # BECOMES
 
 123 # hello
-
 ```
-### unnamed test 552
+### unnamed test 582
 ```ruby
-# BEFORE
+# GIVEN
 
 1;
 2
@@ -138,14 +130,13 @@ sidebar:
 
 1
 2
-
 ```
-### unnamed test 553
+### unnamed test 583
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
- 1 ; 2 
+ 1 ; 2
  end
 
 ```

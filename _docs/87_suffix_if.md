@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 621
+### unnamed test 654
 ```ruby
-# BEFORE
+# GIVEN
 
 1 if 2
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 1 if 2
-
 ```
-### unnamed test 622
+### unnamed test 655
 ```ruby
-# BEFORE
+# GIVEN
 
 1 unless 2
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 1 unless 2
-
 ```
-### unnamed test 623
+### unnamed test 656
 ```ruby
-# BEFORE
+# GIVEN
 
 1 rescue 2
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 1 rescue 2
-
 ```
-### unnamed test 624
+### unnamed test 657
 ```ruby
-# BEFORE
+# GIVEN
 
 1 while 2
 
@@ -56,11 +53,10 @@ sidebar:
 # BECOMES
 
 1 while 2
-
 ```
-### unnamed test 625
+### unnamed test 658
 ```ruby
-# BEFORE
+# GIVEN
 
 1 until 2
 
@@ -69,11 +65,10 @@ sidebar:
 # BECOMES
 
 1 until 2
-
 ```
-### unnamed test 626
+### unnamed test 659
 ```ruby
-# BEFORE
+# GIVEN
 
 x.y rescue z
 
@@ -82,11 +77,10 @@ x.y rescue z
 # BECOMES
 
 x.y rescue z
-
 ```
-### unnamed test 627
+### unnamed test 660
 ```ruby
-# BEFORE
+# GIVEN
 
 1  if  2
 
@@ -95,11 +89,10 @@ x.y rescue z
 # BECOMES
 
 1 if 2
-
 ```
-### unnamed test 628
+### unnamed test 661
 ```ruby
-# BEFORE
+# GIVEN
 
 foo bar(1)  if  2
 

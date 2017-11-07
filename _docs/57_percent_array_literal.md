@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 500
+### unnamed test 530
 ```ruby
-# BEFORE
+# GIVEN
 
  %w(  ) 
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 %w()
-
 ```
-### unnamed test 501
+### unnamed test 531
 ```ruby
-# BEFORE
+# GIVEN
 
  %w(one) 
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 %w(one)
-
 ```
-### unnamed test 502
+### unnamed test 532
 ```ruby
-# BEFORE
+# GIVEN
 
  %w( one ) 
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 %w( one )
-
 ```
-### unnamed test 503
+### unnamed test 533
 ```ruby
-# BEFORE
+# GIVEN
 
  %w(one   two 
  three ) 
@@ -58,11 +55,10 @@ sidebar:
 
 %w(one two
    three)
-
 ```
-### unnamed test 504
+### unnamed test 534
 ```ruby
-# BEFORE
+# GIVEN
 
  %w( one   two 
  three ) 
@@ -73,11 +69,10 @@ sidebar:
 
 %w( one two
     three )
-
 ```
-### unnamed test 505
+### unnamed test 535
 ```ruby
-# BEFORE
+# GIVEN
 
  %w( 
  one ) 
@@ -88,11 +83,10 @@ sidebar:
 
 %w(
   one)
-
 ```
-### unnamed test 506
+### unnamed test 536
 ```ruby
-# BEFORE
+# GIVEN
 
  %w( 
  one 
@@ -105,11 +99,10 @@ sidebar:
 %w(
   one
 )
-
 ```
-### unnamed test 507
+### unnamed test 537
 ```ruby
-# BEFORE
+# GIVEN
 
  %w[ one ] 
 
@@ -118,11 +111,10 @@ sidebar:
 # BECOMES
 
 %w[ one ]
-
 ```
-### unnamed test 508
+### unnamed test 538
 ```ruby
-# BEFORE
+# GIVEN
 
  begin 
  %w( 
@@ -139,11 +131,10 @@ begin
     one
   )
 end
-
 ```
-### unnamed test 509
+### unnamed test 539
 ```ruby
-# BEFORE
+# GIVEN
 
  %i(  ) 
 
@@ -152,11 +143,10 @@ end
 # BECOMES
 
 %i()
-
 ```
-### unnamed test 510
+### unnamed test 540
 ```ruby
-# BEFORE
+# GIVEN
 
  %i( one ) 
 
@@ -165,11 +155,10 @@ end
 # BECOMES
 
 %i( one )
-
 ```
-### unnamed test 511
+### unnamed test 541
 ```ruby
-# BEFORE
+# GIVEN
 
  %i( one   two 
  three ) 
@@ -180,11 +169,10 @@ end
 
 %i( one two
     three )
-
 ```
-### unnamed test 512
+### unnamed test 542
 ```ruby
-# BEFORE
+# GIVEN
 
  %i[ one ] 
 
@@ -193,11 +181,10 @@ end
 # BECOMES
 
 %i[ one ]
-
 ```
-### unnamed test 513
+### unnamed test 543
 ```ruby
-# BEFORE
+# GIVEN
 
  %W( ) 
 
@@ -206,11 +193,10 @@ end
 # BECOMES
 
 %W()
-
 ```
-### unnamed test 514
+### unnamed test 544
 ```ruby
-# BEFORE
+# GIVEN
 
  %W( one ) 
 
@@ -219,11 +205,10 @@ end
 # BECOMES
 
 %W( one )
-
 ```
-### unnamed test 515
+### unnamed test 545
 ```ruby
-# BEFORE
+# GIVEN
 
  %W( one  two ) 
 
@@ -232,11 +217,10 @@ end
 # BECOMES
 
 %W( one two )
-
 ```
-### unnamed test 516
+### unnamed test 546
 ```ruby
-# BEFORE
+# GIVEN
 
  %W( one  two #{ 1 } ) 
 
@@ -245,11 +229,10 @@ end
 # BECOMES
 
 %W( one two #{1} )
-
 ```
-### unnamed test 517
+### unnamed test 547
 ```ruby
-# BEFORE
+# GIVEN
 
 %W(#{1}2)
 
@@ -258,11 +241,10 @@ end
 # BECOMES
 
 %W(#{1}2)
-
 ```
-### unnamed test 518
+### unnamed test 548
 ```ruby
-# BEFORE
+# GIVEN
 
  %I( ) 
 
@@ -271,11 +253,10 @@ end
 # BECOMES
 
 %I()
-
 ```
-### unnamed test 519
+### unnamed test 549
 ```ruby
-# BEFORE
+# GIVEN
 
  %I( one  two #{ 1 } ) 
 

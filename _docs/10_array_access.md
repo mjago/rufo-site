@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 58
+### unnamed test 81
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ ]
 
@@ -17,11 +17,10 @@ foo[ ]
 # BECOMES
 
 foo[]
-
 ```
-### unnamed test 59
+### unnamed test 82
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[
  ]
@@ -31,11 +30,10 @@ foo[
 # BECOMES
 
 foo[]
-
 ```
-### unnamed test 60
+### unnamed test 83
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ 1 ]
 
@@ -44,11 +42,10 @@ foo[ 1 ]
 # BECOMES
 
 foo[1]
-
 ```
-### unnamed test 61
+### unnamed test 84
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ 1 , 2 , 3 ]
 
@@ -57,11 +54,10 @@ foo[ 1 , 2 , 3 ]
 # BECOMES
 
 foo[1, 2, 3]
-
 ```
-### unnamed test 62
+### unnamed test 85
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ 1 ,
  2 ,
@@ -74,11 +70,10 @@ foo[ 1 ,
 foo[1,
     2,
     3]
-
 ```
-### unnamed test 63
+### unnamed test 86
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[
  1 ,
@@ -93,11 +88,10 @@ foo[
   1,
   2,
   3]
-
 ```
-### unnamed test 64
+### unnamed test 87
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ *x ]
 
@@ -106,11 +100,10 @@ foo[ *x ]
 # BECOMES
 
 foo[*x]
-
 ```
-### unnamed test 65
+### unnamed test 88
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[
  1,
@@ -123,7 +116,6 @@ foo[
 foo[
   1,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -132,9 +124,9 @@ foo[
   1
 ]
 ```
-### unnamed test 66
+### unnamed test 89
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[
  1,

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 93
+### unnamed test 116
 ```ruby
-# BEFORE
+# GIVEN
 
 a += 2
 
@@ -17,11 +17,10 @@ a += 2
 # BECOMES
 
 a += 2
-
 ```
-### unnamed test 94
+### unnamed test 117
 ```ruby
-# BEFORE
+# GIVEN
 
 a +=
  2
@@ -32,11 +31,10 @@ a +=
 
 a +=
   2
-
 ```
-### unnamed test 95
+### unnamed test 118
 ```ruby
-# BEFORE
+# GIVEN
 
 a+=1
 

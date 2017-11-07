@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 160
+### unnamed test 183
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   {}
 
@@ -17,11 +17,10 @@ foo   {}
 # BECOMES
 
 foo { }
-
 ```
-### unnamed test 161
+### unnamed test 184
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   {   }
 
@@ -30,11 +29,10 @@ foo   {   }
 # BECOMES
 
 foo { }
-
 ```
-### unnamed test 162
+### unnamed test 185
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   {  1 }
 
@@ -43,11 +41,10 @@ foo   {  1 }
 # BECOMES
 
 foo { 1 }
-
 ```
-### unnamed test 163
+### unnamed test 186
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   {  1 ; 2 }
 
@@ -56,11 +53,10 @@ foo   {  1 ; 2 }
 # BECOMES
 
 foo { 1; 2 }
-
 ```
-### unnamed test 164
+### unnamed test 187
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   {  1
  2 }
@@ -73,11 +69,10 @@ foo {
   1
   2
 }
-
 ```
-### unnamed test 165
+### unnamed test 188
 ```ruby
-# BEFORE
+# GIVEN
 
 foo {
   1 }
@@ -89,11 +84,10 @@ foo {
 foo {
   1
 }
-
 ```
-### unnamed test 166
+### unnamed test 189
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  foo {  1  }
@@ -106,11 +100,10 @@ begin
 begin
   foo { 1 }
 end
-
 ```
-### unnamed test 167
+### unnamed test 190
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x , y | }
 
@@ -119,11 +112,10 @@ foo { | x , y | }
 # BECOMES
 
 foo { |x, y| }
-
 ```
-### unnamed test 168
+### unnamed test 191
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x , | }
 
@@ -132,11 +124,10 @@ foo { | x , | }
 # BECOMES
 
 foo { |x, | }
-
 ```
-### unnamed test 169
+### unnamed test 192
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x , y, | bar}
 
@@ -145,11 +136,10 @@ foo { | x , y, | bar}
 # BECOMES
 
 foo { |x, y, | bar }
-
 ```
-### unnamed test 170
+### unnamed test 193
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { || }
 
@@ -158,11 +148,10 @@ foo { || }
 # BECOMES
 
 foo { }
-
 ```
-### unnamed test 171
+### unnamed test 194
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | | }
 
@@ -171,11 +160,10 @@ foo { | | }
 # BECOMES
 
 foo { }
-
 ```
-### unnamed test 172
+### unnamed test 195
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | ( x ) , z | }
 
@@ -184,11 +172,10 @@ foo { | ( x ) , z | }
 # BECOMES
 
 foo { |(x), z| }
-
 ```
-### unnamed test 173
+### unnamed test 196
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | ( x , y ) , z | }
 
@@ -197,11 +184,10 @@ foo { | ( x , y ) , z | }
 # BECOMES
 
 foo { |(x, y), z| }
-
 ```
-### unnamed test 174
+### unnamed test 197
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | ( x , ( y , w ) ) , z | }
 
@@ -210,11 +196,10 @@ foo { | ( x , ( y , w ) ) , z | }
 # BECOMES
 
 foo { |(x, (y, w)), z| }
-
 ```
-### unnamed test 175
+### unnamed test 198
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | bar: 1 , baz: 2 | }
 
@@ -223,11 +208,10 @@ foo { | bar: 1 , baz: 2 | }
 # BECOMES
 
 foo { |bar: 1, baz: 2| }
-
 ```
-### unnamed test 176
+### unnamed test 199
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | *z | }
 
@@ -236,11 +220,10 @@ foo { | *z | }
 # BECOMES
 
 foo { |*z| }
-
 ```
-### unnamed test 177
+### unnamed test 200
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | **z | }
 
@@ -249,11 +232,10 @@ foo { | **z | }
 # BECOMES
 
 foo { |**z| }
-
 ```
-### unnamed test 178
+### unnamed test 201
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | bar = 1 | }
 
@@ -262,11 +244,10 @@ foo { | bar = 1 | }
 # BECOMES
 
 foo { |bar = 1| }
-
 ```
-### unnamed test 179
+### unnamed test 202
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x , y | 1 }
 
@@ -275,11 +256,10 @@ foo { | x , y | 1 }
 # BECOMES
 
 foo { |x, y| 1 }
-
 ```
-### unnamed test 180
+### unnamed test 203
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x |
   1 }
@@ -291,11 +271,10 @@ foo { | x |
 foo { |x|
   1
 }
-
 ```
-### unnamed test 181
+### unnamed test 204
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { | x ,
  y |
@@ -309,11 +288,10 @@ foo { |x,
        y|
   1
 }
-
 ```
-### unnamed test 182
+### unnamed test 205
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   do   end
 
@@ -322,11 +300,10 @@ foo   do   end
 # BECOMES
 
 foo do end
-
 ```
-### unnamed test 183
+### unnamed test 206
 ```ruby
-# BEFORE
+# GIVEN
 
 foo   do 1  end
 
@@ -335,11 +312,10 @@ foo   do 1  end
 # BECOMES
 
 foo do 1 end
-
 ```
-### unnamed test 184
+### unnamed test 207
 ```ruby
-# BEFORE
+# GIVEN
 
 bar foo {
  1
@@ -352,11 +328,10 @@ bar foo {
 bar foo {
   1
 }, 2
-
 ```
-### unnamed test 185
+### unnamed test 208
 ```ruby
-# BEFORE
+# GIVEN
 
 bar foo {
  1
@@ -369,11 +344,10 @@ bar foo {
 bar foo {
   1
 } + 2
-
 ```
-### unnamed test 186
+### unnamed test 209
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { |;x| }
 
@@ -382,11 +356,10 @@ foo { |;x| }
 # BECOMES
 
 foo { |; x| }
-
 ```
-### unnamed test 187
+### unnamed test 210
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { |
 ;x| }
@@ -396,11 +369,10 @@ foo { |
 # BECOMES
 
 foo { |; x| }
-
 ```
-### unnamed test 188
+### unnamed test 211
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { |;x, y| }
 
@@ -409,11 +381,10 @@ foo { |;x, y| }
 # BECOMES
 
 foo { |; x, y| }
-
 ```
-### unnamed test 189
+### unnamed test 212
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { |a, b;x, y| }
 
@@ -422,11 +393,10 @@ foo { |a, b;x, y| }
 # BECOMES
 
 foo { |a, b; x, y| }
-
 ```
-### unnamed test 190
+### unnamed test 213
 ```ruby
-# BEFORE
+# GIVEN
 
 proc { |(x, *y),z| }
 
@@ -435,11 +405,10 @@ proc { |(x, *y),z| }
 # BECOMES
 
 proc { |(x, *y), z| }
-
 ```
-### unnamed test 191
+### unnamed test 214
 ```ruby
-# BEFORE
+# GIVEN
 
 proc { |(w, *x, y), z| }
 
@@ -448,11 +417,10 @@ proc { |(w, *x, y), z| }
 # BECOMES
 
 proc { |(w, *x, y), z| }
-
 ```
-### unnamed test 192
+### unnamed test 215
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { |(*x, y), z| }
 
@@ -461,11 +429,10 @@ foo { |(*x, y), z| }
 # BECOMES
 
 foo { |(*x, y), z| }
-
 ```
-### unnamed test 193
+### unnamed test 216
 ```ruby
-# BEFORE
+# GIVEN
 
 foo { begin; end; }
 
@@ -474,11 +441,10 @@ foo { begin; end; }
 # BECOMES
 
 foo { begin; end }
-
 ```
-### unnamed test 194
+### unnamed test 217
 ```ruby
-# BEFORE
+# GIVEN
 
 foo {
  |i| }

@@ -8,7 +8,7 @@ sidebar:
 ---
 ### multiline\_comment
 ```ruby
-# BEFORE
+# GIVEN
 
 =begin
   foo
@@ -23,11 +23,10 @@ sidebar:
   foo
   bar
 =end
-
 ```
 ### multiline\_comment\_2
 ```ruby
-# BEFORE
+# GIVEN
 
 1
 
@@ -50,11 +49,10 @@ sidebar:
 =end
 
 2
-
 ```
 ### multiline\_comment\_3
 ```ruby
-# BEFORE
+# GIVEN
 
 # foo
 =begin

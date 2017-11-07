@@ -8,7 +8,7 @@ sidebar:
 ---
 ### 123
 ```ruby
-# BEFORE
+# GIVEN
 
 123
 

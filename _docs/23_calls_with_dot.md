@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 201
+### unnamed test 224
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.()
 
@@ -17,11 +17,10 @@ foo.()
 # BECOMES
 
 foo.()
-
 ```
-### unnamed test 202
+### unnamed test 225
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.( 1 )
 
@@ -30,11 +29,10 @@ foo.( 1 )
 # BECOMES
 
 foo.(1)
-
 ```
-### unnamed test 203
+### unnamed test 226
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.( 1, 2 )
 
@@ -43,11 +41,10 @@ foo.( 1, 2 )
 # BECOMES
 
 foo.(1, 2)
-
 ```
-### unnamed test 204
+### unnamed test 227
 ```ruby
-# BEFORE
+# GIVEN
 
 x.foo.( 1, 2 )
 

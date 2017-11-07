@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 685
+### unnamed test 726
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1 ; end
 
@@ -17,11 +17,10 @@ while 1 ; end
 # BECOMES
 
 while 1; end
-
 ```
-### unnamed test 686
+### unnamed test 727
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1 ; 2 ; end
 
@@ -30,11 +29,10 @@ while 1 ; 2 ; end
 # BECOMES
 
 while 1; 2; end
-
 ```
-### unnamed test 687
+### unnamed test 728
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1
  end
@@ -45,11 +43,10 @@ while 1
 
 while 1
 end
-
 ```
-### unnamed test 688
+### unnamed test 729
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1
  2
@@ -64,11 +61,10 @@ while 1
   2
   3
 end
-
 ```
-### unnamed test 689
+### unnamed test 730
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1  # foo
  2
@@ -83,11 +79,10 @@ while 1 # foo
   2
   3
 end
-
 ```
-### unnamed test 690
+### unnamed test 731
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1 do  end
 
@@ -96,11 +91,10 @@ while 1 do  end
 # BECOMES
 
 while 1 do end
-
 ```
-### unnamed test 691
+### unnamed test 732
 ```ruby
-# BEFORE
+# GIVEN
 
 while 1 do  2  end
 
@@ -109,11 +103,10 @@ while 1 do  2  end
 # BECOMES
 
 while 1 do 2 end
-
 ```
-### unnamed test 692
+### unnamed test 733
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  while 1  do  2  end

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 112
+### unnamed test 135
 ```ruby
-# BEFORE
+# GIVEN
 
 begin;end
 
@@ -17,11 +17,10 @@ begin;end
 # BECOMES
 
 begin; end
-
 ```
-### unnamed test 113
+### unnamed test 136
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  end
@@ -32,11 +31,10 @@ begin
 
 begin
 end
-
 ```
-### unnamed test 114
+### unnamed test 137
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 1 end
 
@@ -45,11 +43,10 @@ begin 1 end
 # BECOMES
 
 begin 1 end
-
 ```
-### unnamed test 115
+### unnamed test 138
 ```ruby
-# BEFORE
+# GIVEN
 
 begin; 1; end
 
@@ -58,11 +55,10 @@ begin; 1; end
 # BECOMES
 
 begin; 1; end
-
 ```
-### unnamed test 116
+### unnamed test 139
 ```ruby
-# BEFORE
+# GIVEN
 
 begin; 1; 2; end
 
@@ -71,11 +67,10 @@ begin; 1; 2; end
 # BECOMES
 
 begin; 1; 2; end
-
 ```
-### unnamed test 117
+### unnamed test 140
 ```ruby
-# BEFORE
+# GIVEN
 
 begin; 1 
  2; end
@@ -86,11 +81,10 @@ begin; 1
 
 begin; 1
   2; end
-
 ```
-### unnamed test 118
+### unnamed test 141
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  1 
@@ -103,11 +97,10 @@ begin
 begin
   1
 end
-
 ```
-### unnamed test 119
+### unnamed test 142
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  1 
@@ -122,11 +115,10 @@ begin
   1
   2
 end
-
 ```
-### unnamed test 120
+### unnamed test 143
 ```ruby
-# BEFORE
+# GIVEN
 
 begin 
  begin 
@@ -145,11 +137,10 @@ begin
   end
   2
 end
-
 ```
-### unnamed test 121
+### unnamed test 144
 ```ruby
-# BEFORE
+# GIVEN
 
 begin # hello
  end
@@ -160,11 +151,10 @@ begin # hello
 
 begin # hello
 end
-
 ```
-### unnamed test 122
+### unnamed test 145
 ```ruby
-# BEFORE
+# GIVEN
 
 begin;# hello
  end
@@ -175,11 +165,10 @@ begin;# hello
 
 begin # hello
 end
-
 ```
-### unnamed test 123
+### unnamed test 146
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  1  # a
@@ -192,11 +181,10 @@ end
 begin
   1  # a
 end
-
 ```
-### unnamed test 124
+### unnamed test 147
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  1  # a
@@ -213,11 +201,10 @@ begin
   # b
   3 # c
 end
-
 ```
-### unnamed test 125
+### unnamed test 148
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
 end
@@ -232,11 +219,10 @@ begin
 end
 
 # foo
-
 ```
-### unnamed test 126
+### unnamed test 149
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   begin 1 end
@@ -249,11 +235,10 @@ end
 begin
   begin 1 end
 end
-
 ```
-### unnamed test 127
+### unnamed test 150
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   def foo(x) 1 end
@@ -266,11 +251,10 @@ end
 begin
   def foo(x) 1 end
 end
-
 ```
-### unnamed test 128
+### unnamed test 151
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   if 1 then 2 end
@@ -283,11 +267,10 @@ end
 begin
   if 1 then 2 end
 end
-
 ```
-### unnamed test 129
+### unnamed test 152
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   if 1 then 2 end
@@ -300,11 +283,10 @@ end
 begin
   if 1 then 2 end
 end
-
 ```
-### unnamed test 130
+### unnamed test 153
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   foo do 1 end
@@ -317,11 +299,10 @@ end
 begin
   foo do 1 end
 end
-
 ```
-### unnamed test 131
+### unnamed test 154
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   for x in y do 1 end
@@ -334,11 +315,10 @@ end
 begin
   for x in y do 1 end
 end
-
 ```
-### unnamed test 132
+### unnamed test 155
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   # foo

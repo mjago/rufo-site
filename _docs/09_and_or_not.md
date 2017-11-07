@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 52
+### unnamed test 75
 ```ruby
-# BEFORE
+# GIVEN
 
  foo  and  bar
 
@@ -17,16 +17,15 @@ sidebar:
 # BECOMES
 
 foo  and  bar
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 foo and bar
 ```
-### unnamed test 53
+### unnamed test 76
 ```ruby
-# BEFORE
+# GIVEN
 
  foo  or  bar
 
@@ -35,16 +34,15 @@ foo and bar
 # BECOMES
 
 foo  or  bar
-
 ```
 ```ruby
 # with setting `spaces_around_binary :one`
 
 foo or bar
 ```
-### unnamed test 54
+### unnamed test 77
 ```ruby
-# BEFORE
+# GIVEN
 
  not  foo
 
@@ -53,11 +51,10 @@ foo or bar
 # BECOMES
 
 not foo
-
 ```
-### unnamed test 55
+### unnamed test 78
 ```ruby
-# BEFORE
+# GIVEN
 
 not(x)
 
@@ -66,11 +63,10 @@ not(x)
 # BECOMES
 
 not(x)
-
 ```
-### unnamed test 56
+### unnamed test 79
 ```ruby
-# BEFORE
+# GIVEN
 
 not (x)
 
@@ -79,11 +75,10 @@ not (x)
 # BECOMES
 
 not(x)
-
 ```
-### unnamed test 57
+### unnamed test 80
 ```ruby
-# BEFORE
+# GIVEN
 
 not((a, b = 1, 2))
 

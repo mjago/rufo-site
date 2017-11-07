@@ -8,7 +8,7 @@ sidebar:
 ---
 ### char
 ```ruby
-# BEFORE
+# GIVEN
 
 ?a
 

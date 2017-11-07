@@ -8,7 +8,7 @@ sidebar:
 ---
 ### nil
 ```ruby
-# BEFORE
+# GIVEN
 
 nil
 

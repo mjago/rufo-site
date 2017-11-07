@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 666
+### unnamed test 707
 ```ruby
-# BEFORE
+# GIVEN
 
 - x
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 -x
-
 ```
-### unnamed test 667
+### unnamed test 708
 ```ruby
-# BEFORE
+# GIVEN
 
 + x
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 +x
-
 ```
-### unnamed test 668
+### unnamed test 709
 ```ruby
-# BEFORE
+# GIVEN
 
 +x
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 +x
-
 ```
-### unnamed test 669
+### unnamed test 710
 ```ruby
-# BEFORE
+# GIVEN
 
 +(x)
 
@@ -56,11 +53,10 @@ sidebar:
 # BECOMES
 
 +(x)
-
 ```
-### unnamed test 670
+### unnamed test 711
 ```ruby
-# BEFORE
+# GIVEN
 
 + (x)
 

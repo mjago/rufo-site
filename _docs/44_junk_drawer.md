@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 357
+### unnamed test 383
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo
 end
@@ -24,11 +24,10 @@ end
 
 def bar
 end
-
 ```
-### unnamed test 358
+### unnamed test 384
 ```ruby
-# BEFORE
+# GIVEN
 
 class Foo
 end
@@ -44,11 +43,10 @@ end
 
 class Bar
 end
-
 ```
-### unnamed test 359
+### unnamed test 385
 ```ruby
-# BEFORE
+# GIVEN
 
 module Foo
 end
@@ -64,11 +62,10 @@ end
 
 module Bar
 end
-
 ```
-### unnamed test 360
+### unnamed test 386
 ```ruby
-# BEFORE
+# GIVEN
 
 1
 def foo

@@ -8,7 +8,7 @@ sidebar:
 ---
 ### retry
 ```ruby
-# BEFORE
+# GIVEN
 
 retry
 

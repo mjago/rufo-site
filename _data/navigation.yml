@@ -211,3 +211,13 @@ docs:
     url: "/docs/while"
   - title: yield
     url: "/docs/yield"
+  - title: lonely
+    url: "/docs/lonely"
+  - title: lonely_operator
+    url: "/docs/lonely_operator"
+  - title: lonely_property_setters
+    url: "/docs/lonely_property_setters"
+  - title: lonely_receiver_and_block
+    url: "/docs/lonely_receiver_and_block"
+  - title: squiggly_heredoc
+    url: "/docs/squiggly_heredoc"

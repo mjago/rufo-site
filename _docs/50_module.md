@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 467
+### unnamed test 495
 ```ruby
-# BEFORE
+# GIVEN
 
 module   Foo  
   end
@@ -19,11 +19,10 @@ module   Foo
 
 module Foo
 end
-
 ```
-### unnamed test 468
+### unnamed test 496
 ```ruby
-# BEFORE
+# GIVEN
 
 module Foo ; end
 
@@ -32,11 +31,10 @@ module Foo ; end
 # BECOMES
 
 module Foo; end
-
 ```
-### unnamed test 469
+### unnamed test 497
 ```ruby
-# BEFORE
+# GIVEN
 
 module Foo; 1; end
 module Bar; 2; end
@@ -47,11 +45,10 @@ module Bar; 2; end
 
 module Foo; 1; end
 module Bar; 2; end
-
 ```
-### unnamed test 470
+### unnamed test 498
 ```ruby
-# BEFORE
+# GIVEN
 
 module Foo; 1; end
 

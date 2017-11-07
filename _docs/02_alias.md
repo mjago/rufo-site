@@ -8,7 +8,7 @@ sidebar:
 ---
 ### unnamed test 2
 ```ruby
-# BEFORE
+# GIVEN
 
 alias  foo  bar
 
@@ -17,11 +17,10 @@ alias  foo  bar
 # BECOMES
 
 alias foo bar
-
 ```
 ### unnamed test 3
 ```ruby
-# BEFORE
+# GIVEN
 
 alias  :foo  :bar
 
@@ -30,11 +29,10 @@ alias  :foo  :bar
 # BECOMES
 
 alias :foo :bar
-
 ```
 ### unnamed test 4
 ```ruby
-# BEFORE
+# GIVEN
 
 alias  store  []=
 
@@ -43,11 +41,10 @@ alias  store  []=
 # BECOMES
 
 alias store []=
-
 ```
 ### unnamed test 5
 ```ruby
-# BEFORE
+# GIVEN
 
 alias  $foo  $bar
 

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 67
+### unnamed test 90
 ```ruby
-# BEFORE
+# GIVEN
 
  [  ]
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 []
-
 ```
-### unnamed test 68
+### unnamed test 91
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 ]
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 [1]
-
 ```
-### unnamed test 69
+### unnamed test 92
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 , 2 ]
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 [1, 2]
-
 ```
-### unnamed test 70
+### unnamed test 93
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 , 2 , ]
 
@@ -56,11 +53,10 @@ sidebar:
 # BECOMES
 
 [1, 2]
-
 ```
-### unnamed test 71
+### unnamed test 94
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 , 2 ]
@@ -72,7 +68,6 @@ sidebar:
 [
   1, 2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -81,9 +76,9 @@ sidebar:
   1, 2
 ]
 ```
-### unnamed test 72
+### unnamed test 95
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 , 2, ]
@@ -95,7 +90,6 @@ sidebar:
 [
   1, 2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -104,9 +98,9 @@ sidebar:
   1, 2
 ]
 ```
-### unnamed test 73
+### unnamed test 96
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 , 2 ,
@@ -120,7 +114,6 @@ sidebar:
   1, 2,
   3, 4,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -130,9 +123,9 @@ sidebar:
   3, 4
 ]
 ```
-### unnamed test 74
+### unnamed test 97
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 ,
@@ -146,7 +139,6 @@ sidebar:
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -156,9 +148,9 @@ sidebar:
   2
 ]
 ```
-### unnamed test 75
+### unnamed test 98
 ```ruby
-# BEFORE
+# GIVEN
 
  [  # comment
  1 ,
@@ -172,7 +164,6 @@ sidebar:
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -182,9 +173,9 @@ sidebar:
   2
 ]
 ```
-### unnamed test 76
+### unnamed test 99
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 ,  # comment
@@ -198,7 +189,6 @@ sidebar:
   1,  # comment
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -208,9 +198,9 @@ sidebar:
   2
 ]
 ```
-### unnamed test 77
+### unnamed test 100
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 ,
  2, 3,
@@ -223,11 +213,10 @@ sidebar:
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 78
+### unnamed test 101
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 ,
  2, 3,
@@ -240,11 +229,10 @@ sidebar:
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 79
+### unnamed test 102
 ```ruby
-# BEFORE
+# GIVEN
 
  [  1 ,
  2, 3,
@@ -258,11 +246,10 @@ sidebar:
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 80
+### unnamed test 103
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1 ,
  2, 3,
@@ -277,11 +264,10 @@ sidebar:
  2, 3,
  4 # foo
 ]
-
 ```
-### unnamed test 81
+### unnamed test 104
 ```ruby
-# BEFORE
+# GIVEN
 
  begin
  [
@@ -297,7 +283,6 @@ begin
     1, 2,
   ]
 end
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -308,9 +293,9 @@ begin
   ]
 end
 ```
-### unnamed test 82
+### unnamed test 105
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 # foo
@@ -323,7 +308,6 @@ end
 [
   1, # foo
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -332,9 +316,9 @@ end
   1 # foo
 ]
 ```
-### unnamed test 83
+### unnamed test 106
 ```ruby
-# BEFORE
+# GIVEN
 
  [ *x ]
 
@@ -343,11 +327,10 @@ end
 # BECOMES
 
 [*x]
-
 ```
-### unnamed test 84
+### unnamed test 107
 ```ruby
-# BEFORE
+# GIVEN
 
  [ *x , 1 ]
 
@@ -356,11 +339,10 @@ end
 # BECOMES
 
 [*x, 1]
-
 ```
-### unnamed test 85
+### unnamed test 108
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1, *x ]
 
@@ -369,11 +351,10 @@ end
 # BECOMES
 
 [1, *x]
-
 ```
-### unnamed test 86
+### unnamed test 109
 ```ruby
-# BEFORE
+# GIVEN
 
  x = [{
  foo: 1
@@ -386,7 +367,6 @@ end
 x = [{
   foo: 1,
 }]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -395,9 +375,9 @@ x = [{
   foo: 1
 }]
 ```
-### unnamed test 87
+### unnamed test 110
 ```ruby
-# BEFORE
+# GIVEN
 
 [1,   2]
 
@@ -406,11 +386,10 @@ x = [{
 # BECOMES
 
 [1, 2]
-
 ```
-### unnamed test 88
+### unnamed test 111
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   1,
@@ -427,7 +406,6 @@ x = [{
   # comment
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -438,9 +416,9 @@ x = [{
   2
 ]
 ```
-### unnamed test 89
+### unnamed test 112
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   *a,
@@ -455,7 +433,6 @@ x = [{
   *a,
   b,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -465,9 +442,9 @@ x = [{
   b
 ]
 ```
-### unnamed test 90
+### unnamed test 113
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   1, *a,

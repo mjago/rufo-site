@@ -8,7 +8,7 @@ sidebar:
 ---
 ### comment
 ```ruby
-# BEFORE
+# GIVEN
 
 # foo
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 # foo
-
 ```
 ### two\_comments
 ```ruby
-# BEFORE
+# GIVEN
 
 # foo
 # bar
@@ -32,11 +31,10 @@ sidebar:
 
 # foo
 # bar
-
 ```
 ### integer\_with\_comment
 ```ruby
-# BEFORE
+# GIVEN
 
 1   # foo
 
@@ -45,11 +43,10 @@ sidebar:
 # BECOMES
 
 1   # foo
-
 ```
 ### comment\_with\_double\_line\_break
 ```ruby
-# BEFORE
+# GIVEN
 
 # a
 
@@ -62,11 +59,10 @@ sidebar:
 # a
 
 # b
-
 ```
 ### comment\_with\_triple\_line\_break
 ```ruby
-# BEFORE
+# GIVEN
 
 # a
 
@@ -80,11 +76,10 @@ sidebar:
 # a
 
 # b
-
 ```
 ### comment\_and\_integer
 ```ruby
-# BEFORE
+# GIVEN
 
 # a
 1
@@ -95,11 +90,10 @@ sidebar:
 
 # a
 1
-
 ```
 ### comment\_double\_newline\_integer
 ```ruby
-# BEFORE
+# GIVEN
 
 # a
 
@@ -113,11 +107,10 @@ sidebar:
 # a
 
 1
-
 ```
 ### integer\_with\_comment\_and\_following\_comment
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 # b
@@ -128,11 +121,10 @@ sidebar:
 
 1 # a
 # b
-
 ```
 ### integer\_with\_comment\_and\_multiline\_break
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 
@@ -145,11 +137,10 @@ sidebar:
 1 # a
 
 # b
-
 ```
 ### integers\_separated\_by\_comments
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 
@@ -162,11 +153,10 @@ sidebar:
 1 # a
 
 2 # b
-
 ```
 ### multiple\_trailing\_comments
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 
@@ -180,11 +170,10 @@ sidebar:
 1 # a
 
 2 # b
-
 ```
 ### more\_trailing\_comments
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 
@@ -202,11 +191,10 @@ sidebar:
 1 # a
 
 2 # b
-
 ```
 ### still\_more\_trailing\_comments
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # a
 
@@ -227,11 +215,10 @@ sidebar:
 
 # c
 2 # b
-
 ```
 ### comment\_indentation\_inside\_method\_call
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(
 # comment for foo
@@ -246,7 +233,6 @@ foo(
   # comment for foo
   foo: 'foo',
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -258,7 +244,7 @@ foo(
 ```
 ### comment\_indentation\_inside\_method\_call\_2
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(
  # comment for foo
@@ -273,7 +259,6 @@ foo(
   # comment for foo
   foo: 'foo',
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -285,7 +270,7 @@ foo(
 ```
 ### comment\_indentation\_inside\_method\_call\_3
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(
   # comment for foo
@@ -300,7 +285,6 @@ foo(
   # comment for foo
   foo: 'foo',
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -312,7 +296,7 @@ foo(
 ```
 ### comment\_indentation\_inside\_method\_call\_4
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(
    # comment for foo
@@ -327,7 +311,6 @@ foo(
   # comment for foo
   foo: 'foo',
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -339,7 +322,7 @@ foo(
 ```
 ### multiple\_comments\_inside\_method\_call
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(
 # comment for foo

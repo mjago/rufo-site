@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 646
+### unnamed test 679
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   1,
@@ -23,7 +23,6 @@ sidebar:
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -33,9 +32,35 @@ sidebar:
   2
 ]
 ```
-### unnamed test 647
+### unnamed test 680
 ```ruby
-# BEFORE
+# GIVEN
+
+[
+  1,
+  2,
+]
+
+```
+```ruby
+# BECOMES
+
+[
+  1,
+  2,
+]
+```
+```ruby
+# with setting `trailing_commas :never`
+
+[
+  1,
+  2
+]
+```
+### unnamed test 681
+```ruby
+# GIVEN
 
 [
   1,
@@ -50,7 +75,6 @@ sidebar:
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -60,9 +84,35 @@ sidebar:
   2
 ]
 ```
-### unnamed test 648
+### unnamed test 682
 ```ruby
-# BEFORE
+# GIVEN
+
+[
+  1,
+  2
+]
+
+```
+```ruby
+# BECOMES
+
+[
+  1,
+  2,
+]
+```
+```ruby
+# with setting `trailing_commas :never`
+
+[
+  1,
+  2
+]
+```
+### unnamed test 683
+```ruby
+# GIVEN
 
 {
   foo: 1,
@@ -77,7 +127,6 @@ sidebar:
   foo: 1,
   bar: 2,
 }
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -87,9 +136,35 @@ sidebar:
   bar: 2
 }
 ```
-### unnamed test 649
+### unnamed test 684
 ```ruby
-# BEFORE
+# GIVEN
+
+{
+  foo: 1,
+  bar: 2,
+}
+
+```
+```ruby
+# BECOMES
+
+{
+  foo: 1,
+  bar: 2,
+}
+```
+```ruby
+# with setting `trailing_commas :never`
+
+{
+  foo: 1,
+  bar: 2
+}
+```
+### unnamed test 685
+```ruby
+# GIVEN
 
 {
   foo: 1,
@@ -104,7 +179,6 @@ sidebar:
   foo: 1,
   bar: 2,
 }
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -114,9 +188,35 @@ sidebar:
   bar: 2
 }
 ```
-### unnamed test 650
+### unnamed test 686
 ```ruby
-# BEFORE
+# GIVEN
+
+{
+  foo: 1,
+  bar: 2
+}
+
+```
+```ruby
+# BECOMES
+
+{
+  foo: 1,
+  bar: 2,
+}
+```
+```ruby
+# with setting `trailing_commas :never`
+
+{
+  foo: 1,
+  bar: 2
+}
+```
+### unnamed test 687
+```ruby
+# GIVEN
 
 foo(
   one:   1,
@@ -133,7 +233,6 @@ foo(
   two: 2,
   three: 3,
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -144,9 +243,38 @@ foo(
   three: 3
 )
 ```
-### unnamed test 651
+### unnamed test 688
 ```ruby
-# BEFORE
+# GIVEN
+
+foo(
+  one:   1,
+  two:   2,
+  three: 3,
+)
+
+```
+```ruby
+# BECOMES
+
+foo(
+  one: 1,
+  two: 2,
+  three: 3,
+)
+```
+```ruby
+# with setting `trailing_commas :never`
+
+foo(
+  one: 1,
+  two: 2,
+  three: 3
+)
+```
+### unnamed test 689
+```ruby
+# GIVEN
 
 foo(
   one:   1,
@@ -163,7 +291,6 @@ foo(
   two: 2,
   three: 3,
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -174,9 +301,38 @@ foo(
   three: 3
 )
 ```
-### unnamed test 652
+### unnamed test 690
 ```ruby
-# BEFORE
+# GIVEN
+
+foo(
+  one:   1,
+  two:   2,
+  three: 3
+)
+
+```
+```ruby
+# BECOMES
+
+foo(
+  one: 1,
+  two: 2,
+  three: 3,
+)
+```
+```ruby
+# with setting `trailing_commas :never`
+
+foo(
+  one: 1,
+  two: 2,
+  three: 3
+)
+```
+### unnamed test 691
+```ruby
+# GIVEN
 
 foo(
   one: 1)
@@ -188,7 +344,6 @@ foo(
 foo(
   one: 1,
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -197,9 +352,31 @@ foo(
   one: 1
 )
 ```
-### unnamed test 653
+### unnamed test 692
 ```ruby
-# BEFORE
+# GIVEN
+
+foo(
+  one: 1)
+
+```
+```ruby
+# BECOMES
+
+foo(
+  one: 1,
+)
+```
+```ruby
+# with setting `trailing_commas :never`
+
+foo(
+  one: 1
+)
+```
+### unnamed test 693
+```ruby
+# GIVEN
 
 foo(
   one: 1,)
@@ -211,7 +388,6 @@ foo(
 foo(
   one: 1,
 )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -220,9 +396,31 @@ foo(
   one: 1
 )
 ```
-### unnamed test 654
+### unnamed test 694
 ```ruby
-# BEFORE
+# GIVEN
+
+foo(
+  one: 1,)
+
+```
+```ruby
+# BECOMES
+
+foo(
+  one: 1,
+)
+```
+```ruby
+# with setting `trailing_commas :never`
+
+foo(
+  one: 1
+)
+```
+### unnamed test 695
+```ruby
+# GIVEN
 
  [
  1 , 2 ]
@@ -234,7 +432,6 @@ foo(
 [
   1, 2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -243,9 +440,9 @@ foo(
   1, 2
 ]
 ```
-### unnamed test 655
+### unnamed test 696
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 , 2, ]
@@ -257,7 +454,6 @@ foo(
 [
   1, 2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -266,9 +462,9 @@ foo(
   1, 2
 ]
 ```
-### unnamed test 656
+### unnamed test 697
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 , 2 ,
@@ -282,7 +478,6 @@ foo(
   1, 2,
   3, 4,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -292,9 +487,9 @@ foo(
   3, 4
 ]
 ```
-### unnamed test 657
+### unnamed test 698
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 ,
@@ -308,7 +503,6 @@ foo(
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -318,9 +512,9 @@ foo(
   2
 ]
 ```
-### unnamed test 658
+### unnamed test 699
 ```ruby
-# BEFORE
+# GIVEN
 
  [  # comment
  1 ,
@@ -334,7 +528,6 @@ foo(
   1,
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -344,9 +537,9 @@ foo(
   2
 ]
 ```
-### unnamed test 659
+### unnamed test 700
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 ,  # comment
@@ -360,7 +553,6 @@ foo(
   1,  # comment
   2,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -370,9 +562,9 @@ foo(
   2
 ]
 ```
-### unnamed test 660
+### unnamed test 701
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1 ,
  2, 3,
@@ -385,11 +577,10 @@ foo(
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 661
+### unnamed test 702
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1 ,
  2, 3,
@@ -402,11 +593,10 @@ foo(
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 662
+### unnamed test 703
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1 ,
  2, 3,
@@ -420,11 +610,10 @@ foo(
 [1,
  2, 3,
  4]
-
 ```
-### unnamed test 663
+### unnamed test 704
 ```ruby
-# BEFORE
+# GIVEN
 
  [ 1 ,
  2, 3,
@@ -439,11 +628,10 @@ foo(
  2, 3,
  4 # foo
 ]
-
 ```
-### unnamed test 664
+### unnamed test 705
 ```ruby
-# BEFORE
+# GIVEN
 
  begin
  [
@@ -459,7 +647,6 @@ begin
     1, 2,
   ]
 end
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -470,9 +657,9 @@ begin
   ]
 end
 ```
-### unnamed test 665
+### unnamed test 706
 ```ruby
-# BEFORE
+# GIVEN
 
  [
  1 # foo
@@ -485,7 +672,6 @@ end
 [
   1, # foo
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`

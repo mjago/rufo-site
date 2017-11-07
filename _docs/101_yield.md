@@ -8,7 +8,7 @@ sidebar:
 ---
 ### yield
 ```ruby
-# BEFORE
+# GIVEN
 
 yield
 
@@ -17,11 +17,10 @@ yield
 # BECOMES
 
 yield
-
 ```
-### unnamed test 694
+### unnamed test 735
 ```ruby
-# BEFORE
+# GIVEN
 
 yield  1
 
@@ -30,11 +29,10 @@ yield  1
 # BECOMES
 
 yield 1
-
 ```
-### unnamed test 695
+### unnamed test 736
 ```ruby
-# BEFORE
+# GIVEN
 
 yield  1 , 2
 
@@ -43,11 +41,10 @@ yield  1 , 2
 # BECOMES
 
 yield 1, 2
-
 ```
-### unnamed test 696
+### unnamed test 737
 ```ruby
-# BEFORE
+# GIVEN
 
 yield  1 , 
  2
@@ -58,11 +55,10 @@ yield  1 ,
 
 yield 1,
       2
-
 ```
-### unnamed test 697
+### unnamed test 738
 ```ruby
-# BEFORE
+# GIVEN
 
 yield( 1 , 2 )
 

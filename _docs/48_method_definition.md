@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 436
+### unnamed test 462
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo
  end
@@ -19,11 +19,10 @@ sidebar:
 
 def foo
 end
-
 ```
-### unnamed test 437
+### unnamed test 463
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo ; end
 
@@ -32,11 +31,10 @@ end
 # BECOMES
 
 def foo; end
-
 ```
-### unnamed test 438
+### unnamed test 464
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo()
  end
@@ -47,11 +45,10 @@ def foo; end
 
 def foo()
 end
-
 ```
-### unnamed test 439
+### unnamed test 465
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo() 1 end
 
@@ -60,11 +57,10 @@ end
 # BECOMES
 
 def foo() 1 end
-
 ```
-### unnamed test 440
+### unnamed test 466
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo(
  )
@@ -76,11 +72,10 @@ def foo() 1 end
 
 def foo()
 end
-
 ```
-### unnamed test 441
+### unnamed test 467
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( x )
  end
@@ -91,14 +86,13 @@ end
 
 def foo(x)
 end
-
 ```
-### unnamed test 442
+### unnamed test 468
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( x , y )
-  end
+ end
 
 ```
 ```ruby
@@ -106,11 +100,50 @@ end
 
 def foo(x, y)
 end
+```
+### unnamed test 469
+```ruby
+# GIVEN
+
+  def foo x
+ end
 
 ```
-### unnamed test 443
 ```ruby
-# BEFORE
+# BECOMES
+
+def foo(x)
+end
+```
+```ruby
+# with setting `parens_in_def :yes`
+
+def foo(x))
+end
+```
+### unnamed test 470
+```ruby
+# GIVEN
+
+  def foo x , y
+ end
+
+```
+```ruby
+# BECOMES
+
+def foo(x, y)
+end
+```
+```ruby
+# with setting `parens_in_def :yes`
+
+def foo(x, y))
+end
+```
+### unnamed test 471
+```ruby
+# GIVEN
 
   def foo
  1
@@ -123,11 +156,10 @@ end
 def foo
   1
 end
-
 ```
-### unnamed test 444
+### unnamed test 472
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( * x )
  1
@@ -140,11 +172,10 @@ end
 def foo(*x)
   1
 end
-
 ```
-### unnamed test 445
+### unnamed test 473
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a , * x )
  1
@@ -157,11 +188,10 @@ end
 def foo(a, *x)
   1
 end
-
 ```
-### unnamed test 446
+### unnamed test 474
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a , * x, b )
  1
@@ -174,11 +204,10 @@ end
 def foo(a, *x, b)
   1
 end
-
 ```
-### unnamed test 447
+### unnamed test 475
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( x  =  1 )
  end
@@ -189,11 +218,10 @@ end
 
 def foo(x = 1)
 end
-
 ```
-### unnamed test 448
+### unnamed test 476
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( x  =  1, * y )
  end
@@ -204,11 +232,10 @@ end
 
 def foo(x = 1, *y)
 end
-
 ```
-### unnamed test 449
+### unnamed test 477
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( & block )
  end
@@ -219,11 +246,10 @@ end
 
 def foo(&block)
 end
-
 ```
-### unnamed test 450
+### unnamed test 478
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a: , b: )
  end
@@ -234,11 +260,10 @@ end
 
 def foo(a:, b:)
 end
-
 ```
-### unnamed test 451
+### unnamed test 479
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a: 1 , b: 2  )
  end
@@ -249,11 +274,10 @@ end
 
 def foo(a: 1, b: 2)
 end
-
 ```
-### unnamed test 452
+### unnamed test 480
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( x,
  y )
@@ -266,11 +290,10 @@ end
 def foo(x,
         y)
 end
-
 ```
-### unnamed test 453
+### unnamed test 481
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a: 1,
  b: 2 )
@@ -283,11 +306,10 @@ end
 def foo(a: 1,
         b: 2)
 end
-
 ```
-### unnamed test 454
+### unnamed test 482
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo(
  x,
@@ -302,11 +324,10 @@ def foo(
         x,
         y)
 end
-
 ```
-### unnamed test 455
+### unnamed test 483
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a: 1, &block )
  end
@@ -317,11 +338,10 @@ end
 
 def foo(a: 1, &block)
 end
-
 ```
-### unnamed test 456
+### unnamed test 484
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo( a: 1,
  &block )
@@ -334,11 +354,10 @@ end
 def foo(a: 1,
         &block)
 end
-
 ```
-### unnamed test 457
+### unnamed test 485
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo(*)
  end
@@ -349,11 +368,10 @@ end
 
 def foo(*)
 end
-
 ```
-### unnamed test 458
+### unnamed test 486
 ```ruby
-# BEFORE
+# GIVEN
 
   def foo(**)
  end
@@ -364,11 +382,10 @@ end
 
 def foo(**)
 end
-
 ```
-### unnamed test 459
+### unnamed test 487
 ```ruby
-# BEFORE
+# GIVEN
 
 def `(cmd)
 end
@@ -379,11 +396,10 @@ end
 
 def `(cmd)
 end
-
 ```
-### unnamed test 460
+### unnamed test 488
 ```ruby
-# BEFORE
+# GIVEN
 
 module_function def foo
   1
@@ -396,11 +412,10 @@ end
 module_function def foo
   1
 end
-
 ```
-### unnamed test 461
+### unnamed test 489
 ```ruby
-# BEFORE
+# GIVEN
 
 private def foo
   1
@@ -413,11 +428,10 @@ end
 private def foo
   1
 end
-
 ```
-### unnamed test 462
+### unnamed test 490
 ```ruby
-# BEFORE
+# GIVEN
 
 some class Foo
   1
@@ -430,11 +444,10 @@ end
 some class Foo
   1
 end
-
 ```
-### unnamed test 463
+### unnamed test 491
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo; 1; end
 def bar; 2; end
@@ -445,11 +458,10 @@ def bar; 2; end
 
 def foo; 1; end
 def bar; 2; end
-
 ```
-### unnamed test 464
+### unnamed test 492
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo; 1; end
 

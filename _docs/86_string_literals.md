@@ -8,7 +8,7 @@ sidebar:
 ---
 ### single\_quote\_string\_literal
 ```ruby
-# BEFORE
+# GIVEN
 
 'hello'
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 'hello'
-
 ```
 ### double\_quote\_string\_literal
 ```ruby
-# BEFORE
+# GIVEN
 
 "hello"
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 "hello"
-
 ```
 ### percent\_q\_string\_literal
 ```ruby
-# BEFORE
+# GIVEN
 
 "hello"
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 "hello"
-
 ```
 ### percent\_string\_literal
 ```ruby
-# BEFORE
+# GIVEN
 
 "\n"
 
@@ -56,11 +53,10 @@ sidebar:
 # BECOMES
 
 "\n"
-
 ```
 ### percent\_string\_literal\_1
 ```ruby
-# BEFORE
+# GIVEN
 
 "hello #{1} foo"
 
@@ -69,11 +65,10 @@ sidebar:
 # BECOMES
 
 "hello #{1} foo"
-
 ```
 ### percent\_string\_literal\_2
 ```ruby
-# BEFORE
+# GIVEN
 
 "hello #{  1   } foo"
 
@@ -82,11 +77,10 @@ sidebar:
 # BECOMES
 
 "hello #{1} foo"
-
 ```
 ### percent\_string\_literal\_3
 ```ruby
-# BEFORE
+# GIVEN
 
 "hello #{
 1} foo"
@@ -96,11 +90,10 @@ sidebar:
 # BECOMES
 
 "hello #{1} foo"
-
 ```
 ### percent\_string\_literal\_4
 ```ruby
-# BEFORE
+# GIVEN
 
 "#@foo"
 
@@ -109,11 +102,10 @@ sidebar:
 # BECOMES
 
 "#@foo"
-
 ```
 ### percent\_string\_literal\_5
 ```ruby
-# BEFORE
+# GIVEN
 
 "#@@foo"
 
@@ -122,11 +114,10 @@ sidebar:
 # BECOMES
 
 "#@@foo"
-
 ```
 ### percent\_string\_literal\_6
 ```ruby
-# BEFORE
+# GIVEN
 
 "#$foo"
 

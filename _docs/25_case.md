@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 231
+### unnamed test 254
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2
@@ -21,11 +21,10 @@ case
 case
 when 1 then 2
 end
-
 ```
-### unnamed test 232
+### unnamed test 255
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2
@@ -40,11 +39,10 @@ case
 when 1 then 2
 when 3 then 4
 end
-
 ```
-### unnamed test 233
+### unnamed test 256
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2 else 3
@@ -58,7 +56,6 @@ case
 when 1 then 2
 else 3
 end
-
 ```
 ```ruby
 # with setting `align_case_when true`
@@ -68,9 +65,9 @@ when 1 then 2
 else        3
 end
 ```
-### unnamed test 234
+### unnamed test 257
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 ; 2
@@ -83,11 +80,10 @@ case
 case
 when 1; 2
 end
-
 ```
-### unnamed test 235
+### unnamed test 258
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1
@@ -102,11 +98,10 @@ case
 when 1
   2
 end
-
 ```
-### unnamed test 236
+### unnamed test 259
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1
@@ -123,11 +118,10 @@ when 1
   2
   3
 end
-
 ```
-### unnamed test 237
+### unnamed test 260
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1
@@ -148,11 +142,10 @@ when 1
 when 4
   5
 end
-
 ```
-### unnamed test 238
+### unnamed test 261
 ```ruby
-# BEFORE
+# GIVEN
 
 case 123
  when 1
@@ -167,11 +160,10 @@ case 123
 when 1
   2
 end
-
 ```
-### unnamed test 239
+### unnamed test 262
 ```ruby
-# BEFORE
+# GIVEN
 
 case  # foo
  when 1
@@ -186,11 +178,10 @@ case  # foo
 when 1
   2
 end
-
 ```
-### unnamed test 240
+### unnamed test 263
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1  # comment
@@ -205,11 +196,10 @@ case
 when 1 # comment
   2
 end
-
 ```
-### unnamed test 241
+### unnamed test 264
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2 else
@@ -225,11 +215,10 @@ when 1 then 2
 else
   3
 end
-
 ```
-### unnamed test 242
+### unnamed test 265
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2 else ;
@@ -245,11 +234,10 @@ when 1 then 2
 else
   3
 end
-
 ```
-### unnamed test 243
+### unnamed test 266
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then 2 else  # comm
@@ -265,11 +253,10 @@ when 1 then 2
 else # comm
   3
 end
-
 ```
-### unnamed test 244
+### unnamed test 267
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  case
@@ -296,11 +283,10 @@ begin
     5
   end
 end
-
 ```
-### unnamed test 245
+### unnamed test 268
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then
@@ -315,11 +301,10 @@ case
 when 1
   2
 end
-
 ```
-### unnamed test 246
+### unnamed test 269
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 then ;
@@ -334,11 +319,10 @@ case
 when 1
   2
 end
-
 ```
-### unnamed test 247
+### unnamed test 270
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 ;
@@ -353,11 +337,10 @@ case
 when 1
   2
 end
-
 ```
-### unnamed test 248
+### unnamed test 271
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 ,
@@ -374,11 +357,10 @@ when 1,
      2
   3
 end
-
 ```
-### unnamed test 249
+### unnamed test 272
 ```ruby
-# BEFORE
+# GIVEN
 
 case
  when 1 , 2,  # comm
@@ -394,11 +376,10 @@ case
 when 1, 2,  # comm
      3
 end
-
 ```
-### unnamed test 250
+### unnamed test 273
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
  case
@@ -419,11 +400,10 @@ begin
     2
   end
 end
-
 ```
-### unnamed test 251
+### unnamed test 274
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
  when *x , *y
@@ -438,11 +418,10 @@ case 1
 when *x, *y
   2
 end
-
 ```
-### unnamed test 252
+### unnamed test 275
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
 when *x then 2
@@ -455,11 +434,10 @@ end
 case 1
 when *x then 2
 end
-
 ```
-### unnamed test 253
+### unnamed test 276
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
 when  2  then  3
@@ -472,11 +450,10 @@ end
 case 1
 when 2 then 3
 end
-
 ```
-### unnamed test 254
+### unnamed test 277
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
 when 2 then # comment
@@ -489,11 +466,10 @@ end
 case 1
 when 2 then # comment
 end
-
 ```
-### unnamed test 255
+### unnamed test 278
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
  when 2 then 3

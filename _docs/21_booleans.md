@@ -8,7 +8,7 @@ sidebar:
 ---
 ### false
 ```ruby
-# BEFORE
+# GIVEN
 
 false
 
@@ -17,11 +17,10 @@ false
 # BECOMES
 
 false
-
 ```
 ### true
 ```ruby
-# BEFORE
+# GIVEN
 
 true
 

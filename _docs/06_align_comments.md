@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 15
+### unnamed test 36
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # one
  123 # two
@@ -19,11 +19,10 @@ sidebar:
 
 1 # one
 123 # two
-
 ```
-### unnamed test 16
+### unnamed test 37
 ```ruby
-# BEFORE
+# GIVEN
 
 1 # one
  123 # two
@@ -38,11 +37,10 @@ sidebar:
 123 # two
 4
 5 # lala
-
 ```
-### unnamed test 17
+### unnamed test 38
 ```ruby
-# BEFORE
+# GIVEN
 
 foobar( # one
  1 # two
@@ -55,11 +53,10 @@ foobar( # one
 foobar( # one
   1 # two
 )
-
 ```
-### unnamed test 18
+### unnamed test 39
 ```ruby
-# BEFORE
+# GIVEN
 
 a = 1 # foo
  abc = 2 # bar
@@ -70,11 +67,10 @@ a = 1 # foo
 
 a = 1 # foo
 abc = 2 # bar
-
 ```
-### unnamed test 19
+### unnamed test 40
 ```ruby
-# BEFORE
+# GIVEN
 
 a = 1 # foo
       # bar
@@ -85,11 +81,10 @@ a = 1 # foo
 
 a = 1 # foo
       # bar
-
 ```
-### unnamed test 20
+### unnamed test 41
 ```ruby
-# BEFORE
+# GIVEN
 
 # foo
 a # bar
@@ -100,11 +95,10 @@ a # bar
 
 # foo
 a # bar
-
 ```
-### unnamed test 21
+### unnamed test 42
 ```ruby
-# BEFORE
+# GIVEN
 
  # foo
 a # bar
@@ -115,11 +109,10 @@ a # bar
 
 # foo
 a # bar
-
 ```
-### unnamed test 22
+### unnamed test 43
 ```ruby
-# BEFORE
+# GIVEN
 
 require x
 
@@ -136,11 +129,10 @@ require x
 # Comment 1
 # Comment 2
 FOO = :bar # Comment 3
-
 ```
-### unnamed test 23
+### unnamed test 44
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   require x
@@ -161,11 +153,10 @@ begin
   # Comment 2
   FOO = :bar # Comment 3
 end
-
 ```
-### unnamed test 24
+### unnamed test 45
 ```ruby
-# BEFORE
+# GIVEN
 
 begin
   a     # c1
@@ -182,11 +173,47 @@ begin
         # c2
   b = 1 # c3
 end
+```
+### unnamed test 46
+```ruby
+# GIVEN
+
+1 # one
+ 123 # two
 
 ```
-### unnamed test 25
 ```ruby
-# BEFORE
+# BECOMES
+
+1 # one
+123 # two
+```
+### unnamed test 47
+```ruby
+# GIVEN
+
+foo bar( # foo
+  1,     # bar
+)
+
+```
+```ruby
+# BECOMES
+
+foo bar( # foo
+  1,     # bar
+)
+```
+```ruby
+# with setting `trailing_commas :never`
+
+foo bar( # foo
+  1     # bar
+)
+```
+### unnamed test 48
+```ruby
+# GIVEN
 
 a = 1   # foo
 bar = 2 # baz
@@ -197,11 +224,10 @@ bar = 2 # baz
 
 a = 1   # foo
 bar = 2 # baz
-
 ```
-### unnamed test 26
+### unnamed test 49
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   1,   # foo
@@ -216,7 +242,6 @@ bar = 2 # baz
   1,   # foo
   234,   # bar
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -226,9 +251,9 @@ bar = 2 # baz
   234   # bar
 ]
 ```
-### unnamed test 27
+### unnamed test 50
 ```ruby
-# BEFORE
+# GIVEN
 
 [
   1,   # foo
@@ -243,7 +268,6 @@ bar = 2 # baz
   1,   # foo
   234,    # bar
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -253,9 +277,9 @@ bar = 2 # baz
   234    # bar
 ]
 ```
-### unnamed test 28
+### unnamed test 51
 ```ruby
-# BEFORE
+# GIVEN
 
 foo bar: 1,  # comment
     baz: 2    # comment
@@ -266,5 +290,4 @@ foo bar: 1,  # comment
 
 foo bar: 1,  # comment
     baz: 2    # comment
-
 ```

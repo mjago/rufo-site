@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 96
+### unnamed test 119
 ```ruby
-# BEFORE
+# GIVEN
 
 a   =   1
 
@@ -17,11 +17,10 @@ a   =   1
 # BECOMES
 
 a = 1
-
 ```
-### unnamed test 97
+### unnamed test 120
 ```ruby
-# BEFORE
+# GIVEN
 
 a   =
 2
@@ -32,11 +31,10 @@ a   =
 
 a =
   2
-
 ```
-### unnamed test 98
+### unnamed test 121
 ```ruby
-# BEFORE
+# GIVEN
 
 a   =   # hello
 2
@@ -47,11 +45,10 @@ a   =   # hello
 
 a = # hello
   2
-
 ```
-### unnamed test 99
+### unnamed test 122
 ```ruby
-# BEFORE
+# GIVEN
 
 a = if 1
  2
@@ -64,11 +61,10 @@ a = if 1
 a = if 1
       2
     end
-
 ```
-### unnamed test 100
+### unnamed test 123
 ```ruby
-# BEFORE
+# GIVEN
 
 a = unless 1
  2
@@ -81,11 +77,10 @@ a = unless 1
 a = unless 1
       2
     end
-
 ```
-### unnamed test 101
+### unnamed test 124
 ```ruby
-# BEFORE
+# GIVEN
 
 a = begin
 1
@@ -98,11 +93,10 @@ a = begin
 a = begin
   1
 end
-
 ```
-### unnamed test 102
+### unnamed test 125
 ```ruby
-# BEFORE
+# GIVEN
 
 a = case
  when 1
@@ -117,11 +111,10 @@ a = case
     when 1
       2
     end
-
 ```
-### unnamed test 103
+### unnamed test 126
 ```ruby
-# BEFORE
+# GIVEN
 
 a = begin
 1
@@ -134,11 +127,10 @@ end
 a = begin
   1
 end
-
 ```
-### unnamed test 104
+### unnamed test 127
 ```ruby
-# BEFORE
+# GIVEN
 
 a = begin
 1
@@ -155,11 +147,10 @@ a = begin
     rescue
       2
     end
-
 ```
-### unnamed test 105
+### unnamed test 128
 ```ruby
-# BEFORE
+# GIVEN
 
 a = begin
 1
@@ -176,11 +167,10 @@ a = begin
     ensure
       2
     end
-
 ```
-### unnamed test 106
+### unnamed test 129
 ```ruby
-# BEFORE
+# GIVEN
 
 a=1
 
@@ -189,11 +179,10 @@ a=1
 # BECOMES
 
 a = 1
-
 ```
-### unnamed test 107
+### unnamed test 130
 ```ruby
-# BEFORE
+# GIVEN
 
 a = \
   begin

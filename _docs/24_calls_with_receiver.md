@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 205
+### unnamed test 228
 ```ruby
-# BEFORE
+# GIVEN
 
 foo . bar . baz
 
@@ -17,11 +17,10 @@ foo . bar . baz
 # BECOMES
 
 foo.bar.baz
-
 ```
-### unnamed test 206
+### unnamed test 229
 ```ruby
-# BEFORE
+# GIVEN
 
 foo . bar( 1 , 2 )
 
@@ -30,11 +29,10 @@ foo . bar( 1 , 2 )
 # BECOMES
 
 foo.bar(1, 2)
-
 ```
-### unnamed test 207
+### unnamed test 230
 ```ruby
-# BEFORE
+# GIVEN
 
 foo .
  bar
@@ -45,11 +43,10 @@ foo .
 
 foo.
   bar
-
 ```
-### unnamed test 208
+### unnamed test 231
 ```ruby
-# BEFORE
+# GIVEN
 
 foo .
  bar .
@@ -62,11 +59,10 @@ foo .
 foo.
   bar.
   baz
-
 ```
-### unnamed test 209
+### unnamed test 232
 ```ruby
-# BEFORE
+# GIVEN
 
 foo
  . bar
@@ -77,11 +73,10 @@ foo
 
 foo
   .bar
-
 ```
-### unnamed test 210
+### unnamed test 233
 ```ruby
-# BEFORE
+# GIVEN
 
 foo
  . bar
@@ -94,11 +89,10 @@ foo
 foo
   .bar
   .baz
-
 ```
-### unnamed test 211
+### unnamed test 234
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar
 .baz
@@ -109,7 +103,6 @@ foo.bar
 
 foo.bar
   .baz
-
 ```
 ```ruby
 # with setting `align_chained_calls true`
@@ -117,9 +110,9 @@ foo.bar
 foo.bar
    .baz
 ```
-### unnamed test 212
+### unnamed test 235
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(1)
 .baz(2)
@@ -132,7 +125,6 @@ foo.bar(1)
 foo.bar(1)
   .baz(2)
   .qux(3)
-
 ```
 ```ruby
 # with setting `align_chained_calls true`
@@ -141,9 +133,9 @@ foo.bar(1)
    .baz(2)
    .qux(3)
 ```
-### unnamed test 213
+### unnamed test 236
 ```ruby
-# BEFORE
+# GIVEN
 
 foobar.baz
 .with(
@@ -158,7 +150,6 @@ foobar.baz
   .with(
     1
   )
-
 ```
 ```ruby
 # with setting `align_chained_calls true`
@@ -168,9 +159,9 @@ foobar.baz
         1
       )
 ```
-### unnamed test 214
+### unnamed test 237
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar 1,
  x: 1,
@@ -183,11 +174,10 @@ foo.bar 1,
 foo.bar 1,
         x: 1,
         y: 2
-
 ```
-### unnamed test 215
+### unnamed test 238
 ```ruby
-# BEFORE
+# GIVEN
 
 foo
   .bar # x
@@ -200,11 +190,10 @@ foo
 foo
   .bar # x
   .baz
-
 ```
-### unnamed test 216
+### unnamed test 239
 ```ruby
-# BEFORE
+# GIVEN
 
 c.x w 1
 
@@ -213,11 +202,10 @@ c.x w 1
 # BECOMES
 
 c.x w 1
-
 ```
-### unnamed test 217
+### unnamed test 240
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar
   .baz
@@ -230,7 +218,6 @@ foo.bar
 foo.bar
   .baz
   .baz
-
 ```
 ```ruby
 # with setting `align_chained_calls true`
@@ -239,9 +226,9 @@ foo.bar
    .baz
    .baz
 ```
-### unnamed test 218
+### unnamed test 241
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar
   .baz
@@ -254,7 +241,6 @@ foo.bar
 foo.bar
   .baz
   .baz
-
 ```
 ```ruby
 # with setting `align_chained_calls true`
@@ -263,9 +249,9 @@ foo.bar
    .baz
    .baz
 ```
-### unnamed test 219
+### unnamed test 242
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(1)
    .baz([
@@ -280,7 +266,6 @@ foo.bar(1)
    .baz([
      2,
    ])
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -290,9 +275,9 @@ foo.bar(1)
      2
    ])
 ```
-### unnamed test 220
+### unnamed test 243
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(1)
    .baz(
@@ -307,7 +292,6 @@ foo.bar(1)
    .baz(
      2,
    )
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -317,9 +301,9 @@ foo.bar(1)
      2
    )
 ```
-### unnamed test 221
+### unnamed test 244
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(1)
    .baz(
@@ -338,11 +322,10 @@ foo.bar(1)
        2
      )
    )
-
 ```
-### unnamed test 222
+### unnamed test 245
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(1)
    .baz(
@@ -361,11 +344,10 @@ foo.bar(1)
        2
      )
    )
-
 ```
-### unnamed test 223
+### unnamed test 246
 ```ruby
-# BEFORE
+# GIVEN
 
 foo.bar(
 1
@@ -378,11 +360,10 @@ foo.bar(
 foo.bar(
   1
 )
-
 ```
-### unnamed test 224
+### unnamed test 247
 ```ruby
-# BEFORE
+# GIVEN
 
 foo 1, [
   2,
@@ -399,7 +380,6 @@ foo 1, [
 
   3,
 ]
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -410,9 +390,9 @@ foo 1, [
   3
 ]
 ```
-### unnamed test 225
+### unnamed test 248
 ```ruby
-# BEFORE
+# GIVEN
 
 foo :x, {
   :foo1 => :bar,
@@ -437,7 +417,6 @@ foo :x, {
 multiline :call,
           :foo => :bar,
           :foo => bar
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -452,9 +431,9 @@ multiline :call,
           :foo => :bar,
           :foo => bar
 ```
-### unnamed test 226
+### unnamed test 249
 ```ruby
-# BEFORE
+# GIVEN
 
 x
   .foo.bar
@@ -467,11 +446,10 @@ x
 x
   .foo.bar
   .baz
-
 ```
-### unnamed test 227
+### unnamed test 250
 ```ruby
-# BEFORE
+# GIVEN
 
 x
   .foo.bar.baz
@@ -484,11 +462,10 @@ x
 x
   .foo.bar.baz
   .qux
-
 ```
-### unnamed test 228
+### unnamed test 251
 ```ruby
-# BEFORE
+# GIVEN
 
 x
   .foo(a.b).bar(c.d).baz(e.f)
@@ -503,11 +480,10 @@ x
   .foo(a.b).bar(c.d).baz(e.f)
   .qux.z(a.b)
   .final
-
 ```
-### unnamed test 229
+### unnamed test 252
 ```ruby
-# BEFORE
+# GIVEN
 
 x.y  1,  2
 
@@ -516,11 +492,10 @@ x.y  1,  2
 # BECOMES
 
 x.y 1, 2
-
 ```
-### unnamed test 230
+### unnamed test 253
 ```ruby
-# BEFORE
+# GIVEN
 
 x.y \
   1,  2

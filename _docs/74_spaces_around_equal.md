@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 575
+### unnamed test 608
 ```ruby
-# BEFORE
+# GIVEN
 
 a=1
 
@@ -17,11 +17,10 @@ a=1
 # BECOMES
 
 a = 1
-
 ```
-### unnamed test 576
+### unnamed test 609
 ```ruby
-# BEFORE
+# GIVEN
 
 a  =  1
 
@@ -30,11 +29,10 @@ a  =  1
 # BECOMES
 
 a = 1
-
 ```
-### unnamed test 577
+### unnamed test 610
 ```ruby
-# BEFORE
+# GIVEN
 
 a  =  1
 
@@ -43,11 +41,10 @@ a  =  1
 # BECOMES
 
 a = 1
-
 ```
-### unnamed test 578
+### unnamed test 611
 ```ruby
-# BEFORE
+# GIVEN
 
 a+=1
 
@@ -56,11 +53,10 @@ a+=1
 # BECOMES
 
 a += 1
-
 ```
-### unnamed test 579
+### unnamed test 612
 ```ruby
-# BEFORE
+# GIVEN
 
 a  +=  1
 
@@ -69,11 +65,10 @@ a  +=  1
 # BECOMES
 
 a += 1
-
 ```
-### unnamed test 580
+### unnamed test 613
 ```ruby
-# BEFORE
+# GIVEN
 
 a  +=  1
 
@@ -82,11 +77,10 @@ a  +=  1
 # BECOMES
 
 a += 1
-
 ```
-### unnamed test 581
+### unnamed test 614
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo(x  =  1)
 end
@@ -97,11 +91,10 @@ end
 
 def foo(x = 1)
 end
-
 ```
-### unnamed test 582
+### unnamed test 615
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo(x=1)
 end

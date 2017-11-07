@@ -8,7 +8,7 @@ sidebar:
 ---
 ### super
 ```ruby
-# BEFORE
+# GIVEN
 
 super
 
@@ -17,11 +17,10 @@ super
 # BECOMES
 
 super
-
 ```
-### unnamed test 634
+### unnamed test 667
 ```ruby
-# BEFORE
+# GIVEN
 
 super 1
 
@@ -30,11 +29,10 @@ super 1
 # BECOMES
 
 super 1
-
 ```
-### unnamed test 635
+### unnamed test 668
 ```ruby
-# BEFORE
+# GIVEN
 
 super 1, 
  2
@@ -45,11 +43,10 @@ super 1,
 
 super 1,
       2
-
 ```
-### unnamed test 636
+### unnamed test 669
 ```ruby
-# BEFORE
+# GIVEN
 
 super( 1 )
 
@@ -58,11 +55,10 @@ super( 1 )
 # BECOMES
 
 super(1)
-
 ```
-### unnamed test 637
+### unnamed test 670
 ```ruby
-# BEFORE
+# GIVEN
 
 super( 1 , 2 )
 

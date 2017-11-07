@@ -8,7 +8,7 @@ sidebar:
 ---
 ### unnamed test 1
 ```ruby
-# BEFORE
+# GIVEN
 
 1
 

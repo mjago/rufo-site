@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 91
+### unnamed test 114
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ ]  =  1
 
@@ -17,11 +17,10 @@ foo[ ]  =  1
 # BECOMES
 
 foo[] = 1
-
 ```
-### unnamed test 92
+### unnamed test 115
 ```ruby
-# BEFORE
+# GIVEN
 
 foo[ 1 , 2 ]  =  3
 

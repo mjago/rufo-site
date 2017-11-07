@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 50
+### unnamed test 73
 ```ruby
-# BEFORE
+# GIVEN
 
 abc = 1
 a = {foo: 1, # comment
@@ -21,11 +21,10 @@ a = {foo: 1, # comment
 abc = 1
 a = {foo: 1, # comment
      bar: 2} # another
-
 ```
-### unnamed test 51
+### unnamed test 74
 ```ruby
-# BEFORE
+# GIVEN
 
 abc = 1
 a = {foobar: 1, # comment
@@ -38,5 +37,4 @@ a = {foobar: 1, # comment
 abc = 1
 a = {foobar: 1, # comment
      bar: 2} # another
-
 ```

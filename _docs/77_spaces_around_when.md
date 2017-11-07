@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 588
+### unnamed test 621
 ```ruby
-# BEFORE
+# GIVEN
 
 case 1
 when  2  then  3

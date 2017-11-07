@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 671
+### unnamed test 712
 ```ruby
-# BEFORE
+# GIVEN
 
 undef  foo
 
@@ -17,11 +17,10 @@ undef  foo
 # BECOMES
 
 undef foo
-
 ```
-### unnamed test 672
+### unnamed test 713
 ```ruby
-# BEFORE
+# GIVEN
 
 undef  foo , bar
 

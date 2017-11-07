@@ -8,7 +8,7 @@ sidebar:
 ---
 ### redo
 ```ruby
-# BEFORE
+# GIVEN
 
 redo
 

@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 554
+### unnamed test 584
 ```ruby
-# BEFORE
+# GIVEN
 
 foo 1,  2,  3
 
@@ -17,11 +17,10 @@ foo 1,  2,  3
 # BECOMES
 
 foo 1, 2, 3
-
 ```
-### unnamed test 555
+### unnamed test 585
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(1,  2,  3)
 
@@ -30,11 +29,10 @@ foo(1,  2,  3)
 # BECOMES
 
 foo(1, 2, 3)
-
 ```
-### unnamed test 556
+### unnamed test 586
 ```ruby
-# BEFORE
+# GIVEN
 
 foo(1,2,3,x:1,y:2)
 
@@ -43,11 +41,10 @@ foo(1,2,3,x:1,y:2)
 # BECOMES
 
 foo(1, 2, 3, x: 1, y: 2)
-
 ```
-### unnamed test 557
+### unnamed test 587
 ```ruby
-# BEFORE
+# GIVEN
 
 def foo(x,y)
 end
@@ -58,11 +55,10 @@ end
 
 def foo(x, y)
 end
-
 ```
-### unnamed test 558
+### unnamed test 588
 ```ruby
-# BEFORE
+# GIVEN
 
 [1,  2,  3]
 
@@ -71,11 +67,10 @@ end
 # BECOMES
 
 [1, 2, 3]
-
 ```
-### unnamed test 559
+### unnamed test 589
 ```ruby
-# BEFORE
+# GIVEN
 
 [1,2,3]
 
@@ -84,11 +79,10 @@ end
 # BECOMES
 
 [1, 2, 3]
-
 ```
-### unnamed test 560
+### unnamed test 590
 ```ruby
-# BEFORE
+# GIVEN
 
 a  ,  b = 1,  2
 
@@ -97,11 +91,10 @@ a  ,  b = 1,  2
 # BECOMES
 
 a, b = 1, 2
-
 ```
-### unnamed test 561
+### unnamed test 591
 ```ruby
-# BEFORE
+# GIVEN
 
 a,b = 1,2
 
@@ -110,5 +103,4 @@ a,b = 1,2
 # BECOMES
 
 a, b = 1, 2
-
 ```

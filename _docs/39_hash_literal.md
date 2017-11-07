@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 308
+### unnamed test 334
 ```ruby
-# BEFORE
+# GIVEN
 
  { }
 
@@ -17,11 +17,10 @@ sidebar:
 # BECOMES
 
 {}
-
 ```
-### unnamed test 309
+### unnamed test 335
 ```ruby
-# BEFORE
+# GIVEN
 
  {:foo   =>   1 }
 
@@ -30,11 +29,10 @@ sidebar:
 # BECOMES
 
 {:foo => 1}
-
 ```
-### unnamed test 310
+### unnamed test 336
 ```ruby
-# BEFORE
+# GIVEN
 
  {:foo   =>   1}
 
@@ -43,11 +41,10 @@ sidebar:
 # BECOMES
 
 {:foo => 1}
-
 ```
-### unnamed test 311
+### unnamed test 337
 ```ruby
-# BEFORE
+# GIVEN
 
  { :foo   =>   1 }
 
@@ -56,11 +53,10 @@ sidebar:
 # BECOMES
 
 {:foo => 1}
-
 ```
-### unnamed test 312
+### unnamed test 338
 ```ruby
-# BEFORE
+# GIVEN
 
  { :foo   =>   1 , 2  =>  3  }
 
@@ -69,11 +65,10 @@ sidebar:
 # BECOMES
 
 {:foo => 1, 2 => 3}
-
 ```
-### unnamed test 313
+### unnamed test 339
 ```ruby
-# BEFORE
+# GIVEN
 
  {
  :foo   =>   1 ,
@@ -87,7 +82,6 @@ sidebar:
   :foo => 1,
   2 => 3,
 }
-
 ```
 ```ruby
 # with setting `trailing_commas :never`
@@ -97,9 +91,9 @@ sidebar:
   2 => 3
 }
 ```
-### unnamed test 314
+### unnamed test 340
 ```ruby
-# BEFORE
+# GIVEN
 
  { **x }
 
@@ -108,11 +102,10 @@ sidebar:
 # BECOMES
 
 {**x}
-
 ```
-### unnamed test 315
+### unnamed test 341
 ```ruby
-# BEFORE
+# GIVEN
 
  {foo:  1}
 
@@ -121,11 +114,10 @@ sidebar:
 # BECOMES
 
 {foo: 1}
-
 ```
-### unnamed test 316
+### unnamed test 342
 ```ruby
-# BEFORE
+# GIVEN
 
  { foo:  1 }
 
@@ -134,11 +126,10 @@ sidebar:
 # BECOMES
 
 {foo: 1}
-
 ```
-### unnamed test 317
+### unnamed test 343
 ```ruby
-# BEFORE
+# GIVEN
 
  { :foo   =>
   1 }
@@ -148,11 +139,10 @@ sidebar:
 # BECOMES
 
 {:foo => 1}
-
 ```
-### unnamed test 318
+### unnamed test 344
 ```ruby
-# BEFORE
+# GIVEN
 
  { "foo": 1 }
 
@@ -161,11 +151,10 @@ sidebar:
 # BECOMES
 
 {"foo": 1}
-
 ```
-### unnamed test 319
+### unnamed test 345
 ```ruby
-# BEFORE
+# GIVEN
 
  { "foo #{ 2 }": 1 }
 
@@ -174,11 +163,10 @@ sidebar:
 # BECOMES
 
 {"foo #{2}": 1}
-
 ```
-### unnamed test 320
+### unnamed test 346
 ```ruby
-# BEFORE
+# GIVEN
 
  { :"one two"  => 3 }
 
@@ -187,11 +175,10 @@ sidebar:
 # BECOMES
 
 {:"one two" => 3}
-
 ```
-### unnamed test 321
+### unnamed test 347
 ```ruby
-# BEFORE
+# GIVEN
 
  { foo:  1,
    bar: 2 }
@@ -202,11 +189,10 @@ sidebar:
 
 {foo: 1,
  bar: 2}
-
 ```
-### unnamed test 322
+### unnamed test 348
 ```ruby
-# BEFORE
+# GIVEN
 
 {foo: 1,  bar: 2}
 
@@ -215,11 +201,10 @@ sidebar:
 # BECOMES
 
 {foo: 1, bar: 2}
-
 ```
-### unnamed test 323
+### unnamed test 349
 ```ruby
-# BEFORE
+# GIVEN
 
 {1 =>
    2}

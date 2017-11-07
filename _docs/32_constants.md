@@ -6,9 +6,9 @@ toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 285
+### unnamed test 308
 ```ruby
-# BEFORE
+# GIVEN
 
 Foo
 
@@ -17,11 +17,10 @@ Foo
 # BECOMES
 
 Foo
-
 ```
-### unnamed test 286
+### unnamed test 309
 ```ruby
-# BEFORE
+# GIVEN
 
 Foo::Bar::Baz
 
@@ -30,11 +29,10 @@ Foo::Bar::Baz
 # BECOMES
 
 Foo::Bar::Baz
-
 ```
-### unnamed test 287
+### unnamed test 310
 ```ruby
-# BEFORE
+# GIVEN
 
 Foo::Bar::Baz
 
@@ -43,11 +41,10 @@ Foo::Bar::Baz
 # BECOMES
 
 Foo::Bar::Baz
-
 ```
-### unnamed test 288
+### unnamed test 311
 ```ruby
-# BEFORE
+# GIVEN
 
 Foo:: Bar:: Baz
 
@@ -56,11 +53,10 @@ Foo:: Bar:: Baz
 # BECOMES
 
 Foo::Bar::Baz
-
 ```
-### unnamed test 289
+### unnamed test 312
 ```ruby
-# BEFORE
+# GIVEN
 
 Foo:: 
 Bar
@@ -70,11 +66,10 @@ Bar
 # BECOMES
 
 Foo::Bar
-
 ```
-### unnamed test 290
+### unnamed test 313
 ```ruby
-# BEFORE
+# GIVEN
 
 ::Foo
 
@@ -83,11 +78,10 @@ Foo::Bar
 # BECOMES
 
 ::Foo
-
 ```
-### unnamed test 291
+### unnamed test 314
 ```ruby
-# BEFORE
+# GIVEN
 
 ::Foo::Bar
 
@@ -96,11 +90,10 @@ Foo::Bar
 # BECOMES
 
 ::Foo::Bar
-
 ```
-### unnamed test 292
+### unnamed test 315
 ```ruby
-# BEFORE
+# GIVEN
 
 ::Foo = 1
 
@@ -109,11 +102,10 @@ Foo::Bar
 # BECOMES
 
 ::Foo = 1
-
 ```
-### unnamed test 293
+### unnamed test 316
 ```ruby
-# BEFORE
+# GIVEN
 
 ::Foo::Bar = 1
 

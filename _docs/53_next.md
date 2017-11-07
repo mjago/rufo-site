@@ -8,7 +8,7 @@ sidebar:
 ---
 ### next
 ```ruby
-# BEFORE
+# GIVEN
 
 next
 
@@ -17,11 +17,10 @@ next
 # BECOMES
 
 next
-
 ```
-### unnamed test 492
+### unnamed test 520
 ```ruby
-# BEFORE
+# GIVEN
 
 next  1
 
@@ -30,11 +29,10 @@ next  1
 # BECOMES
 
 next 1
-
 ```
-### unnamed test 493
+### unnamed test 521
 ```ruby
-# BEFORE
+# GIVEN
 
 next  1 , 2
 
@@ -43,11 +41,10 @@ next  1 , 2
 # BECOMES
 
 next 1, 2
-
 ```
-### unnamed test 494
+### unnamed test 522
 ```ruby
-# BEFORE
+# GIVEN
 
 next  1 , 
  2
