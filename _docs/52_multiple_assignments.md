@@ -1,212 +1,160 @@
 ---
 title: "multiple\\_assignments"
 permalink: "/docs/multiple_assignments/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 502
+### unnamed 502
 ```ruby
 # GIVEN
-
 a  =   1  ,   2
-
 ```
 ```ruby
 # BECOMES
-
 a = 1, 2
 ```
-### unnamed test 503
+### unnamed 503
 ```ruby
 # GIVEN
-
 a , b  = 2
-
 ```
 ```ruby
 # BECOMES
-
 a, b = 2
 ```
-### unnamed test 504
+### unnamed 504
 ```ruby
 # GIVEN
-
 a , b, ( c, d )  = 2
-
 ```
 ```ruby
 # BECOMES
-
 a, b, (c, d) = 2
 ```
-### unnamed test 505
+### unnamed 505
 ```ruby
 # GIVEN
-
- *x = 1
-
-```
-```ruby
-# BECOMES
-
 *x = 1
 ```
-### unnamed test 506
+```ruby
+# BECOMES
+*x = 1
+```
+### unnamed 506
 ```ruby
 # GIVEN
-
- a , b , *x = 1
-
+a , b , *x = 1
 ```
 ```ruby
 # BECOMES
-
 a, b, *x = 1
 ```
-### unnamed test 507
+### unnamed 507
 ```ruby
 # GIVEN
-
- *x , a , b = 1
-
+*x , a , b = 1
 ```
 ```ruby
 # BECOMES
-
 *x, a, b = 1
 ```
-### unnamed test 508
+### unnamed 508
 ```ruby
 # GIVEN
-
- a, b, *x, c, d = 1
-
-```
-```ruby
-# BECOMES
-
 a, b, *x, c, d = 1
 ```
-### unnamed test 509
-```ruby
-# GIVEN
-
-a, b, = 1
-
-```
 ```ruby
 # BECOMES
-
+a, b, *x, c, d = 1
+```
+### unnamed 509
+```ruby
+# GIVEN
 a, b, = 1
 ```
-### unnamed test 510
-```ruby
-# GIVEN
-
-a = b, *c
-
-```
 ```ruby
 # BECOMES
-
+a, b, = 1
+```
+### unnamed 510
+```ruby
+# GIVEN
 a = b, *c
 ```
-### unnamed test 511
-```ruby
-# GIVEN
-
-a = b, *c, *d
-
-```
 ```ruby
 # BECOMES
-
+a = b, *c
+```
+### unnamed 511
+```ruby
+# GIVEN
 a = b, *c, *d
 ```
-### unnamed test 512
-```ruby
-# GIVEN
-
-a, = b
-
-```
 ```ruby
 # BECOMES
-
+a = b, *c, *d
+```
+### unnamed 512
+```ruby
+# GIVEN
 a, = b
 ```
-### unnamed test 513
-```ruby
-# GIVEN
-
-a = b, c, *d
-
-```
 ```ruby
 # BECOMES
-
+a, = b
+```
+### unnamed 513
+```ruby
+# GIVEN
 a = b, c, *d
 ```
-### unnamed test 514
-```ruby
-# GIVEN
-
-a = b, c, *d, e
-
-```
 ```ruby
 # BECOMES
-
+a = b, c, *d
+```
+### unnamed 514
+```ruby
+# GIVEN
 a = b, c, *d, e
 ```
-### unnamed test 515
+```ruby
+# BECOMES
+a = b, c, *d, e
+```
+### unnamed 515
 ```ruby
 # GIVEN
-
 *, y = z
-
 ```
 ```ruby
 # BECOMES
-
 *, y = z
 ```
-### unnamed test 516
+### unnamed 516
 ```ruby
 # GIVEN
-
 w, (x,), y = z
-
 ```
 ```ruby
 # BECOMES
-
 w, (x,), y = z
 ```
-### unnamed test 517
+### unnamed 517
 ```ruby
 # GIVEN
-
 a, b=1, 2
-
 ```
 ```ruby
 # BECOMES
-
 a, b = 1, 2
 ```
-### unnamed test 518
+### unnamed 518
 ```ruby
 # GIVEN
-
 * = 1
-
 ```
 ```ruby
 # BECOMES
-
 * = 1
 ```

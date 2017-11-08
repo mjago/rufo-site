@@ -1,476 +1,380 @@
 ---
 title: "method\\_definition"
 permalink: "/docs/method_definition/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 462
+### unnamed 462
 ```ruby
 # GIVEN
-
-  def foo
+def foo
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo
 end
 ```
-### unnamed test 463
+### unnamed 463
 ```ruby
 # GIVEN
-
-  def foo ; end
-
+def foo ; end
 ```
 ```ruby
 # BECOMES
-
 def foo; end
 ```
-### unnamed test 464
+### unnamed 464
 ```ruby
 # GIVEN
-
-  def foo()
+def foo()
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo()
 end
 ```
-### unnamed test 465
+### unnamed 465
 ```ruby
 # GIVEN
-
-  def foo() 1 end
-
-```
-```ruby
-# BECOMES
-
 def foo() 1 end
 ```
-### unnamed test 466
+```ruby
+# BECOMES
+def foo() 1 end
+```
+### unnamed 466
 ```ruby
 # GIVEN
-
-  def foo(
+def foo(
  )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo()
 end
 ```
-### unnamed test 467
+### unnamed 467
 ```ruby
 # GIVEN
-
-  def foo( x )
+def foo( x )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x)
 end
 ```
-### unnamed test 468
+### unnamed 468
 ```ruby
 # GIVEN
-
-  def foo( x , y )
+def foo( x , y )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x, y)
 end
 ```
-### unnamed test 469
+### unnamed 469
 ```ruby
 # GIVEN
-
-  def foo x
+def foo x
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x)
 end
 ```
 ```ruby
 # with setting `parens_in_def :yes`
-
-def foo(x))
+def foo(x)
 end
 ```
-### unnamed test 470
+### unnamed 470
 ```ruby
 # GIVEN
-
-  def foo x , y
+def foo x , y
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x, y)
 end
 ```
 ```ruby
 # with setting `parens_in_def :yes`
-
-def foo(x, y))
+def foo(x, y)
 end
 ```
-### unnamed test 471
+### unnamed 471
 ```ruby
 # GIVEN
-
-  def foo
+def foo
  1
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo
   1
 end
 ```
-### unnamed test 472
+### unnamed 472
 ```ruby
 # GIVEN
-
-  def foo( * x )
+def foo( * x )
  1
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(*x)
   1
 end
 ```
-### unnamed test 473
+### unnamed 473
 ```ruby
 # GIVEN
-
-  def foo( a , * x )
+def foo( a , * x )
  1
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a, *x)
   1
 end
 ```
-### unnamed test 474
+### unnamed 474
 ```ruby
 # GIVEN
-
-  def foo( a , * x, b )
+def foo( a , * x, b )
  1
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a, *x, b)
   1
 end
 ```
-### unnamed test 475
+### unnamed 475
 ```ruby
 # GIVEN
-
-  def foo( x  =  1 )
+def foo( x  =  1 )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x = 1)
 end
 ```
-### unnamed test 476
+### unnamed 476
 ```ruby
 # GIVEN
-
-  def foo( x  =  1, * y )
+def foo( x  =  1, * y )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x = 1, *y)
 end
 ```
-### unnamed test 477
+### unnamed 477
 ```ruby
 # GIVEN
-
-  def foo( & block )
+def foo( & block )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(&block)
 end
 ```
-### unnamed test 478
+### unnamed 478
 ```ruby
 # GIVEN
-
-  def foo( a: , b: )
+def foo( a: , b: )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a:, b:)
 end
 ```
-### unnamed test 479
+### unnamed 479
 ```ruby
 # GIVEN
-
-  def foo( a: 1 , b: 2  )
+def foo( a: 1 , b: 2  )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a: 1, b: 2)
 end
 ```
-### unnamed test 480
+### unnamed 480
 ```ruby
 # GIVEN
-
-  def foo( x,
+def foo( x,
  y )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(x,
         y)
 end
 ```
-### unnamed test 481
+### unnamed 481
 ```ruby
 # GIVEN
-
-  def foo( a: 1,
+def foo( a: 1,
  b: 2 )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a: 1,
         b: 2)
 end
 ```
-### unnamed test 482
+### unnamed 482
 ```ruby
 # GIVEN
-
-  def foo(
+def foo(
  x,
  y )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(
         x,
         y)
 end
 ```
-### unnamed test 483
+### unnamed 483
 ```ruby
 # GIVEN
-
-  def foo( a: 1, &block )
+def foo( a: 1, &block )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a: 1, &block)
 end
 ```
-### unnamed test 484
+### unnamed 484
 ```ruby
 # GIVEN
-
-  def foo( a: 1,
+def foo( a: 1,
  &block )
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(a: 1,
         &block)
 end
 ```
-### unnamed test 485
+### unnamed 485
 ```ruby
 # GIVEN
-
-  def foo(*)
+def foo(*)
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(*)
 end
 ```
-### unnamed test 486
+### unnamed 486
 ```ruby
 # GIVEN
-
-  def foo(**)
+def foo(**)
  end
-
 ```
 ```ruby
 # BECOMES
-
 def foo(**)
 end
 ```
-### unnamed test 487
+### unnamed 487
 ```ruby
 # GIVEN
-
-def `(cmd)
-end
-
-```
-```ruby
-# BECOMES
-
 def `(cmd)
 end
 ```
-### unnamed test 488
-```ruby
-# GIVEN
-
-module_function def foo
-  1
-end
-
-```
 ```ruby
 # BECOMES
-
+def `(cmd)
+end
+```
+### unnamed 488
+```ruby
+# GIVEN
 module_function def foo
   1
 end
 ```
-### unnamed test 489
+```ruby
+# BECOMES
+module_function def foo
+  1
+end
+```
+### unnamed 489
 ```ruby
 # GIVEN
-
 private def foo
   1
 end
-
 ```
 ```ruby
 # BECOMES
-
 private def foo
   1
 end
 ```
-### unnamed test 490
+### unnamed 490
 ```ruby
 # GIVEN
-
-some class Foo
-  1
-end
-
-```
-```ruby
-# BECOMES
-
 some class Foo
   1
 end
 ```
-### unnamed test 491
+```ruby
+# BECOMES
+some class Foo
+  1
+end
+```
+### unnamed 491
 ```ruby
 # GIVEN
-
 def foo; 1; end
 def bar; 2; end
-
 ```
 ```ruby
 # BECOMES
-
 def foo; 1; end
 def bar; 2; end
 ```
-### unnamed test 492
+### unnamed 492
 ```ruby
 # GIVEN
-
 def foo; 1; end
 
 def bar; 2; end
-
 ```
 ```ruby
 # BECOMES
-
 def foo; 1; end
 
 def bar; 2; end

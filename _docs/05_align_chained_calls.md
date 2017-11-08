@@ -1,320 +1,267 @@
 ---
 title: "align\\_chained\\_calls"
 permalink: "/docs/align_chained_calls/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 17
+### unnamed 17
 ```ruby
 # GIVEN
-
 foo . bar
  . baz
-
 ```
 ```ruby
 # BECOMES
-
 foo.bar
   .baz
 ```
 ```ruby
 # with setting `align_chained_calls true`
-
 foo.bar
    .baz
 ```
-### unnamed test 18
+### unnamed 18
 ```ruby
 # GIVEN
-
 foo . bar
  . baz
  . qux
-
 ```
 ```ruby
 # BECOMES
-
 foo.bar
   .baz
   .qux
 ```
 ```ruby
 # with setting `align_chained_calls true`
-
 foo.bar
    .baz
    .qux
 ```
-### unnamed test 19
+### unnamed 19
 ```ruby
 # GIVEN
-
 foo . bar( x.y )
  . baz
  . qux
-
 ```
 ```ruby
 # BECOMES
-
 foo.bar(x.y)
   .baz
   .qux
 ```
 ```ruby
 # with setting `align_chained_calls true`
-
 foo.bar(x.y)
    .baz
    .qux
 ```
-### unnamed test 20
+### unnamed 20
 ```ruby
 # GIVEN
-
 x.foo
  .bar { a.b }
  .baz
-
 ```
 ```ruby
 # BECOMES
-
 x.foo
  .bar { a.b }
  .baz
 ```
-### unnamed test 21
+### unnamed 21
 ```ruby
 # GIVEN
-
 a do #
   b
     .w y(x)
          .z
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do #
   b.w y(x)
         .z
 end
 ```
-### unnamed test 22
+### unnamed 22
 ```ruby
 # GIVEN
-
-a do #
-  b #
-    .w y(x)
-         .z
-end
-
-```
-```ruby
-# BECOMES
-
 a do #
   b #
     .w y(x)
          .z
 end
 ```
-### unnamed test 23
+```ruby
+# BECOMES
+a do #
+  b #
+    .w y(x)
+         .z
+end
+```
+### unnamed 23
 ```ruby
 # GIVEN
-
 a do #
   b #
     .w y(x) #
          .z
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do #
   b #
     .w y(x) #
          .z
 end
 ```
-### unnamed test 24
+### unnamed 24
 ```ruby
 # GIVEN
-
-a do
-  b #
-    .w x
-end
-
-```
-```ruby
-# BECOMES
-
 a do
   b #
     .w x
 end
 ```
-### unnamed test 25
-```ruby
-# GIVEN
-
-a
-  .b
-  .c
-  .d
-
-```
 ```ruby
 # BECOMES
-
+a do
+  b #
+    .w x
+end
+```
+### unnamed 25
+```ruby
+# GIVEN
 a
   .b
   .c
   .d
 ```
-### unnamed test 26
+```ruby
+# BECOMES
+a
+  .b
+  .c
+  .d
+```
+### unnamed 26
 ```ruby
 # GIVEN
-
 a do
   b #
     .w x
          .z
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do
   b #
     .w x
          .z
 end
 ```
-### unnamed test 27
+### unnamed 27
 ```ruby
 # GIVEN
-
-a {
-  b #
-    .w x
-         .z
-}
-
-```
-```ruby
-# BECOMES
-
 a {
   b #
     .w x
          .z
 }
 ```
-### unnamed test 28
-```ruby
-# GIVEN
-
-a {
-  b x #
-      .w
-      .z
-}
-
-```
 ```ruby
 # BECOMES
-
+a {
+  b #
+    .w x
+         .z
+}
+```
+### unnamed 28
+```ruby
+# GIVEN
 a {
   b x #
       .w
       .z
 }
 ```
-### unnamed test 29
+```ruby
+# BECOMES
+a {
+  b x #
+      .w
+      .z
+}
+```
+### unnamed 29
 ```ruby
 # GIVEN
-
 a do
   b #
     .w
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do
   b #
     .w
 end
 ```
-### unnamed test 30
+### unnamed 30
 ```ruby
 # GIVEN
-
-b #
-  .w
-
-```
-```ruby
-# BECOMES
-
 b #
   .w
 ```
-### unnamed test 31
+```ruby
+# BECOMES
+b #
+  .w
+```
+### unnamed 31
 ```ruby
 # GIVEN
-
 a do
   b #
     .w
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do
   b #
     .w
 end
 ```
-### unnamed test 32
+### unnamed 32
 ```ruby
 # GIVEN
-
 a do
   b#
     .w x
 end
-
 ```
 ```ruby
 # BECOMES
-
 a do
   b #
     .w x
 end
 ```
-### unnamed test 33
+### unnamed 33
 ```ruby
 # GIVEN
-
 a b do
   c d do
     e #
@@ -323,11 +270,9 @@ a b do
            .i
   end
 end
-
 ```
 ```ruby
 # BECOMES
-
 a b do
   c d do
     e #
@@ -337,10 +282,9 @@ a b do
   end
 end
 ```
-### unnamed test 34
+### unnamed 34
 ```ruby
 # GIVEN
-
 context 'b123' do
   it 'd123' do
     expect_any_instance_of(Uploader::Null) # some comment
@@ -349,11 +293,9 @@ context 'b123' do
               .i123
   end
 end
-
 ```
 ```ruby
 # BECOMES
-
 context 'b123' do
   it 'd123' do
     expect_any_instance_of(Uploader::Null) # some comment
@@ -366,7 +308,6 @@ end
 ### bug\_49
 ```ruby
 # GIVEN
-
 context 'no sidecar/archive' do
   it 'uploads destination master to the specified destination' do
     expect_any_instance_of(Uploader::Null) # rubocop:disable RSpec/AnyInstance
@@ -375,11 +316,9 @@ context 'no sidecar/archive' do
             .and_return(Uploader::Result.new(success: true))
   end
 end
-
 ```
 ```ruby
 # BECOMES
-
 context 'no sidecar/archive' do
   it 'uploads destination master to the specified destination' do
     expect_any_instance_of(Uploader::Null) # rubocop:disable RSpec/AnyInstance

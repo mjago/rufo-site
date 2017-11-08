@@ -1,143 +1,114 @@
 ---
 title: "array\\_access"
 permalink: "/docs/array_access/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 81
+### unnamed 81
 ```ruby
 # GIVEN
-
 foo[ ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[]
 ```
-### unnamed test 82
+### unnamed 82
 ```ruby
 # GIVEN
-
 foo[
  ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[]
 ```
-### unnamed test 83
+### unnamed 83
 ```ruby
 # GIVEN
-
 foo[ 1 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[1]
 ```
-### unnamed test 84
+### unnamed 84
 ```ruby
 # GIVEN
-
 foo[ 1 , 2 , 3 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[1, 2, 3]
 ```
-### unnamed test 85
+### unnamed 85
 ```ruby
 # GIVEN
-
 foo[ 1 ,
  2 ,
  3 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[1,
     2,
     3]
 ```
-### unnamed test 86
+### unnamed 86
 ```ruby
 # GIVEN
-
 foo[
  1 ,
  2 ,
  3 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[
   1,
   2,
   3]
 ```
-### unnamed test 87
+### unnamed 87
 ```ruby
 # GIVEN
-
 foo[ *x ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[*x]
 ```
-### unnamed test 88
+### unnamed 88
 ```ruby
 # GIVEN
-
 foo[
  1,
 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[
   1,
 ]
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo[
   1
 ]
 ```
-### unnamed test 89
+### unnamed 89
 ```ruby
 # GIVEN
-
 foo[
  1,
  2 , 3,
  4,
 ]
-
 ```
 ```ruby
 # BECOMES
-
 foo[
   1,
   2, 3,
@@ -145,8 +116,7 @@ foo[
 ]
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo[
   1,
   2, 3,

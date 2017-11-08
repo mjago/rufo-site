@@ -1,198 +1,161 @@
 ---
 title: "assignments"
 permalink: "/docs/assignments/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 119
+### unnamed 119
 ```ruby
 # GIVEN
-
 a   =   1
-
 ```
 ```ruby
 # BECOMES
-
 a = 1
 ```
-### unnamed test 120
+### unnamed 120
 ```ruby
 # GIVEN
-
 a   =
 2
-
 ```
 ```ruby
 # BECOMES
-
 a =
   2
 ```
-### unnamed test 121
+### unnamed 121
 ```ruby
 # GIVEN
-
 a   =   # hello
 2
-
 ```
 ```ruby
 # BECOMES
-
 a = # hello
   2
 ```
-### unnamed test 122
+### unnamed 122
 ```ruby
 # GIVEN
-
 a = if 1
  2
  end
-
 ```
 ```ruby
 # BECOMES
-
 a = if 1
       2
     end
 ```
-### unnamed test 123
+### unnamed 123
 ```ruby
 # GIVEN
-
 a = unless 1
  2
  end
-
 ```
 ```ruby
 # BECOMES
-
 a = unless 1
       2
     end
 ```
-### unnamed test 124
+### unnamed 124
 ```ruby
 # GIVEN
-
 a = begin
 1
  end
-
 ```
 ```ruby
 # BECOMES
-
 a = begin
   1
 end
 ```
-### unnamed test 125
+### unnamed 125
 ```ruby
 # GIVEN
-
 a = case
  when 1
  2
  end
-
 ```
 ```ruby
 # BECOMES
-
 a = case
     when 1
       2
     end
 ```
-### unnamed test 126
+### unnamed 126
 ```ruby
 # GIVEN
-
 a = begin
 1
 end
-
 ```
 ```ruby
 # BECOMES
-
 a = begin
   1
 end
 ```
-### unnamed test 127
+### unnamed 127
 ```ruby
 # GIVEN
-
 a = begin
 1
 rescue
 2
 end
-
 ```
 ```ruby
 # BECOMES
-
 a = begin
       1
     rescue
       2
     end
 ```
-### unnamed test 128
+### unnamed 128
 ```ruby
 # GIVEN
-
 a = begin
 1
 ensure
 2
 end
-
 ```
 ```ruby
 # BECOMES
-
 a = begin
       1
     ensure
       2
     end
 ```
-### unnamed test 129
+### unnamed 129
 ```ruby
 # GIVEN
-
 a=1
-
 ```
 ```ruby
 # BECOMES
-
 a = 1
 ```
-### unnamed test 130
+### unnamed 130
 ```ruby
 # GIVEN
-
 a = \
   begin
     1
   end
-
 ```
 ```ruby
 # BECOMES
-
 a =
   begin
     1

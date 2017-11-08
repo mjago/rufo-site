@@ -9,12 +9,11 @@ permalink: "/pages/settings/"
 ## Table of contents
 
 - Usage
+- [parens_in_def](#parens_in_def)
+- [trailing_commas](#trailing_commas)
 - [align_case_when](#align_case_when)
 - [align_chained_calls](#align_chained_calls)
 - [double_newline_inside_type](#double_newline_inside_type)
-- [parens_in_def](#parens_in_def)
-- [spaces_around_binary](#spaces_around_binary)
-- [trailing_commas](#trailing_commas)
 
 
 ### Usage
@@ -25,6 +24,143 @@ Use the following settings in a `.rufo` file. Each configuration is a call with 
 # .rufo
 trailing_commas :never
 parens_in_def :dynamic
+```
+
+### parens_in_def
+
+Use parentheses in defs?
+
+- `:yes`: (default) always use parentheses (add them if they are not there)
+- `:dynamic`: don't modify existing methods parentheses choice
+
+Given this code:
+
+```ruby
+def foo x, y
+end
+
+def bar(x, y)
+end
+```
+
+With `:yes` the formatter will change it to:
+
+```ruby
+def foo(x, y)
+end
+
+def bar(x, y)
+end
+```
+
+With `:dynamic` it won't modify it.
+
+### trailing_commas
+
+Use trailing commas in array and hash literals, and keyword arguments?
+
+- `true`: (default) always put a trailing comma
+- `false`: never put a trailing comma
+
+Given this code:
+
+```ruby
+[
+  1,
+  2
+]
+
+[
+  1,
+  2,
+]
+
+{
+  foo: 1,
+  bar: 2
+}
+
+{
+  foo: 1,
+  bar: 2,
+}
+
+foo(
+  x: 1,
+  y: 2
+)
+
+foo(
+  x: 1,
+  y: 2,
+)
+```
+
+With `true`, the formatter will change it to:
+
+```ruby
+[
+  1,
+  2,
+]
+
+[
+  1,
+  2,
+]
+
+{
+  foo: 1,
+  bar: 2,
+}
+
+{
+  foo: 1,
+  bar: 2,
+}
+
+foo(
+  x: 1,
+  y: 2,
+)
+
+foo(
+  x: 1,
+  y: 2,
+)
+```
+With `false`, the formatter will change it to:
+
+```ruby
+[
+  1,
+  2
+]
+
+[
+  1,
+  2
+]
+
+{
+  foo: 1,
+  bar: 2
+}
+
+{
+  foo: 1,
+  bar: 2
+}
+
+foo(
+  x: 1,
+  y: 2
+)
+
+foo(
+  x: 1,
+  y: 2
+)
 ```
 
 ### align_case_when
@@ -120,35 +256,6 @@ end
 
 With `:dynamic` it won't modify it.
 
-### parens_in_def
-
-Use parentheses in defs?
-
-- `:yes`: (default) always use parentheses (add them if they are not there)
-- `:dynamic`: don't modify existing methods parentheses choice
-
-Given this code:
-
-```ruby
-def foo x, y
-end
-
-def bar(x, y)
-end
-```
-
-With `:yes` the formatter will change it to:
-
-```ruby
-def foo(x, y)
-end
-
-def bar(x, y)
-end
-```
-
-With `:dynamic` it won't modify it.
-
 ### spaces_around_binary
 
 How to format spaces around a binary operator?
@@ -180,110 +287,3 @@ before the operator, a space is added after it.
 
 With `:dynamic` it won't modify it.
 
-### trailing_commas
-
-Use trailing commas in array and hash literals, and keyword arguments?
-
-- `:always`: (default) always put a trailing comma
-- `:never`: never put a trailing comma
-
-Given this code:
-
-```ruby
-[
-  1,
-  2
-]
-
-[
-  1,
-  2,
-]
-
-{
-  foo: 1,
-  bar: 2
-}
-
-{
-  foo: 1,
-  bar: 2,
-}
-
-foo(
-  x: 1,
-  y: 2
-)
-
-foo(
-  x: 1,
-  y: 2,
-)
-```
-
-With `:always`, the formatter will change it to:
-
-```ruby
-[
-  1,
-  2,
-]
-
-[
-  1,
-  2,
-]
-
-{
-  foo: 1,
-  bar: 2,
-}
-
-{
-  foo: 1,
-  bar: 2,
-}
-
-foo(
-  x: 1,
-  y: 2,
-)
-
-foo(
-  x: 1,
-  y: 2,
-)
-```
-With `:never`, the formatter will change it to:
-
-```ruby
-[
-  1,
-  2
-]
-
-[
-  1,
-  2
-]
-
-{
-  foo: 1,
-  bar: 2
-}
-
-{
-  foo: 1,
-  bar: 2
-}
-
-foo(
-  x: 1,
-  y: 2
-)
-
-foo(
-  x: 1,
-  y: 2
-)
-```

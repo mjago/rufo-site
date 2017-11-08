@@ -1,7 +1,6 @@
 ---
 title: "comments"
 permalink: "/docs/comments/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
@@ -9,53 +8,41 @@ sidebar:
 ### comment
 ```ruby
 # GIVEN
-
 # foo
-
 ```
 ```ruby
 # BECOMES
-
 # foo
 ```
 ### two\_comments
 ```ruby
 # GIVEN
-
 # foo
 # bar
-
 ```
 ```ruby
 # BECOMES
-
 # foo
 # bar
 ```
 ### integer\_with\_comment
 ```ruby
 # GIVEN
-
 1   # foo
-
 ```
 ```ruby
 # BECOMES
-
 1   # foo
 ```
 ### comment\_with\_double\_line\_break
 ```ruby
 # GIVEN
-
 # a
 
 # b
-
 ```
 ```ruby
 # BECOMES
-
 # a
 
 # b
@@ -63,16 +50,13 @@ sidebar:
 ### comment\_with\_triple\_line\_break
 ```ruby
 # GIVEN
-
 # a
 
 
 # b
-
 ```
 ```ruby
 # BECOMES
-
 # a
 
 # b
@@ -80,30 +64,24 @@ sidebar:
 ### comment\_and\_integer
 ```ruby
 # GIVEN
-
 # a
 1
-
 ```
 ```ruby
 # BECOMES
-
 # a
 1
 ```
 ### comment\_double\_newline\_integer
 ```ruby
 # GIVEN
-
 # a
 
 
 1
-
 ```
 ```ruby
 # BECOMES
-
 # a
 
 1
@@ -111,29 +89,23 @@ sidebar:
 ### integer\_with\_comment\_and\_following\_comment
 ```ruby
 # GIVEN
-
 1 # a
 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 # b
 ```
 ### integer\_with\_comment\_and\_multiline\_break
 ```ruby
 # GIVEN
-
 1 # a
 
 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 
 # b
@@ -141,15 +113,12 @@ sidebar:
 ### integers\_separated\_by\_comments
 ```ruby
 # GIVEN
-
 1 # a
 
 2 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 
 2 # b
@@ -157,16 +126,13 @@ sidebar:
 ### multiple\_trailing\_comments
 ```ruby
 # GIVEN
-
 1 # a
 
 
 2 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 
 2 # b
@@ -174,7 +140,6 @@ sidebar:
 ### more\_trailing\_comments
 ```ruby
 # GIVEN
-
 1 # a
 
 
@@ -183,11 +148,9 @@ sidebar:
 
 
 2 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 
 2 # b
@@ -195,7 +158,6 @@ sidebar:
 ### still\_more\_trailing\_comments
 ```ruby
 # GIVEN
-
 1 # a
 
 
@@ -204,11 +166,9 @@ sidebar:
 
  # c
  2 # b
-
 ```
 ```ruby
 # BECOMES
-
 1 # a
 
 # b
@@ -219,24 +179,20 @@ sidebar:
 ### comment\_indentation\_inside\_method\_call
 ```ruby
 # GIVEN
-
 foo(
 # comment for foo
 foo: 'foo'
 )
-
 ```
 ```ruby
 # BECOMES
-
 foo(
   # comment for foo
   foo: 'foo',
 )
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo(
   # comment for foo
   foo: 'foo'
@@ -245,24 +201,20 @@ foo(
 ### comment\_indentation\_inside\_method\_call\_2
 ```ruby
 # GIVEN
-
 foo(
  # comment for foo
 foo: 'foo'
 )
-
 ```
 ```ruby
 # BECOMES
-
 foo(
   # comment for foo
   foo: 'foo',
 )
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo(
   # comment for foo
   foo: 'foo'
@@ -271,24 +223,20 @@ foo(
 ### comment\_indentation\_inside\_method\_call\_3
 ```ruby
 # GIVEN
-
 foo(
   # comment for foo
 foo: 'foo'
 )
-
 ```
 ```ruby
 # BECOMES
-
 foo(
   # comment for foo
   foo: 'foo',
 )
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo(
   # comment for foo
   foo: 'foo'
@@ -297,24 +245,20 @@ foo(
 ### comment\_indentation\_inside\_method\_call\_4
 ```ruby
 # GIVEN
-
 foo(
    # comment for foo
 foo: 'foo'
 )
-
 ```
 ```ruby
 # BECOMES
-
 foo(
   # comment for foo
   foo: 'foo',
 )
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo(
   # comment for foo
   foo: 'foo'
@@ -323,7 +267,6 @@ foo(
 ### multiple\_comments\_inside\_method\_call
 ```ruby
 # GIVEN
-
 foo(
 # comment for foo
 foo: 'foo',
@@ -331,11 +274,9 @@ foo: 'foo',
 # comment for bar
 bar: 'bar',
 )
-
 ```
 ```ruby
 # BECOMES
-
 foo(
   # comment for foo
   foo: 'foo',
@@ -345,8 +286,7 @@ foo(
 )
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 foo(
   # comment for foo
   foo: 'foo',

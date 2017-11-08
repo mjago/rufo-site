@@ -1,133 +1,113 @@
 ---
 title: "begin\\_rescue\\_end"
 permalink: "/docs/begin_rescue_end/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 156
+### unnamed 156
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue
   2
 end
 ```
-### unnamed test 157
+### unnamed 157
 ```ruby
 # GIVEN
-
 begin
 rescue A
 rescue B
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
 rescue A
 rescue B
 end
 ```
-### unnamed test 158
+### unnamed 158
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue   Foo 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue Foo
   2
 end
 ```
-### unnamed test 159
+### unnamed 159
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue  =>   ex  
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue => ex
   2
 end
 ```
-### unnamed test 160
+### unnamed 160
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue  Foo  =>  ex 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue Foo => ex
   2
 end
 ```
-### unnamed test 161
+### unnamed 161
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue  Foo  , Bar , Baz =>  ex 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue Foo, Bar, Baz => ex
   2
 end
 ```
-### unnamed test 162
+### unnamed 162
 ```ruby
 # GIVEN
-
 begin 
  1 
  rescue  Foo  , 
@@ -135,11 +115,9 @@ begin
  Baz =>  ex 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue Foo,
@@ -148,95 +126,80 @@ rescue Foo,
   2
 end
 ```
-### unnamed test 163
+### unnamed 163
 ```ruby
 # GIVEN
-
 begin 
  1 
  ensure 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 ensure
   2
 end
 ```
-### unnamed test 164
+### unnamed 164
 ```ruby
 # GIVEN
-
 begin 
  1 
  else 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 else
   2
 end
 ```
-### unnamed test 165
+### unnamed 165
 ```ruby
 # GIVEN
-
-begin
-  1
-rescue *x
-end
-
-```
-```ruby
-# BECOMES
-
 begin
   1
 rescue *x
 end
 ```
-### unnamed test 166
+```ruby
+# BECOMES
+begin
+  1
+rescue *x
+end
+```
+### unnamed 166
 ```ruby
 # GIVEN
-
 begin
   1
 rescue *x, *y
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue *x, *y
 end
 ```
-### unnamed test 167
+### unnamed 167
 ```ruby
 # GIVEN
-
 begin
   1
 rescue *x, y, *z
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 rescue *x, y, *z

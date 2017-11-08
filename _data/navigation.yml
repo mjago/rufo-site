@@ -74,7 +74,7 @@ docs:
   - title: constants
     url: "/docs/constants"
   - title: defined?
-    url: "/docs/defined?"
+    url: "/docs/defined_qu"
   - title: double_newline_inside_type
     url: "/docs/double_newline_inside_type"
   - title: END

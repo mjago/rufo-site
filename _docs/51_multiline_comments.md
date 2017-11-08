@@ -1,7 +1,6 @@
 ---
 title: "multiline\\_comments"
 permalink: "/docs/multiline_comments/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
@@ -9,16 +8,13 @@ sidebar:
 ### multiline\_comment
 ```ruby
 # GIVEN
-
 =begin
   foo
   bar
 =end
-
 ```
 ```ruby
 # BECOMES
-
 =begin
   foo
   bar
@@ -27,7 +23,6 @@ sidebar:
 ### multiline\_comment\_2
 ```ruby
 # GIVEN
-
 1
 
 =begin
@@ -36,11 +31,9 @@ sidebar:
 =end
 
 2
-
 ```
 ```ruby
 # BECOMES
-
 1
 
 =begin
@@ -53,16 +46,13 @@ sidebar:
 ### multiline\_comment\_3
 ```ruby
 # GIVEN
-
 # foo
 =begin
 bar
 =end
-
 ```
 ```ruby
 # BECOMES
-
 # foo
 =begin
 bar

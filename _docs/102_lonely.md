@@ -1,16 +1,16 @@
 ---
-title: "retry"
-permalink: "/docs/retry/"
+title: "lonely"
+permalink: "/docs/lonely/"
 toc: true
 sidebar:
   nav: "docs"
 ---
-### retry
+### unnamed 738
 ```ruby
 # GIVEN
-retry
+foo &. bar
 ```
 ```ruby
 # BECOMES
-retry
+foo&.bar
 ```

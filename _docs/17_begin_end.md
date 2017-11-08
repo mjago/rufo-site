@@ -1,136 +1,108 @@
 ---
 title: "begin\\_end"
 permalink: "/docs/begin_end/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 135
+### unnamed 135
 ```ruby
 # GIVEN
-
 begin;end
-
 ```
 ```ruby
 # BECOMES
-
 begin; end
 ```
-### unnamed test 136
+### unnamed 136
 ```ruby
 # GIVEN
-
 begin 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
 end
 ```
-### unnamed test 137
+### unnamed 137
 ```ruby
 # GIVEN
-
-begin 1 end
-
-```
-```ruby
-# BECOMES
-
 begin 1 end
 ```
-### unnamed test 138
+```ruby
+# BECOMES
+begin 1 end
+```
+### unnamed 138
 ```ruby
 # GIVEN
-
 begin; 1; end
-
 ```
 ```ruby
 # BECOMES
-
 begin; 1; end
 ```
-### unnamed test 139
+### unnamed 139
 ```ruby
 # GIVEN
-
 begin; 1; 2; end
-
 ```
 ```ruby
 # BECOMES
-
 begin; 1; 2; end
 ```
-### unnamed test 140
+### unnamed 140
 ```ruby
 # GIVEN
-
 begin; 1 
  2; end
-
 ```
 ```ruby
 # BECOMES
-
 begin; 1
   2; end
 ```
-### unnamed test 141
+### unnamed 141
 ```ruby
 # GIVEN
-
 begin
  1 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
 end
 ```
-### unnamed test 142
+### unnamed 142
 ```ruby
 # GIVEN
-
 begin
  1 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1
   2
 end
 ```
-### unnamed test 143
+### unnamed 143
 ```ruby
 # GIVEN
-
 begin 
  begin 
  1 
  end 
  2 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   begin
     1
@@ -138,198 +110,162 @@ begin
   2
 end
 ```
-### unnamed test 144
+### unnamed 144
 ```ruby
 # GIVEN
-
 begin # hello
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin # hello
 end
 ```
-### unnamed test 145
+### unnamed 145
 ```ruby
 # GIVEN
-
 begin;# hello
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin # hello
 end
 ```
-### unnamed test 146
+### unnamed 146
 ```ruby
 # GIVEN
-
 begin
  1  # a
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1  # a
 end
 ```
-### unnamed test 147
+### unnamed 147
 ```ruby
 # GIVEN
-
 begin
  1  # a
  # b 
  3 # c 
  end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   1  # a
   # b
   3 # c
 end
 ```
-### unnamed test 148
+### unnamed 148
 ```ruby
 # GIVEN
-
-begin
-end
-
-# foo
-
-```
-```ruby
-# BECOMES
-
 begin
 end
 
 # foo
 ```
-### unnamed test 149
+```ruby
+# BECOMES
+begin
+end
+
+# foo
+```
+### unnamed 149
 ```ruby
 # GIVEN
-
 begin
   begin 1 end
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   begin 1 end
 end
 ```
-### unnamed test 150
+### unnamed 150
 ```ruby
 # GIVEN
-
-begin
-  def foo(x) 1 end
-end
-
-```
-```ruby
-# BECOMES
-
 begin
   def foo(x) 1 end
 end
 ```
-### unnamed test 151
+```ruby
+# BECOMES
+begin
+  def foo(x) 1 end
+end
+```
+### unnamed 151
 ```ruby
 # GIVEN
-
 begin
   if 1 then 2 end
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   if 1 then 2 end
 end
 ```
-### unnamed test 152
+### unnamed 152
 ```ruby
 # GIVEN
-
 begin
   if 1 then 2 end
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   if 1 then 2 end
 end
 ```
-### unnamed test 153
+### unnamed 153
 ```ruby
 # GIVEN
-
-begin
-  foo do 1 end
-end
-
-```
-```ruby
-# BECOMES
-
 begin
   foo do 1 end
 end
 ```
-### unnamed test 154
+```ruby
+# BECOMES
+begin
+  foo do 1 end
+end
+```
+### unnamed 154
 ```ruby
 # GIVEN
-
 begin
   for x in y do 1 end
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   for x in y do 1 end
 end
 ```
-### unnamed test 155
+### unnamed 155
 ```ruby
 # GIVEN
-
 begin
   # foo
 
   1
 end
-
 ```
 ```ruby
 # BECOMES
-
 begin
   # foo
 

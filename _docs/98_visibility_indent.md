@@ -1,51 +1,43 @@
 ---
 title: "visibility\\_indent"
 permalink: "/docs/visibility_indent/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 719
+### unnamed 718
 ```ruby
 # GIVEN
-
 private
 
 foo
 bar
-
 ```
 ```ruby
 # BECOMES
-
 private
 
 foo
 bar
 ```
-### unnamed test 720
+### unnamed 719
 ```ruby
 # GIVEN
-
 private
 
   foo
 bar
-
 ```
 ```ruby
 # BECOMES
-
 private
 
 foo
 bar
 ```
-### unnamed test 721
+### unnamed 720
 ```ruby
 # GIVEN
-
 private
 
   foo
@@ -54,11 +46,9 @@ bar
 protected
 
   baz
-
 ```
 ```ruby
 # BECOMES
-
 private
 
 foo
@@ -68,10 +58,9 @@ protected
 
 baz
 ```
-### unnamed test 722
+### unnamed 721
 ```ruby
 # GIVEN
-
 private
 
   foo
@@ -80,11 +69,9 @@ bar
 protected
 
   baz
-
 ```
 ```ruby
 # BECOMES
-
 private
 
 foo
@@ -94,40 +81,34 @@ protected
 
 baz
 ```
-### unnamed test 723
+### unnamed 722
 ```ruby
 # GIVEN
-
 class Foo
   private
 
     foo
 end
-
 ```
 ```ruby
 # BECOMES
-
 class Foo
   private
 
   foo
 end
 ```
-### unnamed test 724
+### unnamed 723
 ```ruby
 # GIVEN
-
 class << self
   private
 
     foo
 end
-
 ```
 ```ruby
 # BECOMES
-
 class << self
   private
 

@@ -1,217 +1,167 @@
 ---
 title: "hash\\_literal"
 permalink: "/docs/hash_literal/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 334
+### unnamed 334
 ```ruby
 # GIVEN
-
- { }
-
+{ }
 ```
 ```ruby
 # BECOMES
-
 {}
 ```
-### unnamed test 335
+### unnamed 335
 ```ruby
 # GIVEN
-
- {:foo   =>   1 }
-
+{:foo   =>   1 }
 ```
 ```ruby
 # BECOMES
-
 {:foo => 1}
 ```
-### unnamed test 336
+### unnamed 336
 ```ruby
 # GIVEN
-
- {:foo   =>   1}
-
+{:foo   =>   1}
 ```
 ```ruby
 # BECOMES
-
 {:foo => 1}
 ```
-### unnamed test 337
+### unnamed 337
 ```ruby
 # GIVEN
-
- { :foo   =>   1 }
-
+{ :foo   =>   1 }
 ```
 ```ruby
 # BECOMES
-
 {:foo => 1}
 ```
-### unnamed test 338
+### unnamed 338
 ```ruby
 # GIVEN
-
- { :foo   =>   1 , 2  =>  3  }
-
+{ :foo   =>   1 , 2  =>  3  }
 ```
 ```ruby
 # BECOMES
-
 {:foo => 1, 2 => 3}
 ```
-### unnamed test 339
+### unnamed 339
 ```ruby
 # GIVEN
-
- {
+{
  :foo   =>   1 ,
  2  =>  3  }
-
 ```
 ```ruby
 # BECOMES
-
 {
   :foo => 1,
   2 => 3,
 }
 ```
 ```ruby
-# with setting `trailing_commas :never`
-
+# with setting `trailing_commas false`
 {
   :foo => 1,
   2 => 3
 }
 ```
-### unnamed test 340
+### unnamed 340
 ```ruby
 # GIVEN
-
- { **x }
-
+{ **x }
 ```
 ```ruby
 # BECOMES
-
 {**x}
 ```
-### unnamed test 341
+### unnamed 341
 ```ruby
 # GIVEN
-
- {foo:  1}
-
+{foo:  1}
 ```
 ```ruby
 # BECOMES
-
 {foo: 1}
 ```
-### unnamed test 342
+### unnamed 342
 ```ruby
 # GIVEN
-
- { foo:  1 }
-
+{ foo:  1 }
 ```
 ```ruby
 # BECOMES
-
 {foo: 1}
 ```
-### unnamed test 343
+### unnamed 343
 ```ruby
 # GIVEN
-
- { :foo   =>
+{ :foo   =>
   1 }
-
 ```
 ```ruby
 # BECOMES
-
 {:foo => 1}
 ```
-### unnamed test 344
+### unnamed 344
 ```ruby
 # GIVEN
-
- { "foo": 1 }
-
+{ "foo": 1 }
 ```
 ```ruby
 # BECOMES
-
 {"foo": 1}
 ```
-### unnamed test 345
+### unnamed 345
 ```ruby
 # GIVEN
-
- { "foo #{ 2 }": 1 }
-
+{ "foo #{ 2 }": 1 }
 ```
 ```ruby
 # BECOMES
-
 {"foo #{2}": 1}
 ```
-### unnamed test 346
+### unnamed 346
 ```ruby
 # GIVEN
-
- { :"one two"  => 3 }
-
+{ :"one two"  => 3 }
 ```
 ```ruby
 # BECOMES
-
 {:"one two" => 3}
 ```
-### unnamed test 347
+### unnamed 347
 ```ruby
 # GIVEN
-
- { foo:  1,
+{ foo:  1,
    bar: 2 }
-
 ```
 ```ruby
 # BECOMES
-
 {foo: 1,
  bar: 2}
 ```
-### unnamed test 348
+### unnamed 348
 ```ruby
 # GIVEN
-
 {foo: 1,  bar: 2}
-
 ```
 ```ruby
 # BECOMES
-
 {foo: 1, bar: 2}
 ```
-### unnamed test 349
+### unnamed 349
 ```ruby
 # GIVEN
-
 {1 =>
    2}
-
 ```
 ```ruby
 # BECOMES
-
 {1 => 2}
 ```

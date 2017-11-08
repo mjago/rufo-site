@@ -2,28 +2,25 @@ require "zlib"
 require 'yaml'
 require "diff/lcs"
 require 'pp'
-require_relative "../new_parser/lib/rufo"
+require_relative "../master/lib/rufo"
 
 class RenderSpecs
-  FILE_PATH = '../new_parser'
+  FILE_PATH = '../master'
   SOURCE_SPECS = File.join FILE_PATH, 'spec/lib/rufo/formatter_source_specs'
   SPEC_FILES = [File.join(SOURCE_SPECS, '**.rb.spec'),
                 File.join(SOURCE_SPECS, '2.3/**.rb.spec')]
   OUTDIR = '_docs'
   CONFIGDIR = '_data'
-  SETTINGS_COUNT = 6
+  SETTINGS_COUNT = 5
   NUM_OF_SETTINGS = 2 ** SETTINGS_COUNT
-
-  def initialize
-  end
 
   def write_nav tests
     headings = [{"title"=> "Introduction", "url"=>"/docs/introduction"}]
     examples = []
     tests.each do |test|
       filename = File.basename(test[:file_name])
-      fn = filename.gsub('.rb.spec','')
-      examples << {"title"=> "#{fn}", "url"=>"/docs/#{fn}"}
+      name = filename.gsub('.rb.spec','')
+      examples << {"title"=> "#{name}", "url"=>"/docs/#{name.gsub('?', '_qu')}"}
     end
     File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do|f|
       f.write ({"main" =>  [{ "title" =>"Introduction",
@@ -64,14 +61,9 @@ class RenderSpecs
     out.puts '### ' + title.gsub('.rb.spec','').gsub('_', '\\_')
   end
 
-  def print_filename(out)
-    out.puts @filename.gsub('.rb.spec','').gsub('_','\_')
-    @current_filename, @filename = @filename, ''
-  end
-
   def render(title, mode, code, out)
+    code.strip!
     case mode
-    # code.strip!
     when :original
       print_title title, out
       out.puts '```ruby'
@@ -108,17 +100,18 @@ class RenderSpecs
   end
 
   def out_filename(filename, file_count)
+    name = File.basename(filename)
+             .gsub('.rb.spec', '.md').gsub('?.md', '_qu.md')
     fc = file_count < 10 ? "0#{file_count}_" : "#{file_count}_"
-    File.join(OUTDIR, fc + filename.gsub('.rb.spec', '.md'))
+    File.join(OUTDIR, fc + name)
   end
 
-  def front_matter(out)
-    name = @filename.gsub('.rb.spec', '')
+  def front_matter(filename, out)
+    name = filename.gsub('.rb.spec', '')
     out.puts <<~EFM
                ---
                title: \"#{name.gsub('_', '\\\\\\\\_')}\"
-               permalink: \"/docs/#{name}/\"
-               # modified: 2017-10-27T16:25:30-04:00
+               permalink: \"/docs/#{name.gsub('?','_qu')}/\"
                toc: true
                sidebar:
                  nav: "docs"
@@ -148,14 +141,13 @@ class RenderSpecs
       [:align_case_when, false, true],
       [:align_chained_calls, false, true],
       [:double_newline_inside_type, :dynamic, :no],
-      [:trailing_commas, :always, :never],
-      [:spaces_around_binary, :dynamic, :one],
+      [:trailing_commas, true, false],
     ]
   end
 
   def fetch_options(count)
     options = {}
-    6.times do |y|
+    SETTINGS_COUNT.times do |y|
       options[settings[y][0]] =
         (count & (1 << y) == 0) ?
           settings[y][1] : settings[y][2]
@@ -166,7 +158,7 @@ class RenderSpecs
   def fetch_option(count)
     options = fetch_options(count)
     str = ''
-    6.times do |y|
+    SETTINGS_COUNT.times do |y|
       if options[settings[y][0]] == settings[y][2]
         str += '`' + settings[y][0].to_s + ' ' + settings[y][2].inspect + '`'
       end
@@ -178,9 +170,8 @@ class RenderSpecs
     acw = (options[:align_case_when] == true) ? '✔' : '✘'
     acc = (options[:align_chained_calls] == true) ? '✔' : '✘'
     pid = (options[:parens_in_def] == :yes) ? '✔' : '✘'
-    tc = (options[:trailing_commas] == :always) ? '✔' : '✘'
+    tc = (options[:trailing_commas] == true) ? '✔' : '✘'
     dlit = options[:double_newline_inside_type].inspect
-    sab = options[:spaces_around_binary].inspect
 
     <<-EOS
     :align_case_when #{acw}
@@ -188,7 +179,6 @@ class RenderSpecs
     :parens_in_def #{pid}
     :trailing_commas #{tc}
     :double_newline_inside_type #{dlit}
-    :spaces_around_binary #{sab}
   EOS
   end
 
@@ -198,46 +188,81 @@ class RenderSpecs
 
   def with_spec_files(dir)
     files = Dir.glob(dir)
-#    pp files
     files.each { |f| yield f }
+  end
+
+  def original(line)
+    if line =~ /^#~# ORIGINAL ?([\w\s]+)$/
+      @name = $~[1].strip
+      puts @name
+      return true
+    end
+    @name = ''
+    false
+  end
+
+  def expected(line)
+    line =~ /^#~# EXPECTED$/
+  end
+
+  def pending(line)
+    line =~ /^#~# PENDING$/
+  end
+
+  def use_options(line)
+    line =~ /^#~# (.+)$/
+  end
+
+  def make_name
+    name = @name == '' ?
+             "unnamed #{test_count}" :
+             @name
+    return name + " (v2.3 +)" if @version == :two_three_plus
+    name
+  end
+
+  def set_version(dir)
+    if dir.include?("2.3")
+      @version = :two_three_plus
+    else
+      @version = :all
+    end
   end
 
   def get_tests
     tests = []
     test_count = 0
     with_spec_dirs SPEC_FILES do |dir|
-      version = :two_three_plus if dir.include?("2.3")
+      set_version dir
       with_spec_files dir do |file|
         file_tests = []
         current_test = {}
         ignore_next_line = false
         filename = "formatter_source_specs/#{File.basename file}"
-        name = ''
-        File.foreach(file).with_index do |line, index|
-          case
-          when line =~ /^#~# ORIGINAL ?([\w\s]+)$/
+        File.foreach(file).with_index do |line, idx|
+          name = ''
+          if original(line)
             # save old test
             unless current_test == {}
               file_tests << current_test
               current_test = {}
             end
-
             # start a new test
-            name = $~[1].strip
             test_count += 1
-            name = "unnamed test #{test_count}" if name.empty?
-            name += " - (v2.3 only)" if version == :two_three_plus
+            name = @name == '' ?
+                     "unnamed #{test_count}" :
+                     @name
             current_test[:name] = name
             current_test[:original] = ""
-            current_test[:line] = index + 1
-          when line =~ /^#~# EXPECTED$/
+            current_test[:line] = idx + 1
+          elsif expected(line)
             current_test[:expected] = ""
-          when line =~ /^#~# PENDING$/
+          elsif pending(line)
             current_test[:pending] = true
-          when line =~ /^#~# (.+)$/
-          when current_test[:expected]
+          elsif use_options(line)
+          elsif current_test[:expected]
             current_test[:expected] += line
-          when current_test[:original]
+          elsif current_test[:original]
             current_test[:original] += line
           end
         end
@@ -250,16 +275,22 @@ class RenderSpecs
     tests
   end
 
+  def get_default_format code
+    Rufo::Formatter.format(code)
+  end
+
   def sort_uniques(tests)
     STDOUT.puts "sorting"
     sorted = []
     tests.each do |test|
+#      pp test
+#      exit
       sorted_data = []
       test[:tests].each do |data|
         expected_ary = []
-        default_format = Rufo::Formatter.format(data[:original])
+        default_format = get_default_format(data[:original])
         NUM_OF_SETTINGS.times do |iteration|
-          name = "#{(test[:file_name].to_s)} #{data[:line]}"
+          name = test_locator_name(test[:file_name], data[:line])
           if @diffs_hash[name]
             if @diffs_hash[name][iteration]
               diff = @diffs_hash[name][iteration]
@@ -283,11 +314,13 @@ class RenderSpecs
     file_count = 0
     tests.each do |test|
       file_count += 1
-      @filename = File.basename(test[:file_name])
+      filename = File.basename(test[:file_name])
       with_write_file out_filename(File.basename(test[:file_name]), file_count) do |wf|
-        front_matter(wf)
+        front_matter(filename, wf)
         test[:tests].each do |test_data|
-          default_format = Rufo::Formatter.format(test_data[:original])
+#          pp test_data
+          default_format = get_default_format(test_data[:original])
+          puts test_data[:name]
           render(test_data[:name], :original, test_data[:original], wf)
           render('(default)', :default, default_format, wf)
           uniques = test_data[:unique_expects]
@@ -313,11 +346,10 @@ class RenderSpecs
         line = test[:line]
         diffs_hash[test_locator_name(name, line)] = {}
         diff_count = 0
-        default_format = Rufo::Formatter.format(test[:original])
+        default_format = get_default_format(test[:original])
         NUM_OF_SETTINGS.times do |iteration|
           options = fetch_options(iteration)
           formatted = Rufo::Formatter.format(test[:original], options)
-          default_format = formatted if iteration == 0
           diff = Diff::LCS.diff(default_format, formatted)
           diffs_hash[test_locator_name(name, line)][iteration] = diff
           diff_count += 1 unless diff.empty?

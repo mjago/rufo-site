@@ -1,32 +1,25 @@
 ---
 title: "global\\_variables"
 permalink: "/docs/global_variables/"
-# modified: 2017-10-27T16:25:30-04:00
 toc: true
 sidebar:
   nav: "docs"
 ---
-### unnamed test 332
+### unnamed 332
 ```ruby
 # GIVEN
-
 $abc
-
 ```
 ```ruby
 # BECOMES
-
 $abc
 ```
-### unnamed test 333
+### unnamed 333
 ```ruby
 # GIVEN
-
 $abc . d
-
 ```
 ```ruby
 # BECOMES
-
 $abc.d
 ```
