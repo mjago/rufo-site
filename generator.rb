@@ -9,7 +9,8 @@ class RenderSpecs
   SOURCE_SPECS = File.join FILE_PATH, 'spec/lib/rufo/formatter_source_specs'
   SPEC_FILES = [File.join(SOURCE_SPECS, '**.rb.spec'),
                 File.join(SOURCE_SPECS, '2.3/**.rb.spec')]
-  OUTDIR = '_docs'
+  TEMP_OUTDIR = 'temp_docs'
+  FINAL_OUTDIR = '_docs'
   CONFIGDIR = '_data'
   SETTINGS_COUNT = 5
   NUM_OF_SETTINGS = 2 ** SETTINGS_COUNT
@@ -87,6 +88,11 @@ class RenderSpecs
     paths.each { |p| yield p }
   end
 
+  def with_doc_files(type = :final)
+    dir = type == :final ? FINAL_OUTDIR : TEMP_OUTDIR
+    Dir.glob("#{dir}/*.md") { |f| yield f }
+  end
+
   def with_spec_files(dir)
     files = Dir.glob(dir)
     files.each { |f| yield f }
@@ -103,7 +109,7 @@ class RenderSpecs
     name = File.basename(filename)
              .gsub('.rb.spec', '.md').gsub('?.md', '_qu.md')
     fc = file_count < 10 ? "0#{file_count}_" : "#{file_count}_"
-    File.join(OUTDIR, fc + name)
+    File.join(TEMP_OUTDIR, fc + name)
   end
 
   def front_matter(filename, out)
@@ -121,7 +127,6 @@ class RenderSpecs
 
   def load_diffs
     yml = ''
-#    File.open('../test_all_settings/spec/lib/rufo/diffs.gz') do |f|
     File.open('diffs.gz') do |f|
       gz = Zlib::GzipReader.new(f)
       yml = gz.read
@@ -194,7 +199,6 @@ class RenderSpecs
   def original(line)
     if line =~ /^#~# ORIGINAL ?([\w\s]+)$/
       @name = $~[1].strip
-      puts @name
       return true
     end
     @name = ''
@@ -229,6 +233,66 @@ class RenderSpecs
     end
   end
 
+  def get_default_format code
+    Rufo::Formatter.format(code)
+  end
+
+  def update_diffs_maybe(yml)
+    old_yml = ''
+    File.open('diffs.gz') do |f|
+      gz = Zlib::GzipReader.new(f)
+      old_yml = gz.read
+      gz.close
+    end
+
+    if old_yml != yml
+      Zlib::GzipWriter.open('diffs.gz') do |gz|
+        gz.write yml
+        gz.close
+      end
+    end
+  end
+
+  def create_temp_dir
+    if Dir.exist? TEMP_OUTDIR
+      raise "Error: Temporary directory #{TEMP_OUTDIR} already exists!"
+    end
+    Dir.mkdir TEMP_OUTDIR
+  end
+
+  def copy_changed_docs(tests)
+    temp = []
+    final = []
+    with_doc_files(:temp) { |t| temp << File.basename(t) }
+    return if temp.empty?
+    with_doc_files(:final) { |f| final << File.basename(f) }
+    temp.each do |t|
+      tname = "#{TEMP_OUTDIR}/#{t}"
+      fname = "#{FINAL_OUTDIR}/#{t}"
+      if final.include? t
+        copy = false
+        File.open(tname, "r") do |t|
+          File.open(fname, "r") do |f|
+            copy = (f.read != t.read)
+          end
+        end
+        if copy
+          FileUtils.cp(tname, fname)
+        end
+        final.delete t
+      else
+        FileUtils.cp(tname, fname)
+      end
+    end
+    final.each do |f|
+      FileUtils.rm "#{FINAL_OUTDIR}/#{f}"
+    end
+  end
+
+  def destroy_temp_dir
+    FileUtils.rm_rf TEMP_OUTDIR
+  end
+
   def get_tests
     tests = []
     test_count = 0
@@ -237,7 +301,6 @@ class RenderSpecs
       with_spec_files dir do |file|
         file_tests = []
         current_test = {}
-        ignore_next_line = false
         filename = "formatter_source_specs/#{File.basename file}"
         File.foreach(file).with_index do |line, idx|
           name = ''
@@ -275,16 +338,11 @@ class RenderSpecs
     tests
   end
 
-  def get_default_format code
-    Rufo::Formatter.format(code)
-  end
-
   def sort_uniques(tests)
     STDOUT.puts "sorting"
     sorted = []
     tests.each do |test|
-#      pp test
-#      exit
+      test
       sorted_data = []
       test[:tests].each do |data|
         expected_ary = []
@@ -312,15 +370,15 @@ class RenderSpecs
   def build(tests)
     STDOUT.puts "generating html"
     file_count = 0
+
+    create_temp_dir
     tests.each do |test|
       file_count += 1
       filename = File.basename(test[:file_name])
       with_write_file out_filename(File.basename(test[:file_name]), file_count) do |wf|
         front_matter(filename, wf)
         test[:tests].each do |test_data|
-#          pp test_data
           default_format = get_default_format(test_data[:original])
-          puts test_data[:name]
           render(test_data[:name], :original, test_data[:original], wf)
           render('(default)', :default, default_format, wf)
           uniques = test_data[:unique_expects]
@@ -334,6 +392,8 @@ class RenderSpecs
       end
     end
     write_nav tests
+    copy_changed_docs tests
+    destroy_temp_dir
   end
 
   def generate_diffs
@@ -358,10 +418,7 @@ class RenderSpecs
       end
     end
     yml = YAML.dump diffs_hash
-    Zlib::GzipWriter.open('diffs.gz') do |gz|
-      gz.write yml
-      gz.close
-    end
+    update_diffs_maybe yml
   end
 end
 
