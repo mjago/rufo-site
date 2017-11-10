@@ -21,26 +21,26 @@ class RenderSpecs
   end
 
   def nav_to_yml(examples)
-    ({"main" =>  [{ "title" =>"Introduction",
-                    "url"=> "/pages/introduction" },
-                  { "title" => "Examples",
-                    "url" => "/examples/alias" },
-                  { "title" => "Settings",
-                    "url" => "/pages/settings" }],
-      "examples" => [{ "title" =>"Spec Examples",
-                       "children"=> examples }]}).to_yaml
+    ({"main" => [{"title" => "Introduction",
+                  "url" => "/pages/introduction"},
+                 {"title" => "Examples",
+                  "url" => "/examples/alias"},
+                 {"title" => "Settings",
+                  "url" => "/pages/settings"}],
+      "examples" => [{"title" => "Spec Examples",
+                      "children" => examples}]}).to_yaml
   end
 
-  def write_nav tests
-    headings = [{"title"=> "Introduction", "url"=>"/examples/introduction"}]
+  def write_nav(tests)
+    headings = [{"title" => "Introduction", "url" => "/examples/introduction"}]
     examples = []
     tests.each do |test|
       filename = File.basename(test[:file_name])
-      name = filename.gsub('.rb.spec','')
-      examples << {"title"=> "#{name + test[:version]}",
-                   "url"=>"/examples/#{name.gsub('?', '_qu').gsub('__', 'u_')}"}
+      name = filename.gsub('.rb.spec', '')
+      examples << {"title" => "#{name + test[:version]}",
+                   "url" => "/examples/#{name.gsub('?', '_qu').gsub('__', 'u_')}"}
     end
-    File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do|f|
+    File.open(File.join(CONFIGDIR, 'navigation.yml'), 'w') do |f|
       f.write nav_to_yml(examples)
     end
   end
@@ -67,9 +67,9 @@ class RenderSpecs
   def md_file(filename)
     File.join(TEMP_OUTDIR,
               File.basename(filename)
-                .gsub('.rb.spec', '.md')
-                .gsub('?.md', '_qu.md')
-                .gsub('__', 'u_'))
+                  .gsub('.rb.spec', '.md')
+                  .gsub('?.md', '_qu.md')
+                  .gsub('__', 'u_'))
   end
 
   def with_md_file(name)
@@ -80,8 +80,8 @@ class RenderSpecs
     name = filename.gsub('.rb.spec', '')
     <<~EFM
       ---
-      title: \"#{(name  + version).gsub('_', '\\\\\\\\_')}\"
-      permalink: \"/examples/#{name.gsub('?','_qu').gsub('__', 'u_')}/\"
+      title: \"#{(name + version).gsub('_', '\\\\\\\\_')}\"
+      permalink: \"/examples/#{name.gsub('?', '_qu').gsub('__', 'u_')}/\"
       toc: true
       sidebar:
         nav: "examples"
@@ -181,14 +181,14 @@ class RenderSpecs
 
   def set_version(dir)
     @version = (dir.include?("2.3")) ?
-                 :two_three_plus : :all
+      :two_three_plus : :all
   end
 
   def version
-    @version == :two_three_plus ? ' (v2.3 +)'  : ''
+    @version == :two_three_plus ? ' (v2.3 +)' : ''
   end
 
-  def default_format code
+  def default_format(code)
     Rufo::Formatter.format(code)
   end
 
@@ -307,16 +307,16 @@ class RenderSpecs
           end
         end
         file_tests << current_test
-        tests << { file_name: filename,
-                   version: version,
-                   tests: file_tests }
+        tests << {file_name: filename,
+                  version: version,
+                  tests: file_tests}
       end
     end
     tests
   end
 
   def unique_expects(exps)
-    exps.uniq{ |x| x[:expected]}
+    exps.uniq { |x| x[:expected] }
   end
 
   def sort_uniques(tests)
@@ -333,16 +333,16 @@ class RenderSpecs
             if @diffs_hash[name][iteration]
               diff = @diffs_hash[name][iteration]
               new_expected = Diff::LCS.patch!(default, diff)
-              expected_ary << { :setting => iteration, :expected => new_expected }
+              expected_ary << {:setting => iteration, :expected => new_expected}
             end
           end
         end
-        sorted_data << data.merge({ :unique_expects => unique_expects(expected_ary) })
+        sorted_data << data.merge({:unique_expects => unique_expects(expected_ary)})
       end
-      sorted << { file_name: test[:file_name],
-                  relative_path: test[:relative_path],
-                  version: test[:version],
-                  tests: sorted_data }
+      sorted << {file_name: test[:file_name],
+                 relative_path: test[:relative_path],
+                 version: test[:version],
+                 tests: sorted_data}
     end
     sorted
   end
