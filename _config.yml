@@ -62,8 +62,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "site-logo.png" # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
@@ -166,19 +165,9 @@ kramdown:
 
 # Collections
 collections:
-  docs:
+  examples:
     output: true
     permalink: /:collection/:path/
-  recipes:
-    output: true
-    permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
 
 # Defaults
 defaults:
@@ -196,7 +185,7 @@ defaults:
   # _docs
   - scope:
       path: ""
-      type: docs
+      type: examples
     values:
       layout: single
       read_time: false
@@ -205,7 +194,7 @@ defaults:
       comments: false
       related: false
 #      sidebar:
-#        nav: "docs"
+#        nav: "examples"
   # _pages
   - scope:
       path: ""
@@ -214,33 +203,6 @@ defaults:
       layout: single
       author_profile: false
       toc: true
-#  # _recipes
-#  - scope:
-#      path: ""
-#      type: recipes
-#    values:
-#      layout: single
-#      author_profile: true
-#      share: true
-#      comments: true
-#  # _pets
-#  - scope:
-#      path: ""
-#      type: pets
-#    values:
-#      layout: single
-#      author_profile: true
-#      share: true
-#      comment: true
-#  # _portfolio
-#  - scope:
-#      path: ""
-#      type: portfolio
-#    values:
-#      layout: single
-#      author_profile: false
-#      share: true
-
 
 # Sass/SCSS
 sass:
@@ -256,7 +218,7 @@ timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_ti
 
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

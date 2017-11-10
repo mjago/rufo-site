@@ -3,29 +3,33 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: homepage.jpg
+  overlay_image: images/homepage.jpg
   cta_url: "/pages/introduction"
   caption:
 excerpt: 'Ruby is a fast Ruby formatter - ideal for integrating with your Editor, or Continuous Integration System.'
+
 feature_row:
-  - image_path: introduction.png
+  - image_path: images/introduction.png
     alt: "Introduction"
     title: "Introduction"
     excerpt: "Use from the command line, within your CI process, or in your Editor"
     url: "/pages/introduction/"
-    btn_label: "Intro"
-  - image_path: examples.png
+    btn_label: "Learn More"
+    btn_class: "btn--info"
+  - image_path: images/examples.png
     alt: "Examples"
     title: "Examples"
     excerpt: "These examples are used internally to test Rufo"
-    url: "/docs/__END__"
+    url: "/examples/alias"
     btn_label: "Examples"
-  - image_path: settings.png
+    btn_class: "btn--info"
+  - image_path: images/settings.png
     alt: "settings"
     title: "Settings"
-    excerpt: "There is a limited sub-set of configuration available for controlling how Rufo formats"
+    excerpt: "There is a very limited sub-set of configuration available"
     url: "/pages/settings"
     btn_label: "Settings"
+    btn_class: "btn--info"
 github:
   - excerpt: '{::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=mmistakes&repo=minimal-mistakes&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>{:/nomarkdown}'
 ---
